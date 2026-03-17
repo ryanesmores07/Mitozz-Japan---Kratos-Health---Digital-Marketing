@@ -1,0 +1,31 @@
+{
+  "asset_type": "instagram-feed",
+  "campaign_name": "",
+  "topic": "",
+  "objective": "",
+  "platform": "instagram",
+  "aspect_ratio": "4:5",
+  "audience": "",
+  "visual_intent": [],
+  "brand_guardrails": [],
+  "composition": [],
+  "image_references": [
+    {
+      "path": "",
+      "role": "style-anchor",
+      "influence": [],
+      "match_strength": "medium"
+    }
+  ],
+  "text_overlay": {
+    "allowed": true,
+    "max_words": 0,
+    "tone": "",
+    "font_reference": "Noto Sans JP or closest available sans-serif for Japanese",
+    "headline_ja": "",
+    "slides_ja": []
+  },
+  "negative_prompts": [],
+  "reference_files": [],
+  "notes": ""
+}
