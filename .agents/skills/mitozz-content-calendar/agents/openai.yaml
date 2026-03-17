@@ -1,0 +1,8 @@
+interface:
+  display_name: "Mitozz Content Calendar"
+  short_description: "Plan monthly Mitozz Instagram calendars from strategy, audience, and brand context."
+  brand_color: "#6F8794"
+  default_prompt: "Create or update the monthly Mitozz Instagram content calendar."
+
+policy:
+  allow_implicit_invocation: true

@@ -1,0 +1,8 @@
+interface:
+  display_name: "Mitozz Creatives Director"
+  short_description: "Turn calendar rows into Japanese creative direction and Nano Banana visual handoff."
+  brand_color: "#6F8794"
+  default_prompt: "Create creative direction for the selected Mitozz Instagram post."
+
+policy:
+  allow_implicit_invocation: true

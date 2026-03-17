@@ -1,0 +1,8 @@
+interface:
+  display_name: "Nano Banana Instagram"
+  short_description: "Execute prepared Instagram prompt JSON with the approved visual reference pack."
+  brand_color: "#6F8794"
+  default_prompt: "Generate the Instagram creative from the prepared prompt and selected image references."
+
+policy:
+  allow_implicit_invocation: true

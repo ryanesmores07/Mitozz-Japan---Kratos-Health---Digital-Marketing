@@ -1,0 +1,8 @@
+interface:
+  display_name: "Mitozz Prompt Engineer"
+  short_description: "Convert creative packages into Nano Banana-ready Instagram prompt JSON."
+  brand_color: "#6F8794"
+  default_prompt: "Create or update the Instagram prompt JSON from the latest creative package."
+
+policy:
+  allow_implicit_invocation: true
