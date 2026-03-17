@@ -6,13 +6,13 @@ This workspace is organized for creating and maintaining **reusable JSON prompts
 ## Structure
 
 - `brand/`: Brand identity and visual references that keep images consistent.
+- `.agents/skills/`: Codex-native repository skills.
 - `prompts/`: Reusable JSON prompts and their schemas, organized by Instagram format.
 - `workflows/`: Short checklists describing how you use prompts and Nano Banana Pro.
-- `.cursor/`: Cursor Skills and Rules that tie this structure into the editor.
 
 ## Skills and Workflow
 
-This project is wired into Cursor using four project-local skills under `.cursor/skills/`:
+This project is wired into Codex using four project-local skills under `.agents/skills/`:
 
 - `mitozz-content-calendar`: plans and drafts the **monthly Mitozz Japan Instagram content calendar** (feed, reels, stories) based on audience research, brand strategy, and prior calendars.
 - `mitozz-creatives-director`: turns calendar rows into **creative direction packages** with positioning, Japanese copy, captions, layout ideas, and Nano Banana-ready visual guidance.
@@ -24,6 +24,8 @@ Both skills follow Anthropic-style patterns:
 - concise `SKILL.md` entrypoints with clear “what + when” descriptions,
 - links to one-level-deep reference material (e.g. `references/prompt-examples.md`),
 - workflows that assume the agent already knows general best practices.
+
+The repository now treats `.agents/skills/` as the single source of truth for skill discovery and maintenance.
 
 ## Typical Flow
 
@@ -44,4 +46,3 @@ Examples:
 
 - `ig-feed-2026-03-23-mitochondria-basics-v01.json`
 - `ig-story-2026-03-23-mitochondria-basics-reinforcement-v01.json`
-
