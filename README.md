@@ -31,6 +31,8 @@ The repository treats `.agents/skills/` as the single source of truth for skill 
 4. Use `nano-banana-instagram` to execute Nano Banana Pro MCP using those prompt files.
 5. Review the outputs, approve winners, and promote only the best assets into the visual reference pack when appropriate.
 
+For free rehearsal runs, use `tools/chatgpt-image-test-run.ps1` to turn an existing prompt JSON into a dry-run ChatGPT image-generation bundle without calling a paid API.
+
 Use the checklists in `workflows/` to keep planning, creative packaging, generation, and approval lean and repeatable.
 
 ## Prompt Naming
