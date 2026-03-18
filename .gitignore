@@ -1,2 +1,5 @@
 mcp/*.local.json
+mcp/uv-cache/
+mcp/uv-python/
+mcp/xdg-data/
 .env.local

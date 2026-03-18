@@ -50,7 +50,7 @@ Recommended setup:
 
 The launcher wraps:
 
-- `uvx nanobanana-mcp-server@latest`
+- `uvx nanobanana-pro-mcp-server`
 
 This gives the workspace a stable local entrypoint even if the MCP client configuration differs between tools.
 

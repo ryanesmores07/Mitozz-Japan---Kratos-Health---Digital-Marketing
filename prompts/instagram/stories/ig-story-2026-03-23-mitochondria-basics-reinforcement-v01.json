@@ -32,7 +32,7 @@
   ],
   "image_references": [
     {
-      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-editorial-whitespace-01.jpg",
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-editorial-whitespace-01.png",
       "role": "style-anchor",
       "influence": [
         "palette",
@@ -41,7 +41,7 @@
       "match_strength": "medium"
     },
     {
-      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.jpg",
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.png",
       "role": "style-anchor",
       "influence": [
         "palette",
@@ -80,7 +80,6 @@
   "reference_files": [
     "brand/references/business-context/creative-packages/creative-package-2026-03-23.md",
     "brand/references/business-context/content-planning/Mitozz Instagram Content Calendar - 2026 - March.csv",
-    "brand/references/business-context/visual/Brand Visual Direction.pdf",
     "brand/references/business-context/visual/Brand Visual Direction.md",
     "brand/references/business-context/visual/reference-pack/reference-pack-index.md",
     "brand/references/business-context/strategy/Mitozz Japan Brand Voice And Messaging Guidelines.docx.pdf"

@@ -34,6 +34,15 @@ if (-not (Test-Path -LiteralPath $env:UV_PYTHON_INSTALL_DIR)) {
     New-Item -ItemType Directory -Path $env:UV_PYTHON_INSTALL_DIR -Force | Out-Null
 }
 
+if ([string]::IsNullOrWhiteSpace($env:XDG_DATA_HOME)) {
+    $workspaceRoot = [System.IO.Path]::GetFullPath((Join-Path -Path $PSScriptRoot -ChildPath ".."))
+    $env:XDG_DATA_HOME = Join-Path -Path $workspaceRoot -ChildPath "mcp/xdg-data"
+}
+
+if (-not (Test-Path -LiteralPath $env:XDG_DATA_HOME)) {
+    New-Item -ItemType Directory -Path $env:XDG_DATA_HOME -Force | Out-Null
+}
+
 $packageName = if ([string]::IsNullOrWhiteSpace($env:NANOBANANA_PACKAGE)) {
     "nanobanana-pro-mcp-server"
 }
