@@ -9,6 +9,18 @@ Use this checklist when turning a calendar row into a creative package.
 - `brand/references/business-context/visual/Brand Visual Direction.md`
 - `brand/references/business-context/visual/reference-pack/reference-pack-index.md`
 
+Read the calendar row using the current schema:
+
+- `Section`
+- `Format`
+- `投稿テーマ`
+- `Objective`
+- `Primary Persona`
+- `切り口`
+- `Related Feed Post`
+- `CTA`
+- `補足メモ`
+
 ## Checklist
 
 - Define the objective clearly: educate, reinforce, trust-build, or support conversion.

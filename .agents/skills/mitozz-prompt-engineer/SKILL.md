@@ -22,6 +22,16 @@ Use this skill after `mitozz-creatives-director` and before `nano-banana-instagr
 6. `workflows/02-build-creative-package.md`
 7. `workflows/03-generate-and-approve.md`
 
+## Calendar Compatibility
+
+The content calendar is now Japanese-first for planning, but prompt JSON should stay operationally clear.
+
+- use the calendar row only as planning context
+- use the creative package as the source of truth for wording and production decisions
+- keep prompt structure and control fields in English
+- preserve exact customer-facing Japanese only inside `text_overlay` or other explicit copy fields
+- do not copy raw calendar cells into the prompt without refining them through the creative package
+
 ## Prompt Shape
 
 Use this JSON structure:

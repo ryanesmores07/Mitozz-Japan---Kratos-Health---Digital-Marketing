@@ -70,6 +70,29 @@ Treat these as operating constraints unless newer project files override them:
 If a directly relevant image is attached in chat, treat it as a candidate style anchor.
 If `working-examples/` is empty, build direction from `style-anchors/` plus the visual direction docs only.
 
+## Calendar Row Intake
+
+The current calendar system uses one shared table for feed and story rows. Read these columns as the operating inputs:
+
+- `Section`
+- `Format`
+- `投稿テーマ`
+- `Content Pillar`
+- `Objective`
+- `Primary Persona`
+- `切り口`
+- `Related Feed Post`
+- `CTA`
+- `補足メモ`
+
+Interpretation rules:
+
+- treat `投稿テーマ` as the client-approved topic label
+- treat `切り口` as the primary messaging angle for the asset
+- treat `補足メモ` as execution context, not final copy
+- if `Section` is `Story`, use `Related Feed Post` to keep support assets aligned to the parent feed post
+- do not carry calendar wording straight into final copy without refining it into natural Japanese
+
 ## Required Output Shape
 
 Output only what is needed to execute, in this order:
@@ -226,6 +249,7 @@ Always include:
 - Do not soften decisions by listing many alternatives.
 - Prioritize clarity, trust, save/share value, and premium brand building over novelty.
 - Make every asset feel like it belongs to one coherent Mitozz system.
+- Keep the calendar simple by resolving ambiguity yourself instead of inventing new planning layers.
 
 ## Internal Check Before Answering
 

@@ -27,3 +27,6 @@ Use this checklist when shaping or revising the monthly Instagram calendar.
 
 - a dated content calendar row or revision
 - a rough archetype suggestion for each planned asset
+- use one shared table for feed and story rows
+- keep client-facing planning fields in Japanese
+- keep workflow control fields stable and machine-friendly

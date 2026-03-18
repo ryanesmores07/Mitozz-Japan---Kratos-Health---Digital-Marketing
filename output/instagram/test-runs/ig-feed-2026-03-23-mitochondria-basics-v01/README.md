@@ -4,10 +4,10 @@
 - Asset type: instagram-feed-carousel
 - Aspect ratio: 4:5
 - Batch size: 3
-- Resolved image references: 2
+- Resolved image references: 3
 - Missing image references: 0
 - Resolved reference files: 5
-- Missing reference files: 1
+- Missing reference files: 0
 
 ## How To Use
 
@@ -18,5 +18,4 @@
 
 ## Notes
 
-Missing reference files:
-- brand/references/business-context/visual/Brand Visual Direction.pdf
+All references resolved successfully.

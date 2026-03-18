@@ -10,85 +10,98 @@
   "visual_intent": [
     "premium Japanese wellness editorial",
     "calm educational clarity",
-    "soft steel-blue atmosphere with luminous white space",
-    "apricot warmth used only as a restrained signal color",
-    "high-trust, understated science-led Instagram aesthetic"
+    "cloud-white base with mist-blue atmosphere",
+    "science-led but soft and non-clinical",
+    "save-worthy text-first carousel",
+    "introductory mitochondria education that feels approachable rather than technical"
   ],
   "brand_guardrails": [
-    "do not use loud supplement ad colors or neon",
-    "avoid exaggerated energy or bodybuilder imagery",
-    "keep it minimal, intelligent, and premium",
-    "preserve clean text-safe areas for slide headlines",
-    "no hospital or clinical imagery",
-    "follow the latest Steel Light brand visual direction",
-    "match mood and restraint from the selected references without copying exact crop, pose, or object placement"
+    "keep the post minimal, intelligent, and premium",
+    "avoid neon biohacking or aggressive supplement-ad aesthetics",
+    "preserve generous text-safe whitespace on every slide",
+    "no hospital, lab-equipment, or heavy medical CGI cues",
+    "do not imply treatment, recovery, anti-aging, or guaranteed functional outcomes",
+    "match mood, palette, light quality, whitespace, and restraint from the selected references without duplicating exact crop, pose, object placement, or gradient pattern"
   ],
   "composition": [
-    "strong centered or slightly offset focal point",
-    "generous negative space with at least 40 percent breathing room",
-    "layered but simple depth with one foreground element maximum",
-    "4:5 portrait carousel-friendly framing",
-    "text-first educational carousel with one key message per slide",
-    "cloud-white base with mist-blue atmosphere and restrained apricot accents"
+    "4:5 portrait carousel framing",
+    "one clear message per slide",
+    "centered or slightly offset focal structure",
+    "40 percent or more negative space",
+    "subtle abstract science cue only, never a busy diagram",
+    "white-led educational layout with calm mobile readability",
+    "product absent or reduced to a near-invisible brand-presence detail only on the final card"
   ],
   "image_references": [
     {
-      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-education-layout-01.jpg",
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-education-layout-01.png",
       "role": "style-anchor",
       "influence": [
-        "whitespace",
         "editorial education layout",
-        "palette"
+        "whitespace",
+        "text hierarchy"
       ],
       "match_strength": "medium"
     },
     {
-      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.jpg",
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.png",
       "role": "style-anchor",
       "influence": [
-        "palette",
+        "steel-blue tonality",
         "calm lighting",
-        "restraint"
+        "atmospheric restraint"
+      ],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cta-layout-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "end-card rhythm",
+        "soft save CTA hierarchy",
+        "breathing room"
       ],
       "match_strength": "medium"
     }
   ],
-  "reference_strategy": "Use the education-layout anchor for whitespace and editorial balance, then the cool-palette anchor for tonality and calm lighting.",
+  "reference_strategy": "Use the education-layout anchor for spacing and hierarchy, the cool-palette anchor for tonality and light quality, and the CTA-layout anchor only for the final save card rhythm.",
   "variation_guardrails": [
-    "vary crop and camera distance",
-    "vary exact object placement",
-    "do not repeat exact text placement from references"
+    "do not reuse exact paragraph blocks or text placement from anchors",
+    "rotate focal placement between centered and slightly offset layouts",
+    "keep apricot accent use below 10 percent of the frame",
+    "avoid using the same background wash on every slide",
+    "keep the carousel more introductory and education-first than campaign-like"
   ],
   "text_overlay": {
     "allowed": true,
-    "max_words": 8,
-    "tone": "clear, premium, educational",
-    "font_reference": "Noto Sans JP Bold or closest available sans-serif",
-    "headline_ja": "\u30df\u30c8\u30b3\u30f3\u30c9\u30ea\u30a2\u3068\u306f\uff1f",
+    "max_words": 14,
+    "tone": "clear, premium, educational, quietly reassuring",
+    "font_reference": "Noto Sans JP Bold / Medium",
+    "headline_ja": "ミトコンドリアとは？",
     "slides_ja": [
-      "\u30df\u30c8\u30b3\u30f3\u30c9\u30ea\u30a2\u306f\u7d30\u80de\u306e\u30a8\u30cd\u30eb\u30ae\u30fc\u3065\u304f\u308a\u3092\u652f\u3048\u308b\u5b58\u5728\u3067\u3059\u3002",
-      "\u5e74\u9f62\u3084\u751f\u6d3b\u7fd2\u6163\u306e\u5f71\u97ff\u3067\u3001\u50cd\u304d\u304c\u3086\u308b\u3084\u304b\u306b\u306a\u308b\u3053\u3068\u304c\u3042\u308a\u307e\u3059\u3002",
-      "\u6bce\u65e5\u306e\u30b1\u30a2\u3067\u306f\u3001\u6574\u3063\u305f\u751f\u6d3b\u7fd2\u6163\u3068\u3084\u3055\u3057\u3044\u7d99\u7d9a\u304c\u5927\u5207\u3067\u3059\u3002",
-      "\u96e3\u3057\u304f\u898b\u3048\u308b\u30c6\u30fc\u30de\u3082\u3001\u307e\u305a\u306f\u57fa\u790e\u304b\u3089\u77e5\u308b\u3053\u3068\u304c\u7b2c\u4e00\u6b69\u3067\u3059\u3002",
-      "\u4fdd\u5b58\u3057\u3066\u3001\u3042\u3068\u3067\u898b\u8fd4\u305b\u308b\u57fa\u790e\u77e5\u8b58\u3068\u3057\u3066\u6d3b\u7528\u3057\u3066\u304f\u3060\u3055\u3044\u3002"
+      "毎日の土台を支える小さな存在",
+      "ミトコンドリアは、細胞の中でエネルギー産生に関わる存在です。",
+      "このテーマが注目されるのは、日々のコンディションの土台として考えられているから。",
+      "難しい話に見えても、まずは基礎を知ることが第一歩です。",
+      "毎日の習慣を見つめるときも、こうした基礎理解が静かなヒントになります。",
+      "保存して、あとで見返せる基礎知識に。"
     ]
   },
   "negative_prompts": [
     "cheap stock photo look",
-    "overdesigned infographic clutter",
-    "neon health-tech or biohacking aesthetic",
-    "aggressive sales graphics or before/after framing",
-    "fear-based medical visuals",
-    "gym, bodybuilding, or athletic performance imagery",
-    "exact duplication of any reference crop, pose, object placement, or gradient pattern"
+    "busy infographic clutter",
+    "neon blue biotech aesthetic",
+    "fitness-performance imagery",
+    "before-after framing",
+    "capsule explosion or flashy supplement advertising",
+    "heavy 3D mitochondria render with medical drama"
   ],
   "reference_files": [
     "brand/references/business-context/creative-packages/creative-package-2026-03-23.md",
     "brand/references/business-context/content-planning/Mitozz Instagram Content Calendar - 2026 - March.csv",
-    "brand/references/business-context/visual/Brand Visual Direction.pdf",
     "brand/references/business-context/visual/Brand Visual Direction.md",
     "brand/references/business-context/visual/reference-pack/reference-pack-index.md",
     "brand/references/business-context/strategy/Mitozz Japan Brand Voice And Messaging Guidelines.docx.pdf"
   ],
-  "notes": "March 23 educational carousel. Use the selected references to keep the Steel Light palette, glow, and whitespace consistent while varying crop, camera distance, and exact object placement."
+  "notes": "March 23 feed-only educational carousel. Introduce mitochondria in a calm, premium, easy-to-save format that feels intelligent rather than technical. Keep the Steel Light system consistent while varying crop, focal placement, and background treatment across variants."
 }

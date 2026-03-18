@@ -1,0 +1,223 @@
+Variant 1
+
+Create one Instagram instagram-feed-carousel image in aspect ratio 4:5.
+Brand mood: Steel Light. Soft science, clear skin, quiet confidence.
+Audience: Research-First Wellness Optimizer.
+Topic: What are mitochondria?. Objective: Educate.
+Visual archetype: education-card.
+
+Creative intent:
+- premium Japanese wellness editorial
+- calm educational clarity
+- cloud-white base with mist-blue atmosphere
+- science-led but soft and non-clinical
+- save-worthy text-first carousel
+- introductory mitochondria education that feels approachable rather than technical
+
+Brand guardrails:
+- keep the post minimal, intelligent, and premium
+- avoid neon biohacking or aggressive supplement-ad aesthetics
+- preserve generous text-safe whitespace on every slide
+- no hospital, lab-equipment, or heavy medical CGI cues
+- do not imply treatment, recovery, anti-aging, or guaranteed functional outcomes
+- match mood, palette, light quality, whitespace, and restraint from the selected references without duplicating exact crop, pose, object placement, or gradient pattern
+
+Composition goals:
+- 4:5 portrait carousel framing
+- one clear message per slide
+- centered or slightly offset focal structure
+- 40 percent or more negative space
+- subtle abstract science cue only, never a busy diagram
+- white-led educational layout with calm mobile readability
+- product absent or reduced to a near-invisible brand-presence detail only on the final card
+
+Reference strategy:
+Use the education-layout anchor for spacing and hierarchy, the cool-palette anchor for tonality and light quality, and the CTA-layout anchor only for the final save card rhythm.
+
+Variation guardrails:
+- do not reuse exact paragraph blocks or text placement from anchors
+- rotate focal placement between centered and slightly offset layouts
+- keep apricot accent use below 10 percent of the frame
+- avoid using the same background wash on every slide
+- keep the carousel more introductory and education-first than campaign-like
+
+Negative prompts:
+- cheap stock photo look
+- busy infographic clutter
+- neon blue biotech aesthetic
+- fitness-performance imagery
+- before-after framing
+- capsule explosion or flashy supplement advertising
+- heavy 3D mitochondria render with medical drama
+
+Text overlay:
+- Allowed: True
+- Tone: clear, premium, educational, quietly reassuring
+- Font reference: Noto Sans JP Bold / Medium
+- Headline (Japanese): ミトコンドリアとは？
+- Slide copy (Japanese): 毎日の土台を支える小さな存在
+- Slide copy (Japanese): ミトコンドリアは、細胞の中でエネルギー産生に関わる存在です。
+- Slide copy (Japanese): このテーマが注目されるのは、日々のコンディションの土台として考えられているから。
+- Slide copy (Japanese): 難しい話に見えても、まずは基礎を知ることが第一歩です。
+- Slide copy (Japanese): 毎日の習慣を見つめるときも、こうした基礎理解が静かなヒントになります。
+- Slide copy (Japanese): 保存して、あとで見返せる基礎知識に。
+
+Image references to attach in ChatGPT:
+- C:\Users\esmoresernieryanocam\Desktop\Workspace\Nano banana\brand\references\business-context\visual\reference-pack\style-anchors\anchor-education-layout-01.png
+- C:\Users\esmoresernieryanocam\Desktop\Workspace\Nano banana\brand\references\business-context\visual\reference-pack\style-anchors\anchor-cool-palette-01.png
+- C:\Users\esmoresernieryanocam\Desktop\Workspace\Nano banana\brand\references\business-context\visual\reference-pack\style-anchors\anchor-cta-layout-01.png
+
+Execution notes:
+March 23 feed-only educational carousel. Introduce mitochondria in a calm, premium, easy-to-save format that feels intelligent rather than technical. Keep the Steel Light system consistent while varying crop, focal placement, and background treatment across variants.
+
+Variant 1: use a centered composition with airy whitespace, a calmer camera distance, and a restrained glow treatment.
+
+
+Variant 2
+
+Create one Instagram instagram-feed-carousel image in aspect ratio 4:5.
+Brand mood: Steel Light. Soft science, clear skin, quiet confidence.
+Audience: Research-First Wellness Optimizer.
+Topic: What are mitochondria?. Objective: Educate.
+Visual archetype: education-card.
+
+Creative intent:
+- premium Japanese wellness editorial
+- calm educational clarity
+- cloud-white base with mist-blue atmosphere
+- science-led but soft and non-clinical
+- save-worthy text-first carousel
+- introductory mitochondria education that feels approachable rather than technical
+
+Brand guardrails:
+- keep the post minimal, intelligent, and premium
+- avoid neon biohacking or aggressive supplement-ad aesthetics
+- preserve generous text-safe whitespace on every slide
+- no hospital, lab-equipment, or heavy medical CGI cues
+- do not imply treatment, recovery, anti-aging, or guaranteed functional outcomes
+- match mood, palette, light quality, whitespace, and restraint from the selected references without duplicating exact crop, pose, object placement, or gradient pattern
+
+Composition goals:
+- 4:5 portrait carousel framing
+- one clear message per slide
+- centered or slightly offset focal structure
+- 40 percent or more negative space
+- subtle abstract science cue only, never a busy diagram
+- white-led educational layout with calm mobile readability
+- product absent or reduced to a near-invisible brand-presence detail only on the final card
+
+Reference strategy:
+Use the education-layout anchor for spacing and hierarchy, the cool-palette anchor for tonality and light quality, and the CTA-layout anchor only for the final save card rhythm.
+
+Variation guardrails:
+- do not reuse exact paragraph blocks or text placement from anchors
+- rotate focal placement between centered and slightly offset layouts
+- keep apricot accent use below 10 percent of the frame
+- avoid using the same background wash on every slide
+- keep the carousel more introductory and education-first than campaign-like
+
+Negative prompts:
+- cheap stock photo look
+- busy infographic clutter
+- neon blue biotech aesthetic
+- fitness-performance imagery
+- before-after framing
+- capsule explosion or flashy supplement advertising
+- heavy 3D mitochondria render with medical drama
+
+Text overlay:
+- Allowed: True
+- Tone: clear, premium, educational, quietly reassuring
+- Font reference: Noto Sans JP Bold / Medium
+- Headline (Japanese): ミトコンドリアとは？
+- Slide copy (Japanese): 毎日の土台を支える小さな存在
+- Slide copy (Japanese): ミトコンドリアは、細胞の中でエネルギー産生に関わる存在です。
+- Slide copy (Japanese): このテーマが注目されるのは、日々のコンディションの土台として考えられているから。
+- Slide copy (Japanese): 難しい話に見えても、まずは基礎を知ることが第一歩です。
+- Slide copy (Japanese): 毎日の習慣を見つめるときも、こうした基礎理解が静かなヒントになります。
+- Slide copy (Japanese): 保存して、あとで見返せる基礎知識に。
+
+Image references to attach in ChatGPT:
+- C:\Users\esmoresernieryanocam\Desktop\Workspace\Nano banana\brand\references\business-context\visual\reference-pack\style-anchors\anchor-education-layout-01.png
+- C:\Users\esmoresernieryanocam\Desktop\Workspace\Nano banana\brand\references\business-context\visual\reference-pack\style-anchors\anchor-cool-palette-01.png
+- C:\Users\esmoresernieryanocam\Desktop\Workspace\Nano banana\brand\references\business-context\visual\reference-pack\style-anchors\anchor-cta-layout-01.png
+
+Execution notes:
+March 23 feed-only educational carousel. Introduce mitochondria in a calm, premium, easy-to-save format that feels intelligent rather than technical. Keep the Steel Light system consistent while varying crop, focal placement, and background treatment across variants.
+
+Variant 2: use a slightly offset composition with a closer crop, softer foreground depth, and a slightly warmer apricot signal accent.
+
+
+Variant 3
+
+Create one Instagram instagram-feed-carousel image in aspect ratio 4:5.
+Brand mood: Steel Light. Soft science, clear skin, quiet confidence.
+Audience: Research-First Wellness Optimizer.
+Topic: What are mitochondria?. Objective: Educate.
+Visual archetype: education-card.
+
+Creative intent:
+- premium Japanese wellness editorial
+- calm educational clarity
+- cloud-white base with mist-blue atmosphere
+- science-led but soft and non-clinical
+- save-worthy text-first carousel
+- introductory mitochondria education that feels approachable rather than technical
+
+Brand guardrails:
+- keep the post minimal, intelligent, and premium
+- avoid neon biohacking or aggressive supplement-ad aesthetics
+- preserve generous text-safe whitespace on every slide
+- no hospital, lab-equipment, or heavy medical CGI cues
+- do not imply treatment, recovery, anti-aging, or guaranteed functional outcomes
+- match mood, palette, light quality, whitespace, and restraint from the selected references without duplicating exact crop, pose, object placement, or gradient pattern
+
+Composition goals:
+- 4:5 portrait carousel framing
+- one clear message per slide
+- centered or slightly offset focal structure
+- 40 percent or more negative space
+- subtle abstract science cue only, never a busy diagram
+- white-led educational layout with calm mobile readability
+- product absent or reduced to a near-invisible brand-presence detail only on the final card
+
+Reference strategy:
+Use the education-layout anchor for spacing and hierarchy, the cool-palette anchor for tonality and light quality, and the CTA-layout anchor only for the final save card rhythm.
+
+Variation guardrails:
+- do not reuse exact paragraph blocks or text placement from anchors
+- rotate focal placement between centered and slightly offset layouts
+- keep apricot accent use below 10 percent of the frame
+- avoid using the same background wash on every slide
+- keep the carousel more introductory and education-first than campaign-like
+
+Negative prompts:
+- cheap stock photo look
+- busy infographic clutter
+- neon blue biotech aesthetic
+- fitness-performance imagery
+- before-after framing
+- capsule explosion or flashy supplement advertising
+- heavy 3D mitochondria render with medical drama
+
+Text overlay:
+- Allowed: True
+- Tone: clear, premium, educational, quietly reassuring
+- Font reference: Noto Sans JP Bold / Medium
+- Headline (Japanese): ミトコンドリアとは？
+- Slide copy (Japanese): 毎日の土台を支える小さな存在
+- Slide copy (Japanese): ミトコンドリアは、細胞の中でエネルギー産生に関わる存在です。
+- Slide copy (Japanese): このテーマが注目されるのは、日々のコンディションの土台として考えられているから。
+- Slide copy (Japanese): 難しい話に見えても、まずは基礎を知ることが第一歩です。
+- Slide copy (Japanese): 毎日の習慣を見つめるときも、こうした基礎理解が静かなヒントになります。
+- Slide copy (Japanese): 保存して、あとで見返せる基礎知識に。
+
+Image references to attach in ChatGPT:
+- C:\Users\esmoresernieryanocam\Desktop\Workspace\Nano banana\brand\references\business-context\visual\reference-pack\style-anchors\anchor-education-layout-01.png
+- C:\Users\esmoresernieryanocam\Desktop\Workspace\Nano banana\brand\references\business-context\visual\reference-pack\style-anchors\anchor-cool-palette-01.png
+- C:\Users\esmoresernieryanocam\Desktop\Workspace\Nano banana\brand\references\business-context\visual\reference-pack\style-anchors\anchor-cta-layout-01.png
+
+Execution notes:
+March 23 feed-only educational carousel. Introduce mitochondria in a calm, premium, easy-to-save format that feels intelligent rather than technical. Keep the Steel Light system consistent while varying crop, focal placement, and background treatment across variants.
+
+Variant 3: use a more editorial angle with extra breathing room, a quieter focal treatment, and stronger text-safe spacing.

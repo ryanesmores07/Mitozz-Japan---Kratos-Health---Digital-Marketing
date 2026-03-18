@@ -35,6 +35,34 @@ For free rehearsal runs, use `tools/chatgpt-image-test-run.ps1` to turn an exist
 
 Use the checklists in `workflows/` to keep planning, creative packaging, generation, and approval lean and repeatable.
 
+## Local Nano Banana MCP
+
+This workspace now includes a repo-local launcher for the published Nano Banana MCP server:
+
+- launcher: `tools/run-nanobanana-mcp.ps1`
+- Cursor example config: `mcp/nanobanana.cursor.example.json`
+
+Recommended setup:
+
+1. Set `GEMINI_API_KEY` in your local environment or IDE secret store.
+2. Point your MCP client at `tools/run-nanobanana-mcp.ps1`.
+3. Do not commit real API keys into repo config files.
+
+The launcher wraps:
+
+- `uvx nanobanana-mcp-server@latest`
+
+This gives the workspace a stable local entrypoint even if the MCP client configuration differs between tools.
+
+## Calendar Operating Rules
+
+The production calendar now uses one shared table for feed and story rows with a Japanese-first review layer.
+
+- Client-facing planning fields stay in Japanese: `投稿テーマ`, `切り口`, `補足メモ`
+- Workflow fields stay stable for downstream skills: `Section`, `Format`, `Objective`, `Primary Persona`, `Workflow Status`
+- Keep feed and story rows in one CSV with one header row
+- When needed for Google Drive or client sharing, generate a matching `.xlsx` beside the CSV with `tools/export-csv-to-xlsx.ps1`
+
 ## Prompt Naming
 
 Use date-based filenames so the execution skill can reliably match prompts from calendar-driven requests:

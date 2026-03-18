@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "nanobanana": {
+      "command": "powershell",
+      "args": [
+        "-NoProfile",
+        "-ExecutionPolicy",
+        "Bypass",
+        "-File",
+        "tools/run-nanobanana-mcp.ps1"
+      ],
+      "env": {
+        "GEMINI_API_KEY": "set-your-key-outside-the-repo"
+      }
+    }
+  }
+}
