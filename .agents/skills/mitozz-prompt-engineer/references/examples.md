@@ -2,6 +2,8 @@
 
 These examples show how creative-direction output should be turned into final Nano Banana prompt JSON with both document references and image references.
 
+Use `style-anchors/` as the default visual source. Add `working-examples/` only when an asset was explicitly approved into that folder.
+
 ## Feed Educational Carousel Example
 
 ```json
@@ -10,6 +12,7 @@ These examples show how creative-direction output should be turned into final Na
   "campaign_name": "March Organic Education",
   "topic": "What are mitochondria?",
   "objective": "Educate",
+  "asset_archetype": "education-card",
   "platform": "instagram",
   "aspect_ratio": "4:5",
   "audience": "Research-First Wellness Optimizer",
@@ -32,11 +35,16 @@ These examples show how creative-direction output should be turned into final Na
       "match_strength": "medium"
     },
     {
-      "path": "brand/references/business-context/visual/reference-pack/working-examples/feed-education-whitespace-thumb.jpg",
-      "role": "working-example",
-      "influence": ["whitespace", "text-first balance"],
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.jpg",
+      "role": "style-anchor",
+      "influence": ["palette", "lighting", "restraint"],
       "match_strength": "medium"
     }
+  ],
+  "reference_strategy": "Use the first anchor for whitespace and editorial restraint, and the second anchor for tonality and calm lighting.",
+  "variation_guardrails": [
+    "vary crop and camera distance",
+    "avoid repeating exact text placement"
   ],
   "reference_files": [
     "brand/references/business-context/visual/Brand Visual Direction.md",
@@ -54,6 +62,7 @@ These examples show how creative-direction output should be turned into final Na
   "campaign_name": "March Organic Education",
   "topic": "Product hero",
   "objective": "Trust build",
+  "asset_archetype": "product-hero",
   "platform": "instagram",
   "aspect_ratio": "4:5",
   "image_references": [
@@ -64,11 +73,16 @@ These examples show how creative-direction output should be turned into final Na
       "match_strength": "medium"
     },
     {
-      "path": "brand/references/business-context/visual/reference-pack/working-examples/feed-product-glow-thumb.jpg",
-      "role": "working-example",
-      "influence": ["product framing", "soft glow treatment"],
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.jpg",
+      "role": "style-anchor",
+      "influence": ["palette", "restraint"],
       "match_strength": "medium"
     }
+  ],
+  "reference_strategy": "Let the product-glow anchor drive lighting and framing, while the cool-palette anchor keeps the tone consistent.",
+  "variation_guardrails": [
+    "rotate angle and reflection pattern",
+    "change crop and focal placement"
   ],
   "notes": "Match premium glow and restraint. Rotate angle and reflection pattern."
 }
@@ -82,6 +96,7 @@ These examples show how creative-direction output should be turned into final Na
   "campaign_name": "March Organic Education",
   "topic": "Story reinforcement",
   "objective": "Reinforce",
+  "asset_archetype": "story-reinforcement",
   "platform": "instagram",
   "aspect_ratio": "9:16",
   "image_references": [
@@ -92,11 +107,16 @@ These examples show how creative-direction output should be turned into final Na
       "match_strength": "medium"
     },
     {
-      "path": "brand/references/business-context/visual/reference-pack/working-examples/story-text-first-thumb.jpg",
-      "role": "working-example",
-      "influence": ["vertical breathing room", "text-first hierarchy"],
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.jpg",
+      "role": "style-anchor",
+      "influence": ["palette", "soft atmosphere"],
       "match_strength": "medium"
     }
+  ],
+  "reference_strategy": "Use one anchor for breathing room and one anchor for the steel-blue atmosphere.",
+  "variation_guardrails": [
+    "change exact frame layout",
+    "shift focal placement"
   ],
   "notes": "Keep the mood aligned while varying exact frame layout and focal placement."
 }

@@ -3,6 +3,7 @@
   "campaign_name": "March 2026 Organic Education",
   "topic": "Mitochondria basics story reinforcement",
   "objective": "Reinforce",
+  "asset_archetype": "story-reinforcement",
   "platform": "instagram",
   "aspect_ratio": "9:16",
   "audience": "Research-First Wellness Optimizer",
@@ -40,14 +41,21 @@
       "match_strength": "medium"
     },
     {
-      "path": "brand/references/business-context/visual/reference-pack/working-examples/story-text-first-thumb.jpg",
-      "role": "working-example",
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.jpg",
+      "role": "style-anchor",
       "influence": [
-        "text-first hierarchy",
-        "simple vertical composition"
+        "palette",
+        "soft atmosphere",
+        "restraint"
       ],
       "match_strength": "medium"
     }
+  ],
+  "reference_strategy": "Use the editorial-whitespace anchor for breathing room and the cool-palette anchor for steel-blue atmosphere.",
+  "variation_guardrails": [
+    "vary exact frame layout",
+    "vary focal placement",
+    "avoid copying the reference frame structure too closely"
   ],
   "text_overlay": {
     "allowed": true,

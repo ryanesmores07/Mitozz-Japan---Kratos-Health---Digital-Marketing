@@ -19,6 +19,8 @@ Use this skill after `mitozz-creatives-director` and before `nano-banana-instagr
    - `brand/references/business-context/visual/reference-pack/reference-pack-index.md`
    - `brand/references/business-context/visual/reference-pack/style-anchors/`
    - `brand/references/business-context/visual/reference-pack/working-examples/`
+6. `workflows/02-build-creative-package.md`
+7. `workflows/03-generate-and-approve.md`
 
 ## Prompt Shape
 
@@ -28,6 +30,7 @@ Use this JSON structure:
 - `campaign_name`
 - `topic`
 - `objective`
+- `asset_archetype`
 - `platform`
 - `aspect_ratio`
 - `audience`
@@ -35,6 +38,8 @@ Use this JSON structure:
 - `brand_guardrails`
 - `composition`
 - `image_references`
+- `reference_strategy`
+- `variation_guardrails`
 - `text_overlay`
 - `negative_prompts`
 - `reference_files`
@@ -58,6 +63,7 @@ Default rules:
 - include at least 1 `style-anchor` when available
 - use at most 1 close composition match
 - default `match_strength` to `medium`
+- if no approved `working-example` exists, use `style-anchor` references only
 
 Keep `reference_files` for business-context documents only. Use `image_references` for image inputs.
 
@@ -76,6 +82,7 @@ Before finalizing a prompt, verify:
 - `image_references` and `reference_files` are separate
 - the prompt reflects the creatives director concept
 - the prompt encodes the Steel Light system
+- the prompt includes `asset_archetype` and `reference_strategy`
 - the prompt includes variation guardrails so outputs stay cohesive without becoming repetitive
 
 ## Output

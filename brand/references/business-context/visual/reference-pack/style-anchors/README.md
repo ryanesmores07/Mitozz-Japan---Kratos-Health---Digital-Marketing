@@ -1,18 +1,36 @@
 # Style Anchors
 
+This folder is the active visual source of truth for Nano Banana generation.
+
 Drop the approved inspiration images here.
 
-Use these naming conventions:
+Recommended naming conventions:
 
 - `anchor-editorial-whitespace-01.jpg`
 - `anchor-product-glow-01.jpg`
 - `anchor-portrait-trust-01.jpg`
 - `anchor-education-layout-01.jpg`
 - `anchor-cool-palette-01.jpg`
+- `anchor-feed-rhythm-01.jpg`
+- `anchor-cta-layout-01.jpg`
+- `anchor-body-copy-01.jpg`
+
+What each anchor should control:
+
+- `editorial-whitespace`: spacing, breathing room, and quiet composition
+- `product-glow`: lighting quality, reflections, and restrained warmth
+- `portrait-trust`: human mood, posture, and premium softness
+- `education-layout`: text-safe balance and save-worthy editorial rhythm
+- `cool-palette`: steel-blue atmosphere and cloud-white tonality
+- `cta-layout`: CTA hierarchy, end-card rhythm, and soft prompt framing
+- `body-copy`: long-form text hierarchy, highlighted takeaways, and comfortable reading density
 
 Rules:
 
 - Keep 5 to 8 anchors total.
 - Keep only evergreen references that define the brand look.
 - Avoid near-duplicates.
+- Do not use trial outputs as style anchors.
+- Prefer one clear function per anchor.
+- Use only files in this folder for prompt `image_references`.
 - Update `../reference-pack-index.md` whenever you add or remove an anchor.

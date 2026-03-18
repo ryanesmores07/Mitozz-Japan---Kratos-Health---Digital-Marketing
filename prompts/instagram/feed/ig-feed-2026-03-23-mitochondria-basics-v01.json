@@ -3,6 +3,7 @@
   "campaign_name": "March 2026 Organic Education",
   "topic": "What are mitochondria?",
   "objective": "Educate",
+  "asset_archetype": "education-card",
   "platform": "instagram",
   "aspect_ratio": "4:5",
   "audience": "Research-First Wellness Optimizer",
@@ -42,23 +43,21 @@
       "match_strength": "medium"
     },
     {
-      "path": "brand/references/business-context/visual/reference-pack/working-examples/feed-education-whitespace-thumb.jpg",
-      "role": "working-example",
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.jpg",
+      "role": "style-anchor",
       "influence": [
-        "whitespace",
-        "text-first balance"
-      ],
-      "match_strength": "medium"
-    },
-    {
-      "path": "brand/references/business-context/visual/reference-pack/working-examples/feed-product-glow-thumb.jpg",
-      "role": "working-example",
-      "influence": [
-        "restrained warm accent use",
-        "soft glow treatment"
+        "palette",
+        "calm lighting",
+        "restraint"
       ],
       "match_strength": "medium"
     }
+  ],
+  "reference_strategy": "Use the education-layout anchor for whitespace and editorial balance, then the cool-palette anchor for tonality and calm lighting.",
+  "variation_guardrails": [
+    "vary crop and camera distance",
+    "vary exact object placement",
+    "do not repeat exact text placement from references"
   ],
   "text_overlay": {
     "allowed": true,

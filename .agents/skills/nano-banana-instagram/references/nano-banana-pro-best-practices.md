@@ -1,73 +1,59 @@
-# Nano Banana Pro best practices
+# Nano Banana Pro Best Practices
 
-This document summarizes practices from the [awesome-nano-banana-pro-prompts](https://github.com/YouMind-OpenLab/awesome-nano-banana-pro-prompts) library (10,000+ curated prompts, 16 languages) and applies them to Mitozz Instagram execution.
+Use these rules when building or executing Instagram image prompts for Mitozz.
 
-## Source
+## Core Principles
 
-- **Repo:** [YouMind-OpenLab/awesome-nano-banana-pro-prompts](https://github.com/YouMind-OpenLab/awesome-nano-banana-pro-prompts)
-- **Use:** When building or passing prompts to Nano Banana Pro MCP, follow these patterns for consistent, high-quality results.
+- Keep the visual system consistent: steel-blue atmosphere, cloud-white space, restrained apricot accents, and calm premium lighting.
+- Match references for palette, light quality, whitespace, and restraint.
+- Do not clone the exact crop, pose, object placement, or gradient pattern from any reference.
+- Keep the output simple enough to feel premium on a mobile screen.
 
-## Best practices (aligned with community prompts)
+## Prompt Construction
 
-### 1. Specify aspect ratio explicitly
+- State the exact aspect ratio explicitly.
+- State the asset archetype explicitly: `education-card`, `product-hero`, `portrait-trust`, or `story-reinforcement`.
+- Include the exact on-image Japanese text in quotes when text is required.
+- Separate document references from image references:
+  - `reference_files` for business context, strategy, and visual-direction docs
+  - `image_references` for actual visual inputs
+- Use `reference_strategy` to explain which references should dominate and why.
+- Use `variation_guardrails` to state what must change from the references.
+- Pass negative prompts explicitly.
 
-Nano Banana Pro responds well when the aspect ratio is stated clearly in the prompt.
+## Reference Selection
 
-- **Feed:** Always include `4:5` (e.g. “Aspect ratio: 4:5 vertical, Instagram feed.”).
-- **Story:** Always include `9:16` (e.g. “Aspect ratio: 9:16 vertical, Instagram story.”).
+- Use 2 to 4 image references per generation.
+- Include at least 1 `style-anchor` when available.
+- Use at most 1 close composition match.
+- Match feed educational assets primarily to whitespace, typography, and editorial layout references.
+- Match product heroes primarily to lighting, palette, and product framing references.
+- Match stories primarily to vertical breathing room and simplified composition references.
 
-Our prompt JSON already has `aspect_ratio`; when constructing the natural-language or structured prompt for the MCP, include this value explicitly.
+## Generation Method
 
-### 2. Put exact on-image text in quotes
+- Generate 3 variants per asset before choosing a winner.
+- Keep the same `image_references` across the first batch.
+- Vary crop, camera distance, angle, and focal treatment across the variants.
+- Select 1 winner and refine once if needed.
+- Avoid repeated one-off prompting with large structural changes between attempts.
 
-Community prompts that need accurate text (quote cards, titles, labels) put the **exact text to appear** in quotes inside the prompt. This improves faithful rendering.
+## Approval Rules
 
-- **Apply to our flow:** When sending the prompt to Nano Banana Pro, include the Japanese copy as quoted text, e.g.:
-  - “Headline text: 「ミトコンドリアって、何？」”
-  - “Slide 1: 「ミトコンドリアって、何？毎日のコンディションを考える、土台の話。」”
-  - For carousel: “Slide 2: 「…」”, “Slide 3: 「…」”, etc.
+Only promote generated outputs into `working-examples` when they:
 
-So: pass `text_overlay.headline_ja` and each `text_overlay.slides_ja` entry as **quoted text** in the generation prompt, not only as metadata.
+- clearly match the visual direction
+- feel premium and calm
+- do not look repetitive next to the current reference pack
+- improve the system instead of diluting it
 
-### 3. Use negative prompts
+Promotion should stay human-approved, never automatic.
 
-Featured prompts often include a dedicated **negative prompts** section (things to avoid), which reduces off-brand or low-quality outputs.
+## Final Execution Checklist
 
-- Our JSON has `negative_prompts` (array). When calling the MCP, include these as “avoid: …” or equivalent so the model does not generate those elements.
-
-### 4. Structured prompt sections
-
-High-quality prompts in the repo use clear sections, e.g. Scene, Subject, Environment, Lighting, Camera, Negative prompts (or similar). Our JSON already provides:
-
-- `visual_intent` → overall style and mood
-- `composition` → layout and framing
-- `brand_guardrails` → do’s and don’ts
-- `negative_prompts` → avoid list
-
-When building the prompt for the MCP, keep this structure readable (e.g. “Visual style: …”, “Composition: …”, “Avoid: …”) so the model gets precise control.
-
-### 5. Japanese and multilingual
-
-The library supports Japanese (JA) and 16+ languages. For Mitozz Japan:
-
-- Use the **exact Japanese strings** from our prompt file (`headline_ja`, `slides_ja`); do not translate or rephrase.
-- If the MCP or model supports a “language” or “locale” hint, set it to Japanese so typography and layout stay appropriate.
-
-### 6. Quality and reproducibility
-
-From the repo’s quality standards:
-
-- **Clear and reproducible:** Our prompt files are versioned and structured so the same JSON produces consistent intent.
-- **Structured:** We use a fixed schema (asset_type, aspect_ratio, visual_intent, composition, text_overlay, negative_prompts, etc.) so every execution has the same control levers.
-
-## Summary for the execution agent
-
-When calling Nano Banana Pro MCP with a Mitozz prompt JSON:
-
-1. **Aspect ratio:** State the prompt’s `aspect_ratio` explicitly (4:5 or 9:16).
-2. **Exact text:** Include `headline_ja` and each `slides_ja` entry as **quoted text** in the generation prompt so the image shows that text accurately.
-3. **Structure:** Map `visual_intent`, `composition`, and `brand_guardrails` into clear prompt sections.
-4. **Negative prompts:** Pass `negative_prompts` as things to avoid.
-5. **No copy changes:** Do not alter or regenerate the Japanese copy; use it verbatim.
-
-These practices align our skill with the [awesome-nano-banana-pro-prompts](https://github.com/YouMind-OpenLab/awesome-nano-banana-pro-prompts) library and improve text accuracy and brand consistency.
+- The prompt includes `asset_archetype`.
+- The prompt includes `image_references` and `reference_files`.
+- The prompt includes `reference_strategy`.
+- The prompt includes `variation_guardrails`.
+- The prompt includes explicit negative prompts.
+- The selected references fit the asset type and do not overconstrain composition.

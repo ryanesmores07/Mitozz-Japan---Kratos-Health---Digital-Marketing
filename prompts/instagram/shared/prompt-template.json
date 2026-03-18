@@ -3,6 +3,7 @@
   "campaign_name": "",
   "topic": "",
   "objective": "",
+  "asset_archetype": "",
   "platform": "instagram",
   "aspect_ratio": "4:5",
   "audience": "",
@@ -17,6 +18,8 @@
       "match_strength": "medium"
     }
   ],
+  "reference_strategy": "",
+  "variation_guardrails": [],
   "text_overlay": {
     "allowed": true,
     "max_words": 0,

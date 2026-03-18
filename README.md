@@ -1,39 +1,37 @@
 Nano Banana Instagram Workspace
 ================================
 
-This workspace is organized for creating and maintaining **reusable JSON prompts** for Nano Banana Pro, focused on **Instagram organic marketing** (Feed posts and Stories).
+This workspace is organized for creating and maintaining reusable JSON prompts for Nano Banana Pro, focused on Instagram organic marketing for Mitozz Japan.
 
 ## Structure
 
-- `brand/`: Brand identity and visual references that keep images consistent.
-- `.agents/skills/`: Codex-native repository skills.
-- `prompts/`: Reusable JSON prompts and their schemas, organized by Instagram format.
-- `workflows/`: Short checklists describing how you use prompts and Nano Banana Pro.
+- `brand/`: brand identity, strategy, creative packages, and visual references
+- `.agents/skills/`: Codex-native repository skills
+- `prompts/`: reusable JSON prompts organized by Instagram format
+- `workflows/`: lean checklists for planning, packaging, generation, and approval
+- `output/`: generated asset history and candidate working examples
+- `tools/`: local helper scripts
 
-## Skills and Workflow
+## Skills And Workflow
 
 This project is wired into Codex using four project-local skills under `.agents/skills/`:
 
-- `mitozz-content-calendar`: plans and drafts the **monthly Mitozz Japan Instagram content calendar** (feed, reels, stories) based on audience research, brand strategy, and prior calendars.
-- `mitozz-creatives-director`: turns calendar rows into **creative direction packages** with positioning, Japanese copy, captions, layout ideas, and Nano Banana-ready visual guidance.
-- `mitozz-prompt-engineer`: converts the creatives director output into **consistent Nano Banana Pro JSON prompt files** under `prompts/instagram/feed/` and `prompts/instagram/stories/`.
-- `nano-banana-instagram`: takes finalized prompt files and uses **Nano Banana Pro MCP** to generate the actual Instagram creatives.
+- `mitozz-content-calendar`: plans the monthly Mitozz Japan Instagram calendar
+- `mitozz-creatives-director`: turns calendar rows into decisive creative packages
+- `mitozz-prompt-engineer`: converts creative packages into Nano Banana JSON prompts
+- `nano-banana-instagram`: executes prompt files and generates the final assets
 
-Both skills follow Anthropic-style patterns:
-
-- concise `SKILL.md` entrypoints with clear “what + when” descriptions,
-- links to one-level-deep reference material (e.g. `references/prompt-examples.md`),
-- workflows that assume the agent already knows general best practices.
-
-The repository now treats `.agents/skills/` as the single source of truth for skill discovery and maintenance.
+The repository treats `.agents/skills/` as the single source of truth for skill discovery and maintenance.
 
 ## Typical Flow
 
-1. Use `mitozz-content-calendar` to create or revise a monthly calendar under `brand/references/business-context/content-planning/`.
-2. Use `mitozz-creatives-director` to turn specific dates or date ranges into creative packages with Japanese messaging, design direction, and Nano Banana handoff guidance.
-3. Use `mitozz-prompt-engineer` to create or update the final prompt JSON under `prompts/instagram/feed/` or `prompts/instagram/stories/`.
+1. Use `mitozz-content-calendar` to create or revise the monthly calendar under `brand/references/business-context/content-planning/`.
+2. Use `mitozz-creatives-director` to turn selected calendar rows into creative packages under `brand/references/business-context/creative-packages/`.
+3. Use `mitozz-prompt-engineer` to create or update prompt JSON in `prompts/instagram/feed/` or `prompts/instagram/stories/`.
 4. Use `nano-banana-instagram` to execute Nano Banana Pro MCP using those prompt files.
-5. Reuse the saved prompts for future iterations, keeping naming aligned with `prompts/schema/naming-conventions.md`.
+5. Review the outputs, approve winners, and promote only the best assets into the visual reference pack when appropriate.
+
+Use the checklists in `workflows/` to keep planning, creative packaging, generation, and approval lean and repeatable.
 
 ## Prompt Naming
 

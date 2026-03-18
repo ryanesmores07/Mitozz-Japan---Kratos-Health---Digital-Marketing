@@ -5,6 +5,7 @@ Use this folder as the official image-reference source for Nano Banana generatio
 ## Structure
 
 - `style-anchors/`: evergreen mood and look references that define the brand system
+- `source-intake/`: extra inspiration files kept for review but not used as active generation guides
 - `working-examples/`: approved Mitozz outputs that prove how the system should look in real posts
 - `reference-pack-index.md`: the source of truth for how references are selected and used
 
@@ -19,5 +20,7 @@ Use this folder as the official image-reference source for Nano Banana generatio
 
 ## Current State
 
-- `working-examples/` has been seeded with approved generated thumbs from the existing March outputs.
-- `style-anchors/` is ready for the approved inspiration images to be dropped in as the first long-term style anchors.
+- `style-anchors/` now contains the approved anchor set derived from your uploaded inspiration screenshots.
+- `source-intake/` holds remaining inspiration files that are not active anchors.
+- `working-examples/` is intentionally empty until real Mitozz outputs are explicitly approved as references.
+- `style-anchors/` is the active source of visual guidance for prompts and generation.

@@ -16,12 +16,15 @@ Use this skill for Instagram organic image generation with Nano Banana Pro by ex
 5. `brand/references/business-context/visual/reference-pack/style-anchors/`
 6. `brand/references/business-context/visual/reference-pack/working-examples/`
 7. Strategy, audience, and content-planning docs when relevant
+8. `workflows/03-generate-and-approve.md`
+9. `references/nano-banana-pro-best-practices.md`
 
 ## Required Execution Behavior
 
 - Load every prompt `image_references` entry as an actual visual reference input.
 - Treat `style-anchor` references as the highest-priority visual input.
 - Use `working-example` references to reinforce brand uniformity, not to clone an existing post.
+- Treat `working-example` references as unavailable unless they were explicitly approved into the folder.
 - If no `working-example` exists for the asset type, fall back to `style-anchor` references plus the visual-direction docs.
 - Keep any prompt refinements minimal and execution-focused.
 
@@ -38,8 +41,11 @@ When building the final generation request, explicitly instruct Nano Banana to:
 
 Prompt files should include:
 
+- `asset_archetype` for the visual archetype
 - `image_references` for actual image assets
 - `reference_files` for documents and business context
+- `reference_strategy` for which references should dominate
+- `variation_guardrails` for what must change from the references
 - exact `text_overlay.headline_ja` and `text_overlay.slides_ja`
 
 ## Output
