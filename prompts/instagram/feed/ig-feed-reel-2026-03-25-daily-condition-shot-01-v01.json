@@ -1,0 +1,103 @@
+{
+  "asset_type": "instagram-feed",
+  "campaign_name": "March Organic Education",
+  "topic": "Rethink daily condition design",
+  "objective": "Educate",
+  "asset_archetype": "reel-source-frame",
+  "platform": "instagram",
+  "aspect_ratio": "9:16",
+  "audience": "Sleep-Deprived High Performer",
+  "motion_role": "opening-hook",
+  "shot_id": "shot-01",
+  "shot_position": 1,
+  "continuity_tokens": [
+    "same Japanese woman in early 30s",
+    "soft steel-blue morning light",
+    "quiet premium apartment workspace",
+    "neutral wardrobe",
+    "no baked-in text"
+  ],
+  "visual_intent": [
+    "premium wellness editorial",
+    "subtle busy-morning tension",
+    "clean negative space for later kinetic typography"
+  ],
+  "brand_guardrails": [
+    "avoid exaggerated stress acting",
+    "avoid influencer-style trend visuals",
+    "keep the mood premium and calm"
+  ],
+  "composition": [
+    "vertical 9:16 framing",
+    "subject slightly off-center",
+    "clear top and bottom text-safe zones",
+    "single readable focal action"
+  ],
+  "image_references": [
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-editorial-whitespace-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "whitespace",
+        "editorial restraint",
+        "vertical breathing room"
+      ],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "lighting",
+        "palette",
+        "calm atmosphere"
+      ],
+      "match_strength": "medium"
+    }
+  ],
+  "reference_strategy": "Use the first anchor for breathing room and the second for steel-blue morning tonality.",
+  "variation_guardrails": [
+    "do not reuse an exact pose from the references",
+    "keep the background simpler than the anchors",
+    "preserve continuity with later shots through wardrobe, palette, and light direction"
+  ],
+  "text_overlay": {
+    "allowed": false,
+    "max_words": 0,
+    "tone": "premium, clear, restrained",
+    "font_reference": "Noto Sans JP or closest available sans-serif for Japanese",
+    "headline_ja": "",
+    "slides_ja": []
+  },
+  "sora_handoff": {
+    "use_for_sora": true,
+    "input_mode": "image-to-video",
+    "shot_goal": "Open the reel with a relatable premium busy-morning beat.",
+    "duration_seconds": 2.5,
+    "camera_motion": "Very subtle slow push-in.",
+    "subject_motion": "Small breath, soft blink, tiny hand movement near the desk.",
+    "transition_in": "Cold open from stillness.",
+    "transition_out": "Hold the last frame cleanly for a straight cut.",
+    "prompt": "Animate this vertical source image into a calm premium reel opening. Keep the same subject identity, wardrobe, environment, and soft steel-blue morning light. Use only subtle natural motion: a small breath, a soft blink, and a gentle hand movement. Add a very slow push-in. Do not add new people, props, or dramatic movement. Preserve generous text-safe negative space.",
+    "negative_prompt": [
+      "identity drift",
+      "warped hands",
+      "extra objects appearing",
+      "sudden lighting changes",
+      "fast camera moves",
+      "flashy ad transitions",
+      "unreadable text"
+    ]
+  },
+  "negative_prompts": [
+    "cheap stock photo energy",
+    "overacted fatigue expression",
+    "cluttered workspace",
+    "harsh fitness-ad aesthetic"
+  ],
+  "reference_files": [
+    "brand/references/business-context/visual/Brand Visual Direction.md",
+    "brand/references/business-context/content-planning/Mitozz Instagram Content Calendar - 2026 - March.csv"
+  ],
+  "notes": "Shot 01 of a coordinated March 25 reel set. Generate final selected output as .jpg."
+}

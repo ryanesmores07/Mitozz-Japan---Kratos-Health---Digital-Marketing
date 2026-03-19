@@ -5,7 +5,7 @@ Use this folder as the official image-reference source for Nano Banana generatio
 ## Structure
 
 - `style-anchors/`: evergreen mood and look references that define the brand system
-- `source-intake/`: extra inspiration files kept for review but not used as active generation guides
+- `source-intake/`: extra inspiration files plus approved product-truth source photos for accurate pack fidelity
 - `working-examples/`: approved Mitozz outputs that prove how the system should look in real posts
 - `reference-pack-index.md`: the source of truth for how references are selected and used
 
@@ -13,6 +13,7 @@ Use this folder as the official image-reference source for Nano Banana generatio
 
 - Use 2 to 4 image references per generation.
 - Always include at least 1 `style-anchor`.
+- Add 1 approved `source-intake/` product photo when the asset needs accurate bottle shape, cap, label, or tablet relationship.
 - Use at most 1 close composition match.
 - Match palette, lighting, whitespace, mood, and restraint.
 - Do not copy exact crop, pose, object placement, or gradient pattern.
@@ -21,6 +22,7 @@ Use this folder as the official image-reference source for Nano Banana generatio
 ## Current State
 
 - `style-anchors/` now contains the approved anchor set derived from your uploaded inspiration screenshots.
-- `source-intake/` holds remaining inspiration files that are not active anchors.
+- `source-intake/` holds remaining inspiration files plus the approved Mitozz bottle source photos.
 - `working-examples/` is intentionally empty until real Mitozz outputs are explicitly approved as references.
 - `style-anchors/` is the active source of visual guidance for prompts and generation.
+- Product-truth source photos in `source-intake/` should be paired with anchors when product fidelity matters, not used as standalone style guides.

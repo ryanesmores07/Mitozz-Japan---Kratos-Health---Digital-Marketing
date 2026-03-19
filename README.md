@@ -17,6 +17,15 @@ Current model standard:
 - `output/`: generated asset history and candidate working examples
 - `tools/`: local helper scripts
 
+## Encoding Rules
+
+This workspace should be treated as UTF-8 by default.
+
+- All calendars, creative packages, prompts, workflows, and skill docs should be saved as UTF-8
+- Japanese content is expected in planning and copy fields, so avoid ANSI or Shift-JIS saves for shared project files
+- `.editorconfig` defines UTF-8 as the workspace default
+- `tools/normalize-workspace-utf8.ps1` can be used to normalize key workflow files back to UTF-8 if needed
+
 ## Skills And Workflow
 
 This project is wired into Codex using four project-local skills under `.agents/skills/`:
@@ -35,6 +44,14 @@ The repository treats `.agents/skills/` as the single source of truth for skill 
 3. Use `mitozz-prompt-engineer` to create or update prompt JSON in `prompts/instagram/feed/` or `prompts/instagram/stories/`.
 4. Use `nano-banana-instagram` to execute Nano Banana Pro MCP using those prompt files.
 5. Review the outputs, approve winners, and promote only the best assets into the visual reference pack when appropriate.
+
+For Reels, the flow is more specific:
+
+1. Build the Reel creative package from `brand/references/business-context/creative-packages/reel-creative-package-template.md`.
+2. Create one coordinated prompt JSON per planned shot.
+3. Generate source frames with Nano Banana, defaulting outputs to `.jpg`.
+4. Animate approved source frames in Sora using `workflows/04-sora-reel-assembly-template.md`.
+5. Assemble, review, and export the final Reel cut.
 
 For free rehearsal runs, use `tools/chatgpt-image-test-run.ps1` to turn an existing prompt JSON into a dry-run ChatGPT image-generation bundle without calling a paid API.
 

@@ -7,6 +7,10 @@
   "platform": "instagram",
   "aspect_ratio": "4:5",
   "audience": "",
+  "motion_role": "",
+  "shot_id": "",
+  "shot_position": 0,
+  "continuity_tokens": [],
   "visual_intent": [],
   "brand_guardrails": [],
   "composition": [],
@@ -14,6 +18,12 @@
     {
       "path": "",
       "role": "style-anchor",
+      "influence": [],
+      "match_strength": "medium"
+    },
+    {
+      "path": "",
+      "role": "product-source",
       "influence": [],
       "match_strength": "medium"
     }
@@ -27,6 +37,18 @@
     "font_reference": "Noto Sans JP or closest available sans-serif for Japanese",
     "headline_ja": "",
     "slides_ja": []
+  },
+  "sora_handoff": {
+    "use_for_sora": false,
+    "input_mode": "image-to-video",
+    "shot_goal": "",
+    "duration_seconds": 0,
+    "camera_motion": "",
+    "subject_motion": "",
+    "transition_in": "",
+    "transition_out": "",
+    "prompt": "",
+    "negative_prompt": []
   },
   "negative_prompts": [],
   "reference_files": [],

@@ -32,5 +32,6 @@ Rules:
 - Avoid near-duplicates.
 - Do not use trial outputs as style anchors.
 - Prefer one clear function per anchor.
-- Use only files in this folder for prompt `image_references`.
+- Use files in this folder for prompt `image_references` whenever they are controlling style, palette, layout, lighting, or mood.
+- If an asset needs accurate bottle or tablet depiction, pair these anchors with approved product-truth photos from `../source-intake/`.
 - Update `../reference-pack-index.md` whenever you add or remove an anchor.

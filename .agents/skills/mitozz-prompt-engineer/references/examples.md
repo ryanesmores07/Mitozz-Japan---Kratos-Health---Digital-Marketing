@@ -2,7 +2,7 @@
 
 These examples show how creative-direction output should be turned into final Nano Banana prompt JSON with both document references and image references.
 
-Use `style-anchors/` as the default visual source. Add `working-examples/` only when an asset was explicitly approved into that folder.
+Use `style-anchors/` as the default visual source. Add approved `source-intake/` bottle photos as `product-source` references when pack fidelity matters. Add `working-examples/` only when an asset was explicitly approved into that folder.
 
 ## Feed Educational Carousel Example
 
@@ -29,13 +29,13 @@ Use `style-anchors/` as the default visual source. Add `working-examples/` only 
   ],
   "image_references": [
     {
-      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-education-layout-01.jpg",
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-education-layout-01.png",
       "role": "style-anchor",
       "influence": ["whitespace", "editorial education layout", "palette"],
       "match_strength": "medium"
     },
     {
-      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.jpg",
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.png",
       "role": "style-anchor",
       "influence": ["palette", "lighting", "restraint"],
       "match_strength": "medium"
@@ -67,24 +67,31 @@ Use `style-anchors/` as the default visual source. Add `working-examples/` only 
   "aspect_ratio": "4:5",
   "image_references": [
     {
-      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-product-glow-01.jpg",
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-product-glow-01.png",
       "role": "style-anchor",
       "influence": ["lighting", "palette", "product framing"],
       "match_strength": "medium"
     },
     {
-      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.jpg",
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.png",
       "role": "style-anchor",
       "influence": ["palette", "restraint"],
       "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/source-intake/mitozz-bottle.jpg",
+      "role": "product-source",
+      "influence": ["pack fidelity", "label placement", "cap finish"],
+      "match_strength": "medium"
     }
   ],
-  "reference_strategy": "Let the product-glow anchor drive lighting and framing, while the cool-palette anchor keeps the tone consistent.",
+  "reference_strategy": "Let the anchors drive lighting and tone, and use the approved bottle photo only for product-truth details.",
   "variation_guardrails": [
     "rotate angle and reflection pattern",
-    "change crop and focal placement"
+    "change crop and focal placement",
+    "do not inherit the source photo background"
   ],
-  "notes": "Match premium glow and restraint. Rotate angle and reflection pattern."
+  "notes": "Match premium glow and restraint while preserving bottle silhouette and label accuracy."
 }
 ```
 
@@ -101,13 +108,13 @@ Use `style-anchors/` as the default visual source. Add `working-examples/` only 
   "aspect_ratio": "9:16",
   "image_references": [
     {
-      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-editorial-whitespace-01.jpg",
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-editorial-whitespace-01.png",
       "role": "style-anchor",
       "influence": ["palette", "vertical breathing room"],
       "match_strength": "medium"
     },
     {
-      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.jpg",
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.png",
       "role": "style-anchor",
       "influence": ["palette", "soft atmosphere"],
       "match_strength": "medium"
@@ -119,5 +126,104 @@ Use `style-anchors/` as the default visual source. Add `working-examples/` only 
     "shift focal placement"
   ],
   "notes": "Keep the mood aligned while varying exact frame layout and focal placement."
+}
+```
+
+## Reel Shot Example
+
+```json
+{
+  "asset_type": "instagram-feed",
+  "campaign_name": "March Organic Education",
+  "topic": "Rethink daily condition design",
+  "objective": "Educate",
+  "asset_archetype": "reel-source-frame",
+  "platform": "instagram",
+  "aspect_ratio": "9:16",
+  "audience": "Sleep-Deprived High Performer",
+  "motion_role": "opening-hook",
+  "shot_id": "shot-01",
+  "shot_position": 1,
+  "continuity_tokens": [
+    "female Japanese professional in early 30s",
+    "soft steel-blue morning light",
+    "quiet premium apartment workspace",
+    "calm editorial styling",
+    "no baked-in text"
+  ],
+  "visual_intent": [
+    "premium wellness editorial",
+    "subtle tension before the reset",
+    "clean negative space for later kinetic typography"
+  ],
+  "brand_guardrails": [
+    "avoid exaggerated stress acting",
+    "avoid trendy influencer styling",
+    "preserve premium calm even in a busy-morning scene"
+  ],
+  "composition": [
+    "vertical 9:16 framing",
+    "subject slightly off-center",
+    "clear top-third and lower-third text-safe zones",
+    "single readable focal action"
+  ],
+  "image_references": [
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-editorial-whitespace-01.png",
+      "role": "style-anchor",
+      "influence": ["whitespace", "editorial restraint", "palette"],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.png",
+      "role": "style-anchor",
+      "influence": ["lighting", "soft steel-blue atmosphere"],
+      "match_strength": "medium"
+    }
+  ],
+  "reference_strategy": "Use the first anchor for vertical breathing room and the second for light quality and tonality.",
+  "variation_guardrails": [
+    "do not reuse an exact pose from the references",
+    "keep background simpler than the anchors",
+    "preserve continuity with later shots through wardrobe, palette, and lighting direction"
+  ],
+  "text_overlay": {
+    "allowed": false,
+    "max_words": 0,
+    "tone": "premium, clear, restrained",
+    "font_reference": "Noto Sans JP or closest available sans-serif for Japanese",
+    "headline_ja": "",
+    "slides_ja": []
+  },
+  "sora_handoff": {
+    "use_for_sora": true,
+    "input_mode": "image-to-video",
+    "shot_goal": "Open the reel with a relatable busy-morning beat that feels premium, not chaotic.",
+    "duration_seconds": 2.5,
+    "camera_motion": "Very subtle slow push-in.",
+    "subject_motion": "Small breath, slight blink, hand settles near mug or notebook.",
+    "transition_in": "Cold open from stillness.",
+    "transition_out": "Hold a clean final frame that can cut to the next shot.",
+    "prompt": "Animate this image into a calm premium vertical reel opening. Keep the subject identity, wardrobe, environment, and lighting consistent. Use only subtle natural motion: a small breath, a soft blink, and a gentle hand movement. Add a very slow push-in. Do not introduce new objects, new people, or dramatic motion. Preserve text-safe negative space.",
+    "negative_prompt": [
+      "warped hands",
+      "identity drift",
+      "extra objects appearing",
+      "sudden lighting changes",
+      "fast camera moves",
+      "flashy ad transitions",
+      "unreadable text"
+    ]
+  },
+  "negative_prompts": [
+    "cheap stock photo energy",
+    "overacted stress expression",
+    "busy cluttered desk",
+    "harsh fitness-ad aesthetic"
+  ],
+  "reference_files": [
+    "brand/references/business-context/visual/Brand Visual Direction.md"
+  ],
+  "notes": "Shot 01 of a coordinated reel set. Keep continuity tokens stable across all subsequent shots."
 }
 ```

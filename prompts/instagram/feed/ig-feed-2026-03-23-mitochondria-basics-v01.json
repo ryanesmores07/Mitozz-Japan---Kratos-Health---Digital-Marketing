@@ -11,26 +11,24 @@
     "premium Japanese wellness editorial",
     "calm educational clarity",
     "cloud-white base with mist-blue atmosphere",
-    "science-led but soft and non-clinical",
-    "save-worthy text-first carousel",
-    "introductory mitochondria education that feels approachable rather than technical"
+    "soft science without medical harshness",
+    "save-worthy text-first carousel"
   ],
   "brand_guardrails": [
-    "keep the post minimal, intelligent, and premium",
-    "avoid neon biohacking or aggressive supplement-ad aesthetics",
-    "preserve generous text-safe whitespace on every slide",
-    "no hospital, lab-equipment, or heavy medical CGI cues",
-    "do not imply treatment, recovery, anti-aging, or guaranteed functional outcomes",
+    "keep it minimal, intelligent, and premium",
+    "preserve generous text-safe whitespace",
+    "avoid neon health-tech or biohacking aesthetics",
+    "avoid direct medical, anti-aging, or guaranteed function language",
+    "no cluttered infographic layout",
     "match mood, palette, light quality, whitespace, and restraint from the selected references without duplicating exact crop, pose, object placement, or gradient pattern"
   ],
   "composition": [
     "4:5 portrait carousel framing",
     "one clear message per slide",
-    "centered or slightly offset focal structure",
+    "centered or slightly offset focal balance",
     "40 percent or more negative space",
-    "subtle abstract science cue only, never a busy diagram",
-    "white-led educational layout with calm mobile readability",
-    "product absent or reduced to a near-invisible brand-presence detail only on the final card"
+    "subtle abstract science cue only",
+    "white-led educational layout with calm mobile readability"
   ],
   "image_references": [
     {
@@ -47,9 +45,9 @@
       "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.png",
       "role": "style-anchor",
       "influence": [
-        "steel-blue tonality",
+        "palette",
         "calm lighting",
-        "atmospheric restraint"
+        "restraint"
       ],
       "match_strength": "medium"
     },
@@ -58,18 +56,18 @@
       "role": "style-anchor",
       "influence": [
         "end-card rhythm",
-        "soft save CTA hierarchy",
+        "save CTA hierarchy",
         "breathing room"
       ],
       "match_strength": "medium"
     }
   ],
-  "reference_strategy": "Use the education-layout anchor for spacing and hierarchy, the cool-palette anchor for tonality and light quality, and the CTA-layout anchor only for the final save card rhythm.",
+  "reference_strategy": "Use the education-layout anchor for typography spacing and card rhythm, the cool-palette anchor for tonality and light restraint, and the CTA-layout anchor only for the final save card hierarchy.",
   "variation_guardrails": [
-    "do not reuse exact paragraph blocks or text placement from anchors",
-    "rotate focal placement between centered and slightly offset layouts",
-    "keep apricot accent use below 10 percent of the frame",
-    "avoid using the same background wash on every slide",
+    "do not copy exact paragraph layout from the references",
+    "vary crop and focal placement across the carousel system",
+    "keep apricot accents restrained and secondary",
+    "avoid repeating the same background wash on every slide",
     "keep the carousel more introductory and education-first than campaign-like"
   ],
   "text_overlay": {
@@ -79,22 +77,21 @@
     "font_reference": "Noto Sans JP Bold / Medium",
     "headline_ja": "ミトコンドリアとは？",
     "slides_ja": [
-      "毎日の土台を支える小さな存在",
-      "ミトコンドリアは、細胞の中でエネルギー産生に関わる存在です。",
-      "このテーマが注目されるのは、日々のコンディションの土台として考えられているから。",
-      "難しい話に見えても、まずは基礎を知ることが第一歩です。",
-      "毎日の習慣を見つめるときも、こうした基礎理解が静かなヒントになります。",
-      "保存して、あとで見返せる基礎知識に。"
+      "ミトコンドリアは、細胞のエネルギーづくりを支える存在です。",
+      "年齢や生活習慣の影響で、働き方がゆるやかに変わることがあります。",
+      "難しく見えるテーマも、まずは基礎から知ることが第一歩です。",
+      "毎日のケアでは、整った生活習慣とやさしい継続が大切です。",
+      "保存して、あとで見返せる基礎知識として役立ててください。"
     ]
   },
   "negative_prompts": [
     "cheap stock photo look",
     "busy infographic clutter",
-    "neon blue biotech aesthetic",
+    "neon biotech aesthetic",
     "fitness-performance imagery",
     "before-after framing",
-    "capsule explosion or flashy supplement advertising",
-    "heavy 3D mitochondria render with medical drama"
+    "heavy medical CGI",
+    "flashy supplement advertising"
   ],
   "reference_files": [
     "brand/references/business-context/creative-packages/creative-package-2026-03-23.md",
@@ -103,5 +100,5 @@
     "brand/references/business-context/visual/reference-pack/reference-pack-index.md",
     "brand/references/business-context/strategy/Mitozz Japan Brand Voice And Messaging Guidelines.docx.pdf"
   ],
-  "notes": "March 23 feed-only educational carousel. Introduce mitochondria in a calm, premium, easy-to-save format that feels intelligent rather than technical. Keep the Steel Light system consistent while varying crop, focal placement, and background treatment across variants."
+  "notes": "March 23 educational carousel. Introduce mitochondria in a calm, premium, easy-to-save format that feels intelligent rather than technical. Keep the Steel Light system consistent while varying crop, focal placement, and background treatment."
 }

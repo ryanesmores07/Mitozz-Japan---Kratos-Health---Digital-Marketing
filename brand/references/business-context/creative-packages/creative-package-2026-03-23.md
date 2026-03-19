@@ -1,172 +1,324 @@
 # Creative Package - 2026-03-23
 
-## Creative Objective
+Two assets for March 23:
 
-ミトコンドリアを初めて聞く人でも抵抗なく理解できるように、難しい印象をほどきながら基礎を整理する保存価値の高い教育投稿にする。売り込みではなく、Mitozzの「落ち着いた科学理解」を感じてもらうことを優先する。
+1. Feed carousel
+2. Story reinforcement
 
-## Target Persona
+---
+
+## 1. Feed Carousel
+
+### Creative Objective
+
+ミトコンドリアという言葉を、難しい理論ではなく「毎日の土台を整える視点」として理解してもらう。保存したくなる基礎教育投稿として、Mitozzの世界観に自然に入っていける入口をつくる。
+
+### Target Persona
 
 `Research-First Wellness Optimizer`
 
-健康情報を感覚ではなく根拠ベースで理解したい人。派手な訴求より、静かで信頼できる基礎説明に反応しやすい。
+情報の正確さと納得感を重視しつつ、難解すぎる表現は好まない層。派手な訴求よりも、静かで信頼できる整理を求めている。
 
-## Format Decision
+### Format Decision
 
 `carousel`
 
-ミトコンドリアという抽象度の高いテーマは、1枚で言い切るよりも「定義 -> なぜ注目されるか -> どう向き合うか」を段階的に見せたほうが理解されやすく、保存にもつながるため。
+このテーマは一枚で断言するより、順序立てて理解させる方が相性が良い。保存価値のある教育カルーセルにすることで、初見ユーザーにも既存フォロワーにも機能する。
 
-## Creative Direction
+### Creative Direction
 
-テーマは「ミトコンドリアの基本を、静かにほどく入門カード」。第一印象で「難しそう」ではなく「これなら読めそう」と感じさせることが重要。専門用語を増やしすぎず、毎日のコンディションを支える基礎的な存在として伝える。科学感は必要だが、医療説明や機能断定に寄せすぎない。避けるべきなのは、バイオハック風の強いエネルギー演出、体感保証に聞こえる言い回し、情報過多の図解。
+「ミトコンドリアとは？」を、やさしく、美しく、過剰に医療っぽくせず説明する。第一印象は白場が多く、上質で、静かな知性があること。読後感は「難しそうだったテーマが少しわかった」「あとで見返したい」に置く。
 
-## Layout / Structure
+伝えるべき感覚は以下:
 
-6枚構成のカルーセルにする。
+- ミトコンドリアは大げさなバイオ用語ではなく、毎日のコンディションを考える時の基礎視点
+- Mitozzは売り込みではなく、まず理解から入るブランド
+- 科学感は必要だが、図解過多や専門用語の押しつけは避ける
 
-1. 表紙
-   `ミトコンドリアとは？` を大きく配置。サブで `毎日の土台を支える小さな存在` を添える。余白を多く取り、読後の信頼感を先に作る。
-2. 定義
-   細胞の中にあり、日々のエネルギー産生に関わる存在だとシンプルに説明。文章は2〜3行で止める。
-3. なぜ注目されるのか
-   年齢や生活習慣とともに、コンディションの土台として意識されるテーマであることを整理。煽らず静かに意味づける。
-4. 身近さへの変換
-   「特別な話ではなく、毎日の積み重ねとつながる基礎理解」であることを伝える。睡眠、食事、習慣のアイコン的な示唆は可。ただし説明は抽象的に保つ。
-5. Mitozzらしい締め
-   複雑なテーマほど、まずは基礎から知ることが大切というメッセージ。ブランドの姿勢として、落ち着いた学びのトーンを見せる。
-6. エンドカード
-   `保存して、あとで見返せる基礎知識に。` を主文にした軽い保存CTA。販売誘導は入れない。
+避けるもの:
 
-## Copy Direction
+- 強いエネルギー訴求
+- パフォーマンス改善を断定する言い回し
+- 医療機関っぽい無機質さ
+- 情報量過多のインフォグラフィック
 
-表紙フック:
+### Layout / Structure
+
+6枚想定のカルーセル:
+
+1. Cover
+   `ミトコンドリアとは？`
+   サブで `毎日の土台をやさしく理解する`
+
+2. Intro
+   ミトコンドリアは細胞のエネルギーづくりを支える存在、という最小限の説明
+
+3. Relevance
+   年齢や生活習慣の影響で、働き方がゆるやかに変わることがあると示す
+
+4. Daily context
+   難しい話にせず、まずは整った生活習慣や継続の視点が大切だと伝える
+
+5. Why it matters
+   毎日のコンディションを見直す時の基礎知識として知る価値を提示する
+
+6. End card
+   `保存して、あとで見返せる基礎知識に`
+
+### Copy Direction
+
+カバー見出し:
 `ミトコンドリアとは？`
 
-表紙サブコピー:
-`毎日の土台を支える小さな存在`
+カバー補足:
+`毎日の土台をやさしく理解する`
 
-スライドコピー方針:
-- 1文を短く、言い切りすぎず、読む負担を軽くする。
-- 「元気になる」「若返る」などの直接的ベネフィット表現は使わない。
-- 科学っぽさは言葉数ではなく、整理の上手さで出す。
+トーン:
 
-推奨スライド文案:
+- やわらかいが曖昧ではない
+- 上質で信頼感がある
+- 断定ではなく理解を助ける
+- 日本語として読みやすく短い
+
+スライド本文の方向:
 
 1.
-`ミトコンドリアとは？`
-`毎日の土台を支える小さな存在`
+`ミトコンドリアは、細胞のエネルギーづくりを支える存在です。`
 
 2.
-`ミトコンドリアは、`
-`細胞の中でエネルギー産生に関わる存在です。`
+`年齢や生活習慣の影響で、その働き方がゆるやかに変わることがあります。`
 
 3.
-`このテーマが注目されるのは、`
-`日々のコンディションの土台として考えられているから。`
+`難しく見えるテーマも、まずは基礎から知ることが第一歩です。`
 
 4.
-`難しい話に見えても、`
-`まずは基礎を知ることが第一歩です。`
+`毎日のケアでは、整った生活習慣とやさしい継続が大切です。`
 
 5.
-`毎日の習慣を見つめるときも、`
-`こうした基礎理解が静かなヒントになります。`
-
-6.
-`保存して、`
-`あとで見返せる基礎知識に。`
+`保存して、あとで見返せる基礎知識として役立ててください。`
 
 キャプション方向:
-冒頭で「ミトコンドリア」という言葉の距離を縮め、その後に基礎理解の重要性を落ち着いて説明する。専門家ぶった断定口調ではなく、知識の入口として案内する文体にする。
 
-キャプション案:
-`ミトコンドリアという言葉を聞いたことはあっても、実際にはよく知らないという方も多いかもしれません。`
-``
-`ミトコンドリアは、細胞の中でエネルギー産生に関わる存在として知られています。だからこそ、毎日のコンディションを考える文脈でも、基礎から理解しておきたいテーマのひとつです。`
-``
-`難しく見える内容ほど、まずはシンプルな理解から。`
-`保存して、あとで静かに見返せる一枚としてご活用ください。`
+ミトコンドリアという言葉を、必要以上に難しく見せず、毎日の土台を考える視点として紹介する。教育目的を前面に置き、商品説明よりも「まず知ること」の価値を強くする。
 
 CTA:
-`保存して、基礎理解の入口として見返す`
+`保存して、あとで見返してみてください`
 
-## Visual Direction
+### Visual Direction
 
-白を主役にした教育カード寄りのカルーセル。ベースは Cloud White と Mist Blue、アクセントは Apricot Glow をごく小さく使う。表紙は抽象的な細胞イメージか、柔らかな発光を帯びたミニマルな粒子表現までに留め、露骨な3Dサイエンス図や医療CGにはしない。全体の構図は中央寄せか、ややオフセット。各スライドに十分な余白を持たせ、本文は短く、左揃えまたは整然とした中央揃えで統一する。
+白を主役にした教育カルーセル。ベースは Cloud White と Mist Blue。アクセントは Apricot Glow をごく小さく使う。図解を前に出すのではなく、抽象的な光、やわらかな粒子感、薄いレイヤーで「静かなサイエンス」を感じさせる。
 
 見せたい要素:
-- 清潔な白場
-- 霧がかったスチールブルーの空気感
-- 薄い罫線や小さなラベル程度の編集的ディテール
-- 読みやすいNoto Sans JP主体の文字組み
 
-避ける要素:
-- ネオンの発光表現
-- 派手なインフォグラフィック
-- サプリ広告っぽい強いオレンジ
-- 筋トレ、パフォーマンス、若返りを連想させるビジュアル
-- 病院、臓器、検査結果のような医療連想
+- 大きな白場
+- 1枚につき1メッセージ
+- Noto Sans JP を中心にした読みやすいタイポ
+- 中央寄せか少しオフセットした整った構図
+- ごく控えめなサイエンスの抽象表現
 
-商品露出:
-今回は商品理解ではなく基礎教育が主目的なので、商品は出さないか、出しても最終カードで極小のブランド存在感に留める。
+避けたい要素:
 
-## Brand / Messaging Check
+- ネオンの青や発光しすぎるCG
+- 医療機器やラボ器具の直接描写
+- ビフォーアフター風の比較
+- 情報を詰め込みすぎた図版
+- 健康効果を連想させすぎる誇張表現
 
-- premium trust-first positioning: 白場と静かな情報設計で、売り込みより信頼形成を優先している
-- mitochondria-first education: ミトコンドリアの基礎理解に集中し、ブランドの科学起点と整合している
-- calm Japanese-premium execution: 日本語は短く自然で、読みやすさと余白を重視した上品なトーン
-- general-food-safe compliant messaging: 医療効果、疲労回復、若返り、機能保証の表現を避けている
+### Brand / Messaging Check
 
-## Nano Banana Handoff
+- premium trust-first positioning: 上質で静かな教育トーンを優先し、売り込み感を抑えている
+- mitochondria-first education: ミトコンドリア理解を投稿の中心に据えている
+- calm Japanese-premium execution: 日本語は短く、読みやすく、余白を活かした設計にしている
+- general-food-safe compliant messaging: 治療、回復、抗加齢、機能改善の断定表現は避けている
+
+### Nano Banana Handoff
 
 - `asset_archetype`: `education-card`
 - `visual_intent`:
   - `premium Japanese wellness editorial`
   - `calm educational clarity`
   - `cloud-white base with mist-blue atmosphere`
-  - `science-led but soft and non-clinical`
+  - `soft science without medical harshness`
   - `save-worthy text-first carousel`
 - `brand_guardrails`:
-  - `keep the post minimal, intelligent, and premium`
-  - `avoid neon biohacking or aggressive supplement-ad aesthetics`
-  - `preserve generous text-safe whitespace on every slide`
-  - `no hospital, lab-equipment, or heavy medical CGI cues`
-  - `do not imply treatment, recovery, anti-aging, or guaranteed functional outcomes`
+  - `keep it minimal, intelligent, and premium`
+  - `preserve generous text-safe whitespace`
+  - `avoid neon health-tech or biohacking aesthetics`
+  - `avoid direct medical, anti-aging, or guaranteed function language`
+  - `no cluttered infographic layout`
 - `composition`:
   - `4:5 portrait carousel framing`
   - `one clear message per slide`
-  - `centered or slightly offset focal structure`
+  - `centered or slightly offset focal balance`
   - `40 percent or more negative space`
-  - `subtle abstract science cue only, never a busy diagram`
-- `reference_strategy`: `Use one anchor for educational spacing, one for cool palette restraint, and one for CTA end-card rhythm while changing crop, text structure, and focal treatment.`
+  - `subtle abstract science cue only`
+- `reference_strategy`: `Use the education-layout anchor for typography spacing and card rhythm, the cool-palette anchor for tonality and light restraint, and the CTA-layout anchor only to guide the final save card hierarchy.`
 - `variation_guardrails`:
-  - `do not reuse exact paragraph blocks or text placement from anchors`
-  - `rotate focal placement between centered and slightly offset layouts`
-  - `keep apricot accent use below 10 percent of the frame`
-  - `avoid using the same background wash on every slide`
+  - `do not copy exact paragraph layout from the references`
+  - `vary crop and focal placement across the carousel system`
+  - `keep apricot accents restrained and secondary`
+  - `avoid repeating the same background wash on every slide`
 - `selected_image_references`:
-  - `style-anchors/anchor-education-layout-01.png`
-    influence: `editorial education layout, whitespace, text hierarchy`
-  - `style-anchors/anchor-cool-palette-01.png`
-    influence: `steel-blue tonality, calm lighting, atmospheric restraint`
-  - `style-anchors/anchor-cta-layout-01.png`
-    influence: `end-card rhythm, soft save CTA hierarchy, breathing room`
+  - `style-anchors/anchor-education-layout-01.png` for whitespace, editorial education layout, and text hierarchy
+  - `style-anchors/anchor-cool-palette-01.png` for palette, calm lighting, and restraint
+  - `style-anchors/anchor-cta-layout-01.png` for end-card rhythm and soft save CTA structure
 - `variation_from_references`:
-  - `replace any close product-led composition with a more abstract education-first focal point`
-  - `simplify text blocks further for Japanese mobile readability`
-  - `use softer cellular or light-particle cues instead of copying any object arrangement`
-  - `keep the same premium calm, but make the March 23 carousel feel more introductory and less campaign-like`
+  - `make the March 23 asset more introductory and less campaign-like`
+  - `simplify Japanese text blocks further for mobile readability`
+  - `use softer abstract cues instead of any literal object arrangement`
+  - `keep the same premium calm while changing exact text rhythm and focal treatment`
 - `text_overlay`:
   - `allowed`: `true`
-  - `headline`: `ミトコンドリアとは？`
-  - `max_words_per_panel`: `14`
+  - `headline_ja`: `ミトコンドリアとは？`
+  - `slides_ja`:
+    - `ミトコンドリアは、細胞のエネルギーづくりを支える存在です。`
+    - `年齢や生活習慣の影響で、働き方がゆるやかに変わることがあります。`
+    - `難しく見えるテーマも、まずは基礎から知ることが第一歩です。`
+    - `毎日のケアでは、整った生活習慣とやさしい継続が大切です。`
+    - `保存して、あとで見返せる基礎知識として役立ててください。`
   - `tone`: `clear, premium, educational, quietly reassuring`
   - `font_reference`: `Noto Sans JP Bold / Medium`
 - `negative_prompts`:
   - `cheap stock photo look`
   - `busy infographic clutter`
-  - `neon blue biotech aesthetic`
+  - `neon biotech aesthetic`
   - `fitness-performance imagery`
   - `before-after framing`
-  - `capsule explosion or flashy supplement advertising`
-  - `heavy 3D mitochondria render with medical drama`
+  - `heavy medical CGI`
+  - `flashy supplement advertising`
+
+---
+
+## 2. Story Reinforcement
+
+### Creative Objective
+
+同日のフィード投稿を、ストーリーで軽く補強して理解を定着させる。深掘りではなく「気になったらフィードへ戻る」ための静かな再接触をつくる。
+
+### Target Persona
+
+`Research-First Wellness Optimizer`
+
+フィード投稿をしっかり読む前に、まずストーリーで雰囲気や要点を掴みたい層。軽さは欲しいが、安っぽさは避けたい。
+
+### Format Decision
+
+`story sequence`
+
+ストーリーはフィードの要点を短く再提示し、タップ導線をつくるのに最適。重い説明を足すより、理解の入口をもう一度整える使い方が良い。
+
+### Creative Direction
+
+フィードのカバーコピーを踏まえつつ、ストーリーではもっと軽く、もっと早く理解できる形にする。役割は「復習」ではなく「再認識」。1秒で読める余白のある構成で、上質な静けさを保つ。
+
+避けるもの:
+
+- 情報量の多い文章
+- コラージュ的な詰め込み
+- フィードより強い売り文句
+- 派手なアニメーション前提のデザイン
+
+### Layout / Structure
+
+3フレーム想定:
+
+1. Frame 1
+   `ミトコンドリアとは？`
+   `まずは基礎から、やさしく。`
+
+2. Frame 2
+   `毎日の土台を考える時の`
+   `ひとつの視点として知っておきたいテーマです。`
+
+3. Frame 3
+   `気になったら、フィードで詳しく。`
+
+### Copy Direction
+
+見出し:
+`ミトコンドリアとは？`
+
+補足:
+`まずは基礎から、やさしく。`
+
+CTA:
+`続きはフィードへ`
+
+トーン:
+
+- 短く
+- やわらかく
+- 信頼感を保って
+- 読み飛ばされない密度にする
+
+### Visual Direction
+
+縦長9:16で、上部と下部に十分な安全余白を取る。フィードと同じ Steel Light 系の色調で統一しつつ、より軽い構造にする。抽象的な光の層、薄いブルーグラデーション、控えめなアプリコットの気配のみで組む。
+
+見せたい要素:
+
+- 上下セーフゾーンを意識したレイアウト
+- 一目で読める短いテキスト
+- 静かな背景処理
+- フィードとつながる世界観
+
+避けたい要素:
+
+- 密度の高い説明
+- アイコンや装飾の多用
+- 強い販促感
+- フレームごとのトーンのばらつき
+
+### Brand / Messaging Check
+
+- premium trust-first positioning: 補強目的に徹し、売り込みを前面に出していない
+- mitochondria-first education: フィードの基礎教育テーマをそのまま支えている
+- calm Japanese-premium execution: 余白と静けさを保ちながら、やさしい日本語でまとめている
+- general-food-safe compliant messaging: 効能を断定せず、教育的導線にとどめている
+
+### Nano Banana Handoff
+
+- `asset_archetype`: `story-reinforcement`
+- `visual_intent`:
+  - `premium story-first vertical layout`
+  - `quiet educational reinforcement`
+  - `mist-blue calm with generous breathing room`
+  - `fast mobile readability`
+- `brand_guardrails`:
+  - `preserve top and bottom safe zones`
+  - `avoid collage layouts or sticker-heavy UI`
+  - `maintain continuity with the March 23 feed carousel`
+  - `avoid promotional or sales-first wording`
+- `composition`:
+  - `9:16 vertical framing`
+  - `clear upper-third message area`
+  - `one short message block per frame`
+  - `strong negative space`
+- `reference_strategy`: `Use editorial-whitespace for story breathing room and cool-palette for the calm steel-blue atmosphere, while keeping the frame lighter and simpler than the feed.`
+- `variation_guardrails`:
+  - `vary exact text placement from the references`
+  - `avoid copying reference frame structure literally`
+  - `keep the background treatment softer and more minimal than the feed`
+  - `do not introduce new focal objects that compete with the message`
+- `selected_image_references`:
+  - `style-anchors/anchor-editorial-whitespace-01.png` for breathing room and vertical restraint
+  - `style-anchors/anchor-cool-palette-01.png` for palette and atmosphere
+- `variation_from_references`:
+  - `simplify further for instant story readability`
+  - `shift exact text position and crop`
+  - `keep the same mood without cloning the reference frame`
+- `text_overlay`:
+  - `allowed`: `true`
+  - `headline_ja`: `ミトコンドリアとは？`
+  - `slides_ja`:
+    - `まずは基礎から、やさしく。`
+    - `毎日の土台を考える時の、ひとつの視点です。`
+    - `気になったら、フィードで詳しく。`
+  - `tone`: `soft, clear, trustworthy`
+  - `font_reference`: `Noto Sans JP`
+- `negative_prompts`:
+  - `busy collage layout`
+  - `harsh promotional story design`
+  - `tiny unreadable typography`
+  - `loud gradient gimmicks`
+  - `aggressive CTA styling`

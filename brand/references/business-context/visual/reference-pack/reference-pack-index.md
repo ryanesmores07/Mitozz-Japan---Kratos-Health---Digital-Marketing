@@ -8,6 +8,7 @@ This file is the lightweight registry for the official Nano Banana visual refere
 - Match strictness: medium
 - Each generation should use 2 to 4 image references
 - At least 1 reference must be a `style-anchor`
+- Add 1 approved `product-source` reference from `source-intake/` when product fidelity is important
 - At most 1 reference may be a close composition match
 - If no approved `working-example` exists for the asset type, fall back to `style-anchor` images plus the visual direction docs
 
@@ -59,6 +60,9 @@ Promote a candidate only if it:
 | `style-anchors/anchor-body-copy-01.png` | style-anchor | long-form education card spacing, text block rhythm, calm reading hierarchy | exact wording, highlight treatment, and paragraph layout |
 | `style-anchors/README.md` | style-anchor placeholder | anchor naming and intake instructions only | not a visual reference |
 | `source-intake/source-grid-alt-01.png` | source-intake | alternate inspiration only | not an active generation guide |
+| `source-intake/mitozz-bottle.jpg` | product-source | bottle silhouette, cap finish, label fidelity, clean hero packshot truth | exact background, crop, and incidental reflections |
+| `source-intake/mitozz-bottle-with-tablets.jpg` | product-source | bottle-plus-tablets relationship, tablet scale, tabletop product context | exact tablet scatter, crop, and scene styling |
+| `working-examples/feed-education-white-card-01.png` | working-example | approved education white-card mode, premium text hierarchy, restrained abstract science cue, white-card grid consistency | exact card radius, exact typography placement, exact focal object shape, and exact atmospheric wash |
 | `working-examples/README.md` | working-example placeholder | approval rules only | not a visual reference |
 
 ## Active Anchor Roles
@@ -71,6 +75,10 @@ Promote a candidate only if it:
 - `anchor-cool-palette-01.png`: use for steel-blue tonality and luminous cool atmosphere
 - `anchor-cta-layout-01.png`: use for soft CTA structure, end-card spacing, and save-worthy prompt framing
 - `anchor-body-copy-01.png`: use for longer educational copy cards, highlighted takeaways, and calm reading flow
+
+## Active Working Example Roles
+
+- `working-examples/feed-education-white-card-01.png`: use as the approved benchmark for future feed education covers when the goal is calm, white-card, save-worthy editorial learning content
 
 ## Intake Notes For Style Anchors
 

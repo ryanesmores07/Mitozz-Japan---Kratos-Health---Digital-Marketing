@@ -10,22 +10,21 @@
   "visual_intent": [
     "premium story-first vertical layout",
     "quiet educational reinforcement",
-    "Japanese wellness editorial mood",
-    "text-centric generous negative space",
-    "mist-blue calm with very restrained apricot warmth"
+    "mist-blue calm with generous breathing room",
+    "fast mobile readability",
+    "Japanese wellness editorial mood"
   ],
   "brand_guardrails": [
-    "preserve top 15 percent and bottom 25 percent as safe zones for Instagram story UI",
-    "avoid crowded multi-panel or collage layouts",
-    "maintain visual continuity with the related feed carousel",
-    "no product photography in this story frame",
-    "follow the latest Steel Light brand visual direction",
+    "preserve top and bottom safe zones",
+    "avoid collage layouts or sticker-heavy UI",
+    "maintain continuity with the matching March 23 feed carousel",
+    "avoid promotional or sales-first wording",
     "match mood and restraint from the selected references without copying exact frame layout, crop, or focal placement"
   ],
   "composition": [
-    "vertical 9:16 framing",
-    "clear center-to-upper-third message area",
-    "subtle background texture or single abstract focal element",
+    "9:16 vertical framing",
+    "clear upper-third message area",
+    "one short message block per frame",
     "strong negative space",
     "text-first story sequence with frame 1 headline, frame 2 support, and frame 3 CTA",
     "cloud-white or mist-blue background with soft steel-blue structure and restrained apricot cues"
@@ -35,8 +34,9 @@
       "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-editorial-whitespace-01.png",
       "role": "style-anchor",
       "influence": [
-        "palette",
-        "vertical breathing room"
+        "vertical breathing room",
+        "whitespace",
+        "layout restraint"
       ],
       "match_strength": "medium"
     },
@@ -51,31 +51,31 @@
       "match_strength": "medium"
     }
   ],
-  "reference_strategy": "Use the editorial-whitespace anchor for breathing room and the cool-palette anchor for steel-blue atmosphere.",
+  "reference_strategy": "Use editorial-whitespace for story breathing room and cool-palette for the calm steel-blue atmosphere, while keeping the frame lighter and simpler than the feed.",
   "variation_guardrails": [
-    "vary exact frame layout",
-    "vary focal placement",
-    "avoid copying the reference frame structure too closely"
+    "vary exact text placement from the references",
+    "avoid copying reference frame structure literally",
+    "keep the background treatment softer and more minimal than the feed",
+    "do not introduce new focal objects that compete with the message"
   ],
   "text_overlay": {
     "allowed": true,
-    "max_words": 6,
+    "max_words": 8,
     "tone": "soft, clear, trustworthy",
-    "font_reference": "Noto Sans JP or closest available sans-serif",
-    "headline_ja": "\u30df\u30c8\u30b3\u30f3\u30c9\u30ea\u30a2\u3068\u306f\uff1f",
+    "font_reference": "Noto Sans JP",
+    "headline_ja": "ミトコンドリアとは？",
     "slides_ja": [
-      "\u30df\u30c8\u30b3\u30f3\u30c9\u30ea\u30a2\u3068\u306f\uff1f",
-      "\u7d30\u80de\u306e\u30a8\u30cd\u30eb\u30ae\u30fc\u3065\u304f\u308a\u3092\u652f\u3048\u308b\u5927\u5207\u306a\u5b58\u5728\u3067\u3059\u3002",
-      "\u4fdd\u5b58\u3057\u3066\u3001\u3042\u3068\u3067\u3086\u3063\u304f\u308a\u898b\u8fd4\u3057\u3066\u304f\u3060\u3055\u3044\u3002"
+      "まずは基礎から、やさしく。",
+      "毎日の土台を考える時の、ひとつの視点です。",
+      "気になったら、フィードで詳しく。"
     ]
   },
   "negative_prompts": [
-    "busy collage or multi-image layout",
+    "busy collage layout",
     "harsh promotional story design",
-    "tiny or unreadable typography",
-    "loud gradients or gimmicky overlays",
-    "inconsistent palette with feed carousel",
-    "exact duplication of any reference crop, pose, object placement, or gradient pattern"
+    "tiny unreadable typography",
+    "loud gradient gimmicks",
+    "aggressive CTA styling"
   ],
   "reference_files": [
     "brand/references/business-context/creative-packages/creative-package-2026-03-23.md",
@@ -84,5 +84,5 @@
     "brand/references/business-context/visual/reference-pack/reference-pack-index.md",
     "brand/references/business-context/strategy/Mitozz Japan Brand Voice And Messaging Guidelines.docx.pdf"
   ],
-  "notes": "March 23 story reinforcement. Keep the Steel Light mood and vertical breathing room consistent while varying exact frame layout and focal placement."
+  "notes": "March 23 story reinforcement. Keep the Steel Light mood and vertical breathing room consistent while varying exact text placement, crop, and background treatment."
 }

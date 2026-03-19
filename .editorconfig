@@ -1,0 +1,22 @@
+root = true
+
+[*]
+charset = utf-8
+end_of_line = lf
+insert_final_newline = true
+trim_trailing_whitespace = true
+
+[*.md]
+charset = utf-8
+
+[*.csv]
+charset = utf-8
+
+[*.json]
+charset = utf-8
+
+[*.ps1]
+charset = utf-8
+
+[*.txt]
+charset = utf-8

@@ -1,0 +1,102 @@
+{
+  "asset_type": "instagram-feed-carousel",
+  "campaign_name": "March 2026 Organic Education",
+  "topic": "What is epicatechin?",
+  "objective": "Educate",
+  "asset_archetype": "education-card",
+  "platform": "instagram",
+  "aspect_ratio": "4:5",
+  "audience": "Research-First Wellness Optimizer",
+  "visual_intent": [
+    "premium Japanese wellness editorial",
+    "calm ingredient education",
+    "cloud-white card structure with mist-blue atmosphere",
+    "slightly more intellectual tone than the March 23 post",
+    "save-worthy text-first carousel"
+  ],
+  "brand_guardrails": [
+    "retain the approved Education White Card mode",
+    "avoid exact reuse of the March 23 card layout",
+    "preserve generous text-safe whitespace",
+    "avoid flashy ingredient-ad aesthetics",
+    "no direct efficacy claims or dramatic science visuals",
+    "match mood, palette, light quality, whitespace, and restraint from the selected references without duplicating exact crop, pose, object placement, or gradient pattern"
+  ],
+  "composition": [
+    "4:5 portrait carousel framing",
+    "white card structure as the dominant mode",
+    "slightly offset editorial layout rather than perfectly centered",
+    "one clear message per slide",
+    "subtle ingredient-oriented abstract cue only",
+    "text-first educational layout with premium readability"
+  ],
+  "image_references": [
+    {
+      "path": "brand/references/business-context/visual/reference-pack/working-examples/feed-education-white-card-01.png",
+      "role": "working-example",
+      "influence": [
+        "approved education white-card mode",
+        "premium restraint",
+        "text hierarchy"
+      ],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-education-layout-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "spacing",
+        "card rhythm",
+        "text hierarchy"
+      ],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "tonality",
+        "atmosphere",
+        "calm light quality"
+      ],
+      "match_strength": "medium"
+    }
+  ],
+  "reference_strategy": "Use the approved March 23 working example as the benchmark for the Education White Card mode, then use education-layout for spacing discipline and cool-palette for atmosphere. Keep the card language consistent while shifting the composition and abstract cue so this reads as a new post.",
+  "variation_guardrails": [
+    "do not copy the exact March 23 type placement or object shape",
+    "shift the card rhythm toward a slightly more editorial offset layout",
+    "keep the science cue softer and more ingredient-like than cellular",
+    "maintain the same premium calm while increasing the sense of thoughtful structure"
+  ],
+  "text_overlay": {
+    "allowed": true,
+    "max_words": 14,
+    "tone": "clear, premium, educational, thoughtful",
+    "font_reference": "Noto Sans JP Bold / Medium",
+    "headline_ja": "エピカテキンとは？",
+    "slides_ja": [
+      "エピカテキンは、Mitozzの考え方を理解するうえで大切な成分です。",
+      "成分名だけを見ると難しく感じても、まずは役割の輪郭を知ることが大切です。",
+      "大切なのは、言葉の難しさではなく、どう位置づけるかという視点です。",
+      "まずは基礎から整理することで、ブランドの見え方も変わります。",
+      "保存して、あとで見返せる成分の基礎知識として役立ててください。"
+    ]
+  },
+  "negative_prompts": [
+    "cheap stock photo look",
+    "busy infographic clutter",
+    "capsule or tablet hero visuals",
+    "flashy supplement advertising",
+    "neon biotech aesthetic",
+    "heavy molecular diagram treatment"
+  ],
+  "reference_files": [
+    "brand/references/business-context/creative-packages/creative-package-2026-03-27.md",
+    "brand/references/business-context/content-planning/Mitozz Instagram Content Calendar - 2026 - March.csv",
+    "brand/references/business-context/visual/Brand Visual Direction.md",
+    "brand/references/business-context/visual/reference-pack/reference-pack-index.md",
+    "brand/references/business-context/strategy/Mitozz Japan Brand Voice And Messaging Guidelines.docx.pdf"
+  ],
+  "notes": "March 27 ingredient education carousel. Stay inside the approved Education White Card mode established on March 23, but shift toward a more ingredient-focused, slightly more intellectual presentation with a more offset editorial rhythm."
+}

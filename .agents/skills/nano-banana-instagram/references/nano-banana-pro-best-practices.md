@@ -25,10 +25,12 @@ Use these rules when building or executing Instagram image prompts for Mitozz.
 
 - Use 2 to 4 image references per generation.
 - Include at least 1 `style-anchor` when available.
+- Add 1 approved `product-source` reference when product accuracy matters.
 - Use at most 1 close composition match.
 - Match feed educational assets primarily to whitespace, typography, and editorial layout references.
 - Match product heroes primarily to lighting, palette, and product framing references.
 - Match stories primarily to vertical breathing room and simplified composition references.
+- Use product-source references only for bottle silhouette, cap finish, label fidelity, and tablet relationship.
 
 ## Generation Method
 
@@ -57,3 +59,4 @@ Promotion should stay human-approved, never automatic.
 - The prompt includes `variation_guardrails`.
 - The prompt includes explicit negative prompts.
 - The selected references fit the asset type and do not overconstrain composition.
+- Product-source references, if present, are guiding product truth rather than style.
