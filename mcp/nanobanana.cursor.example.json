@@ -11,7 +11,7 @@
       ],
       "env": {
         "GEMINI_API_KEY": "set-your-key-outside-the-repo",
-        "NANOBANANA_MODEL": "pro"
+        "NANOBANANA_MODEL": "flash"
       }
     }
   }

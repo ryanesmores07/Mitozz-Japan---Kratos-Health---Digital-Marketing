@@ -3,6 +3,11 @@ Nano Banana Instagram Workspace
 
 This workspace is organized for creating and maintaining reusable JSON prompts for Nano Banana Pro, focused on Instagram organic marketing for Mitozz Japan.
 
+Current model standard:
+
+- Nano Banana Pro 2 = `gemini-3.1-flash-image-preview`
+- Use Flash tier by default unless a task explicitly requires the Pro image tier
+
 ## Structure
 
 - `brand/`: brand identity, strategy, creative packages, and visual references
@@ -51,6 +56,10 @@ Recommended setup:
 The launcher wraps:
 
 - `uvx nanobanana-pro-mcp-server`
+
+The workspace launcher also patches the MCP runtime to keep the Flash tier aligned to:
+
+- `gemini-3.1-flash-image-preview`
 
 This gives the workspace a stable local entrypoint even if the MCP client configuration differs between tools.
 
