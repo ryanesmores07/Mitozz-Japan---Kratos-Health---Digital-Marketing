@@ -17,6 +17,33 @@ Current model standard:
 - `output/`: generated asset history and candidate working examples
 - `tools/`: local helper scripts
 
+## Template Automation
+
+The calendar stays strategy-focused. Template assignment is resolved automatically from existing calendar fields through:
+
+- `brand/references/business-context/visual/template-mapping-rules.json`
+- `brand/references/business-context/visual/Mitozz Template Library Index.md`
+- `tools/resolve-template-mapping.py`
+- `tools/resolve-template-mapping.ps1` for Windows / PowerShell use
+
+This keeps the grid consistent while avoiding extra production columns in the planning calendar.
+
+The recommended operating split is:
+
+- calendar = strategy
+- mapping layer = template and structure
+- creative package = art direction
+- prompt = execution input
+
+See:
+
+- `workflows/03-post-calendar-production-flow.md`
+
+Quick examples:
+
+- Mac / zsh: `python3 tools/resolve-template-mapping.py --csv "brand/references/business-context/content-planning/Mitozz Instagram Content Calendar - 2026 - March.csv" --row 1 --pretty`
+- Windows / PowerShell: `pwsh -NoProfile -File tools/resolve-template-mapping.ps1 --csv "brand/references/business-context/content-planning/Mitozz Instagram Content Calendar - 2026 - March.csv" --row 1 --pretty`
+
 ## Encoding Rules
 
 This workspace should be treated as UTF-8 by default.
@@ -40,10 +67,18 @@ The repository treats `.agents/skills/` as the single source of truth for skill 
 ## Typical Flow
 
 1. Use `mitozz-content-calendar` to create or revise the monthly calendar under `brand/references/business-context/content-planning/`.
-2. Use `mitozz-creatives-director` to turn selected calendar rows into creative packages under `brand/references/business-context/creative-packages/`.
-3. Use `mitozz-prompt-engineer` to create or update prompt JSON in `prompts/instagram/feed/` or `prompts/instagram/stories/`.
-4. Use `nano-banana-instagram` to execute Nano Banana Pro MCP using those prompt files.
-5. Review the outputs, approve winners, and promote only the best assets into the visual reference pack when appropriate.
+2. Use the post-calendar flow in `workflows/03-post-calendar-production-flow.md` to resolve the production layer from the approved row.
+3. Use `mitozz-creatives-director` to turn selected calendar rows into creative packages under `brand/references/business-context/creative-packages/`.
+4. Resolve the asset's `template_set` and `slide_blueprint` from the central mapping rules.
+5. Use `mitozz-prompt-engineer` to create or update prompt JSON in `prompts/instagram/feed/` or `prompts/instagram/stories/`.
+6. Use `nano-banana-instagram` to execute Nano Banana Pro MCP using those prompt files.
+7. Review the outputs, approve winners, and promote only the best assets into the visual reference pack when appropriate.
+
+For zero-follower or near-zero-follower periods, use:
+
+- `brand/references/business-context/content-planning/Mitozz Launch Phase Posting Strategy.md`
+
+This keeps Stories in a support role while Reels and save-worthy carousels do the heavier growth work.
 
 For Reels, the flow is more specific:
 
@@ -62,13 +97,15 @@ Use the checklists in `workflows/` to keep planning, creative packaging, generat
 This workspace now includes a repo-local launcher for the published Nano Banana MCP server:
 
 - launcher: `tools/run-nanobanana-mcp.ps1`
+- project MCP config: `.codex/config.toml`
 - Cursor example config: `mcp/nanobanana.cursor.example.json`
 
 Recommended setup:
 
 1. Set `GEMINI_API_KEY` in your local environment or IDE secret store.
-2. Point your MCP client at `tools/run-nanobanana-mcp.ps1`.
-3. Do not commit real API keys into repo config files.
+2. Keep your local secret file at `mcp/nanobanana.cursor.local.json`.
+3. Open the repo in Codex so the project-local `.codex/config.toml` can register the MCP server with the correct `cwd` and longer startup timeout.
+4. Do not commit real API keys into repo config files.
 
 The launcher wraps:
 

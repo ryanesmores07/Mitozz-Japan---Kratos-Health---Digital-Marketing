@@ -3,6 +3,8 @@
   "campaign_name": "March 2026 Organic Education",
   "topic": "Mitochondria basics story reinforcement",
   "objective": "Reinforce",
+  "template_set": "Set 1",
+  "slide_blueprint": "story-3-frame",
   "asset_archetype": "story-reinforcement",
   "platform": "instagram",
   "aspect_ratio": "9:16",
@@ -19,7 +21,10 @@
     "avoid collage layouts or sticker-heavy UI",
     "maintain continuity with the matching March 23 feed carousel",
     "avoid promotional or sales-first wording",
-    "match mood and restraint from the selected references without copying exact frame layout, crop, or focal placement"
+    "match mood and restraint from the selected references without copying exact frame layout, crop, or focal placement",
+    "lock all 3 story frames to the same typography personality and medium weight",
+    "do not use fake buttons or random hierarchy jumps between frames",
+    "keep text color density, opacity, and typographic presence visually consistent across all 3 frames"
   ],
   "composition": [
     "9:16 vertical framing",
@@ -63,11 +68,19 @@
     "max_words": 8,
     "tone": "soft, clear, trustworthy",
     "font_reference": "Noto Sans JP",
+    "font_lock": {
+      "all_frames": "Noto Sans JP Medium"
+    },
+    "batch_lock": {
+      "text_color": "dark charcoal, visually consistent across all frames",
+      "text_opacity": "stable across all frames",
+      "weight_presence": "same medium-weight feel across all frames"
+    },
     "headline_ja": "ミトコンドリアとは？",
     "slides_ja": [
       "まずは基礎から、やさしく。",
       "毎日の土台を考える時の、ひとつの視点です。",
-      "気になったら、フィードで詳しく。"
+      "続きはフィードへ。基礎からやさしく。"
     ]
   },
   "negative_prompts": [
@@ -84,5 +97,5 @@
     "brand/references/business-context/visual/reference-pack/reference-pack-index.md",
     "brand/references/business-context/strategy/Mitozz Japan Brand Voice And Messaging Guidelines.docx.pdf"
   ],
-  "notes": "March 23 story reinforcement. Keep the Steel Light mood and vertical breathing room consistent while varying exact text placement, crop, and background treatment."
+  "notes": "March 23 story reinforcement. Keep the Steel Light mood and vertical breathing room consistent while varying exact text placement, crop, and background treatment. Typography must stay locked across all 3 frames."
 }

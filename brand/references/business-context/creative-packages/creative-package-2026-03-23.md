@@ -63,7 +63,7 @@ Two assets for March 23:
    毎日のコンディションを見直す時の基礎知識として知る価値を提示する
 
 6. End card
-   `保存して、あとで見返せる基礎知識に`
+   `保存して、毎日の土台を見直すきっかけに`
 
 ### Copy Direction
 
@@ -95,14 +95,14 @@ Two assets for March 23:
 `毎日のケアでは、整った生活習慣とやさしい継続が大切です。`
 
 5.
-`保存して、あとで見返せる基礎知識として役立ててください。`
+`保存して、毎日の土台を見直すきっかけに。`
 
 キャプション方向:
 
 ミトコンドリアという言葉を、必要以上に難しく見せず、毎日の土台を考える視点として紹介する。教育目的を前面に置き、商品説明よりも「まず知ること」の価値を強くする。
 
 CTA:
-`保存して、あとで見返してみてください`
+`保存して、やさしく見返してみてください`
 
 ### Visual Direction
 
@@ -115,6 +115,23 @@ CTA:
 - Noto Sans JP を中心にした読みやすいタイポ
 - 中央寄せか少しオフセットした整った構図
 - ごく控えめなサイエンスの抽象表現
+
+Typography lock:
+
+- cover headline = `Noto Sans JP Bold`
+- cover supporting line = `Noto Sans JP Medium`
+- slides 2 to 5 = `Noto Sans JP Medium`
+- slide 6 CTA = `Noto Sans JP Medium`
+- do not mix type weights between inner slides
+- do not add extra headings or subheads on inner slides
+
+Batch consistency lock:
+
+- keep dark charcoal text treatment consistent across all feed slides
+- keep text opacity visually even across the carousel
+- keep support visuals in the same restrained opacity family
+- keep edge glow and background softness stable across the batch
+- if one slide renders darker, brighter, or heavier than the rest, regenerate it
 
 避けたい要素:
 
@@ -231,7 +248,8 @@ CTA:
    `ひとつの視点として知っておきたいテーマです。`
 
 3. Frame 3
-   `気になったら、フィードで詳しく。`
+   `続きはフィードへ。`
+   `基礎からやさしく。`
 
 ### Copy Direction
 
@@ -242,7 +260,7 @@ CTA:
 `まずは基礎から、やさしく。`
 
 CTA:
-`続きはフィードへ`
+`続きはフィードへ。基礎からやさしく。`
 
 トーン:
 
@@ -254,6 +272,12 @@ CTA:
 ### Visual Direction
 
 縦長9:16で、上部と下部に十分な安全余白を取る。フィードと同じ Steel Light 系の色調で統一しつつ、より軽い構造にする。抽象的な光の層、薄いブルーグラデーション、控えめなアプリコットの気配のみで組む。
+
+Typography lock:
+
+- all 3 story frames = `Noto Sans JP Medium`
+- do not let one story frame become heavier or more decorative than the others
+- use directional emphasis through layout and a tiny cue, not a button
 
 見せたい要素:
 

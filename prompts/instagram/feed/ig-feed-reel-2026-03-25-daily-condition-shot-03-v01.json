@@ -3,6 +3,8 @@
   "campaign_name": "March Organic Education",
   "topic": "Rethink daily condition design",
   "objective": "Educate",
+  "template_set": "Set 4 + Set 3",
+  "slide_blueprint": "reel-4-shot",
   "asset_archetype": "reel-source-frame",
   "platform": "instagram",
   "aspect_ratio": "9:16",
@@ -15,7 +17,8 @@
     "soft steel-blue morning light",
     "quiet premium apartment workspace",
     "neutral wardrobe",
-    "Mitozz bottle label facing forward cleanly",
+    "Mitozz bottle with the real front label facing forward cleanly",
+    "clean white bottle body with a white cap and centered label blocks kept readable",
     "no baked-in text"
   ],
   "visual_intent": [
@@ -31,6 +34,7 @@
   "composition": [
     "vertical 9:16 framing",
     "bottle as the primary focal point",
+    "Mitozz bottle shown as a clean white supplement bottle with a white cap and readable centered front label",
     "space below or beside the bottle for later CTA",
     "simple background with premium depth"
   ],
@@ -90,7 +94,7 @@
     "subject_motion": "Very light hand movement settling the bottle.",
     "transition_in": "Cut from lifestyle reframe shot.",
     "transition_out": "Hold the final bottle position before the end frame.",
-    "prompt": "Animate this image into a calm premium product reveal in vertical format. Preserve the exact bottle silhouette, cap finish, label placement, and overall room continuity. Use only subtle natural motion and restrained editorial camera movement. The hand may gently settle the bottle into place. Do not add extra products, extra hands, or dramatic reflections. Keep the frame stable and elegant.",
+    "prompt": "Animate this image into a calm premium product reveal in vertical format. Preserve the exact Mitozz bottle silhouette, clean white bottle body, white cap, centered front label blocks, label readability, and overall room continuity. Keep the real front label facing forward cleanly. Use only subtle natural motion and restrained editorial camera movement. The hand may gently settle the bottle into place. Do not add extra products, extra hands, label redesign, or dramatic reflections. Keep the frame stable and elegant.",
     "negative_prompt": [
       "bottle distortion",
       "label drift",

@@ -1,0 +1,113 @@
+{
+  "asset_type": "instagram-feed-static",
+  "campaign_name": "Mitozz Template Library",
+  "topic": "Template Set 4 - Real-Life Ritual Lifestyle",
+  "objective": "Create reusable template reference",
+  "template_set": "Set 4",
+  "slide_blueprint": "1-slide",
+  "asset_archetype": "lifestyle-template",
+  "platform": "instagram",
+  "aspect_ratio": "4:5",
+  "audience": "Mitozz Japan organic Instagram audience",
+  "motion_role": "",
+  "shot_id": "",
+  "shot_position": 0,
+  "continuity_tokens": [],
+  "visual_intent": [
+    "premium realistic lifestyle image",
+    "calm everyday ritual moment",
+    "natural daylight with Japanese-premium restraint",
+    "believable wellness context rather than staged luxury",
+    "bridge between education and product"
+  ],
+  "brand_guardrails": [
+    "keep it realistic, quiet, and premium",
+    "avoid influencer-style posing or cluttered environments",
+    "preserve the Steel Light palette and restraint",
+    "keep props minimal and believable",
+    "match mood, palette, light quality, whitespace, and restraint from the selected references without duplicating exact crop, pose, object placement, or gradient pattern"
+  ],
+  "composition": [
+    "4:5 portrait lifestyle framing",
+    "natural daylight or diffused studio daylight",
+    "one believable ritual moment such as a desk reset, reading pause, or calm morning setup",
+    "clean negative space for one short Japanese headline",
+    "product may appear naturally but does not need to dominate"
+  ],
+  "image_references": [
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-editorial-whitespace-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "airy spacing",
+        "washed light",
+        "editorial calm"
+      ],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "steel-blue tonality",
+        "cloud-white atmosphere",
+        "soft cool warmth balance"
+      ],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/source-intake/mitozz-bottle-with-tablets.jpg",
+      "role": "product-source",
+      "influence": [
+        "product truth",
+        "tablet relationship",
+        "real pack proportions"
+      ],
+      "match_strength": "medium"
+    }
+  ],
+  "reference_strategy": "Use editorial-whitespace for air and composition, cool-palette for tonality, and bottle-with-tablets only if the product appears as a secondary natural object in the scene.",
+  "variation_guardrails": [
+    "do not create a staged influencer or luxury-hotel scene",
+    "keep the environment minimal and lived-in",
+    "allow realism to lead more than graphics",
+    "maintain text-safe space without making the scene empty"
+  ],
+  "text_overlay": {
+    "allowed": true,
+    "max_words": 8,
+    "tone": "calm, modern, minimal, premium",
+    "font_reference": "Noto Sans JP Bold / Medium",
+    "headline_ja": "短い日本語の見出し",
+    "slides_ja": [
+      "サブラインのプレースホルダー"
+    ]
+  },
+  "sora_handoff": {
+    "use_for_sora": false,
+    "input_mode": "image-to-video",
+    "shot_goal": "",
+    "duration_seconds": 0,
+    "camera_motion": "",
+    "subject_motion": "",
+    "transition_in": "",
+    "transition_out": "",
+    "prompt": "",
+    "negative_prompt": []
+  },
+  "negative_prompts": [
+    "busy home interior",
+    "staged influencer pose",
+    "dramatic fitness scene",
+    "glossy commercial prop pile",
+    "overly dark lighting",
+    "generic stock lifestyle photo"
+  ],
+  "reference_files": [
+    "brand/references/business-context/visual/Brand Visual Direction.md",
+    "brand/references/business-context/visual/Mitozz Instagram Template System.md",
+    "brand/references/business-context/visual/Mitozz Instagram Creative Design System.md",
+    "brand/references/business-context/visual/reference-pack/reference-pack-index.md"
+  ],
+  "notes": "Template Set 4 reference asset. Build a premium realistic lifestyle scene that can support carousels, reels, and bridge posts without breaking the Mitozz visual system."
+}

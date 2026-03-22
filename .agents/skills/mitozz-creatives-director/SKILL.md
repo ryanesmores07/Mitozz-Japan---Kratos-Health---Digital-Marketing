@@ -69,6 +69,9 @@ Treat these as operating constraints unless newer project files override them:
 8. `brand/references/business-context/visual/reference-pack/source-intake/`
 9. `brand/references/business-context/visual/reference-pack/working-examples/`
 10. `workflows/02-build-creative-package.md`
+11. `brand/references/business-context/visual/Mitozz Template Library Index.md`
+12. `brand/references/business-context/visual/template-mapping-rules.json`
+13. `tools/resolve-template-mapping.py` or `tools/resolve-template-mapping.ps1`
 
 If a directly relevant image is attached in chat, treat it as a candidate style anchor.
 If `working-examples/` is empty, build direction from `style-anchors/` plus the visual direction docs only.
@@ -96,6 +99,7 @@ Interpretation rules:
 - treat `補足メモ` as execution context, not final copy
 - if `Section` is `Story`, use `Related Feed Post` to keep support assets aligned to the parent feed post
 - do not carry calendar wording straight into final copy without refining it into natural Japanese
+- resolve the asset's `Template Set` and `Slide Blueprint` from the central mapping rules before choosing exact layout behavior
 
 ## Required Output Shape
 

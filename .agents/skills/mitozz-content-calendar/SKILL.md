@@ -144,6 +144,7 @@ Schema rules:
 - use Japanese for `投稿テーマ`, `切り口`, and `補足メモ`
 - keep system fields and enums stable in English unless the user asks for a different operating system
 - avoid bilingual text in the same cell unless there is a strong review need
+- keep the calendar strategy-focused and let downstream mapping rules resolve the visual system
 - use `Workflow Status` instead of splitting status across multiple columns
 - keep the file easy for both human review and downstream skill parsing
 

@@ -18,18 +18,23 @@ For reel workflows, this skill must produce prompts that are optimized for a lat
 5. Visual reference sources:
    - `brand/references/business-context/visual/Brand Visual Direction.md`
    - `brand/references/business-context/visual/Brand Visual Direction.pdf`
+   - `brand/references/business-context/visual/Mitozz Template Library Index.md`
+   - `brand/references/business-context/visual/template-mapping-rules.json`
    - `brand/references/business-context/visual/reference-pack/reference-pack-index.md`
    - `brand/references/business-context/visual/reference-pack/style-anchors/`
    - `brand/references/business-context/visual/reference-pack/source-intake/`
    - `brand/references/business-context/visual/reference-pack/working-examples/`
 6. `workflows/02-build-creative-package.md`
 7. `workflows/03-generate-and-approve.md`
+8. `tools/resolve-template-mapping.py`
+9. `tools/resolve-template-mapping.ps1` for Windows / PowerShell environments
 
 ## Calendar Compatibility
 
 The content calendar is now Japanese-first for planning, but prompt JSON should stay operationally clear.
 
 - use the calendar row only as planning context
+- resolve `template_set` and `slide_blueprint` from the central mapping rules when the creative package does not already state them
 - use the creative package as the source of truth for wording and production decisions
 - keep prompt structure and control fields in English
 - preserve exact customer-facing Japanese only inside `text_overlay` or other explicit copy fields
@@ -43,6 +48,8 @@ Use this JSON structure:
 - `campaign_name`
 - `topic`
 - `objective`
+- `template_set`
+- `slide_blueprint`
 - `asset_archetype`
 - `platform`
 - `aspect_ratio`
@@ -107,6 +114,15 @@ Product-source rules:
 - keep `influence` focused on pack fidelity, label placement, cap finish, bottle silhouette, or tablet relationship
 - do not use product-source references to control palette, typography, or overall composition
 
+When a reel shot includes the Mitozz bottle as a visible focal element:
+
+- do not rely on the `product-source` image alone
+- explicitly write the bottle description into the prompt fields
+- explicitly describe the front label orientation and readability
+- include the bottle's visible form details such as silhouette, cap finish, bottle material/color, and label block structure
+- treat this written pack description as mandatory for bottle-led reel shots, especially product reveals and CTA end frames
+- prefer concise factual wording such as "Mitozz supplement bottle with the real label facing forward, clean white bottle body, white cap, and clear centered front label blocks" unless a newer approved source photo requires a more exact description
+
 ## Anti-Copy Guardrail
 
 Always encode this rule in the prompt:
@@ -123,6 +139,7 @@ When building prompts for a reel:
 - preserve generous negative space when captions, kinetic text, or CTA overlays will be added later
 - use consistent subject description across the shot set so Sora does not drift
 - use consistent product orientation when the bottle appears
+- for bottle shots, repeat a concise Mitozz bottle-and-label description inside `continuity_tokens`, `composition`, or other prompt text so the model receives explicit pack instructions in plain language
 - prefer simple, direct compositions that animate cleanly
 - avoid overcomplicated background detail that creates unstable motion
 - keep the first shot visually strong enough to serve as the opening frame
@@ -158,6 +175,7 @@ The `negative_prompt` field should suppress:
 Before finalizing a prompt, verify:
 
 - the JSON is valid
+- `template_set` and `slide_blueprint` are present and match the mapped design system
 - `image_references` and `reference_files` are separate
 - the prompt reflects the creatives director concept
 - the prompt encodes the Steel Light system

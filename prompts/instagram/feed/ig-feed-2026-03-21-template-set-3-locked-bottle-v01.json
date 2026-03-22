@@ -1,0 +1,125 @@
+{
+  "asset_type": "instagram-feed-static",
+  "campaign_name": "Mitozz Template Library",
+  "topic": "Template Set 3 - Luminous Product Hero Locked Bottle",
+  "objective": "Create reusable template reference",
+  "template_set": "Set 3",
+  "slide_blueprint": "1-slide",
+  "asset_archetype": "product-hero-template",
+  "platform": "instagram",
+  "aspect_ratio": "4:5",
+  "audience": "Mitozz Japan organic Instagram audience",
+  "motion_role": "",
+  "shot_id": "",
+  "shot_position": 0,
+  "continuity_tokens": [
+    "real Mitozz bottle design stays intact",
+    "real white cap finish stays intact",
+    "real front label structure and placement stay intact",
+    "lighting direction must match the surrounding scene",
+    "contact shadow must feel grounded and realistic"
+  ],
+  "visual_intent": [
+    "premium Japanese wellness editorial",
+    "real bottle kept intact inside a luminous editorial environment",
+    "cool-to-warm premium atmosphere",
+    "realistic lighting consistency",
+    "negative space for short Japanese copy"
+  ],
+  "brand_guardrails": [
+    "keep the real bottle design intact",
+    "do not redesign, recolor, simplify, or relabel the bottle",
+    "match light direction, color temperature, and shadow softness across bottle and environment",
+    "make the bottle feel naturally grounded on the surface",
+    "avoid flashy supplement-ad energy and cluttered props"
+  ],
+  "composition": [
+    "4:5 portrait static feed framing",
+    "real bottle on a believable premium surface",
+    "cloud-white and mist-blue environment with restrained apricot warmth",
+    "ample negative space for one short Japanese headline and one secondary line",
+    "editorial calm with realistic bottle-to-scene integration"
+  ],
+  "image_references": [
+    {
+      "path": "brand/references/business-context/visual/reference-pack/source-intake/mitozz-bottle.jpg",
+      "role": "product-source",
+      "influence": [
+        "exact bottle silhouette",
+        "body color",
+        "cap finish",
+        "front label fidelity"
+      ],
+      "match_strength": "high"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-product-glow-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "product lighting mood",
+        "restrained warmth",
+        "hero atmosphere"
+      ],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-editorial-whitespace-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "whitespace",
+        "editorial restraint",
+        "premium negative space"
+      ],
+      "match_strength": "medium"
+    }
+  ],
+  "reference_strategy": "Use the real bottle source as immutable product truth, then use product-glow and editorial-whitespace to shape the atmosphere around it without altering the package.",
+  "variation_guardrails": [
+    "vary environment and crop without changing the bottle identity",
+    "keep the glow restrained and premium rather than ad-like",
+    "preserve realistic scale and grounded surface contact",
+    "reject any result where the bottle drifts from the approved source design"
+  ],
+  "text_overlay": {
+    "allowed": true,
+    "max_words": 8,
+    "tone": "short, premium, calm, editorial",
+    "font_reference": "Noto Sans JP Bold / Medium",
+    "headline_ja": "短い日本語の見出し",
+    "slides_ja": [
+      "サブラインのプレースホルダー"
+    ]
+  },
+  "sora_handoff": {
+    "use_for_sora": false,
+    "input_mode": "image-to-video",
+    "shot_goal": "",
+    "duration_seconds": 0,
+    "camera_motion": "",
+    "subject_motion": "",
+    "transition_in": "",
+    "transition_out": "",
+    "prompt": "",
+    "negative_prompt": []
+  },
+  "negative_prompts": [
+    "changed bottle design",
+    "fake label",
+    "black bottle",
+    "oversized MITOZZ wordmark",
+    "dark packaging",
+    "unreadable label",
+    "floating bottle",
+    "mismatched shadow direction",
+    "cluttered props",
+    "flashy supplement ad"
+  ],
+  "reference_files": [
+    "brand/references/business-context/visual/Brand Visual Direction.md",
+    "brand/references/business-context/visual/Mitozz Instagram Template System.md",
+    "brand/references/business-context/visual/Mitozz Instagram Creative Design System.md",
+    "brand/references/business-context/visual/Mitozz Locked Bottle Workflow.md",
+    "brand/references/business-context/visual/reference-pack/reference-pack-index.md"
+  ],
+  "notes": "Locked bottle workflow for Set 3. The bottle is product truth and the environment must adapt around it with realistic lighting, shadow, scale, and grounded contact."
+}

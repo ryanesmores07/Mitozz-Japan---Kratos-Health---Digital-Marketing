@@ -1,0 +1,110 @@
+{
+  "version": "2026-03-21",
+  "system_name": "Steel Light System",
+  "description": "Deterministic mapping rules that assign Mitozz template sets and slide blueprints from calendar strategy fields without changing the calendar schema.",
+  "defaults": {
+    "carousel": {
+      "template_set": "Set 1 + Set 2",
+      "slide_blueprint": "5-slide"
+    },
+    "reel": {
+      "template_set": "Set 4 + Set 3",
+      "slide_blueprint": "reel-4-shot"
+    },
+    "static_post": {
+      "template_set": "Set 3",
+      "slide_blueprint": "1-slide"
+    },
+    "story": {
+      "template_set": "Set 1",
+      "slide_blueprint": "story-3-frame"
+    }
+  },
+  "format_mapping": {
+    "Carousel": {
+      "template_set": "Set 1 + Set 2",
+      "slide_blueprint": "5-slide"
+    },
+    "Reel": {
+      "template_set": "Set 4 + Set 3",
+      "slide_blueprint": "reel-4-shot"
+    },
+    "Static Post": {
+      "template_set": "Set 3",
+      "slide_blueprint": "1-slide"
+    },
+    "Feed reinforcement": {
+      "template_set": "Set 1",
+      "slide_blueprint": "story-3-frame"
+    },
+    "Education mini-slide": {
+      "template_set": "Set 1",
+      "slide_blueprint": "story-3-frame"
+    },
+    "FAQ": {
+      "template_set": "Set 1",
+      "slide_blueprint": "story-3-frame"
+    },
+    "Poll": {
+      "template_set": "Set 4",
+      "slide_blueprint": "story-3-frame"
+    },
+    "Question box": {
+      "template_set": "Set 4",
+      "slide_blueprint": "story-3-frame"
+    },
+    "Trust proof": {
+      "template_set": "Set 5 + Set 1",
+      "slide_blueprint": "3-slide"
+    }
+  },
+  "content_pillar_mapping": {
+    "Mitochondria, Explained Simply": {
+      "template_set": "Set 1 + Set 2",
+      "slide_blueprint": "5-slide"
+    },
+    "Epicatechin and the Science Story": {
+      "template_set": "Set 1 + Set 2",
+      "slide_blueprint": "5-slide"
+    },
+    "Better Function, Not Hype": {
+      "template_set": "Set 4 + Set 3",
+      "slide_blueprint": "reel-4-shot"
+    },
+    "Trust, Safety, and Premium Proof": {
+      "template_set": "Set 5 + Set 1",
+      "slide_blueprint": "3-slide"
+    }
+  },
+  "objective_overrides": {
+    "Reinforce": {
+      "template_set": "Set 1",
+      "slide_blueprint": "story-3-frame"
+    },
+    "Gather engagement": {
+      "template_set": "Set 4",
+      "slide_blueprint": "story-3-frame"
+    }
+  },
+  "persona_overrides": {
+    "Sleep-Deprived High Performer": {
+      "preferred_support_set": "Set 4"
+    },
+    "Healthy Aging Planner": {
+      "preferred_support_set": "Set 5"
+    },
+    "Research-First Wellness Optimizer": {
+      "preferred_support_set": "Set 2"
+    }
+  },
+  "resolution_order": [
+    "format_mapping",
+    "content_pillar_mapping",
+    "objective_overrides"
+  ],
+  "notes": [
+    "Use calendar strategy fields as input and resolve template decisions here.",
+    "Do not change the calendar schema unless the user explicitly requests it.",
+    "Creative packaging and prompt generation should inherit the mapped template set and slide blueprint by default."
+  ]
+}

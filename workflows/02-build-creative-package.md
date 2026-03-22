@@ -2,11 +2,15 @@
 
 Use this checklist when turning a calendar row into a creative package.
 
+This workflow starts after the calendar-to-production handoff described in `workflows/03-post-calendar-production-flow.md`.
+
 ## Inputs
 
 - selected calendar row
 - relevant strategy and audience context
 - `brand/references/business-context/visual/Brand Visual Direction.md`
+- `brand/references/business-context/visual/Mitozz Template Library Index.md`
+- `brand/references/business-context/visual/template-mapping-rules.json`
 - `brand/references/business-context/visual/reference-pack/reference-pack-index.md`
 
 Read the calendar row using the current schema:
@@ -21,9 +25,20 @@ Read the calendar row using the current schema:
 - `CTA`
 - `補足メモ`
 
+Then resolve the downstream production layer:
+
+- `Template Set`
+- `Slide Blueprint`
+- `asset_archetype`
+- `story_type` when needed
+- `approved_references`
+
 ## Checklist
 
 - Define the objective clearly: educate, reinforce, trust-build, or support conversion.
+- Resolve `Template Set` and `Slide Blueprint` from the mapping rules before deciding layout details.
+  - canonical resolver: `tools/resolve-template-mapping.py`
+  - windows wrapper: `tools/resolve-template-mapping.ps1`
 - Assign the right `asset_archetype`.
 - Choose 2 to 4 `image_references`.
 - Include at least 1 `style-anchor` when available.
@@ -108,5 +123,6 @@ For reels, also require:
 ## Output
 
 - one creative package per asset
+- inherits its mapped `Template Set` and `Slide Blueprint` from the central rules by default
 - ready for prompt-engineering with no missing visual-reference decisions
 - for reels, ready for prompt-engineering and Sora with no missing shot-level decisions

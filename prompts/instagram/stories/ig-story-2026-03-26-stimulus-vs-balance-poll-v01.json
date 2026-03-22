@@ -1,0 +1,120 @@
+{
+  "asset_type": "instagram-story",
+  "campaign_name": "March 2026 Organic Education",
+  "topic": "Stimulus versus balance poll story",
+  "objective": "Gather engagement",
+  "template_set": "Set 4",
+  "slide_blueprint": "story-3-frame",
+  "asset_archetype": "story-reinforcement",
+  "platform": "instagram",
+  "aspect_ratio": "9:16",
+  "audience": "Sleep-Deprived High Performer",
+  "visual_intent": [
+    "interactive lifestyle-led story",
+    "quiet premium workday atmosphere",
+    "mist-blue calm with generous negative space",
+    "poll-ready final frame",
+    "fast mobile readability"
+  ],
+  "brand_guardrails": [
+    "keep continuity with the March 25 Set 4 story",
+    "preserve top and bottom safe zones",
+    "keep typography stable across all 3 frames",
+    "do not generate fake poll UI or placeholder boxes",
+    "avoid hard-sell or self-help energy",
+    "keep text color density, opacity, and typographic presence visually consistent across all 3 frames"
+  ],
+  "composition": [
+    "9:16 vertical framing",
+    "one short message block per frame",
+    "subtle lifestyle image support with clean reading zone",
+    "frame 3 must leave lower-third space for the native Poll Sticker",
+    "strong negative space",
+    "mist-blue and cloud-white atmosphere with restrained steel-blue structure"
+  ],
+  "image_references": [
+    {
+      "path": "brand/references/business-context/visual/reference-pack/working-examples/template-set-4-lifestyle-v02-no-bottle.png",
+      "role": "working-example",
+      "influence": [
+        "daily-life realism",
+        "quiet lifestyle atmosphere",
+        "premium restraint"
+      ],
+      "match_strength": "high"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/working-examples/story-busy-day-context-hook-01.png",
+      "role": "working-example",
+      "influence": [
+        "story continuity",
+        "typography presence",
+        "upper text rhythm"
+      ],
+      "match_strength": "high"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/working-examples/story-busy-day-context-context-01.png",
+      "role": "working-example",
+      "influence": [
+        "batch consistency",
+        "text color density",
+        "calm desk atmosphere"
+      ],
+      "match_strength": "high"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "palette",
+        "mist-blue softness",
+        "restraint"
+      ],
+      "match_strength": "medium"
+    }
+  ],
+  "reference_strategy": "Use the approved Set 4 lifestyle reference and the March 25 story frames as the primary continuity anchors, then keep the March 26 story more question-led and interaction-ready without changing the typographic personality.",
+  "variation_guardrails": [
+    "make the sequence more question-led than March 25",
+    "keep the environment similar but not identical",
+    "use more intentional lower-third space on frame 3",
+    "avoid exact crop or hand placement matching from the references"
+  ],
+  "text_overlay": {
+    "allowed": true,
+    "max_words": 10,
+    "tone": "clear, calm, conversational",
+    "font_reference": "Noto Sans JP",
+    "font_lock": {
+      "all_frames": "Noto Sans JP Medium"
+    },
+    "batch_lock": {
+      "text_color": "dark charcoal, visually consistent across all frames",
+      "text_opacity": "stable across all frames",
+      "weight_presence": "same medium-weight feel across all frames"
+    },
+    "headline_ja": "頑張る日は、",
+    "slides_ja": [
+      "刺激で押し切りたくなる。",
+      "でも最近は、整える方がしっくりくる。",
+      "今の自分はどっちに近い？ 気分に近い方を選んでください。"
+    ]
+  },
+  "negative_prompts": [
+    "fake poll UI",
+    "white translucent rectangle",
+    "button-like box",
+    "messy workspace",
+    "hard-sell ad mood",
+    "tiny unreadable text"
+  ],
+  "reference_files": [
+    "brand/references/business-context/creative-packages/creative-package-2026-03-26.md",
+    "brand/references/business-context/creative-packages/post-calendar-layer-2026-03-23-to-2026-03-31.md",
+    "brand/references/business-context/creative-packages/story-posting-actions-2026-03-23-to-2026-03-31.md",
+    "brand/references/business-context/visual/Brand Visual Direction.md",
+    "brand/references/business-context/visual/Mitozz Instagram Story Strategy.md"
+  ],
+  "notes": "March 26 interactive poll story. Keep it in the same Set 4 world as March 25, but make it more obviously response-ready. Frame 3 must stay clean for the native Poll Sticker."
+}

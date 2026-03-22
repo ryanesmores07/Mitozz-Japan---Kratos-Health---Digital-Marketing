@@ -7,3 +7,7 @@ This folder holds **generated images** produced by the `nano-banana-instagram` s
 - **Format:** All images are saved as **JPG** (`.jpg` or `.jpeg`) only.
 
 **Input:** Prompt JSON files from `prompts/instagram/feed/` and `prompts/instagram/stories/` (created by `mitozz-prompt-engineer`).
+
+Current production start:
+
+- March 23 launch file: [START-HERE-MARCH-23.md](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/brand/references/business-context/creative-packages/START-HERE-MARCH-23.md)

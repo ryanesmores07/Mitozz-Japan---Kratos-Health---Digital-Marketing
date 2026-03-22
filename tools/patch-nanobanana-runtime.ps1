@@ -41,7 +41,7 @@ function Replace-Text {
 $patchedFiles = 0
 
 $settingsFiles = Get-ChildItem -Path $archiveRoot -Recurse -File -Filter settings.py |
-    Where-Object { $_.FullName -like "*nanobanana_mcp_server\config\settings.py" }
+    Where-Object { $_.FullName -match 'nanobanana_mcp_server[\\/]+config[\\/]+settings\.py$' }
 
 foreach ($file in $settingsFiles) {
     $changed = $false
@@ -55,7 +55,7 @@ foreach ($file in $settingsFiles) {
 }
 
 $selectorFiles = Get-ChildItem -Path $archiveRoot -Recurse -File -Filter model_selector.py |
-    Where-Object { $_.FullName -like "*nanobanana_mcp_server\services\model_selector.py" }
+    Where-Object { $_.FullName -match 'nanobanana_mcp_server[\\/]+services[\\/]+model_selector\.py$' }
 
 foreach ($file in $selectorFiles) {
     $changed = $false

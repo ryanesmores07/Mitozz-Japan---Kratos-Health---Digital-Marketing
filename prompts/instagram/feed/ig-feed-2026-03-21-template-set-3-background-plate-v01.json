@@ -1,0 +1,112 @@
+{
+  "asset_type": "instagram-feed-static",
+  "campaign_name": "Mitozz Template Library",
+  "topic": "Template Set 3 - Background Plate",
+  "objective": "Create reusable background plate",
+  "template_set": "Set 3",
+  "slide_blueprint": "1-slide",
+  "asset_archetype": "product-hero-background-plate",
+  "platform": "instagram",
+  "aspect_ratio": "4:5",
+  "audience": "Mitozz Japan organic Instagram audience",
+  "motion_role": "",
+  "shot_id": "",
+  "shot_position": 0,
+  "continuity_tokens": [],
+  "visual_intent": [
+    "premium Japanese wellness editorial",
+    "bottle-free luminous product hero plate",
+    "cloud-white and mist-blue atmosphere",
+    "restrained apricot warmth",
+    "clear placement zone for a real bottle composite"
+  ],
+  "brand_guardrails": [
+    "do not show any bottle or product package in the plate",
+    "preserve large negative space for headline placement",
+    "keep the scene minimal, premium, and calm",
+    "avoid hard-sell supplement-ad styling",
+    "match mood, palette, light quality, whitespace, and restraint from the selected references without duplicating exact crop or gradient pattern"
+  ],
+  "composition": [
+    "4:5 portrait static feed framing",
+    "premium believable tabletop or smooth surface",
+    "one clear bottle placement zone near lower center or lower right",
+    "soft backlight and subtle reflection area",
+    "ample clean text-safe area"
+  ],
+  "image_references": [
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-product-glow-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "product-light mood",
+        "restrained warmth",
+        "premium hero atmosphere"
+      ],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-editorial-whitespace-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "airy whitespace",
+        "editorial restraint",
+        "negative space"
+      ],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "steel-light palette",
+        "cloud-white tonality",
+        "mist-blue atmosphere"
+      ],
+      "match_strength": "medium"
+    }
+  ],
+  "reference_strategy": "Use product-glow for lighting mood, editorial-whitespace for breathing room, and cool-palette for the Steel Light atmosphere while leaving a realistic empty bottle zone for later composition.",
+  "variation_guardrails": [
+    "do not place any product in frame",
+    "keep the placement area believable and grounded",
+    "avoid overbuilt props or decorative clutter",
+    "keep the scene usable for real-bottle composition"
+  ],
+  "text_overlay": {
+    "allowed": false,
+    "max_words": 0,
+    "tone": "",
+    "font_reference": "Noto Sans JP Bold / Medium",
+    "headline_ja": "",
+    "slides_ja": []
+  },
+  "sora_handoff": {
+    "use_for_sora": false,
+    "input_mode": "image-to-video",
+    "shot_goal": "",
+    "duration_seconds": 0,
+    "camera_motion": "",
+    "subject_motion": "",
+    "transition_in": "",
+    "transition_out": "",
+    "prompt": "",
+    "negative_prompt": []
+  },
+  "negative_prompts": [
+    "bottle in frame",
+    "product package in frame",
+    "cluttered props",
+    "dark ad scene",
+    "neon biotech",
+    "busy decorative elements"
+  ],
+  "reference_files": [
+    "brand/references/business-context/visual/Brand Visual Direction.md",
+    "brand/references/business-context/visual/Mitozz Instagram Template System.md",
+    "brand/references/business-context/visual/Mitozz Locked Bottle Workflow.md",
+    "brand/references/business-context/visual/Mitozz Set 3 Real Photo Composition Workflow.md",
+    "brand/references/business-context/visual/reference-pack/reference-pack-index.md"
+  ],
+  "notes": "Background plate only for Set 3. This prompt is meant to generate the environment around the real bottle, not the bottle itself."
+}

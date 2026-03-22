@@ -38,6 +38,7 @@ For reel shot prompts:
 - execute each shot prompt as part of one coordinated shot family
 - preserve shared continuity tokens across the whole set
 - keep the subject description, palette, environment, and light direction stable unless the prompt explicitly changes them
+- when the bottle is a featured subject, make sure the prompt text itself explicitly describes the Mitozz bottle and its front label, not just the attached product-source image
 - prioritize simple clean compositions that animate well in Sora
 - protect negative space for later text overlays and subtitles
 - do not bake text into source images unless the prompt explicitly requires it
@@ -106,6 +107,7 @@ For reels, also verify:
 
 - each shot has a clear role in the sequence
 - continuity tokens match across the reel set
+- bottle-led shots explicitly mention bottle silhouette, cap finish, and front-label orientation/readability in the prompt text
 - text-safe space is preserved where needed
 - the first shot can function as a hook frame
 - the last shot can hold for CTA or brand presence

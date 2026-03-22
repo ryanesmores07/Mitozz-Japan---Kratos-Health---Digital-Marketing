@@ -6,6 +6,7 @@ This workspace uses Codex MCP, not Cursor MCP, as the active integration path.
 
 - `tools/run-nanobanana-mcp.ps1`
 - `tools/patch-nanobanana-runtime.ps1`
+- `.codex/config.toml`
 - `mcp/nanobanana.cursor.example.json` as a legacy/example reference only
 
 ## What Does Not Live In Repo
@@ -22,15 +23,21 @@ These are intentionally excluded by `.gitignore`.
    - `mcp/nanobanana.cursor.local.json`
 2. Put your real `GEMINI_API_KEY` in that local file.
 3. Keep `NANOBANANA_MODEL` set to `flash`.
-4. Ensure Codex global config has this entry in `~/.codex/config.toml`:
+4. Open the repo in Codex. This workspace now includes a project-local MCP config at:
+   - `.codex/config.toml`
+5. Ensure `pwsh` is installed and available on PATH.
+6. If you prefer a global fallback, the equivalent entry in `~/.codex/config.toml` is:
 
 ```toml
 [mcp_servers.nanobanana]
-command = "powershell"
-args = ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "C:\\Users\\YOUR_USER\\path\\to\\repo\\tools\\run-nanobanana-mcp.ps1"]
+command = "pwsh"
+args = ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "tools/run-nanobanana-mcp.ps1"]
+cwd = "C:\\Users\\YOUR_USER\\path\\to\\repo"
+startup_timeout_sec = 45
+tool_timeout_sec = 120
 ```
 
-5. Restart Codex after changing the global config.
+7. Restart Codex after changing config or pulling repo updates.
 
 ## Mac Setup
 
@@ -62,10 +69,14 @@ If you keep the same repo structure, it should look like:
 ```toml
 [mcp_servers.nanobanana]
 command = "pwsh"
-args = ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "/Users/YOUR_USER/path/to/repo/tools/run-nanobanana-mcp.ps1"]
+args = ["-NoProfile", "-ExecutionPolicy", "Bypass", "-File", "tools/run-nanobanana-mcp.ps1"]
+cwd = "/Users/YOUR_USER/path/to/repo"
+startup_timeout_sec = 45
+tool_timeout_sec = 120
 ```
 
-4. Restart Codex.
+4. If you open the repo directly in Codex, the project-local `.codex/config.toml` should already cover this setup.
+5. Restart Codex after changing config or pulling repo updates.
 
 ## Model Standard
 
@@ -91,3 +102,4 @@ Expected signs:
 - `mcp/nanobanana.cursor.local.json` is local-only and ignored by Git.
 - `mcp/uv-cache/`, `mcp/uv-python/`, and `mcp/xdg-data/` are also local-only.
 - Pulling the repo onto another machine does not transfer secrets or Codex global config.
+- Official Codex MCP docs support `command`, `args`, `env`, `cwd`, `startup_timeout_sec`, and `tool_timeout_sec` for STDIO servers. We use `cwd` plus a longer startup timeout here because the Nano Banana server may need more than the default 10 seconds to handshake on first start.

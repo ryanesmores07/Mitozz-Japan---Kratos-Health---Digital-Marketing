@@ -90,7 +90,8 @@ Treat `style-anchors/` as the default source of visual guidance. Add approved bo
     "same female Japanese professional in early 30s",
     "soft steel-blue morning light",
     "quiet premium apartment workspace",
-    "Mitozz bottle label facing camera cleanly",
+    "Mitozz bottle with the real front label facing camera cleanly",
+    "clean white bottle body with a white cap and centered label blocks kept readable",
     "no baked-in text"
   ],
   "image_references": [

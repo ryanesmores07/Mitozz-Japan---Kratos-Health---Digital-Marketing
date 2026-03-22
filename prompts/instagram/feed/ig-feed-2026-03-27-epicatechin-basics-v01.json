@@ -3,6 +3,8 @@
   "campaign_name": "March 2026 Organic Education",
   "topic": "What is epicatechin?",
   "objective": "Educate",
+  "template_set": "Set 1 + Set 2",
+  "slide_blueprint": "5-slide",
   "asset_archetype": "education-card",
   "platform": "instagram",
   "aspect_ratio": "4:5",
@@ -12,7 +14,7 @@
     "calm ingredient education",
     "cloud-white card structure with mist-blue atmosphere",
     "slightly more intellectual tone than the March 23 post",
-    "save-worthy text-first carousel"
+    "hook-led save-worthy text-first carousel"
   ],
   "brand_guardrails": [
     "retain the approved Education White Card mode",
@@ -28,7 +30,8 @@
     "slightly offset editorial layout rather than perfectly centered",
     "one clear message per slide",
     "subtle ingredient-oriented abstract cue only",
-    "text-first educational layout with premium readability"
+    "text-first educational layout with premium readability",
+    "hook cover, why-it-matters second slide, and contextual fifth slide"
   ],
   "image_references": [
     {
@@ -62,12 +65,14 @@
       "match_strength": "medium"
     }
   ],
-  "reference_strategy": "Use the approved March 23 working example as the benchmark for the Education White Card mode, then use education-layout for spacing discipline and cool-palette for atmosphere. Keep the card language consistent while shifting the composition and abstract cue so this reads as a new post.",
+  "reference_strategy": "Use the approved March 23 working example as the benchmark for the Education White Card mode, then use education-layout for spacing discipline and cool-palette for atmosphere. Keep the card language consistent while making the cover more hook-led and the later slides more contextual and useful.",
   "variation_guardrails": [
     "do not copy the exact March 23 type placement or object shape",
     "shift the card rhythm toward a slightly more editorial offset layout",
     "keep the science cue softer and more ingredient-like than cellular",
-    "maintain the same premium calm while increasing the sense of thoughtful structure"
+    "maintain the same premium calm while increasing the sense of thoughtful structure",
+    "make the cover feel immediately relevant, not just informative",
+    "make slide 5 feel more lived-in and brand-contextual than purely abstract"
   ],
   "text_overlay": {
     "allowed": true,
@@ -76,11 +81,11 @@
     "font_reference": "Noto Sans JP Bold / Medium",
     "headline_ja": "エピカテキンとは？",
     "slides_ja": [
-      "エピカテキンは、Mitozzの考え方を理解するうえで大切な成分です。",
-      "成分名だけを見ると難しく感じても、まずは役割の輪郭を知ることが大切です。",
-      "大切なのは、言葉の難しさではなく、どう位置づけるかという視点です。",
-      "まずは基礎から整理することで、ブランドの見え方も変わります。",
-      "保存して、あとで見返せる成分の基礎知識として役立ててください。"
+      "成分名がわかると、Mitozzが何を大切にしているかも見えやすくなります。",
+      "エピカテキンは、Mitozzの考え方を支える大切なキーワードです。",
+      "難しい効能を追う前に、まずは位置づけを知ることが大切です。",
+      "だからこそ、成分理解は毎日の土台を見直す入口にもなります。",
+      "保存して、成分の基礎をあとで見返してください。"
     ]
   },
   "negative_prompts": [
@@ -98,5 +103,5 @@
     "brand/references/business-context/visual/reference-pack/reference-pack-index.md",
     "brand/references/business-context/strategy/Mitozz Japan Brand Voice And Messaging Guidelines.docx.pdf"
   ],
-  "notes": "March 27 ingredient education carousel. Stay inside the approved Education White Card mode established on March 23, but shift toward a more ingredient-focused, slightly more intellectual presentation with a more offset editorial rhythm."
+  "notes": "March 27 ingredient education carousel. Stay inside the approved Education White Card mode established on March 23, but use a stronger hook-led cover, clearer why-it-matters logic, and a more contextual fifth slide so the carousel earns the swipe."
 }

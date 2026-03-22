@@ -3,6 +3,8 @@
   "campaign_name": "March Organic Education",
   "topic": "Rethink daily condition design",
   "objective": "Educate",
+  "template_set": "Set 4 + Set 3",
+  "slide_blueprint": "reel-4-shot",
   "asset_archetype": "reel-source-frame",
   "platform": "instagram",
   "aspect_ratio": "9:16",
@@ -15,7 +17,8 @@
     "soft steel-blue morning light",
     "quiet premium apartment workspace",
     "neutral wardrobe",
-    "Mitozz bottle label facing forward cleanly",
+    "Mitozz bottle with the real front label facing forward cleanly",
+    "clean white bottle body with a white cap and centered label blocks kept readable",
     "no baked-in text"
   ],
   "visual_intent": [
@@ -32,6 +35,7 @@
     "vertical 9:16 framing",
     "large negative space in top and bottom areas",
     "bottle stable within the scene",
+    "Mitozz bottle shown as a clean white supplement bottle with a white cap and readable centered front label",
     "almost still final composition"
   ],
   "image_references": [
@@ -89,7 +93,7 @@
     "subject_motion": "Ambient light softness only.",
     "transition_in": "Gentle cut from shot 03.",
     "transition_out": "Final hold for CTA.",
-    "prompt": "Animate this source image into a calm premium end frame for a wellness reel. Keep the bottle orientation, environment, and light direction consistent with the previous product shot. Use only minimal ambient motion and a nearly still camera. Preserve large clean text-safe areas for a soft CTA. Do not add new props, people, or movement.",
+    "prompt": "Animate this source image into a calm premium end frame for a wellness reel. Keep the Mitozz bottle orientation, clean white bottle body, white cap, centered front label blocks, label readability, environment, and light direction consistent with the previous product shot. Keep the real front label facing forward cleanly. Use only minimal ambient motion and a nearly still camera. Preserve large clean text-safe areas for a soft CTA. Do not add new props, people, label redesign, or movement.",
     "negative_prompt": [
       "bottle drift",
       "unstable framing",

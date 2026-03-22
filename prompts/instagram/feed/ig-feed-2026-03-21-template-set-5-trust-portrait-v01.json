@@ -1,0 +1,113 @@
+{
+  "asset_type": "instagram-feed-static",
+  "campaign_name": "Mitozz Template Library",
+  "topic": "Template Set 5 - Warm Trust Portrait",
+  "objective": "Create reusable template reference",
+  "template_set": "Set 5",
+  "slide_blueprint": "1-slide",
+  "asset_archetype": "trust-portrait-template",
+  "platform": "instagram",
+  "aspect_ratio": "4:5",
+  "audience": "Mitozz Japan organic Instagram audience",
+  "motion_role": "",
+  "shot_id": "",
+  "shot_position": 0,
+  "continuity_tokens": [],
+  "visual_intent": [
+    "premium warm trust portrait",
+    "credible Japanese-premium authority image",
+    "soft medically responsible atmosphere",
+    "airy editorial whitespace",
+    "supporting mode for expert and trust content"
+  ],
+  "brand_guardrails": [
+    "keep the subject composed, natural, and credible",
+    "avoid influencer energy or corporate stiffness",
+    "preserve cloud-white and mist-blue tonality with gentle warmth",
+    "keep styling quiet and expensive",
+    "match mood, palette, light quality, whitespace, and restraint from the selected references without duplicating exact crop, pose, object placement, or gradient pattern"
+  ],
+  "composition": [
+    "4:5 portrait static feed framing",
+    "ample whitespace around the subject",
+    "one short Japanese headline and one secondary line",
+    "subject expression calm and intelligent",
+    "minimal environment with soft daylight"
+  ],
+  "image_references": [
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-portrait-trust-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "portrait mood",
+        "human softness",
+        "trust-building feel"
+      ],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-editorial-whitespace-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "whitespace",
+        "washed light",
+        "editorial restraint"
+      ],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "tonality",
+        "cloud-white atmosphere",
+        "subtle premium color control"
+      ],
+      "match_strength": "medium"
+    }
+  ],
+  "reference_strategy": "Use the portrait-trust anchor to control expression and trust tone, editorial-whitespace for layout calm, and cool-palette for the steel-light color world.",
+  "variation_guardrails": [
+    "do not let the portrait fill the frame too aggressively",
+    "keep the scene softer and more editorial than the earlier draft",
+    "avoid a corporate headshot look",
+    "preserve generous text-safe space"
+  ],
+  "text_overlay": {
+    "allowed": true,
+    "max_words": 8,
+    "tone": "short, calm, premium, credible",
+    "font_reference": "Noto Sans JP Bold / Medium",
+    "headline_ja": "短い日本語の見出し",
+    "slides_ja": [
+      "サブラインのプレースホルダー"
+    ]
+  },
+  "sora_handoff": {
+    "use_for_sora": false,
+    "input_mode": "image-to-video",
+    "shot_goal": "",
+    "duration_seconds": 0,
+    "camera_motion": "",
+    "subject_motion": "",
+    "transition_in": "",
+    "transition_out": "",
+    "prompt": "",
+    "negative_prompt": []
+  },
+  "negative_prompts": [
+    "corporate headshot",
+    "influencer selfie",
+    "heavy makeup",
+    "busy background",
+    "dark moody portrait",
+    "generic beauty ad"
+  ],
+  "reference_files": [
+    "brand/references/business-context/visual/Brand Visual Direction.md",
+    "brand/references/business-context/visual/Mitozz Instagram Template System.md",
+    "brand/references/business-context/visual/Mitozz Instagram Creative Design System.md",
+    "brand/references/business-context/visual/reference-pack/reference-pack-index.md"
+  ],
+  "notes": "Template Set 5 reference asset. Refine the trust portrait into a reusable authority mode with more breathing room and stronger editorial softness."
+}

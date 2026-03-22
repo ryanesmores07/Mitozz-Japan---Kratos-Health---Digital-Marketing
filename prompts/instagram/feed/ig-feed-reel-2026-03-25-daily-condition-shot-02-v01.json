@@ -3,6 +3,8 @@
   "campaign_name": "March Organic Education",
   "topic": "Rethink daily condition design",
   "objective": "Educate",
+  "template_set": "Set 4 + Set 3",
+  "slide_blueprint": "reel-4-shot",
   "asset_archetype": "reel-source-frame",
   "platform": "instagram",
   "aspect_ratio": "9:16",

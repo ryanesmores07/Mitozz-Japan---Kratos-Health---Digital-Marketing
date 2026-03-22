@@ -1,0 +1,133 @@
+{
+  "asset_type": "instagram-story",
+  "campaign_name": "March 2026 Organic Education",
+  "topic": "Epicatechin question-box story",
+  "objective": "Encourage questions after the March 27 feed post",
+  "template_set": "Set 1",
+  "slide_blueprint": "story-3-frame",
+  "asset_archetype": "story-reinforcement",
+  "platform": "instagram",
+  "aspect_ratio": "9:16",
+  "audience": "Research-First Wellness Optimizer",
+  "visual_intent": [
+    "premium white-card story simplification",
+    "quiet ingredient follow-up",
+    "calm question-friendly education",
+    "strong readability with wide breathing room",
+    "native question-box-ready final frame"
+  ],
+  "brand_guardrails": [
+    "maintain continuity with the approved March 27 feed carousel",
+    "use the Set 1 color and typography system",
+    "keep typography stable across all 3 frames",
+    "preserve top and bottom safe zones",
+    "do not generate fake question-box UI or placeholder rectangles",
+    "keep frame 3 open in the lower third for the native sticker",
+    "keep text darkness, opacity, and weight visually consistent across all 3 frames"
+  ],
+  "composition": [
+    "9:16 vertical framing",
+    "one short message block per frame",
+    "full-canvas white-card feel with minimal mist-blue edge atmosphere",
+    "strong upper-third reading zone",
+    "very light internal support motif only when needed",
+    "frame 3 must reserve lower-third space for the native Question Sticker"
+  ],
+  "image_references": [
+    {
+      "path": "brand/references/business-context/visual/reference-pack/working-examples/feed-epicatechin-basics-cover-01.png",
+      "role": "working-example",
+      "influence": [
+        "ingredient theme continuity",
+        "border behavior",
+        "calm premium feel"
+      ],
+      "match_strength": "high"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/working-examples/story-mitochondria-basics-hook-01.png",
+      "role": "working-example",
+      "influence": [
+        "Set 1 story restraint",
+        "story spacing",
+        "type presence"
+      ],
+      "match_strength": "high"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/working-examples/story-mitochondria-basics-cta-01.png",
+      "role": "working-example",
+      "influence": [
+        "story CTA calmness",
+        "lower-third reserve behavior",
+        "non-pushy tone"
+      ],
+      "match_strength": "high"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-editorial-whitespace-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "breathing room",
+        "editorial whitespace",
+        "restraint"
+      ],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "mist-blue softness",
+        "cloud-white palette",
+        "premium atmosphere"
+      ],
+      "match_strength": "medium"
+    }
+  ],
+  "reference_strategy": "Use the approved March 27 feed cover as the ingredient-continuity anchor, and the March 23 Set 1 story as the story-behavior anchor. Keep the story lighter and more conversational than the feed while preserving the same premium border logic and typographic calmness.",
+  "variation_guardrails": [
+    "do not clone the feed card layout literally",
+    "keep the frames lighter and more conversational than the feed",
+    "use a softer and more open support motif than the feed cover",
+    "avoid any hard science icon becoming the focal point",
+    "frame 3 should feel like an invitation, not a sales CTA"
+  ],
+  "text_overlay": {
+    "allowed": true,
+    "max_words": 12,
+    "tone": "soft, clear, trustworthy, conversational",
+    "font_reference": "Noto Sans JP",
+    "font_lock": {
+      "all_frames": "Noto Sans JP Medium"
+    },
+    "batch_lock": {
+      "text_color": "dark charcoal, visually consistent across all frames",
+      "text_opacity": "stable across all frames",
+      "weight_presence": "same medium-weight feel across all frames"
+    },
+    "headline_ja": "エピカテキンとは？",
+    "slides_ja": [
+      "まずはシンプルに。",
+      "気になることがあれば、ここから少しずつ整理していけます。",
+      "気になる質問を送ってください"
+    ]
+  },
+  "negative_prompts": [
+    "fake question sticker UI",
+    "white rounded placeholder box",
+    "busy story collage",
+    "harsh promotional story design",
+    "tiny unreadable text",
+    "loud science infographic",
+    "hard CTA button"
+  ],
+  "reference_files": [
+    "brand/references/business-context/creative-packages/creative-package-2026-03-27.md",
+    "brand/references/business-context/creative-packages/post-calendar-layer-2026-03-23-to-2026-03-31.md",
+    "brand/references/business-context/creative-packages/story-posting-actions-2026-03-23-to-2026-03-31.md",
+    "brand/references/business-context/visual/Mitozz Set 1 Master Template Spec.md",
+    "brand/references/business-context/visual/Mitozz Instagram Story Strategy.md"
+  ],
+  "notes": "March 27 question-box story. Keep it inside the Set 1 family but lighter than the feed. Reserve lower-third space on frame 3 for the native Instagram Question Sticker with prompt text: 気になることを送ってください."
+}

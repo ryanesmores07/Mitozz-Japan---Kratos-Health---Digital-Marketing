@@ -1,0 +1,120 @@
+{
+  "asset_type": "instagram-story",
+  "campaign_name": "March 2026 Organic Education",
+  "topic": "Daily foundation bridge story",
+  "objective": "Educate",
+  "template_set": "Set 1",
+  "slide_blueprint": "story-3-frame",
+  "asset_archetype": "story-reinforcement",
+  "platform": "instagram",
+  "aspect_ratio": "9:16",
+  "audience": "Research-First Wellness Optimizer",
+  "visual_intent": [
+    "premium story-first vertical layout",
+    "quiet educational bridge from the March 23 feed",
+    "mist-blue calm with generous breathing room",
+    "fast mobile readability",
+    "Japanese wellness editorial mood"
+  ],
+  "brand_guardrails": [
+    "preserve top and bottom safe zones",
+    "avoid collage layouts or sticker-heavy UI",
+    "maintain continuity with the March 23 Set 1 feed and story batch",
+    "avoid promotional or sales-first wording",
+    "lock all 3 story frames to the same typography personality and medium weight",
+    "do not use fake buttons or random hierarchy jumps between frames",
+    "keep text color density, opacity, and typographic presence visually consistent across all 3 frames"
+  ],
+  "composition": [
+    "9:16 vertical framing",
+    "clear upper-third or middle reading zone",
+    "one short message block per frame",
+    "strong negative space",
+    "text-first story sequence with frame 1 hook, frame 2 bridge, and frame 3 CTA",
+    "cloud-white or mist-blue background with soft steel-blue structure and restrained apricot cues"
+  ],
+  "image_references": [
+    {
+      "path": "brand/references/business-context/visual/reference-pack/working-examples/feed-mitochondria-basics-cover-01.png",
+      "role": "working-example",
+      "influence": [
+        "March 23 Set 1 continuity",
+        "text color density",
+        "overall softness"
+      ],
+      "match_strength": "high"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/working-examples/story-mitochondria-basics-hook-01.png",
+      "role": "working-example",
+      "influence": [
+        "story continuity",
+        "typography presence",
+        "vertical rhythm"
+      ],
+      "match_strength": "high"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-editorial-whitespace-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "vertical breathing room",
+        "whitespace",
+        "layout restraint"
+      ],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "palette",
+        "mist-blue softness",
+        "restraint"
+      ],
+      "match_strength": "medium"
+    }
+  ],
+  "reference_strategy": "Use the March 23 Set 1 feed and story assets as the primary continuity anchor, then use editorial-whitespace and cool-palette for vertical restraint and calm story softness.",
+  "variation_guardrails": [
+    "avoid copying the exact text layout or support-visual placement from March 23",
+    "keep the background treatment light and quiet",
+    "make the story feel like a next-day bridge, not a duplicate of the previous story",
+    "do not introduce strong new focal objects that compete with the message"
+  ],
+  "text_overlay": {
+    "allowed": true,
+    "max_words": 8,
+    "tone": "soft, clear, trustworthy",
+    "font_reference": "Noto Sans JP",
+    "font_lock": {
+      "all_frames": "Noto Sans JP Medium"
+    },
+    "batch_lock": {
+      "text_color": "dark charcoal, visually consistent across all frames",
+      "text_opacity": "stable across all frames",
+      "weight_presence": "same medium-weight feel across all frames"
+    },
+    "headline_ja": "毎日の土台は、",
+    "slides_ja": [
+      "急に整うものではない。",
+      "まずは基礎から知ることも、その一歩です。",
+      "続きはフィードへ。やさしく見返す。"
+    ]
+  },
+  "negative_prompts": [
+    "busy collage layout",
+    "harsh promotional story design",
+    "tiny unreadable typography",
+    "loud gradient gimmicks",
+    "aggressive CTA styling"
+  ],
+  "reference_files": [
+    "brand/references/business-context/creative-packages/creative-package-2026-03-24.md",
+    "brand/references/business-context/content-planning/Mitozz Instagram Content Calendar - 2026 - March.csv",
+    "brand/references/business-context/visual/Brand Visual Direction.md",
+    "brand/references/business-context/visual/reference-pack/reference-pack-index.md",
+    "brand/references/business-context/strategy/Mitozz Japan Brand Voice And Messaging Guidelines.docx.pdf"
+  ],
+  "notes": "March 24 story-only educational bridge. Keep continuity with the approved March 23 Set 1 batch while making the message lighter and more day-to-day. Typography and text density must remain locked across all 3 frames."
+}

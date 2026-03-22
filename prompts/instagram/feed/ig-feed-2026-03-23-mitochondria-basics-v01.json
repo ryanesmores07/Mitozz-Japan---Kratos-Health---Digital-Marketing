@@ -3,6 +3,8 @@
   "campaign_name": "March 2026 Organic Education",
   "topic": "What are mitochondria?",
   "objective": "Educate",
+  "template_set": "Set 1 + Set 2",
+  "slide_blueprint": "5-slide",
   "asset_archetype": "education-card",
   "platform": "instagram",
   "aspect_ratio": "4:5",
@@ -20,7 +22,9 @@
     "avoid neon health-tech or biohacking aesthetics",
     "avoid direct medical, anti-aging, or guaranteed function language",
     "no cluttered infographic layout",
-    "match mood, palette, light quality, whitespace, and restraint from the selected references without duplicating exact crop, pose, object placement, or gradient pattern"
+    "match mood, palette, light quality, whitespace, and restraint from the selected references without duplicating exact crop, pose, object placement, or gradient pattern",
+    "lock typography across the set: cover headline bold, cover supporting line medium, inner slides medium, CTA slide medium",
+    "do not introduce extra headings, subheads, or mixed font weights on inner slides"
   ],
   "composition": [
     "4:5 portrait carousel framing",
@@ -31,6 +35,26 @@
     "white-led educational layout with calm mobile readability"
   ],
   "image_references": [
+    {
+      "path": "brand/references/business-context/visual/reference-pack/working-examples/feed-education-white-card-01.png",
+      "role": "working-example",
+      "influence": [
+        "premium feel",
+        "soft luminous restraint",
+        "unique Education White Card atmosphere"
+      ],
+      "match_strength": "high"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/working-examples/feed-education-white-card-01.png",
+      "role": "working-example",
+      "influence": [
+        "approved Education White Card mode",
+        "premium restraint",
+        "series-defining visual language"
+      ],
+      "match_strength": "high"
+    },
     {
       "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-education-layout-01.png",
       "role": "style-anchor",
@@ -62,26 +86,34 @@
       "match_strength": "medium"
     }
   ],
-  "reference_strategy": "Use the education-layout anchor for typography spacing and card rhythm, the cool-palette anchor for tonality and light restraint, and the CTA-layout anchor only for the final save card hierarchy.",
+  "reference_strategy": "Use the approved Education White Card working example for the premium feel, softness, luminous restraint, and series consistency, then use the education-layout anchor for typography spacing and card rhythm, the cool-palette anchor for tonality and light restraint, and the CTA-layout anchor only for the final save card hierarchy.",
   "variation_guardrails": [
     "do not copy exact paragraph layout from the references",
     "vary crop and focal placement across the carousel system",
     "keep apricot accents restrained and secondary",
     "avoid repeating the same background wash on every slide",
-    "keep the carousel more introductory and education-first than campaign-like"
+    "keep the carousel more introductory and education-first than campaign-like",
+    "feel like the same family as the approved Education White Card without repeating the exact layout",
+    "preserve the premium softness and calm visual confidence of the approved Education White Card working example"
   ],
   "text_overlay": {
     "allowed": true,
     "max_words": 14,
     "tone": "clear, premium, educational, quietly reassuring",
     "font_reference": "Noto Sans JP Bold / Medium",
+    "font_lock": {
+      "cover_headline": "Noto Sans JP Bold",
+      "cover_supporting": "Noto Sans JP Medium",
+      "inner_slides": "Noto Sans JP Medium",
+      "cta_slide": "Noto Sans JP Medium"
+    },
     "headline_ja": "ミトコンドリアとは？",
     "slides_ja": [
       "ミトコンドリアは、細胞のエネルギーづくりを支える存在です。",
       "年齢や生活習慣の影響で、働き方がゆるやかに変わることがあります。",
       "難しく見えるテーマも、まずは基礎から知ることが第一歩です。",
       "毎日のケアでは、整った生活習慣とやさしい継続が大切です。",
-      "保存して、あとで見返せる基礎知識として役立ててください。"
+      "保存して、毎日の土台を見直すきっかけに。"
     ]
   },
   "negative_prompts": [
@@ -100,5 +132,5 @@
     "brand/references/business-context/visual/reference-pack/reference-pack-index.md",
     "brand/references/business-context/strategy/Mitozz Japan Brand Voice And Messaging Guidelines.docx.pdf"
   ],
-  "notes": "March 23 educational carousel. Introduce mitochondria in a calm, premium, easy-to-save format that feels intelligent rather than technical. Keep the Steel Light system consistent while varying crop, focal placement, and background treatment."
+  "notes": "March 23 educational carousel. Introduce mitochondria in a calm, premium, easy-to-save format that feels intelligent rather than technical. Keep the Steel Light system consistent while varying crop, focal placement, and background treatment. Lean directly into the premium softness and feel of the approved Education White Card working example. Typography must stay locked across the full carousel."
 }

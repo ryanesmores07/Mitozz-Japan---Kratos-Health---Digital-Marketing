@@ -1,0 +1,123 @@
+{
+  "asset_type": "instagram-profile-photo",
+  "campaign_name": "Mitozz Japan Brand Avatar",
+  "topic": "Trademark profile photo for Mitozz Japan Instagram",
+  "objective": "Create a long-term recognizable Instagram avatar that reads clearly inside a circular crop and instantly signals premium science-led wellness.",
+  "template_set": "Profile Identity",
+  "slide_blueprint": "Circular Avatar Safe Centered Bottle",
+  "asset_archetype": "profile-avatar-product-mark",
+  "platform": "instagram",
+  "aspect_ratio": "1:1",
+  "audience": "Japan organic Instagram audience seeking premium, trustworthy, science-led wellness guidance",
+  "motion_role": "",
+  "shot_id": "",
+  "shot_position": 0,
+  "continuity_tokens": [
+    "Centered hero composition that stays readable in a circular crop",
+    "Real Mitozz bottle silhouette and cap fidelity from approved product source",
+    "Soft steel-blue atmosphere with restrained apricot halo accent",
+    "No text, no badges, no extra props, no busy background details"
+  ],
+  "visual_intent": [
+    "Build a trademark-like brand avatar around the Mitozz bottle rather than a post-style layout",
+    "Keep the bottle large enough to remain recognizable at tiny profile-photo size",
+    "Use luminous clinical minimalism with warm vitamin-energy restraint",
+    "Feel premium, calm, memorable, and unmistakably Mitozz Japan"
+  ],
+  "brand_guardrails": [
+    "Do not redesign, recolor, simplify, or relabel the bottle",
+    "Preserve real-pack silhouette, cap finish, and front-label structure",
+    "No baked-in typography, logos, stickers, or UI elements outside the real bottle label",
+    "No cluttered supplement-ad styling, dramatic shadows, or dark moody lighting",
+    "Keep the result elegant enough to use as the permanent account profile image"
+  ],
+  "composition": [
+    "True 1:1 square canvas designed for circular crop safety",
+    "Bottle centered or microscopically offset but fully readable within the center 70 percent of the frame",
+    "Bottle occupies roughly 48 to 58 percent of frame height for small-size recognition",
+    "Background uses soft mist-blue to cloud-white wash with a subtle apricot glow halo",
+    "No tabletop clutter; if a surface exists it should be minimal and nearly abstract",
+    "Use a crisp focal silhouette with soft editorial light and restrained glow"
+  ],
+  "image_references": [
+    {
+      "path": "brand/references/business-context/visual/reference-pack/source-intake/mitozz-bottle.jpg",
+      "role": "product-source",
+      "influence": [
+        "bottle silhouette",
+        "cap finish",
+        "front-label fidelity",
+        "overall pack truth"
+      ],
+      "match_strength": "high"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/working-examples/template-set-3-background-plate-v02b-clean-curtain-light.png",
+      "role": "style-anchor",
+      "influence": [
+        "airy luminous environment",
+        "curtain-light softness",
+        "calm premium glow",
+        "minimal surface treatment"
+      ],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "steel-blue palette balance",
+        "restrained apricot warmth",
+        "clean premium skincare-like atmosphere"
+      ],
+      "match_strength": "medium"
+    }
+  ],
+  "reference_strategy": "Use the approved bottle source as immutable product truth, then borrow only the atmosphere, palette, and soft-light restraint from the background-plate and cool-palette references. The output must feel like a distilled brand mark, not a copied post composition.",
+  "variation_guardrails": [
+    "Vary crop, bottle distance, and halo intensity without changing the core centered-avatar concept",
+    "Do not duplicate the exact background plate layout or any reference crop",
+    "Favor stronger bottle legibility over atmosphere if the two compete",
+    "Keep the composition simple enough to remain clear at 40 to 80 pixels"
+  ],
+  "text_overlay": {
+    "allowed": false,
+    "max_words": 0,
+    "tone": "none",
+    "font_reference": "",
+    "headline_ja": "",
+    "slides_ja": []
+  },
+  "sora_handoff": {
+    "use_for_sora": false,
+    "input_mode": "image-to-video",
+    "shot_goal": "",
+    "duration_seconds": 0,
+    "camera_motion": "",
+    "subject_motion": "",
+    "transition_in": "",
+    "transition_out": "",
+    "prompt": "",
+    "negative_prompt": []
+  },
+  "negative_prompts": [
+    "text outside bottle label",
+    "tiny bottle",
+    "off-center crop that fails in a circle",
+    "busy tabletop props",
+    "capsules scattered around the frame",
+    "hard shadows",
+    "dark luxury mood",
+    "flashy supplement ad styling",
+    "badge, ribbon, or icon overlay",
+    "fake label",
+    "changed bottle color",
+    "unreadable or distorted bottle front"
+  ],
+  "reference_files": [
+    "brand/references/business-context/visual/Brand Visual Direction.md",
+    "brand/references/business-context/visual/Mitozz Approved Reference Assets.md",
+    "brand/references/business-context/visual/reference-pack/reference-pack-index.md"
+  ],
+  "notes": "Creative direction: choose a bottle-led avatar because it will remain more recognizable and scalable than a portrait or text-heavy lockup in Instagram's small circular profile display."
+}

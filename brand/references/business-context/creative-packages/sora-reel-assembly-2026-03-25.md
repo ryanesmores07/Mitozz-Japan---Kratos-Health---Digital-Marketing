@@ -8,6 +8,8 @@
 - `target_runtime_seconds`: `11`
 - `aspect_ratio`: `9:16`
 - `delivery_goal`: `Introduce daily condition design with a calm, premium, relatable reel`
+- `working_source_set`: `2026-03-25-daily-condition-v02`
+- `editorial_blueprint`: [reel-edit-blueprint-2026-03-25.md](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/brand/references/business-context/creative-packages/reel-edit-blueprint-2026-03-25.md)
 
 ## Continuity System
 
@@ -24,8 +26,8 @@
 ### Shot 01
 
 - `shot_id`: `shot-01`
-- `source_image_path`: `output/instagram/feed/ig-feed-reel-2026-03-25-daily-condition-shot-01-v01.jpg`
-- `source_prompt_json`: `prompts/instagram/feed/ig-feed-reel-2026-03-25-daily-condition-shot-01-v01.json`
+- `source_image_path`: `output/instagram/reels/2026-03-25-daily-condition-v02/source-frames/shot-01-opening-hook.png`
+- `source_prompt_json`: `prompts/instagram/feed/ig-feed-reel-2026-03-25-daily-condition-shot-01-v02.json`
 - `duration_seconds`: `2.5`
 - `narrative_role`: `opening-hook`
 - `camera_motion`: `Very subtle slow push-in`
@@ -38,8 +40,8 @@
 ### Shot 02
 
 - `shot_id`: `shot-02`
-- `source_image_path`: `output/instagram/feed/ig-feed-reel-2026-03-25-daily-condition-shot-02-v01.jpg`
-- `source_prompt_json`: `prompts/instagram/feed/ig-feed-reel-2026-03-25-daily-condition-shot-02-v01.json`
+- `source_image_path`: `output/instagram/reels/2026-03-25-daily-condition-v02/source-frames/shot-02-reframe.png`
+- `source_prompt_json`: `prompts/instagram/feed/ig-feed-reel-2026-03-25-daily-condition-shot-02-v02.json`
 - `duration_seconds`: `2.5`
 - `narrative_role`: `reframe`
 - `camera_motion`: `Gentle lateral drift`
@@ -52,8 +54,8 @@
 ### Shot 03
 
 - `shot_id`: `shot-03`
-- `source_image_path`: `output/instagram/feed/ig-feed-reel-2026-03-25-daily-condition-shot-03-v01.jpg`
-- `source_prompt_json`: `prompts/instagram/feed/ig-feed-reel-2026-03-25-daily-condition-shot-03-v01.json`
+- `source_image_path`: `output/instagram/reels/2026-03-25-daily-condition-v02/source-frames/shot-03-product-reveal.png`
+- `source_prompt_json`: `prompts/instagram/feed/ig-feed-reel-2026-03-25-daily-condition-shot-03-v02.json`
 - `duration_seconds`: `3.0`
 - `narrative_role`: `product-reveal`
 - `camera_motion`: `Micro push-in`
@@ -66,8 +68,8 @@
 ### Shot 04
 
 - `shot_id`: `shot-04`
-- `source_image_path`: `output/instagram/feed/ig-feed-reel-2026-03-25-daily-condition-shot-04-v01.jpg`
-- `source_prompt_json`: `prompts/instagram/feed/ig-feed-reel-2026-03-25-daily-condition-shot-04-v01.json`
+- `source_image_path`: `output/instagram/reels/2026-03-25-daily-condition-v02/source-frames/shot-04-end-frame.png`
+- `source_prompt_json`: `prompts/instagram/feed/ig-feed-reel-2026-03-25-daily-condition-shot-04-v02.json`
 - `duration_seconds`: `3.0`
 - `narrative_role`: `clean-end-frame`
 - `camera_motion`: `Almost static with a tiny breathing drift`
@@ -91,6 +93,7 @@
 - `subtitle_style`: `Noto Sans JP, restrained, high-contrast, generous line spacing`
 - `text_safe_areas`: `Top third and lower third preserved across all shots`
 - `cta_copy_ja`: `仕組みをやさしく読む`
+- `text_timing_reference`: `Use the blueprint timing from reel-edit-blueprint-2026-03-25.md`
 
 ## Music And Pace
 
@@ -113,4 +116,4 @@
 
 - `export_name`: `mitozz-ig-reel-2026-03-25-daily-condition-v01.mp4`
 - `export_location`: `output/instagram/reels/`
-- `editor_notes`: `Use source frames generated as .jpg. Keep transitions simple, no flashy motion graphics, and allow the final frame to hold for at least 1.2 seconds.`
+- `editor_notes`: `Use the approved v02 9:16 source frames. Keep transitions simple, no flashy motion graphics, and allow the final frame to hold for at least 1.2 seconds.`

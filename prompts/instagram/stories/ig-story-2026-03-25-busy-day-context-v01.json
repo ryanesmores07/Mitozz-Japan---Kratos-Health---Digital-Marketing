@@ -1,0 +1,109 @@
+{
+  "asset_type": "instagram-story",
+  "campaign_name": "March 2026 Organic Education",
+  "topic": "Busy day daily-context story",
+  "objective": "Reinforce",
+  "template_set": "Set 4",
+  "slide_blueprint": "story-3-frame",
+  "asset_archetype": "story-reinforcement",
+  "platform": "instagram",
+  "aspect_ratio": "9:16",
+  "audience": "Sleep-Deprived High Performer",
+  "visual_intent": [
+    "real-life daily-context story",
+    "quiet premium lifestyle cue",
+    "mist-blue calm with editorial breathing room",
+    "soft human context without product emphasis",
+    "fast mobile readability"
+  ],
+  "brand_guardrails": [
+    "use Set 4 as the visual lead and keep it lighter than the March 25 reel",
+    "preserve top and bottom safe zones",
+    "keep typography stable across all 3 frames",
+    "avoid turning the story into a feed-style explanation card",
+    "do not use fake buttons or sticker-heavy UI",
+    "keep text color density, opacity, and typographic presence visually consistent across all 3 frames"
+  ],
+  "composition": [
+    "9:16 vertical framing",
+    "one short message block per frame",
+    "subtle lifestyle image support behind or around the text",
+    "clear safe space for optional native sticker use on frame 3",
+    "strong negative space",
+    "mist-blue and cloud-white atmosphere with restrained steel-blue structure"
+  ],
+  "image_references": [
+    {
+      "path": "brand/references/business-context/visual/reference-pack/working-examples/template-set-4-lifestyle-v02-no-bottle.png",
+      "role": "working-example",
+      "influence": [
+        "daily-life realism",
+        "routine atmosphere",
+        "quiet premium lifestyle tone"
+      ],
+      "match_strength": "high"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-editorial-whitespace-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "vertical breathing room",
+        "whitespace",
+        "layout restraint"
+      ],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "palette",
+        "mist-blue softness",
+        "restraint"
+      ],
+      "match_strength": "medium"
+    }
+  ],
+  "reference_strategy": "Use the approved Set 4 lifestyle reference for realism and routine context, then use editorial-whitespace and cool-palette anchors to keep the story readable, calm, and premium.",
+  "variation_guardrails": [
+    "keep the story more text-led than the lifestyle reference",
+    "avoid making the background too scenic or too photographic",
+    "make the atmosphere feel like a lived-in workday, not a campaign image",
+    "avoid exact crop or pose matching from the reference"
+  ],
+  "text_overlay": {
+    "allowed": true,
+    "max_words": 10,
+    "tone": "soft, empathetic, premium",
+    "font_reference": "Noto Sans JP",
+    "font_lock": {
+      "all_frames": "Noto Sans JP Medium"
+    },
+    "batch_lock": {
+      "text_color": "dark charcoal, visually consistent across all frames",
+      "text_opacity": "stable across all frames",
+      "weight_presence": "same medium-weight feel across all frames"
+    },
+    "headline_ja": "忙しい日は、",
+    "slides_ja": [
+      "整える余白が先に消える。",
+      "だからこそ、押し切るより土台を守りたい。",
+      "こんな日、ありますか？ 自分のペースを見直すきっかけに。"
+    ]
+  },
+  "negative_prompts": [
+    "messy lifestyle clutter",
+    "hard-sell wellness ad mood",
+    "fake button graphics",
+    "overly dramatic fatigue acting",
+    "tiny unreadable text"
+  ],
+  "reference_files": [
+    "brand/references/business-context/creative-packages/creative-package-2026-03-25.md",
+    "brand/references/business-context/creative-packages/post-calendar-layer-2026-03-23-to-2026-03-31.md",
+    "brand/references/business-context/visual/Brand Visual Direction.md",
+    "brand/references/business-context/visual/reference-pack/reference-pack-index.md",
+    "brand/references/business-context/visual/Mitozz Instagram Story Strategy.md"
+  ],
+  "notes": "March 25 daily-context story. Keep this more human and image-led than the March 23/24 Set 1 stories while preserving the same typographic discipline and premium calm."
+}
