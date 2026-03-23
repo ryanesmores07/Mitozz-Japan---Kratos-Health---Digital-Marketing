@@ -10,8 +10,17 @@ output/instagram/**
 !output/instagram/README.md
 !output/instagram/feed/
 !output/instagram/feed/.gitkeep
+!output/instagram/reels/
+!output/instagram/reels/**/
+!output/instagram/reels/**/*.png
+!output/instagram/reels/**/*.jpg
+!output/instagram/reels/**/*.jpeg
 !output/instagram/stories/
 !output/instagram/stories/.gitkeep
+!output/instagram/stories/**/
+!output/instagram/stories/**/*.png
+!output/instagram/stories/**/*.jpg
+!output/instagram/stories/**/*.jpeg
 output/instagram/test-runs/
 output/instagram/tmp-nanobanana/
 output/instagram/feed/**/variant-*.png
