@@ -195,26 +195,6 @@ Use `style-anchors/` as the default visual source. Add approved `source-intake/`
     "headline_ja": "",
     "slides_ja": []
   },
-  "sora_handoff": {
-    "use_for_sora": true,
-    "input_mode": "image-to-video",
-    "shot_goal": "Open the reel with a relatable busy-morning beat that feels premium, not chaotic.",
-    "duration_seconds": 2.5,
-    "camera_motion": "Very subtle slow push-in.",
-    "subject_motion": "Small breath, slight blink, hand settles near mug or notebook.",
-    "transition_in": "Cold open from stillness.",
-    "transition_out": "Hold a clean final frame that can cut to the next shot.",
-    "prompt": "Animate this image into a calm premium vertical reel opening. Keep the subject identity, wardrobe, environment, and lighting consistent. Use only subtle natural motion: a small breath, a soft blink, and a gentle hand movement. Add a very slow push-in. Do not introduce new objects, new people, or dramatic motion. Preserve text-safe negative space.",
-    "negative_prompt": [
-      "warped hands",
-      "identity drift",
-      "extra objects appearing",
-      "sudden lighting changes",
-      "fast camera moves",
-      "flashy ad transitions",
-      "unreadable text"
-    ]
-  },
   "negative_prompts": [
     "cheap stock photo energy",
     "overacted stress expression",
@@ -224,6 +204,6 @@ Use `style-anchors/` as the default visual source. Add approved `source-intake/`
   "reference_files": [
     "brand/references/business-context/visual/Brand Visual Direction.md"
   ],
-  "notes": "Shot 01 of a coordinated reel set. Keep continuity tokens stable across all subsequent shots."
+  "notes": "Shot 01 of a coordinated reel set. Keep continuity tokens stable across all subsequent shots. If motion is needed later, write that separately with workflows/05-image-to-video-prompt-template.md."
 }
 ```

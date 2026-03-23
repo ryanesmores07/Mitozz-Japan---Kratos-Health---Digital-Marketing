@@ -1,7 +1,7 @@
 {
   "asset_type": "instagram-feed",
-  "campaign_name": "March Organic Education",
-  "topic": "Rethink daily condition design",
+  "campaign_name": "March 2026 Organic Education",
+  "topic": "Product enters the routine",
   "objective": "Educate",
   "template_set": "Set 4 + Set 3",
   "slide_blueprint": "reel-4-shot",
@@ -9,55 +9,60 @@
   "platform": "instagram",
   "aspect_ratio": "9:16",
   "audience": "Sleep-Deprived High Performer",
-  "motion_role": "product-reveal",
+  "motion_role": "product-relevance",
   "shot_id": "shot-03",
   "shot_position": 3,
   "continuity_tokens": [
-    "same Japanese woman in early 30s",
-    "soft steel-blue morning light",
-    "quiet premium apartment workspace",
-    "neutral wardrobe",
-    "Mitozz bottle with the real front label facing forward cleanly",
-    "real black Mitozz bottle, black cap, and true label structure",
+    "same Japanese professional in early 30s across shots 01 to 03",
+    "same premium morning workspace",
+    "same soft steel-blue side daylight",
+    "same ivory or soft grey wardrobe family",
+    "Mitozz supplement bottle with matte black bottle body, black ribbed cap, visible light neck ring, centered MITOZZ front wordmark, and real front-label structure facing forward",
     "no baked-in text"
   ],
   "visual_intent": [
-    "premium product reveal",
-    "calm reset moment",
-    "clean editorial glow",
-    "real-bottle fidelity in a calm workspace reveal"
+    "quiet product relevance",
+    "editorial product reveal inside a real routine",
+    "premium calm rather than ad-like emphasis",
+    "clear product fidelity"
   ],
   "brand_guardrails": [
-    "preserve exact pack fidelity",
-    "avoid flashy supplement ad energy",
-    "keep the scene stable and elegant",
-    "reject any bottle redraw that changes the real package"
+    "preserve true bottle silhouette and label orientation",
+    "avoid oversized hero-product staging",
+    "keep the bottle integrated into the room light",
+    "do not make the frame look like a sales ad",
+    "approved pack truth only: matte black bottle body, black ribbed cap, visible light neck ring, and real readable front-label structure",
+    "the scene must fill the entire 9:16 canvas with no white bands, blank bars, inset-card framing, floating panel behavior, or smaller image area inside the frame",
+    "use the locked bottle workflow: keep the real bottle design intact and adapt the environment around it instead of asking the model to redesign the pack"
   ],
   "composition": [
-    "vertical 9:16 framing",
-    "bottle as the primary focal point",
-    "Mitozz bottle must match the approved real black bottle, black cap, and true label structure",
-    "space below or beside the bottle for later CTA",
-    "simple background with premium depth"
+    "true full-bleed vertical 9:16 framing",
+    "product-forward but still editorial",
+    "bottle occupies about one-third of the frame",
+    "clean desk environment with readable negative space",
+    "Mitozz bottle with matte black bottle body, black ribbed cap, visible light neck ring, centered MITOZZ front wordmark, and real front-label structure facing forward",
+    "the hand action must feel incidental and routine, not staged product placement",
+    "extend the environment naturally to the top and bottom edges of the canvas",
+    "no blank white top or bottom padding and no letterbox-style empty zones"
   ],
   "image_references": [
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-editorial-whitespace-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "restraint",
+        "spacing",
+        "composition"
+      ],
+      "match_strength": "medium"
+    },
     {
       "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-product-glow-01.png",
       "role": "style-anchor",
       "influence": [
-        "lighting",
-        "product framing",
-        "premium glow"
-      ],
-      "match_strength": "high"
-    },
-    {
-      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.png",
-      "role": "style-anchor",
-      "influence": [
-        "palette",
-        "restraint",
-        "soft atmosphere"
+        "product finish",
+        "soft glow",
+        "premium depth"
       ],
       "match_strength": "medium"
     },
@@ -67,20 +72,23 @@
       "influence": [
         "pack fidelity",
         "label placement",
-        "cap finish",
-        "bottle silhouette"
+        "bottle silhouette",
+        "cap finish"
       ],
-      "match_strength": "medium"
+      "match_strength": "high"
     }
   ],
-  "reference_strategy": "Use the anchors for art direction, the approved bottle photo as product truth, and the locked Mitozz bottle size spec for scale. Do not redesign, recolor, simplify, or relabel the bottle. Keep the product shot in the same morning workspace world as shots 01 and 02. Bottle scale must stay modest and believable relative to the mug, hand, and desk scene.",
+  "reference_strategy": "Let the product-source control pack truth while the style anchors control restraint, glow, and whitespace.",
   "variation_guardrails": [
-    "preserve bottle orientation for continuity",
-    "keep the background minimal for clean animation",
-    "avoid exact crop duplication from the anchors or source photo",
-    "if the bottle drifts from the approved source, reject and regenerate",
-    "if the bottle feels oversized for the desk scene, regenerate smaller and better integrated",
-    "match bottle size to the locked bottle size spec rather than enlarging it into an ad-style hero"
+    "keep the product shot quieter than a campaign hero shot",
+    "do not enlarge the bottle into a dominant ad object",
+    "preserve the same workspace and light continuity from shots 01 and 02",
+    "limit props to at most two supporting desk elements besides the bottle",
+    "reject and regenerate if bottle color changes",
+    "reject and regenerate if label becomes unreadable, simplified, or invented",
+    "reject and regenerate if the frame reads like a supplement ad instead of routine relevance",
+    "reject and regenerate if the frame looks like an inset composition inside a taller canvas",
+    "reject and regenerate if top or bottom whitespace appears as blank bars instead of real in-scene breathing room"
   ],
   "text_overlay": {
     "allowed": false,
@@ -90,37 +98,31 @@
     "headline_ja": "",
     "slides_ja": []
   },
-  "sora_handoff": {
-    "use_for_sora": true,
-    "input_mode": "image-to-video",
-    "shot_goal": "Introduce the product as a calm premium reset moment.",
-    "duration_seconds": 3,
-    "camera_motion": "Micro push-in.",
-    "subject_motion": "Very light hand movement settling the bottle.",
-    "transition_in": "Cut from lifestyle reframe shot.",
-    "transition_out": "Hold the final bottle position before the end frame.",
-    "prompt": "Animate this image into a calm premium product reveal in vertical format. Preserve the exact approved Mitozz bottle identity: black bottle, black cap, real silhouette, and real label structure. Use the locked Mitozz bottle size spec so the bottle stays realistically scaled in relation to the hand and desk scene, slightly smaller rather than oversized. In a 1536 x 2752 reel frame, keep the bottle roughly within 500 to 605 px tall and 215 to 275 px wide unless the shot becomes a pure product hero. Keep the product in the same quiet morning workspace world as the previous shots. Match the bottle highlights, shadow softness, and local contrast to the surrounding morning desk light so it feels naturally integrated into the environment. Use only subtle natural motion and restrained editorial camera movement. The hand may gently settle the bottle into place. Do not add extra products, extra hands, label redesign, recoloring, or dramatic reflections. Keep the frame stable and elegant.",
-    "negative_prompt": [
-      "bottle distortion",
-      "label drift",
-      "extra fingers",
-      "warped hands",
-      "flashy reflections",
-      "fast motion",
-      "ad-style lighting",
-      "unreadable text"
-    ]
-  },
   "negative_prompts": [
-    "cheap stock-photo product scene",
-    "hard beauty-ad reflections",
-    "busy prop styling",
-    "medical CGI background"
+    "label drift",
+    "distorted bottle shape",
+    "aggressive reflections",
+    "hard-sell product ad mood",
+    "extra products or clutter",
+    "baked-in text",
+    "white bottle",
+    "white cap",
+    "unreadable label",
+    "hero-ad product drop",
+    "too many props",
+    "white bars",
+    "letterboxing",
+    "pillarboxing",
+    "floating card layout",
+    "inset image inside vertical canvas",
+    "blank top padding",
+    "blank bottom padding"
   ],
   "reference_files": [
+    "brand/references/business-context/creative-packages/creative-package-2026-03-25.md",
     "brand/references/business-context/visual/Brand Visual Direction.md",
-    "brand/references/business-context/visual/Mitozz Bottle Size Spec.md",
-    "brand/references/business-context/content-planning/Mitozz Instagram Content Calendar - 2026 - March.csv"
+    "brand/references/business-context/visual/Mitozz Locked Bottle Workflow.md",
+    "brand/references/business-context/visual/Mitozz Bottle Size Spec.md"
   ],
-  "notes": "Shot 03 of the rebuilt March 25 reel set. Generate as PNG. Real bottle truth is mandatory; reject any drift."
+  "notes": "Shot 03 product relevance. Hard lock the real Mitozz bottle design intact via the locked bottle workflow and use the locked bottle size spec for believable scale. Full-bleed 9:16 only with real scene depth to every edge. Reject if the pack drifts, the label structure changes, or the frame slips into ad staging or padded framing."
 }

@@ -190,13 +190,21 @@ Use only these production ratios:
 
 - feed default = `4:5`
 - square feed asset = `1:1`
-- stories = `9:16`
+- stories = `9:16` or `1:1`
 - reels and reel source frames = `9:16`
+
+Story approval rule:
+
+- choose one approved ratio for the whole story set: `9:16` or `1:1`
+- do not mix story ratios within one set or one batch intended to feel uniform
+- use `9:16` for native full-screen Story-first publishing
+- use `1:1` only when the story concept or AI-video workflow benefits from square framing and the full set stays square
 
 Approval rule:
 
 - do not approve a feed asset that exports outside `4:5` unless the asset was explicitly planned as square
 - do not allow random landscape outputs into the working set
+- do not approve a story set that mixes `9:16` and `1:1`
 - if an image generator drifts to the wrong ratio, regenerate it
 
 ## What Rotates

@@ -58,9 +58,9 @@ This workspace should be treated as UTF-8 by default.
 This project is wired into Codex using four project-local skills under `.agents/skills/`:
 
 - `mitozz-content-calendar`: plans the monthly Mitozz Japan Instagram calendar
-- `mitozz-creatives-director`: turns calendar rows into decisive creative packages
-- `mitozz-prompt-engineer`: converts creative packages into Nano Banana JSON prompts
-- `nano-banana-instagram`: executes prompt files and generates the final assets
+- `mitozz-creatives-director`: turns calendar rows into decisive creative packages and reel edit direction
+- `mitozz-prompt-engineer`: converts creative packages into Nano Banana JSON prompts for source assets
+- `nano-banana-instagram`: executes prompt files and generates the internal source assets
 
 The repository treats `.agents/skills/` as the single source of truth for skill discovery and maintenance.
 
@@ -80,17 +80,32 @@ For zero-follower or near-zero-follower periods, use:
 
 This keeps Stories in a support role while Reels and save-worthy carousels do the heavier growth work.
 
-For Reels, the flow is more specific:
+For Reels, the flow is now:
 
 1. Build the Reel creative package from `brand/references/business-context/creative-packages/reel-creative-package-template.md`.
-2. Create one coordinated prompt JSON per planned shot.
-3. Generate source frames with Nano Banana, defaulting outputs to `.jpg`.
-4. Animate approved source frames in Sora using `workflows/04-sora-reel-assembly-template.md`.
-5. Assemble, review, and export the final Reel cut.
+2. Create source images or collect source clips internally.
+3. If generated images are needed, create one coordinated prompt JSON per required source asset.
+4. If a still frame must become a motion clip, create a platform-agnostic motion prompt with `workflows/05-image-to-video-prompt-template.md`.
+5. Assemble a freelancer-ready edit packet with `workflows/04-freelancer-reel-handoff-template.md` and save the filled handoff file under `brand/references/business-context/creative-packages/` when needed.
+6. Send the packet and source assets to the freelancer.
+7. Review the draft, request targeted revisions, and approve the final Reel cut.
+
+Runtime standard for reels:
+
+- hard maximum: `60 seconds`
+- default target: `8-15 seconds`
+- shorter is preferred unless the concept clearly earns more time
+- the first `1-2 seconds` must always carry the hook
 
 For free rehearsal runs, use `tools/chatgpt-image-test-run.ps1` to turn an existing prompt JSON into a dry-run ChatGPT image-generation bundle without calling a paid API.
 
 Use the checklists in `workflows/` to keep planning, creative packaging, generation, and approval lean and repeatable.
+
+For reel source-frame batches, use the hard-lock preflight before generation:
+
+- `workflows/03A-reel-preflight-and-hard-locks.md`
+- `powershell -NoProfile -ExecutionPolicy Bypass -File tools/validate-reel-prompt-batch.ps1 "prompts/instagram/feed/ig-feed-reel-YYYY-MM-DD-theme-shot-*-v01.json"`
+- optional fallback: `python tools/validate-reel-prompt-batch.py "prompts/instagram/feed/ig-feed-reel-YYYY-MM-DD-theme-shot-*-v01.json"`
 
 ## Local Nano Banana MCP
 

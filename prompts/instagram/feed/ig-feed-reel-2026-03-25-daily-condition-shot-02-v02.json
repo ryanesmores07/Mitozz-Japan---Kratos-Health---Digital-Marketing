@@ -1,7 +1,7 @@
 {
   "asset_type": "instagram-feed",
-  "campaign_name": "March Organic Education",
-  "topic": "Rethink daily condition design",
+  "campaign_name": "March 2026 Organic Education",
+  "topic": "Daily condition reframe",
   "objective": "Educate",
   "template_set": "Set 4 + Set 3",
   "slide_blueprint": "reel-4-shot",
@@ -13,36 +13,45 @@
   "shot_id": "shot-02",
   "shot_position": 2,
   "continuity_tokens": [
-    "same Japanese woman in early 30s",
-    "soft steel-blue morning light",
-    "quiet premium apartment workspace",
-    "neutral wardrobe",
+    "same Japanese professional in early 30s across shots 01 to 03",
+    "same premium morning workspace",
+    "same soft steel-blue side daylight",
+    "same ivory or soft grey wardrobe family",
+    "same calm editorial realism",
     "no baked-in text"
   ],
   "visual_intent": [
-    "premium lifestyle detail",
-    "calm reset mood",
-    "clean text-safe space"
+    "quiet desk reset detail",
+    "routine over stimulation",
+    "premium calm with useful clarity",
+    "text-safe negative space"
   ],
   "brand_guardrails": [
-    "avoid clutter or hack-style visuals",
-    "avoid gadget-heavy productivity styling",
-    "keep the scene simple and premium"
+    "avoid wellness-ad cliches",
+    "avoid overstyled desk props",
+    "do not make the frame look like a still life catalog shot",
+    "keep the reframe grounded and believable",
+    "no readable text, logos, labels, UI, or wordmarks anywhere in frame",
+    "the scene must fill the entire 9:16 canvas with no white bands, blank bars, inset-card framing, floating panel behavior, or smaller image area inside the frame"
   ],
   "composition": [
-    "vertical 9:16 framing",
-    "environment and hand detail as the focus",
-    "clear top and bottom safe zones",
-    "one calm action only"
+    "true full-bleed vertical 9:16 framing",
+    "close detail shot",
+    "hand, notebook, and glass of water as the core subjects",
+    "clean negative space for overlay copy inside the real scene",
+    "soft depth and simple tabletop geometry",
+    "the hand-and-reset action must be the true focal point, not the notebook",
+    "extend environment and tabletop logic naturally to all canvas edges",
+    "no blank white top or bottom padding and no letterbox-style empty zones"
   ],
   "image_references": [
     {
       "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-editorial-whitespace-01.png",
       "role": "style-anchor",
       "influence": [
-        "whitespace",
-        "layout restraint",
-        "clean room around the subject"
+        "spacing",
+        "negative space",
+        "layout restraint"
       ],
       "match_strength": "medium"
     },
@@ -51,17 +60,21 @@
       "role": "style-anchor",
       "influence": [
         "palette",
-        "soft atmosphere",
-        "light quality"
+        "light softness",
+        "steel-blue calm"
       ],
       "match_strength": "medium"
     }
   ],
-  "reference_strategy": "Use editorial whitespace for framing and the cool palette anchor for morning atmosphere. Keep it as the same morning, same environment family, and same person as shot 01.",
+  "reference_strategy": "Keep the frame lifestyle-real and text-safe, using the anchors only to control restraint, palette, and breathing room.",
   "variation_guardrails": [
-    "show a different angle than shot 01",
-    "keep the same environment language",
-    "preserve continuity through palette and light direction"
+    "do not overcomplicate the desk styling",
+    "keep the shot calmer and more detailed than shot 01",
+    "preserve the same environment family and light direction",
+    "do not let the frame become a stock tabletop photo",
+    "reject and regenerate if any readable text or brand wordmark appears",
+    "reject and regenerate if the frame looks like an inset composition inside a taller canvas",
+    "reject and regenerate if top or bottom whitespace appears as blank bars instead of real in-scene breathing room"
   ],
   "text_overlay": {
     "allowed": false,
@@ -71,35 +84,27 @@
     "headline_ja": "",
     "slides_ja": []
   },
-  "sora_handoff": {
-    "use_for_sora": true,
-    "input_mode": "image-to-video",
-    "shot_goal": "Reframe the moment away from stimulation and toward intentional daily design.",
-    "duration_seconds": 2.5,
-    "camera_motion": "Gentle lateral drift.",
-    "subject_motion": "Minimal hand movement and tiny ambient motion only.",
-    "transition_in": "Straight cut from shot 01.",
-    "transition_out": "Soft hold before the reveal shot.",
-    "prompt": "Animate this image into a premium vertical lifestyle detail shot that feels calm and intentional. Keep the same environment, palette, and morning light continuity as the previous shot. Use only subtle natural motion in the hand, curtain, or ambient scene. Do not invent new objects or aggressive movement. Keep the composition clean for later text overlay.",
-    "negative_prompt": [
-      "messy desk",
-      "abrupt motion",
-      "background drift",
-      "identity changes",
-      "hard light changes",
-      "flashy transitions",
-      "unreadable text"
-    ]
-  },
   "negative_prompts": [
-    "busy productivity-hack styling",
-    "loud color pops",
-    "gadget clutter",
-    "cheap stock photo feel"
+    "messy workspace",
+    "busy flat-lay styling",
+    "hard contrast lighting",
+    "influencer desk aesthetic",
+    "baked-in typography",
+    "wordmarks",
+    "logos",
+    "catalog still life",
+    "notebook dominating the frame",
+    "white bars",
+    "letterboxing",
+    "pillarboxing",
+    "floating card layout",
+    "inset image inside vertical canvas",
+    "blank top padding",
+    "blank bottom padding"
   ],
   "reference_files": [
-    "brand/references/business-context/visual/Brand Visual Direction.md",
-    "brand/references/business-context/content-planning/Mitozz Instagram Content Calendar - 2026 - March.csv"
+    "brand/references/business-context/creative-packages/creative-package-2026-03-25.md",
+    "brand/references/business-context/visual/Brand Visual Direction.md"
   ],
-  "notes": "Shot 02 of the rebuilt March 25 reel set. Generate as PNG. Keep the tone quiet and continuous with shot 01, not like a separate lifestyle campaign."
+  "notes": "Shot 02 reframe. Hard lock: absolutely no readable text or brand marks anywhere. Full-bleed 9:16 only, with real in-scene breathing room instead of white padding. This must read as a lived-in reset beat, not a stock tabletop photo."
 }

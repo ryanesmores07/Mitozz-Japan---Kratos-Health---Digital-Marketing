@@ -164,6 +164,210 @@ Rule:
 - keep the visual elegant
 - let the native Instagram sticker do the click work
 
+## Story Delivery Mode Decision
+
+Every Story should resolve not only to a `story_type`, but also to a `story_delivery_mode`.
+
+Use these approved delivery modes in the current system:
+
+- `static-sequence`
+- `video-clip`
+- `reel-recut`
+- `native-interaction-led`
+
+Not currently approved for routine planning:
+
+- `repost-with-commentary`
+- UGC-led Story formats
+- founder or team native commentary clips
+
+Reason:
+
+- Mitozz should choose the best mode for the current situation
+- but the system should only choose modes the team can execute consistently right now
+- do not plan around UGC or native commentary until those workflows actually exist
+
+Do not choose the delivery mode by habit.
+Choose it based on the Story's actual job, the parent feed asset, and the timing of the post.
+
+### 1. `static-sequence`
+
+Use when:
+
+- the Story's main job is reinforcement, clarity, or routing
+- the message needs controlled typography
+- the calendar row is educational, bridge-led, or CTA-led
+- there is no strong existing motion asset worth reusing
+
+Best for:
+
+- hook -> context -> CTA
+- feed reinforcement
+- clean myth-to-clarity follow-up
+- quiet premium reminders
+
+Default bias:
+
+- this is the safest default for Mitozz
+- use it unless motion clearly improves attention, realism, or response
+
+### 2. `video-clip`
+
+Use when:
+
+- the Story should feel more human, lived-in, or proof-based
+- we already have a strong native clip, founder clip, product clip, or simple lifestyle motion
+- the movement itself helps credibility or emotional connection
+
+Best for:
+
+- daily-context Stories
+- routine moments
+- behind-the-scenes texture
+- product handling moments
+- proof or trust signals
+
+Rule:
+
+- use short clean clips, not mini commercials
+- keep overlays minimal and readable
+
+### 3. `reel-recut`
+
+Use when:
+
+- a feed reel already exists or is publishing the same day
+- the Story's job is to amplify that reel, not replace it
+- one beat from the reel can create a fast low-friction touchpoint
+
+Best for:
+
+- same-day reel support
+- next-day reminder Stories
+- traffic-routing Stories
+- "watch the full post" style reinforcement
+
+Rule:
+
+- do not dump the full reel into Stories by default
+- recut one clear beat, or use one still / short excerpt from the reel, then add story-specific context, interaction, or CTA
+- the Story must add a new job: route, remind, humanize, or gather a signal
+
+### 4. `native-interaction-led`
+
+Use when:
+
+- the main KPI is taps, votes, replies, or signal gathering
+- the message is simple enough that the native sticker is the hero
+- the Story is more about conversation than visual storytelling
+
+Best for:
+
+- polls
+- sliders
+- question boxes
+- quick preference checks
+
+Rule:
+
+- the artwork supports the interaction
+- the sticker does the main action work
+
+## Current Production Constraint Rule
+
+Do not approve a Story mode just because it sounds richer.
+
+Before locking the mode, confirm:
+
+1. the Story has one clear job
+2. the required source asset actually exists or will be produced in the same batch
+3. the mode adds a real benefit over `static-sequence`
+4. the production effort stays proportional to the expected upside
+
+If any of those fail:
+
+- fall back to `static-sequence`
+
+This keeps the system intentional without over-engineering.
+
+## Delivery Mode Selection Heuristics
+
+Use this order of questions:
+
+1. What is the Story trying to do right now: reinforce, humanize, prove, interact, or route?
+2. Is there already a strong feed reel or other published asset worth reusing?
+3. Would motion improve understanding, realism, or response, or only add noise?
+4. Is the timing same-day support, next-day follow-up, or standalone Story coverage?
+5. Which mode gets the result with the least production friction while still feeling premium?
+
+Default logic:
+
+- if the Story is education, bridge, or CTA support -> choose `static-sequence`
+- if the Story is daily-life, proof, or realism-led and a good clip exists -> choose `video-clip`
+- if a reel is the hero asset for that date or batch and the Story should amplify it with a new job -> choose `reel-recut`
+- if the main job is response gathering -> choose `native-interaction-led`
+
+Use this priority order:
+
+1. choose `native-interaction-led` when the main KPI is taps, votes, replies, or signal gathering
+2. otherwise choose `reel-recut` only if a same-date or same-batch reel exists and one beat can be reused without duplication
+3. otherwise choose `video-clip` only if a strong approved clip exists and motion materially improves realism, proof, or emotional connection
+4. otherwise choose `static-sequence`
+
+In other words:
+
+- do not search for a way to avoid static
+- static is the correct answer whenever it is the clearest and most efficient format
+- motion should earn its place
+
+## Timing Rules For Reel Reuse
+
+Reel reuse is approved, but only when it stays intentional.
+
+Best timing:
+
+- same day as the reel publish
+- later the same day as a reminder or angle shift
+- next day as a bridge or follow-up
+
+Do not use reel reuse when:
+
+- the Story would feel like a duplicate with no new reason to watch
+- the reel is already text-dense and the Story would become cluttered
+- the reel's pacing is too slow or too long for Story consumption
+
+If reusing a reel:
+
+- shorten the payload
+- keep only the strongest beat, not the full edit
+- add a new Story job such as reminder, route, poll, or angle shift
+- if the reel excerpt does not add a new job, do not reuse it
+
+## Decision Examples
+
+Use these as operating defaults:
+
+- educational reinforcement after a carousel or reel -> `static-sequence`
+- next-day bridge Story after a dense educational post -> `static-sequence`
+- same-day support for a hero reel with one reusable opening or reveal beat -> `reel-recut`
+- daily-routine context Story when a clean approved clip already exists -> `video-clip`
+- poll, slider, or question Story where the sticker is the main mechanic -> `native-interaction-led`
+- proof or trust Story without a strong clip and without a native commentary workflow -> `static-sequence`
+
+## Final Delivery Mode Principle
+
+For the current Mitozz system:
+
+- bias toward `static-sequence`
+- use `video-clip` when realism or trust clearly improves
+- use `reel-recut` when a reel is already the hero asset and Story reuse is timely and additive
+- use `native-interaction-led` when response gathering is the real goal
+
+Do not force motion, reuse, or novelty for its own sake.
+- isolate one beat or message
+- add native Story context
+- route clearly to the reel, feed post, reply, or link
+
 ## Are Images Required?
 
 No.

@@ -7,7 +7,7 @@ description: Execute Nano Banana Pro MCP for Mitozz Instagram assets using exist
 
 Use this skill for Instagram organic image generation with Nano Banana Pro by executing prompt JSON files plus the approved visual reference pack.
 
-For reels, this skill generates the coordinated source images that will later be animated in OpenAI Sora. It does not replace Sora or final editing.
+For reels, this skill generates the coordinated source images that will later be edited by the freelancer. It does not replace editing or final assembly.
 
 ## Inputs To Read
 
@@ -26,6 +26,7 @@ For reels, this skill generates the coordinated source images that will later be
 
 - Load every prompt `image_references` entry as an actual visual reference input.
 - Treat `style-anchor` references as the highest-priority visual input.
+- When a prompt includes a mode-specific style anchor, use it only for that asset's specialized mood or composition logic.
 - Treat `product-source` references as factual product inputs for bottle shape, cap, label, and tablet accuracy.
 - Use `working-example` references to reinforce brand uniformity, not to clone an existing post.
 - Treat `working-example` references as unavailable unless they were explicitly approved into the folder.
@@ -39,9 +40,18 @@ For reel shot prompts:
 - preserve shared continuity tokens across the whole set
 - keep the subject description, palette, environment, and light direction stable unless the prompt explicitly changes them
 - when the bottle is a featured subject, make sure the prompt text itself explicitly describes the Mitozz bottle and its front label, not just the attached product-source image
-- prioritize simple clean compositions that animate well in Sora
+- prioritize simple clean compositions that edit cleanly in the final reel
 - protect negative space for later text overlays and subtitles
 - do not bake text into source images unless the prompt explicitly requires it
+
+Mandatory rejection behavior:
+
+- do not treat a generated asset as approved just because generation succeeded
+- inspect each generated asset against the prompt's hard-fail conditions before accepting it
+- if a text-free source image contains any readable text, reject it
+- if a bottle-led image breaks pack truth on color, silhouette, cap, or label, reject it
+- if a reel frame fails its beat function or continuity role, reject it
+- if a Story frame looks individually fine but breaks set uniformity, reject the set
 
 ## Variation Guardrails
 
@@ -70,7 +80,6 @@ Reel shot prompts should also include:
 - `shot_id`
 - `shot_position`
 - `continuity_tokens`
-- `sora_handoff`
 
 ## Output
 
@@ -91,7 +100,7 @@ This skill's deliverable for reels is:
 
 - approved source frame per shot
 - optional alternates
-- intact Sora handoff data from the prompt set
+- clean source assets ready for the freelancer handoff packet
 
 ## Brand Checklist
 
@@ -111,6 +120,21 @@ For reels, also verify:
 - text-safe space is preserved where needed
 - the first shot can function as a hook frame
 - the last shot can hold for CTA or brand presence
+
+For Stories, also verify:
+
+- all frames use one coherent card system
+- border treatment is consistent across the set
+- typography weight, darkness, and spacing feel locked across the set
+- the CTA frame evolves the same system instead of introducing a new one
+
+## Approval Standard
+
+Use these approval rules before saving outputs as winners:
+
+- reels: approve at the beat level and the sequence level
+- stories: approve at the set level, not frame by frame
+- any asset that fails a hard lock should be rejected immediately instead of being carried forward as a provisional winner
 
 ## Examples
 

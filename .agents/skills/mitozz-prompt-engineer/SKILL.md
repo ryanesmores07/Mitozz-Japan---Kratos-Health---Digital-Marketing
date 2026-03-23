@@ -7,7 +7,7 @@ description: Create and update Nano Banana Pro JSON prompts for Mitozz Japan fro
 
 Use this skill after `mitozz-creatives-director` and before `nano-banana-instagram`.
 
-For reel workflows, this skill must produce prompts that are optimized for a later OpenAI Sora image-to-video or video-to-video step. Do not treat a reel as one generic feed prompt.
+For reel workflows, this skill produces source-asset prompts only. It does not create the freelancer edit brief itself.
 
 ## Inputs To Read
 
@@ -65,7 +65,6 @@ Use this JSON structure:
 - `reference_strategy`
 - `variation_guardrails`
 - `text_overlay`
-- `sora_handoff`
 - `negative_prompts`
 - `reference_files`
 - `notes`
@@ -80,7 +79,7 @@ When the source asset is a reel:
 - use `motion_role`, `shot_id`, and `shot_position` to keep the set coordinated
 - encode the same continuity tokens across the full reel set unless a shot intentionally changes environment or subject
 
-The prompt engineer is responsible for making the shot set easy to animate in Sora later.
+The prompt engineer is responsible for making the source asset set easy to edit later.
 
 ## `image_references` Rules
 
@@ -96,9 +95,10 @@ Default rules:
 - feed educational assets prioritize whitespace, typography, and editorial layout references
 - product hero assets prioritize lighting, palette, and product-framing references
 - stories prioritize vertical breathing room and simplified composition references
-- reel shot prompts prioritize continuity, subject legibility, clean motion potential, and text-safe negative space
+- reel shot prompts prioritize continuity, subject legibility, clean edit potential, and text-safe negative space
 - use 2 to 4 image references per generation
 - include at least 1 `style-anchor` when available
+- add up to 1 mode-specific `style-anchor` when the asset clearly matches a specialized anchor such as ingredient-led or bottle-shot-led creative
 - add 1 `product-source` reference when the bottle, cap, label, or tablets must stay accurate
 - use at most 1 close composition match
 - default `match_strength` to `medium`
@@ -134,41 +134,39 @@ Always encode this rule in the prompt:
 
 When building prompts for a reel:
 
-- each prompt should represent one clear source asset for one shot
+- each prompt should represent one clear source asset for one shot or beat
 - default `text_overlay.allowed` to `false` unless the creative package explicitly wants baked-in text
 - preserve generous negative space when captions, kinetic text, or CTA overlays will be added later
-- use consistent subject description across the shot set so Sora does not drift
+- use consistent subject description across the shot set so the asset family does not drift
 - use consistent product orientation when the bottle appears
 - for bottle shots, repeat a concise Mitozz bottle-and-label description inside `continuity_tokens`, `composition`, or other prompt text so the model receives explicit pack instructions in plain language
-- prefer simple, direct compositions that animate cleanly
-- avoid overcomplicated background detail that creates unstable motion
+- prefer simple, direct compositions that cut cleanly in an edit
+- avoid overcomplicated background detail that makes the reel visually noisy
 - keep the first shot visually strong enough to serve as the opening frame
 - make the last shot stable enough to hold the CTA beat
 
-Every reel prompt must include a `sora_handoff` block with:
+Add explicit hard-fail wording whenever relevant:
 
-- `use_for_sora`
-- `input_mode`
-- `shot_goal`
-- `duration_seconds`
-- `camera_motion`
-- `subject_motion`
-- `transition_in`
-- `transition_out`
-- `prompt`
-- `negative_prompt`
+- for text-free source images, explicitly state `no readable text, letters, logos, labels, UI, or wordmarks anywhere in frame`
+- for bottle-led shots, explicitly state the approved bottle color, cap color, label orientation, and label readability requirements
+- for routine shots, explicitly state what object or gesture must be the real focal action so the model does not drift into generic still life
+- for reframe beats, explicitly state what the shot must not become, such as `not a stock tabletop photo` or `not a generic supplement ad`
 
-The `prompt` field should tell Sora exactly how to animate the generated image or how to extend the shot if video already exists.
+For bottle-led shots, encode a rejection rule in plain language:
 
-The `negative_prompt` field should suppress:
+- `reject and regenerate if bottle color changes`
+- `reject and regenerate if label becomes unreadable, simplified, or invented`
 
-- warped hands
-- bottle shape drift
-- unreadable typography
-- sudden costume changes
-- abrupt background swaps
-- hyperactive camera motion
-- flashy ad-style transitions
+## Story Batch Rules
+
+When building prompts for a Story set:
+
+- treat the full Story set as one locked batch, not as unrelated individual frames
+- keep one exact card architecture across all frames
+- keep one exact border rule or no border rule across all frames
+- keep text color density, type weight family, and margin system identical across all frames
+- let frame 03 add CTA emphasis only if the base layout system remains unchanged
+- explicitly write these batch-lock rules into the prompt notes or variation guardrails
 
 ## Quality Checks
 
@@ -181,7 +179,13 @@ Before finalizing a prompt, verify:
 - the prompt encodes the Steel Light system
 - the prompt includes `asset_archetype` and `reference_strategy`
 - the prompt includes variation guardrails so outputs stay cohesive without becoming repetitive
-- reel prompt sets carry consistent continuity tokens and a complete `sora_handoff` block per shot
+- reel prompt sets carry consistent continuity tokens and clear shot roles per asset
+
+Do not finalize a prompt if:
+
+- the prompt leaves text contamination ambiguous on a text-free source asset
+- the prompt leaves bottle color or label fidelity ambiguous on a bottle-led asset
+- the prompt leaves Story batch architecture ambiguous across frames
 
 ## Output
 

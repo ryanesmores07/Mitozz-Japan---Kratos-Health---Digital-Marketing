@@ -10,7 +10,7 @@ This is the short operator-facing version of the production system.
 
 1. read the calendar row
 2. resolve the post-calendar production layer:
-   `Template Set`, `Slide Blueprint`, `asset_archetype`, and `story_type` when needed
+   `Template Set`, `Slide Blueprint`, `asset_archetype`, `story_type`, and `story_delivery_mode` when needed
 3. choose the correct approved reference images
 4. build the creative package
 5. generate the asset or background plate
@@ -63,6 +63,50 @@ Poll or question story:
 - simplify `Set 4` or `Set 5`
 - follow the story operating rules in [Mitozz Instagram Story Strategy.md](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/brand/references/business-context/visual/Mitozz%20Instagram%20Story%20Strategy.md)
 
+## Story Delivery Mode Rule
+
+Before approving any Story direction, explicitly choose one delivery mode:
+
+- `static-sequence`
+- `video-clip`
+- `reel-recut`
+- `native-interaction-led`
+
+Do not plan these as routine modes in the current system:
+
+- `repost-with-commentary`
+- UGC-led Stories
+- founder or team native commentary clips
+
+Only choose from the enabled modes above unless the production system is formally expanded.
+
+Use this quick rule:
+
+- interaction-first Story -> `native-interaction-led`
+- same-date or same-batch reel support with a new Story job -> `reel-recut`
+- educational reinforcement, bridge, or CTA route -> `static-sequence`
+- daily-context, realism, routine, or proof with real motion available -> `video-clip`
+
+Production gate:
+
+- if motion or reuse does not create a clear advantage, choose `static-sequence`
+- if the needed reel beat or clip does not already exist, do not force the mode
+- keep the simplest mode that does the job well
+
+Reject vague story planning such as:
+
+- "just make this a Story too"
+- "reuse the reel somehow"
+- "make a quick story version"
+
+The Story needs its own job, and the delivery mode must serve that job.
+
+Default safe bias:
+
+- `static-sequence` is the baseline mode for Mitozz
+- `video-clip` and `reel-recut` must justify themselves
+- do not over-engineer Stories when a static sequence will perform the job more cleanly
+
 ## How The Feed Should Feel
 
 When someone lands on the grid:
@@ -106,13 +150,21 @@ Lock ratios before approving:
 
 - normal feed posts and carousel slides = `4:5`
 - square feed posts only when intentionally planned = `1:1`
-- stories = `9:16`
+- stories = `9:16` or `1:1`
 - reel source frames = `9:16`
+
+Story ratio rule:
+
+- choose one story ratio per story set: `9:16` or `1:1`
+- keep every frame or generated source image in that story set on the same ratio
+- use `9:16` when the Story is being published as a native full-screen Story-first sequence
+- use `1:1` only when the visual system or downstream motion workflow benefits from square framing and the whole set stays square
 
 Reject:
 
 - landscape feed outputs
 - random ratio drift inside one carousel
+- mixed `9:16` and `1:1` frames inside one story set
 - square crops that were not intentionally specified
 
 ## Set 1 Layout Rule

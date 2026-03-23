@@ -43,6 +43,11 @@ Choose one primary persona.
 - `source_mode`:
   - `generated-images-only`
   - `mixed-generated-images-and-existing-footage`
+  - `existing-footage-led`
+- `motion_asset_mode`:
+  - `still-images-only`
+  - `still-images-plus-sora-clips`
+  - `existing-clips-only`
 - `text_overlay_strategy`:
   - `add-in-edit`
   - `bake-into-source-frame`
@@ -54,6 +59,36 @@ Choose one primary persona.
   - `light direction`
   - `lens distance`
   - `bottle orientation`
+
+## Runtime Rules
+
+- Hard maximum: `60 seconds`
+- Default target for most reels: `8-15 seconds`
+- Preferred ranges by reel goal:
+  - `hook / awareness`: `8-10 seconds`
+  - `education / explainer`: `10-15 seconds`
+  - `routine / lifestyle`: `8-12 seconds`
+  - `product / trust`: `8-12 seconds`
+  - `deeper education`: `15-30 seconds` only when the concept clearly benefits
+- Use `30-60 seconds` only for strong high-retention concepts with a clear narrative payoff
+- Do not go longer just because more footage exists
+- The first `1-2 seconds` must always function as the hook zone
+- Keep one main message per beat so the runtime stays tight
+
+## Runtime Rules
+
+- Hard maximum: `60 seconds`
+- Default target for most reels: `8-15 seconds`
+- Preferred ranges by reel goal:
+  - `hook / awareness`: `8-10 seconds`
+  - `education / explainer`: `10-15 seconds`
+  - `routine / lifestyle`: `8-12 seconds`
+  - `product / trust`: `8-12 seconds`
+  - `deeper education`: `15-30 seconds` only when the concept clearly benefits
+- Use `30-60 seconds` only for strong high-retention concepts with a clear narrative payoff
+- Do not go longer just because more footage exists
+- The first `1-2 seconds` must always function as the hook zone
+- Keep one main message per beat so the runtime stays tight
 
 ## Layout / Structure
 
@@ -126,7 +161,7 @@ Repeat as needed up to a normal maximum of 6 shots.
 - `calm Japanese-premium execution`:
 - `general-food-safe compliant messaging`:
 
-## Nano Banana / Sora Handoff
+## Nano Banana / Source Asset Handoff
 
 - `asset_archetype`:
 - `visual_intent`:
@@ -153,63 +188,137 @@ Repeat as needed up to a normal maximum of 6 shots.
 
 ## Source Asset Plan
 
-List the exact prompt files that need to be created for Nano Banana.
+List the exact source assets that must exist before the freelancer receives the brief.
 
 - `shot-01`:
   - `prompt_filename`:
+  - `source_asset_type`:
+  - `creation_method`:
   - `asset_goal`:
   - `must_hold_continuity_with`:
 - `shot-02`:
   - `prompt_filename`:
+  - `source_asset_type`:
+  - `creation_method`:
   - `asset_goal`:
   - `must_hold_continuity_with`:
 - `shot-03`:
   - `prompt_filename`:
+  - `source_asset_type`:
+  - `creation_method`:
   - `asset_goal`:
   - `must_hold_continuity_with`:
 
-## Sora Shot Prompts
+## Optional Internal Sora Clip Plan
 
-Write one exact Sora prompt per shot.
+Use this section only when an approved still should be turned into a motion clip before the freelancer receives the packet.
 
 ### `shot-01`
 
-- `input_mode`:
+- `use_sora`: `yes/no`
+- `input_asset`:
 - `duration_seconds`:
 - `camera_motion`:
 - `subject_motion`:
-- `transition_in`:
-- `transition_out`:
 - `prompt`:
 - `negative_prompt`:
 
 ### `shot-02`
 
-- `input_mode`:
+- `use_sora`: `yes/no`
+- `input_asset`:
 - `duration_seconds`:
 - `camera_motion`:
 - `subject_motion`:
-- `transition_in`:
-- `transition_out`:
 - `prompt`:
 - `negative_prompt`:
 
 ### `shot-03`
 
-- `input_mode`:
+- `use_sora`: `yes/no`
+- `input_asset`:
 - `duration_seconds`:
 - `camera_motion`:
 - `subject_motion`:
-- `transition_in`:
-- `transition_out`:
 - `prompt`:
 - `negative_prompt`:
 
-## Sora Master Prompt
+## Freelancer Edit Blueprint
 
-Use this to remind Sora of the continuity system across the whole reel.
+Write one exact editing instruction block per shot.
 
-- `master_prompt`:
+### `shot-01`
+
+- `duration_seconds`:
+- `edit_goal`:
+- `source_assets`:
+- `transition_in`:
+- `transition_out`:
+- `text_ja`:
+- `editor_instruction`:
+
+### `shot-02`
+
+- `duration_seconds`:
+- `edit_goal`:
+- `source_assets`:
+- `transition_in`:
+- `transition_out`:
+- `text_ja`:
+- `editor_instruction`:
+
+### `shot-03`
+
+- `duration_seconds`:
+- `edit_goal`:
+- `source_assets`:
+- `transition_in`:
+- `transition_out`:
+- `text_ja`:
+- `editor_instruction`:
+
+## Optional Image-To-Video Prompt Pack
+
+Use this only when a still image will be converted into a short motion clip before editing.
+
+### `shot-01`
+
+- `source_image_path`:
+- `target_duration_seconds`:
+- `motion_goal`:
+- `camera_behavior`:
+- `subject_motion`:
+- `prompt`:
+- `negative_prompt`:
+
+### `shot-02`
+
+- `source_image_path`:
+- `target_duration_seconds`:
+- `motion_goal`:
+- `camera_behavior`:
+- `subject_motion`:
+- `prompt`:
+- `negative_prompt`:
+
+### `shot-03`
+
+- `source_image_path`:
+- `target_duration_seconds`:
+- `motion_goal`:
+- `camera_behavior`:
+- `subject_motion`:
+- `prompt`:
+- `negative_prompt`:
+
+## Freelancer Handoff Summary
+
+Use this to summarize the overall edit for the freelancer.
+
+- `what_the_reel_must_communicate`:
+- `how_the_edit_should_feel`:
+- `what_the_editor_must_not_change`:
+- `final_delivery_requirements`:
 
 ## Motion Guardrails
 

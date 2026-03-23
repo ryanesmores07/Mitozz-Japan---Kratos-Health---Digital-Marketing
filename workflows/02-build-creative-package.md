@@ -67,8 +67,8 @@ Add all of the following:
 - `opening_hook_strategy`
 - `continuity_tokens`
 - `source_asset_plan`
-- `sora_shot_prompts`
-- `sora_master_prompt`
+- `freelancer_edit_blueprint`
+- `freelancer_handoff_summary`
 - `motion_guardrails`
 - `transition_notes`
 - `editor_notes`
@@ -114,8 +114,8 @@ For reels, also require:
 - `target_runtime_seconds`
 - `continuity_tokens`
 - `source_asset_plan`
-- `sora_shot_prompts`
-- `sora_master_prompt`
+- `freelancer_edit_blueprint`
+- `freelancer_handoff_summary`
 - `motion_guardrails`
 - `transition_notes`
 - `editor_notes`
@@ -125,4 +125,4 @@ For reels, also require:
 - one creative package per asset
 - inherits its mapped `Template Set` and `Slide Blueprint` from the central rules by default
 - ready for prompt-engineering with no missing visual-reference decisions
-- for reels, ready for prompt-engineering and Sora with no missing shot-level decisions
+- for reels, ready for prompt-engineering and freelancer handoff with no missing shot-level decisions

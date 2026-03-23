@@ -1,55 +1,58 @@
 {
   "asset_type": "instagram-story",
   "campaign_name": "March 2026 Organic Education",
-  "topic": "Busy day daily-context story",
+  "topic": "Busy day condition reminder",
   "objective": "Reinforce",
-  "template_set": "Set 4",
+  "template_set": "Set 1",
   "slide_blueprint": "story-3-frame",
   "asset_archetype": "story-reinforcement",
   "platform": "instagram",
   "aspect_ratio": "9:16",
   "audience": "Sleep-Deprived High Performer",
   "visual_intent": [
-    "real-life daily-context story",
-    "quiet premium lifestyle cue",
-    "mist-blue calm with editorial breathing room",
-    "soft human context without product emphasis",
-    "fast mobile readability"
+    "clean educational Story card",
+    "soft workday context",
+    "premium calm readability",
+    "light routing support for the reel"
   ],
   "brand_guardrails": [
-    "use Set 4 as the visual lead and keep it lighter than the March 25 reel",
-    "preserve top and bottom safe zones",
-    "keep typography stable across all 3 frames",
-    "avoid turning the story into a feed-style explanation card",
-    "do not use fake buttons or sticker-heavy UI",
-    "keep text color density, opacity, and typographic presence visually consistent across all 3 frames"
+    "protect Story-safe top and bottom zones",
+    "keep one message per frame",
+    "do not turn the Story into a feed-style explainer",
+    "keep it lighter and more conversational than the reel",
+    "all three frames must use the exact same card architecture",
+    "all three frames must use the exact same border behavior or no border behavior",
+    "all three frames must use the same text color density, type weight family, and margin system"
   ],
   "composition": [
     "9:16 vertical framing",
-    "one short message block per frame",
-    "subtle lifestyle image support behind or around the text",
-    "clear safe space for optional native sticker use on frame 3",
+    "text-led white-card behavior",
+    "faint lifestyle cue only",
     "strong negative space",
-    "mist-blue and cloud-white atmosphere with restrained steel-blue structure"
+    "small apricot cue on the CTA frame only",
+    "full rounded white card fills the canvas",
+    "no floating inner card",
+    "no framed border card",
+    "same text-box width and centered layout across all frames"
   ],
   "image_references": [
-    {
-      "path": "brand/references/business-context/visual/reference-pack/working-examples/template-set-4-lifestyle-v02-no-bottle.png",
-      "role": "working-example",
-      "influence": [
-        "daily-life realism",
-        "routine atmosphere",
-        "quiet premium lifestyle tone"
-      ],
-      "match_strength": "high"
-    },
     {
       "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-editorial-whitespace-01.png",
       "role": "style-anchor",
       "influence": [
-        "vertical breathing room",
-        "whitespace",
-        "layout restraint"
+        "spacing",
+        "restraint",
+        "Story-safe breathing room"
+      ],
+      "match_strength": "high"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-body-copy-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "text hierarchy",
+        "body-copy readability",
+        "clean Japanese layout"
       ],
       "match_strength": "medium"
     },
@@ -57,53 +60,50 @@
       "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.png",
       "role": "style-anchor",
       "influence": [
-        "palette",
-        "mist-blue softness",
-        "restraint"
+        "mist-blue atmosphere",
+        "soft palette control",
+        "premium calm"
       ],
       "match_strength": "medium"
     }
   ],
-  "reference_strategy": "Use the approved Set 4 lifestyle reference for realism and routine context, then use editorial-whitespace and cool-palette anchors to keep the story readable, calm, and premium.",
+  "reference_strategy": "Use the whitespace and body-copy anchors to drive a clean Set 1 Story system, then use the cool-palette anchor only for soft atmospheric color control.",
   "variation_guardrails": [
-    "keep the story more text-led than the lifestyle reference",
-    "avoid making the background too scenic or too photographic",
-    "make the atmosphere feel like a lived-in workday, not a campaign image",
-    "avoid exact crop or pose matching from the reference"
+    "keep all three frames inside one calm visual set",
+    "do not make the background too photographic",
+    "optimize for mobile readability over visual complexity",
+    "do not use fake buttons or cluttered stickers",
+    "do not switch card systems between frames",
+    "frame 03 may add CTA emphasis only if the base layout remains identical",
+    "reject the batch if typography weight, darkness, or margins drift between frames"
   ],
   "text_overlay": {
     "allowed": true,
-    "max_words": 10,
-    "tone": "soft, empathetic, premium",
+    "max_words": 14,
+    "tone": "soft, premium, readable",
     "font_reference": "Noto Sans JP",
-    "font_lock": {
-      "all_frames": "Noto Sans JP Medium"
-    },
-    "batch_lock": {
-      "text_color": "dark charcoal, visually consistent across all frames",
-      "text_opacity": "stable across all frames",
-      "weight_presence": "same medium-weight feel across all frames"
-    },
-    "headline_ja": "忙しい日は、",
+    "headline_ja": "気合いで押し切る日が 続いていませんか。",
     "slides_ja": [
-      "整える余白が先に消える。",
-      "だからこそ、押し切るより土台を守りたい。",
-      "こんな日、ありますか？ 自分のペースを見直すきっかけに。"
+      "気合いで押し切る日が 続いていませんか。",
+      "見直したいのは、勢いより 毎日のコンディション。",
+      "今日のリールで 土台から考える視点を。"
     ]
   },
   "negative_prompts": [
-    "messy lifestyle clutter",
-    "hard-sell wellness ad mood",
-    "fake button graphics",
-    "overly dramatic fatigue acting",
-    "tiny unreadable text"
+    "busy infographic layout",
+    "hard-sell supplement story design",
+    "tiny unreadable typography",
+    "flashy sticker clutter",
+    "heavy explanatory design",
+    "floating inner card",
+    "framed border card",
+    "layout drift between frames",
+    "different typography systems across frames"
   ],
   "reference_files": [
     "brand/references/business-context/creative-packages/creative-package-2026-03-25.md",
-    "brand/references/business-context/creative-packages/post-calendar-layer-2026-03-23-to-2026-03-31.md",
     "brand/references/business-context/visual/Brand Visual Direction.md",
-    "brand/references/business-context/visual/reference-pack/reference-pack-index.md",
-    "brand/references/business-context/visual/Mitozz Instagram Story Strategy.md"
+    "brand/references/business-context/visual/Mitozz Template Library Index.md"
   ],
-  "notes": "March 25 daily-context story. Keep this more human and image-led than the March 23/24 Set 1 stories while preserving the same typographic discipline and premium calm."
+  "notes": "March 25 same-day reinforcement Story. Hard batch lock: one full rounded white-card system across all 3 frames, same margins, same text style, same atmosphere. Reject if the set does not look uniform side by side."
 }

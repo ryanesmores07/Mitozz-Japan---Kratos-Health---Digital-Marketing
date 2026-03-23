@@ -8,15 +8,15 @@
   "asset_archetype": "",
   "platform": "instagram",
   "aspect_ratio": "4:5",
-  "aspect_ratio_lock": "Feed defaults to 4:5. Use 1:1 only for intentionally planned square assets. Stories and reels use 9:16.",
+  "aspect_ratio_lock": "Feed defaults to 4:5. Use 1:1 only for intentionally planned square assets. Reels use 9:16. Stories may use either 9:16 or 1:1, but each story set must keep one uniform ratio across all frames or source images.",
   "reel_lock": {
     "system": "Mitozz reel-source-frame",
     "aspect_ratio": "9:16",
     "export_size_px": "1536x2752",
-    "composition_rule": "All reel source frames must use true vertical 9:16 framing with clear text-safe top and bottom zones. Do not mix square or feed-card proportions inside one reel batch.",
+    "composition_rule": "All reel source frames must use true vertical 9:16 framing with full-bleed scene content from top edge to bottom edge. Leave clear text-safe top and bottom zones inside the scene composition, not as blank bars, white padding, or inset-card margins. Do not mix square or feed-card proportions inside one reel batch.",
     "continuity_rule": "Within a reel batch, keep the same subject identity, wardrobe family, environment family, light direction, palette family, and lens distance logic unless the brief explicitly calls for a transition.",
     "product_rule": "If a bottle appears, preserve real-pack truth and the locked bottle size spec. In lifestyle or desk scenes, keep the bottle around 18% to 22% of frame height and 14% to 18% of frame width. Match highlights, shadow softness, and local contrast to the room light.",
-    "consistency_rule": "Reject and regenerate any reel frame that drifts in aspect ratio, bottle scale, light direction, environment continuity, or text-safe spacing."
+    "consistency_rule": "Reject and regenerate any reel frame that drifts in aspect ratio, bottle scale, light direction, environment continuity, text-safe spacing, or full-bleed vertical framing. Reject any reel frame that shows white bands, letterboxing, pillarboxing, inset-card layout, floating canvas behavior, or a smaller image sitting inside the 9:16 frame."
   },
   "design_lock": {
     "system": "Set 1 Education White Card",
@@ -62,18 +62,6 @@
     "font_reference": "Noto Sans JP or closest available sans-serif for Japanese",
     "headline_ja": "",
     "slides_ja": []
-  },
-  "sora_handoff": {
-    "use_for_sora": false,
-    "input_mode": "image-to-video",
-    "shot_goal": "",
-    "duration_seconds": 0,
-    "camera_motion": "",
-    "subject_motion": "",
-    "transition_in": "",
-    "transition_out": "",
-    "prompt": "",
-    "negative_prompt": []
   },
   "negative_prompts": [],
   "reference_files": [],

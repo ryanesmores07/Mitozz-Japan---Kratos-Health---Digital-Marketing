@@ -14,7 +14,8 @@ Use this split instead:
 - mapping layer = template and structure
 - creative package = art direction
 - prompt = execution input
-- output = generated asset candidates
+- handoff packet = freelancer-ready reel edit brief
+- output = generated asset candidates or freelancer edit drafts
 
 ## What Stays In The Calendar
 
@@ -48,11 +49,12 @@ These belong downstream.
 1. Approve the calendar row.
 2. Resolve the asset through the mapping rules.
 3. Build the creative package from the mapped result.
-4. Create or update the prompt JSON.
-5. Generate the asset.
-6. Review against the batch consistency rules and the lessons log.
-7. Regenerate only the failing outputs.
-8. Promote only approved outputs into the working set.
+4. Create or update the prompt JSON when source images are needed.
+5. Generate or collect the source assets.
+6. If the asset is a reel, assemble the freelancer handoff packet.
+7. Review against the batch consistency rules and the lessons log.
+8. Regenerate only the failing outputs or revise only the unclear handoff sections.
+9. Promote only approved outputs into the working set.
 
 ## Minimal Post-Calendar Data Model
 
@@ -65,6 +67,37 @@ After the calendar, every asset should resolve into this smaller production laye
 - `approved_references`
 
 This is enough to automate the rest without turning the calendar into a production spreadsheet.
+
+## Reel-Specific Production Layer
+
+For reels, the post-calendar layer should resolve one extra internal packet after the creative package:
+
+- `reel_type`
+- `runtime_target`
+- `source_asset_mode`
+- `source_asset_manifest`
+- `motion_clip_prompt` when a still will be animated internally
+- `edit_blueprint`
+- `approved_copy_blocks`
+- `freelancer_handoff_status`
+
+These are not planning fields. They exist to make execution consistent and easy to delegate.
+
+## Recommended Reel Sequence
+
+For this project, reels should now follow this operating path:
+
+1. approve the calendar row
+2. resolve template and structure from mapping rules
+3. build the reel creative package
+4. generate or gather all source images and source clips internally
+5. assemble a freelancer-ready reel handoff packet
+6. send one clean package to the freelancer
+7. review the first draft against the approved messaging, pacing, and design rules
+8. request only targeted revisions
+9. approve the final cut and archive the packet for reuse
+
+The freelancer should execute the edit, not reinterpret the brand strategy.
 
 ## Story-Specific Rule
 

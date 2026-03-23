@@ -26,10 +26,10 @@ Core emotional shift:
 
 ## Approved Source Frames
 
-1. [shot-01-opening-hook.png](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/output/instagram/reels/2026-03-25-daily-condition-v02/source-frames/shot-01-opening-hook.png)
-2. [shot-02-reframe.png](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/output/instagram/reels/2026-03-25-daily-condition-v02/source-frames/shot-02-reframe.png)
-3. [shot-03-product-reveal.png](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/output/instagram/reels/2026-03-25-daily-condition-v02/source-frames/shot-03-product-reveal.png)
-4. [shot-04-end-frame.png](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/output/instagram/reels/2026-03-25-daily-condition-v02/source-frames/shot-04-end-frame.png)
+1. [shot-01-opening-hook.png](C:\Users\esmoresernieryanocam\Desktop\Workspace\Nano banana\output\instagram\reels\2026-03-25-daily-condition\shot-01-opening-hook.png)
+2. [shot-02-reframe.png](C:\Users\esmoresernieryanocam\Desktop\Workspace\Nano banana\output\instagram\reels\2026-03-25-daily-condition\shot-02-reframe.png)
+3. [shot-03-product-reveal.png](C:\Users\esmoresernieryanocam\Desktop\Workspace\Nano banana\output\instagram\reels\2026-03-25-daily-condition\shot-03-product-reveal.png)
+4. [shot-04-end-frame.png](C:\Users\esmoresernieryanocam\Desktop\Workspace\Nano banana\output\instagram\reels\2026-03-25-daily-condition\shot-04-end-frame.png)
 
 ## Locked Continuity
 

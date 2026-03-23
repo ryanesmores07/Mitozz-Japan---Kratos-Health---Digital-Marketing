@@ -91,7 +91,7 @@ Treat `style-anchors/` as the default source of visual guidance. Add approved bo
     "soft steel-blue morning light",
     "quiet premium apartment workspace",
     "Mitozz bottle with the real front label facing camera cleanly",
-    "clean white bottle body with a white cap and centered label blocks kept readable",
+    "matte black bottle body with black ribbed cap, visible neck ring, and centered label blocks kept readable",
     "no baked-in text"
   ],
   "image_references": [
@@ -120,28 +120,11 @@ Treat `style-anchors/` as the default source of visual guidance. Add approved bo
     "keep background minimal for clean animation",
     "avoid exact crop duplication from references"
   ],
-  "sora_handoff": {
-    "use_for_sora": true,
-    "input_mode": "image-to-video",
-    "shot_goal": "Introduce the product as a calm premium reset moment inside the reel.",
-    "duration_seconds": 2.0,
-    "camera_motion": "Subtle lateral drift or micro push-in.",
-    "subject_motion": "Very light hand movement bringing the bottle into a settled final position.",
-    "transition_in": "Cut from lifestyle shot.",
-    "transition_out": "Hold steady for next text beat.",
-    "prompt": "Animate this image into a premium vertical reel product shot. Preserve the exact bottle silhouette, cap finish, label placement, and overall environment. Use only subtle natural motion and calm editorial camera movement. Do not add extra products, hands, props, or dramatic reflections. Keep the frame clean and stable for overlay text.",
-    "negative_prompt": [
-      "bottle distortion",
-      "label drift",
-      "extra fingers or warped hands",
-      "fast motion",
-      "flashy ad lighting",
-      "unreadable text"
-    ]
-  },
   "reference_files": [
-    "brand/references/business-context/visual/Brand Visual Direction.md"
+    "brand/references/business-context/visual/Brand Visual Direction.md",
+    "brand/references/business-context/visual/Mitozz Locked Bottle Workflow.md",
+    "brand/references/business-context/visual/Mitozz Bottle Size Spec.md"
   ],
-  "notes": "One coordinated source frame in a reel shot set. Keep subject, light, and product fidelity aligned with adjacent shots."
+  "notes": "One coordinated source frame in a reel shot set. Keep subject, light, and product fidelity aligned with adjacent shots. If motion is needed later, create it separately from the approved still."
 }
 ```

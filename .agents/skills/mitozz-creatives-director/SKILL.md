@@ -27,7 +27,7 @@ Your role covers:
 - format choice when the calendar leaves room for interpretation
 - layout and structure
 - motion direction for reels
-- shot continuity planning for image-to-video workflows
+- shot continuity planning for freelancer-edited reel workflows
 - messaging angle
 - Japanese copy direction
 - visual direction
@@ -100,6 +100,17 @@ Interpretation rules:
 - if `Section` is `Story`, use `Related Feed Post` to keep support assets aligned to the parent feed post
 - do not carry calendar wording straight into final copy without refining it into natural Japanese
 - resolve the asset's `Template Set` and `Slide Blueprint` from the central mapping rules before choosing exact layout behavior
+- if `Section` is `Story`, also resolve a `story_delivery_mode` before writing the brief:
+  - `static-sequence`
+  - `video-clip`
+  - `reel-recut`
+  - `native-interaction-led`
+- for Stories, never default to static just because it is easier
+- for Stories, never default to reel reuse just because a reel exists
+- make the delivery mode serve the Story's actual job, timing, and parent asset relationship
+- stay inside the currently enabled Story modes for the system
+- do not choose `repost-with-commentary`, UGC-led Stories, or native-commentary-led Stories unless the user explicitly says those workflows are now available
+- if no motion or reuse path creates a real strategic advantage, choose `static-sequence`
 
 ## Required Output Shape
 
@@ -114,7 +125,8 @@ Output only what is needed to execute, in this order:
 7. `Copy Direction`
 8. `Visual Direction`
 9. `Brand / Messaging Check`
-10. `Nano Banana / Sora Handoff`
+10. `Nano Banana / Source Asset Handoff`
+11. `Freelancer Reel Handoff` when the format is a reel
 
 Keep the writing concise, direct, and authoritative.
 
@@ -140,6 +152,43 @@ Choose the best format:
 
 Briefly state why that format is the best execution path.
 
+If the asset is a Story, also choose the best `story_delivery_mode`:
+
+- `static-sequence`
+- `video-clip`
+- `reel-recut`
+- `native-interaction-led`
+
+State the reason in one line.
+
+Also lock one `story_aspect_ratio` for the whole Story set:
+
+- `9:16`
+- `1:1`
+
+For Stories:
+
+- choose `9:16` when the asset is meant to behave as a native full-screen Story-first sequence
+- choose `1:1` only when the visual system or downstream AI-video workflow benefits from square framing
+- keep the entire Story set or generated source-image set on the same ratio
+
+For Stories, use this decision logic:
+
+- choose `native-interaction-led` when taps, replies, or audience signal gathering are the main KPI
+- otherwise choose `reel-recut` only when a reel is the hero asset for the same date or batch and the Story can amplify it with a new job
+- otherwise choose `video-clip` only when realism, routine context, proof, or human texture matters most and a good approved clip exists
+- otherwise choose `static-sequence` for education, bridge, CTA reinforcement, trust reinforcement, or any case where controlled copy and clarity matter most
+
+For Stories, apply this production gate before locking the mode:
+
+1. confirm the Story's single main job
+2. confirm the source asset already exists or is being produced in the same batch
+3. confirm the chosen mode adds a real advantage over `static-sequence`
+4. if not, fall back to `static-sequence`
+
+For `reel-recut`, do not duplicate the full reel.
+Reuse only the strongest beat, still, or short excerpt, then add Story-specific context, interaction, or CTA.
+
 ### 4. Creative Direction
 
 Specify:
@@ -160,6 +209,15 @@ Provide exact production structure:
 - frame-by-frame for stories
 
 Keep it simple, structured, and ready to produce.
+
+For Stories, adapt the structure to the chosen `story_delivery_mode`:
+
+- `static-sequence`: define frame-by-frame
+- `video-clip`: define clip-by-clip with overlay behavior and sticker-safe space
+- `reel-recut`: define which reel beat is reused, what new Story copy is added, and what action it routes to
+- `native-interaction-led`: define the sticker type, sticker role, and the supporting frame design
+
+For Stories, also state the chosen `story_aspect_ratio` and keep every frame or source image in that set uniform.
 
 For reels, define each scene with:
 
@@ -185,9 +243,15 @@ Always decide:
   - lifestyle montage reel
   - typography-led explainer reel
 - target runtime:
+  - hard maximum `60 seconds`
   - default to `8-15 seconds`
+  - `hook / awareness`: `8-10 seconds`
+  - `education / explainer`: `10-15 seconds`
+  - `routine / lifestyle`: `8-12 seconds`
+  - `product / trust`: `8-12 seconds`
+  - `deeper education`: `15-30 seconds` only when clearly justified
 - opening hook strategy for the first `1-2 seconds`
-- how many source images are needed before Sora
+- how many source assets are needed before the freelancer can edit
 - which shots should be image-to-video versus native video if the user already has footage
 - continuity tokens that must stay consistent across shots:
   - subject identity
@@ -198,11 +262,11 @@ Always decide:
   - light direction
   - lens distance
 
-For every reel, make the execution easy for Sora:
+For every reel, make the execution easy for a freelancer editor:
 
-- plan `3-6` shots only unless the concept truly needs more
+- plan `3-6` beats only unless the concept truly needs more
 - give each shot one job
-- prefer clear camera behavior over complex cinematic language
+- prefer clear edit behavior over complex cinematic language
 - avoid abrupt subject changes that break continuity
 - avoid text baked into source imagery unless the user explicitly wants it
 - reserve safe space for captions or editor-added text
@@ -276,7 +340,7 @@ Do not:
 - hand off vague instructions such as "make it dynamic"
 - rely on random B-roll ideas that are not reflected in the prompt plan
 - switch visual worlds mid-reel without a strategic reason
-- ask Sora to invent dense Japanese typography inside the moving footage by default
+- ask the freelancer to invent new messaging or typography treatments without direction
 
 Do:
 
@@ -291,7 +355,7 @@ Do:
 - identify where subtle motion is better than dramatic motion
 - protect pack fidelity when the bottle appears
 
-## Nano Banana / Sora Handoff Requirements
+## Nano Banana / Source Asset Handoff Requirements
 
 Always include:
 
@@ -312,16 +376,34 @@ For reels, also include:
 - `target_runtime_seconds`
 - `continuity_tokens`
 - `source_asset_plan`
-- `sora_shot_prompts`
-- `sora_master_prompt`
+- `freelancer_edit_blueprint`
 - `motion_guardrails`
 - `transition_notes`
 - `editor_notes`
+
+## Freelancer Reel Handoff Requirements
+
+For reels, add one final execution block that a freelancer could follow without another strategy meeting.
+
+Always include:
+
+- what the reel must communicate
+- what the viewer should feel
+- hook behavior in the first `1-2 seconds`
+- exact Japanese copy blocks the freelancer may use
+- source asset plan by beat
+- pacing direction
+- transition rules
+- design rules
+- audio direction
+- non-negotiables
+- final export requirements
 
 ## Reference Selection Rules
 
 - Choose 2 to 4 image references per asset when references are needed.
 - Include at least 1 style anchor when available.
+- Add a mode-specific style anchor only when the concept clearly calls for it, such as ingredient-led storytelling or bottle-shot-led premium photography.
 - Add `source-intake/mitozz-bottle.jpg` when the asset needs a clean bottle hero or accurate packshot.
 - Add `source-intake/mitozz-bottle-with-tablets.jpg` when the concept benefits from tablets in frame.
 - Use at most 1 close composition match.
@@ -347,6 +429,10 @@ For reels, also include:
 - Prioritize clarity, trust, save/share value, and premium brand building over novelty.
 - Make every asset feel like it belongs to one coherent Mitozz system.
 - Keep the calendar simple by resolving ambiguity yourself instead of inventing new planning layers.
+- For Stories, always make an explicit delivery-mode decision and explain it briefly.
+- For Stories, prioritize the mode that best fits the Story's job with the least unnecessary production complexity.
+- Treat reel reuse as a support move, not a default.
+- If a Story supports a reel, make the Story do a different job from the reel: route, remind, humanize, or interact.
 
 ## Internal Check Before Answering
 

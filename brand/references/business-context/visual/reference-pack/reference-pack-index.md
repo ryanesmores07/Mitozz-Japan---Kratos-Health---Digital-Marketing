@@ -7,7 +7,8 @@ This file is the lightweight registry for the official Nano Banana visual refere
 - Reference source: curated pack
 - Match strictness: medium
 - Each generation should use 2 to 4 image references
-- At least 1 reference must be a `style-anchor`
+- At least 1 reference must be a core `style-anchor`
+- Add up to 1 mode-specific `style-anchor` when the asset clearly matches that mode
 - Add 1 approved `product-source` reference from `source-intake/` when product fidelity is important
 - At most 1 reference may be a close composition match
 - If no approved `working-example` exists for the asset type, fall back to `style-anchor` images plus the visual direction docs
@@ -58,6 +59,8 @@ Promote a candidate only if it:
 | `style-anchors/anchor-cool-palette-01.png` | style-anchor | steel-blue palette, cloud-white tonality, luminous cool atmosphere | exact product lineup, winter scene, and glow treatment |
 | `style-anchors/anchor-cta-layout-01.png` | style-anchor | CTA hierarchy, save-and-like framing, end-card rhythm | exact icon treatment, exact wording, and exact text placement |
 | `style-anchors/anchor-body-copy-01.png` | style-anchor | long-form education card spacing, text block rhythm, calm reading hierarchy | exact wording, highlight treatment, and paragraph layout |
+| `style-anchors/anchor-ingredients-mode-01.png` | style-anchor | ingredient storytelling mood, ingredient-led styling, premium composition language for formula or material-led assets | exact ingredient choice, exact crop, and exact prop arrangement |
+| `style-anchors/anchor-bottle-shot-mode-01.png` | style-anchor | clean premium bottle-shot mood, single-subject emphasis, polished real-photo framing | exact bottle angle, exact shadow falloff, and exact background treatment |
 | `style-anchors/README.md` | style-anchor placeholder | anchor naming and intake instructions only | not a visual reference |
 | `source-intake/source-grid-alt-01.png` | source-intake | alternate inspiration only | not an active generation guide |
 | `source-intake/mitozz-bottle.jpg` | product-source | bottle silhouette, cap finish, label fidelity, clean hero packshot truth | exact background, crop, and incidental reflections |
@@ -75,6 +78,8 @@ Promote a candidate only if it:
 - `anchor-cool-palette-01.png`: use for steel-blue tonality and luminous cool atmosphere
 - `anchor-cta-layout-01.png`: use for soft CTA structure, end-card spacing, and save-worthy prompt framing
 - `anchor-body-copy-01.png`: use for longer educational copy cards, highlighted takeaways, and calm reading flow
+- `anchor-ingredients-mode-01.png`: optional mode anchor for ingredient creatives, formula storytelling, and material-led visual moments
+- `anchor-bottle-shot-mode-01.png`: optional mode anchor for premium bottle-shot creatives and polished single-product image sets
 
 ## Active Working Example Roles
 
@@ -91,3 +96,5 @@ Keep only 5 to 8 anchors total and name them by function, for example:
 - `anchor-cool-palette-01.jpg`
 - `anchor-cta-layout-01.jpg`
 - `anchor-body-copy-01.jpg`
+- `anchor-ingredients-mode-01.jpg`
+- `anchor-bottle-shot-mode-01.jpg`
