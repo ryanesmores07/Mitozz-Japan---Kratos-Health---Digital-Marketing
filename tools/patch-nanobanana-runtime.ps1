@@ -45,7 +45,7 @@ $settingsFiles = Get-ChildItem -Path $archiveRoot -Recurse -File -Filter setting
 
 foreach ($file in $settingsFiles) {
     $changed = $false
-    $changed = (Replace-Text -Path $file.FullName -OldValue 'FLASH = "flash"  # Speed-optimized (Gemini 2.5 Flash)' -NewValue 'FLASH = "flash"  # Speed-optimized (Gemini 3.1 Flash Image / Nano Banana Pro 2)') -or $changed
+    $changed = (Replace-Text -Path $file.FullName -OldValue 'FLASH = "flash"  # Speed-optimized (Gemini 2.5 Flash)' -NewValue 'FLASH = "flash"  # Speed-optimized (Gemini 3.1 Flash Image / Nano Banana 2)') -or $changed
     $changed = (Replace-Text -Path $file.FullName -OldValue '"""Gemini 2.5 Flash Image configuration (speed-optimized)."""' -NewValue '"""Gemini 3.1 Flash Image configuration (speed-optimized)."""') -or $changed
     $changed = (Replace-Text -Path $file.FullName -OldValue 'model_name: str = "gemini-2.5-flash-image"' -NewValue 'model_name: str = "gemini-3.1-flash-image-preview"') -or $changed
 

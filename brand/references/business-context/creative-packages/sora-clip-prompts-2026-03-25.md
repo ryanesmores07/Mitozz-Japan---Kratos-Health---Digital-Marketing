@@ -24,7 +24,7 @@ Same Japanese woman in her early 30s, same quiet premium apartment workspace, sa
 
 ## Shot 01
 
-- `source_image_path`: `output/instagram/reels/2026-03-25-daily-condition/shot-01-opening-hook.png`
+- `source_image_path`: `output/instagram/reels/2026-03-25-daily-condition/current/shot-01-opening-hook.png`
 - `target_seconds`: `2.5`
 - `role`: `opening-hook`
 - `camera_note`: `medium close-up, eye level, subtle push-in`
@@ -46,7 +46,7 @@ Palette anchors: cloud white, mist blue, steel blue, soft grey
 
 ## Shot 02
 
-- `source_image_path`: `output/instagram/reels/2026-03-25-daily-condition/shot-02-reframe.png`
+- `source_image_path`: `output/instagram/reels/2026-03-25-daily-condition/current/shot-02-reframe.png`
 - `target_seconds`: `2.5`
 - `role`: `reframe`
 - `camera_note`: `close detail shot, slight top-down angle, gentle lateral drift`
@@ -68,7 +68,7 @@ Palette anchors: cloud white, mist blue, steel blue, walnut brown
 
 ## Shot 03
 
-- `source_image_path`: `output/instagram/reels/2026-03-25-daily-condition/shot-03-product-reveal-redo2.png`
+- `source_image_path`: `output/instagram/reels/2026-03-25-daily-condition/current/shot-03-product-reveal.png`
 - `target_seconds`: `3.0`
 - `role`: `product-reveal`
 - `camera_note`: `product-forward medium detail shot, slight push-in`
@@ -90,7 +90,7 @@ Palette anchors: cloud white, mist blue, steel blue, soft apricot
 
 ## Shot 04
 
-- `source_image_path`: `output/instagram/reels/2026-03-25-daily-condition/shot-04-end-frame.png`
+- `source_image_path`: `output/instagram/reels/2026-03-25-daily-condition/current/shot-04-end-frame.png`
 - `target_seconds`: `3.0`
 - `role`: `soft-end-frame`
 - `camera_note`: `stable product end frame, near-static hold with tiny ambient drift`

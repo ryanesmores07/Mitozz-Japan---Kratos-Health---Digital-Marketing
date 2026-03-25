@@ -1,6 +1,6 @@
 ---
 name: mitozz-prompt-engineer
-description: Create and update Nano Banana Pro JSON prompts for Mitozz Japan from creatives director output and project context. Use when the user asks to build, refine, or standardize feed or story prompt files before executing Nano Banana Pro MCP.
+description: Create and update Nano Banana JSON prompts for Mitozz Japan from creatives director output and project context. Use when the user asks to build, refine, or standardize feed or story prompt files before executing Nano Banana MCP.
 ---
 
 # Mitozz Prompt Engineer
@@ -8,6 +8,8 @@ description: Create and update Nano Banana Pro JSON prompts for Mitozz Japan fro
 Use this skill after `mitozz-creatives-director` and before `nano-banana-instagram`.
 
 For reel workflows, this skill produces source-asset prompts only. It does not create the freelancer edit brief itself.
+
+If the prompt work materially improves production readiness, consistency, or execution quality, add a concise entry to the current monthly retainer action log under `brand/references/business-context/reporting/monthly-action-logs/`.
 
 ## Inputs To Read
 

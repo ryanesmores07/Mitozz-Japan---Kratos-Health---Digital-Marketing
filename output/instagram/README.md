@@ -1,13 +1,33 @@
-# Instagram generated assets (nano-banana-instagram output)
+# Instagram Output Structure
 
-This folder holds **generated images** produced by the `nano-banana-instagram` skill when executing Nano Banana Pro MCP.
+This folder holds generated and approved Instagram production assets used across feed, reels, and stories.
 
-- **Feed:** `output/instagram/feed/` — images from feed prompts (e.g. same base name as the JSON prompt file).
-- **Stories:** `output/instagram/stories/` — images from story prompts.
-- **Format:** All images are saved as **JPG** (`.jpg` or `.jpeg`) only.
+## Folder Rules
 
-**Input:** Prompt JSON files from `prompts/instagram/feed/` and `prompts/instagram/stories/` (created by `mitozz-prompt-engineer`).
+- `feed/`: approved feed assets and feed project folders
+- `reels/`: reel source-frame projects
+- `stories/`: story-set projects
 
-Current production start:
+Inside each project folder, use this structure when applicable:
 
-- March 23 launch file: [START-HERE-MARCH-23.md](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/brand/references/business-context/creative-packages/START-HERE-MARCH-23.md)
+- `current/`: the approved assets to use for delivery, editing, or Drive upload
+- `rejected/`: rejected variants and rejection notes
+- `archive/`: older approved versions, exploratory keeps, or source byproducts worth keeping for traceability
+
+For reel projects, prefer this optional archive split when helpful:
+
+- `archive/source-motion/`: approved or kept motion-reference videos used to guide edit direction or future reel production
+- `archive/source-frames/`: older source-frame sets or superseded approved stills worth retaining
+
+## Naming Rules
+
+- Keep project folders date-first: `YYYY-MM-DD-theme-name`
+- Keep approved files human-readable and order-stable
+- For reels, prefer shot-based names like `shot-01-opening-hook.png`
+- For reel motion references, prefer role-based names like `source-motion-reference-v01.mp4`
+- For stories, prefer ordered names like `frame-01.png`
+- Do not leave approved finals mixed beside rejected or archived files at the project root if a `current/` folder exists
+
+## Delivery Rule
+
+The Google Drive delivery workflow prefers `current/` when present. If you want a file set to be uploaded or handed off, it should live inside `current/`.

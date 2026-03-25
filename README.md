@@ -1,11 +1,11 @@
 Nano Banana Instagram Workspace
 ================================
 
-This workspace is organized for creating and maintaining reusable JSON prompts for Nano Banana Pro, focused on Instagram organic marketing for Mitozz Japan.
+This workspace is organized for creating and maintaining reusable JSON prompts for Nano Banana, focused on Instagram organic marketing for Mitozz Japan.
 
 Current model standard:
 
-- Nano Banana Pro 2 = `gemini-3.1-flash-image-preview`
+- Nano Banana 2 = `gemini-3.1-flash-image-preview`
 - Use Flash tier by default unless a task explicitly requires the Pro image tier
 
 ## Structure
@@ -55,24 +55,36 @@ This workspace should be treated as UTF-8 by default.
 
 ## Skills And Workflow
 
-This project is wired into Codex using four project-local skills under `.agents/skills/`:
+This project is wired into Codex using eight project-local skills under `.agents/skills/`:
 
 - `mitozz-content-calendar`: plans the monthly Mitozz Japan Instagram calendar
 - `mitozz-creatives-director`: turns calendar rows into decisive creative packages and reel edit direction
 - `mitozz-prompt-engineer`: converts creative packages into Nano Banana JSON prompts for source assets
 - `nano-banana-instagram`: executes prompt files and generates the internal source assets
+- `imagen`: generates or edits general-purpose project images when you want image creation without using Nano Banana
+- `jay-invoice-sheets`: inspects, clones, and publishes Jay monthly salary and expense Google Sheets from the existing Drive references
+- `retainer-reporting`: logs meaningful retainer work and turns monthly action logs into Jay-ready summaries
+- `drive-delivery`: uploads approved production assets to the mapped Google Drive folders and writes delivery receipts
 
 The repository treats `.agents/skills/` as the single source of truth for skill discovery and maintenance.
 
 ## Typical Flow
 
 1. Use `mitozz-content-calendar` to create or revise the monthly calendar under `brand/references/business-context/content-planning/`.
-2. Use the post-calendar flow in `workflows/03-post-calendar-production-flow.md` to resolve the production layer from the approved row.
-3. Use `mitozz-creatives-director` to turn selected calendar rows into creative packages under `brand/references/business-context/creative-packages/`.
-4. Resolve the asset's `template_set` and `slide_blueprint` from the central mapping rules.
-5. Use `mitozz-prompt-engineer` to create or update prompt JSON in `prompts/instagram/feed/` or `prompts/instagram/stories/`.
-6. Use `nano-banana-instagram` to execute Nano Banana Pro MCP using those prompt files.
-7. Review the outputs, approve winners, and promote only the best assets into the visual reference pack when appropriate.
+2. Use `tools/prepare-content-calendar-month.ps1` when you want to scaffold the month locally and publish it once rows are present.
+3. Publish that CSV to the shared Google Drive calendar folder with `tools/publish-content-calendar-to-drive.ps1` so Drive stays current while the repo keeps the working copy.
+4. Use the post-calendar flow in `workflows/03-post-calendar-production-flow.md` to resolve the production layer from the approved row.
+5. Use `mitozz-creatives-director` to turn selected calendar rows into creative packages under `brand/references/business-context/creative-packages/`.
+6. Resolve the asset's `template_set` and `slide_blueprint` from the central mapping rules.
+7. Use `mitozz-prompt-engineer` to create or update prompt JSON in `prompts/instagram/feed/` or `prompts/instagram/stories/`.
+8. Use `nano-banana-instagram` to execute Nano Banana MCP using those prompt files.
+9. Review the outputs, approve winners, and promote only the best assets into the visual reference pack when appropriate.
+10. When delivery to Google Drive is needed, use `drive-delivery` to upload only the approved assets and create a delivery receipt.
+11. When meaningful retainer work is completed, use `retainer-reporting` to add it to the current monthly action log.
+
+When you want image generation in this workspace without going through the Nano Banana pipeline, use `imagen` instead. It saves selected finals into `output/imagegen/` by default.
+
+For Jay's monthly salary and expense sheet workflow, use `jay-invoice-sheets` to inspect the existing invoice Google Sheets in Drive, copy the reference layout into a new month, and optionally write normalized invoice data into a helper tab.
 
 For zero-follower or near-zero-follower periods, use:
 
@@ -122,9 +134,13 @@ Recommended setup:
 3. Open the repo in Codex so the project-local `.codex/config.toml` can register the MCP server with the correct `cwd` and longer startup timeout.
 4. Do not commit real API keys into repo config files.
 
+The launcher defaults `NANOBANANA_MODEL` to `flash`, which the runtime patch aligns to:
+
+- `gemini-3.1-flash-image-preview`
+
 The launcher wraps:
 
-- `uvx nanobanana-pro-mcp-server`
+- `uvx nanobanana-mcp-server`
 
 The workspace launcher also patches the MCP runtime to keep the Flash tier aligned to:
 
@@ -139,7 +155,12 @@ The production calendar now uses one shared table for feed and story rows with a
 - Client-facing planning fields stay in Japanese: `投稿テーマ`, `切り口`, `補足メモ`
 - Workflow fields stay stable for downstream skills: `Section`, `Format`, `Objective`, `Primary Persona`, `Workflow Status`
 - Keep feed and story rows in one CSV with one header row
-- When needed for Google Drive or client sharing, generate a matching `.xlsx` beside the CSV with `tools/export-csv-to-xlsx.ps1`
+- The default calendar workflow is now:
+  - local CSV in `content-planning/` for the repo copy and downstream skill input
+  - matching Google Sheet in Drive for client-facing review and easy link sharing
+- Use `tools/prepare-content-calendar-month.ps1` to create the correctly named local month file and automatically publish it when the CSV has data rows
+- Publish or refresh the Drive sheet with `tools/publish-content-calendar-to-drive.ps1`
+- When needed for a local Excel snapshot, generate a matching `.xlsx` beside the CSV with `tools/export-csv-to-xlsx.ps1`
 
 ## Prompt Naming
 

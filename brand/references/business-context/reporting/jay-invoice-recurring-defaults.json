@@ -1,0 +1,39 @@
+{
+  "payee": "Jay",
+  "currency": "JPY",
+  "salary": {
+    "description": "Monthly retainer salary",
+    "amount": 1300,
+    "currency": "USD",
+    "notes": "Agreed monthly retainer from Mitozz Japan - Monthly Retainer Proposal (No Paid Ads). Include monthly unless explicitly excluded."
+  },
+  "recurring_items": [
+    {
+      "category": "freelance-editor",
+      "description": "Freelance video reel editor fee",
+      "amount": 4000,
+      "currency": "JPY",
+      "recurrence": "per-video",
+      "default_quantity": 1,
+      "notes": "Include monthly unless explicitly excluded."
+    },
+    {
+      "category": "app-subscription",
+      "description": "Google Nano Banana Pro token fee",
+      "amount": 5000,
+      "currency": "JPY",
+      "recurrence": "monthly",
+      "default_quantity": 1,
+      "notes": "Include monthly unless explicitly excluded."
+    },
+    {
+      "category": "app-subscription",
+      "description": "CapCut Pro",
+      "amount": 2180,
+      "currency": "JPY",
+      "recurrence": "monthly",
+      "default_quantity": 1,
+      "notes": "Include monthly unless explicitly excluded."
+    }
+  ]
+}

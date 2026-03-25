@@ -1,0 +1,39 @@
+{
+  "month": "2026-03",
+  "sheet_name": "Jay Revels - Monthly Retainer Invoice 5",
+  "payee": "Jay",
+  "currency": "Mixed (USD + JPY)",
+  "salary": {
+    "description": "Monthly retainer salary",
+    "amount": 1300,
+    "currency": "USD",
+    "notes": "Agreed monthly retainer from Mitozz Japan - Monthly Retainer Proposal (No Paid Ads)."
+  },
+  "expenses": [
+    {
+      "date": "2026-03-25",
+      "category": "freelance-editor",
+      "description": "Freelance video reel editor fee (1 video)",
+      "amount": 4000,
+      "currency": "JPY",
+      "notes": "Include unless explicitly excluded."
+    },
+    {
+      "date": "2026-03-25",
+      "category": "app-subscription",
+      "description": "Google Nano Banana Pro token fee",
+      "amount": 5000,
+      "currency": "JPY",
+      "notes": "Recurring monthly expense unless explicitly excluded."
+    },
+    {
+      "date": "2026-03-25",
+      "category": "app-subscription",
+      "description": "CapCut Pro",
+      "amount": 2180,
+      "currency": "JPY",
+      "notes": "Recurring monthly expense unless explicitly excluded."
+    }
+  ],
+  "summary_notes": "March 2026 monthly retainer plus recurring operating expenses."
+}

@@ -23,6 +23,7 @@ These are intentionally excluded by `.gitignore`.
    - `mcp/nanobanana.cursor.local.json`
 2. Put your real `GEMINI_API_KEY` in that local file.
 3. Keep `NANOBANANA_MODEL` set to `flash`.
+   If omitted, the repo launcher now defaults it to `flash` automatically.
 4. Open the repo in Codex. This workspace now includes a project-local MCP config at:
    - `.codex/config.toml`
 5. Ensure `pwsh` is installed and available on PATH.
@@ -63,6 +64,7 @@ After pulling the repo on Mac:
 ```
 
 3. Add a Codex MCP entry to `~/.codex/config.toml` on the Mac.
+   If `NANOBANANA_MODEL` is omitted from the local JSON, the repo launcher will still default to `flash`.
 
 If you keep the same repo structure, it should look like:
 
@@ -82,7 +84,7 @@ tool_timeout_sec = 120
 
 This project standard is:
 
-- Nano Banana Pro 2
+- Nano Banana 2
 - `gemini-3.1-flash-image-preview`
 - default tier: `flash`
 

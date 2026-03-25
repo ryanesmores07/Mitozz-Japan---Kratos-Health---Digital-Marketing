@@ -1,0 +1,38 @@
+{
+  "stories": {
+    "root_name": "Story Drive",
+    "root_folder_id": "1S_HZfF5Wi9xlrdjPBE1SUzgWs6tI2Ymf",
+    "delivery_mode": "per-project-folder",
+    "local_rule": "Prefer the project's current/ folder when present."
+  },
+  "reels": {
+    "root_name": "Feed Drive",
+    "root_folder_id": "14WWdQUIQm4Afv_tlm_Xbmhoegv2DYr9H",
+    "delivery_mode": "per-project-folder",
+    "local_rule": "Prefer the project's current/ folder when present; otherwise use the approved reel project folder containing winner frames."
+  },
+  "feed": {
+    "root_name": "Feed Drive",
+    "root_folder_id": "14WWdQUIQm4Afv_tlm_Xbmhoegv2DYr9H",
+    "delivery_mode": "per-project-folder",
+    "local_rule": "Prefer the project's current/ folder when present; otherwise use the approved feed project folder or explicitly supplied approved file set."
+  },
+  "captions": {
+    "root_name": "Captions Drive",
+    "root_folder_id": "1BtCmQHl2ovnLASs8DiXM_DOE-CReKccu",
+    "delivery_mode": "per-project-folder",
+    "local_rule": "Use the explicitly supplied approved caption file or caption folder."
+  },
+  "content_calendars": {
+    "root_name": "Content Calendar Drive",
+    "root_folder_id": "1CLJkp7OWi-xrMAVjPGNTozL5p265V0P6",
+    "delivery_mode": "per-month-sheet",
+    "local_rule": "Keep the project CSV under content-planning/ as the working copy, then publish or update the matching Google Sheet in Drive."
+  },
+  "jay_invoice_sheets": {
+    "root_name": "Jay Invoice Sheets Drive",
+    "root_folder_id": "1-BJZTdF7KYEqL8TdbiYaHKIjXhzN1j8a",
+    "delivery_mode": "per-month-sheet",
+    "local_rule": "Use the existing invoice spreadsheets in this folder as the formatting reference, then copy the selected reference into a new monthly Google Sheet for Jay."
+  }
+}

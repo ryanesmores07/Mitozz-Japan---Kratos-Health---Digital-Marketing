@@ -7,13 +7,17 @@ description: Plan and draft the monthly Mitozz Japan Instagram content calendar.
 
 Use this skill to create or revise the monthly Instagram calendar so downstream creative and prompt-generation work can proceed with minimal reinterpretation.
 
+If the calendar work materially changes planning direction, posting structure, or delivery readiness, add a concise entry to the current monthly retainer action log under `brand/references/business-context/reporting/monthly-action-logs/`.
+
 ## Quick Start
 
 1. Identify the requested month, scope, and whether this is a new plan or a revision.
-2. Read only the most relevant audience, strategy, brand voice, visual direction, and latest calendar inputs.
-3. Use the latest approved calendar as the operating baseline unless the user asks for a strategic reset.
-4. Plan the month as one coherent system, not isolated post ideas.
-5. Output a calendar that is easy for `mitozz-creatives-director` to consume directly.
+2. If the user is asking for a new month, scaffold the correctly named local CSV first with `tools/prepare-content-calendar-month.ps1`.
+3. Read only the most relevant audience, strategy, brand voice, visual direction, and latest calendar inputs.
+4. Use the latest approved calendar as the operating baseline unless the user asks for a strategic reset.
+5. Plan the month as one coherent system, not isolated post ideas.
+6. Save the calendar in the local CSV and publish the matching Google Sheet when the month is ready.
+7. Output a calendar that is easy for `mitozz-creatives-director` to consume directly.
 
 ## Strategic Role
 
@@ -76,6 +80,14 @@ Prefer these sources when available:
    - the internal guideline PDF in `brand/references/business-context/content-planning/` that covers organic Instagram copy and calendar rules for Mitozz Japan
 
 If a calendar for the requested month already exists, treat the task as a refinement task unless the user explicitly asks for a rebuild.
+
+When the user asks to create a new monthly calendar and does not tell you otherwise, the default behavior is:
+
+1. scaffold the month locally
+2. draft or revise the content in the local CSV
+3. publish the matching Google Sheet in Drive
+
+Do not make the user ask for those as separate steps.
 
 ## Planning Workflow
 
@@ -209,9 +221,25 @@ Confirm the calendar:
 
 - Save calendars under `brand/references/business-context/content-planning/`
 - Use `Mitozz Instagram Content Calendar - [YEAR] - [MONTH].csv`
-- When the user wants a Google Drive or spreadsheet-ready handoff, also generate `Mitozz Instagram Content Calendar - [YEAR] - [MONTH].xlsx`
+- Treat the local CSV as the project working copy and audit trail
+- To create the month scaffold and publish it in one workflow, use:
+  - `powershell -NoProfile -ExecutionPolicy Bypass -File tools/prepare-content-calendar-month.ps1 -Year [YEAR] -Month [MONTH]`
+- After creating or revising the CSV, publish it to the Google Drive calendar folder with:
+  - `powershell -NoProfile -ExecutionPolicy Bypass -File tools/publish-content-calendar-to-drive.ps1 -CsvPath "brand/references/business-context/content-planning/Mitozz Instagram Content Calendar - [YEAR] - [MONTH].csv"`
+- When a local spreadsheet snapshot is also helpful, generate `Mitozz Instagram Content Calendar - [YEAR] - [MONTH].xlsx`
 
 ## Input And Output
 
 - Output folder: `brand/references/business-context/content-planning/`
 - Downstream reader: `mitozz-creatives-director`
+- Google Drive publishing: use `tools/publish-content-calendar-to-drive.ps1` so the month also lives in the shared Drive folder as a formatted Google Sheet
+
+## Recommended Workflow
+
+Keep the workflow lean:
+
+1. For a new month, start by running `tools/prepare-content-calendar-month.ps1` so the correctly named local CSV exists.
+2. Draft or revise the month in one local CSV under `content-planning/`.
+3. Publish or update the matching Google Sheet in Drive from that CSV.
+4. Keep the CSV in-repo as the internal copy used by downstream skills and versioned changes.
+5. Treat the Google Sheet as the client-friendly planning surface for review and link-sharing.

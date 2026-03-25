@@ -1,13 +1,15 @@
 ---
 name: nano-banana-instagram
-description: Execute Nano Banana Pro MCP for Mitozz Instagram assets using existing JSON prompt files. Use when the user asks to generate feed or story creatives from prepared prompts, or to lightly refine and then execute prompt files already created in this workspace.
+description: Execute Nano Banana MCP for Mitozz Instagram assets using existing JSON prompt files. Use when the user asks to generate feed or story creatives from prepared prompts, or to lightly refine and then execute prompt files already created in this workspace.
 ---
 
 # Nano Banana Instagram
 
-Use this skill for Instagram organic image generation with Nano Banana Pro by executing prompt JSON files plus the approved visual reference pack.
+Use this skill for Instagram organic image generation with Nano Banana by executing prompt JSON files plus the approved visual reference pack.
 
 For reels, this skill generates the coordinated source images that will later be edited by the freelancer. It does not replace editing or final assembly.
+
+If a batch completion, quality improvement, or execution-system fix materially advances retainer delivery, add a concise entry to the current monthly retainer action log under `brand/references/business-context/reporting/monthly-action-logs/`.
 
 ## Inputs To Read
 
@@ -20,7 +22,7 @@ For reels, this skill generates the coordinated source images that will later be
 7. `brand/references/business-context/visual/reference-pack/working-examples/`
 8. Strategy, audience, and content-planning docs when relevant
 9. `workflows/03-generate-and-approve.md`
-10. `references/nano-banana-pro-best-practices.md`
+10. `references/nano-banana-best-practices.md`
 
 ## Required Execution Behavior
 

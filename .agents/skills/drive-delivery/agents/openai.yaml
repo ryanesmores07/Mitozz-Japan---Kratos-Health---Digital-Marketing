@@ -1,0 +1,8 @@
+interface:
+  display_name: "Drive Delivery"
+  short_description: "Upload approved production assets to the mapped Google Drive folders."
+  brand_color: "#6F8794"
+  default_prompt: "Deliver the approved production assets to the correct Google Drive folder and create a receipt."
+
+policy:
+  allow_implicit_invocation: true

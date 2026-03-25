@@ -1,0 +1,8 @@
+interface:
+  display_name: "Jay Invoice Sheets"
+  short_description: "Create Jay's monthly salary and expense Google Sheets from the existing Drive invoice references."
+  brand_color: "#6C8B7B"
+  default_prompt: "Create or update Jay's monthly salary and expense Google Sheet using the existing invoice files in Drive as the reference layout."
+
+policy:
+  allow_implicit_invocation: true

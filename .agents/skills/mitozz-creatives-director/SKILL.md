@@ -7,6 +7,8 @@ description: Create creative direction for Mitozz Japan Instagram posts from con
 
 Use this skill after the calendar exists. Produce execution-ready creative briefs, not final images and not prompt JSON.
 
+If the completed brief materially advances retainer delivery, creative direction, or production readiness, add a concise entry to the current monthly retainer action log under `brand/references/business-context/reporting/monthly-action-logs/`.
+
 ## Quick Start
 
 1. Identify the requested date, asset, or calendar row.

@@ -1,4 +1,4 @@
-# Nano Banana Pro Best Practices
+# Nano Banana Best Practices
 
 Use these rules when building or executing Instagram image prompts for Mitozz.
 
@@ -38,25 +38,3 @@ Use these rules when building or executing Instagram image prompts for Mitozz.
 - Keep the same `image_references` across the first batch.
 - Vary crop, camera distance, angle, and focal treatment across the variants.
 - Select 1 winner and refine once if needed.
-- Avoid repeated one-off prompting with large structural changes between attempts.
-
-## Approval Rules
-
-Only promote generated outputs into `working-examples` when they:
-
-- clearly match the visual direction
-- feel premium and calm
-- do not look repetitive next to the current reference pack
-- improve the system instead of diluting it
-
-Promotion should stay human-approved, never automatic.
-
-## Final Execution Checklist
-
-- The prompt includes `asset_archetype`.
-- The prompt includes `image_references` and `reference_files`.
-- The prompt includes `reference_strategy`.
-- The prompt includes `variation_guardrails`.
-- The prompt includes explicit negative prompts.
-- The selected references fit the asset type and do not overconstrain composition.
-- Product-source references, if present, are guiding product truth rather than style.

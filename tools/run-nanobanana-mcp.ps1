@@ -35,6 +35,12 @@ if ([string]::IsNullOrWhiteSpace($env:GEMINI_API_KEY)) {
     throw "GEMINI_API_KEY is not set. Set it in your environment before starting the Nano Banana MCP server."
 }
 
+# Default this workspace to the Flash tier so the MCP runtime resolves to
+# Nano Banana 2 / Gemini 3.1 Flash Image unless a caller explicitly overrides it.
+if ([string]::IsNullOrWhiteSpace($env:NANOBANANA_MODEL)) {
+    $env:NANOBANANA_MODEL = "flash"
+}
+
 $runtimePatchScript = Join-Path -Path $PSScriptRoot -ChildPath "patch-nanobanana-runtime.ps1"
 if (Test-Path -LiteralPath $runtimePatchScript) {
     & $runtimePatchScript
@@ -87,7 +93,7 @@ if ([string]::IsNullOrWhiteSpace($env:LOG_LEVEL)) {
 }
 
 $packageName = if ([string]::IsNullOrWhiteSpace($env:NANOBANANA_PACKAGE)) {
-    "nanobanana-pro-mcp-server"
+    "nanobanana-mcp-server"
 }
 else {
     $env:NANOBANANA_PACKAGE

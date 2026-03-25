@@ -5,6 +5,12 @@ mcp/xdg-data/
 .env.local
 .codex/
 .DS_Store
+brand/references/business-context/reporting/google-drive-service-account.local.json
+brand/references/business-context/reporting/google-drive-oauth-client.local.json
+brand/references/business-context/reporting/google-drive-oauth-token.local.json
+brand/references/business-context/reporting/delivery-receipts/
+brand/references/business-context/reporting/google-drive-service-account.local.json
+brand/references/business-context/reporting/delivery-receipts/
 output/instagram/**
 !output/instagram/
 !output/instagram/README.md

@@ -1,0 +1,23 @@
+{
+  "month": "YYYY-MM",
+  "sheet_name": "Jay Monthly Invoice - YYYY-MM",
+  "payee": "Jay",
+  "currency": "JPY",
+  "salary": {
+    "description": "Monthly salary retainer",
+    "amount": 0,
+    "currency": "USD",
+    "notes": ""
+  },
+  "expenses": [
+    {
+      "date": "YYYY-MM-DD",
+      "category": "expense",
+      "description": "Example reimbursable expense",
+      "amount": 0,
+      "currency": "JPY",
+      "notes": ""
+    }
+  ],
+  "summary_notes": ""
+}

@@ -34,10 +34,10 @@
 
 | id | file | type | use |
 | --- | --- | --- | --- |
-| `A01` | `output/instagram/reels/2026-03-25-daily-condition/shot-01-opening-hook.png` | `image` | opening beat |
-| `A02` | `output/instagram/reels/2026-03-25-daily-condition/shot-02-reframe.png` | `image` | reframe beat |
-| `A03` | `output/instagram/reels/2026-03-25-daily-condition/shot-03-product-reveal.png` | `image` | product reveal |
-| `A04` | `output/instagram/reels/2026-03-25-daily-condition/shot-04-end-frame.png` | `image` | CTA ending |
+| `A01` | `output/instagram/reels/2026-03-25-daily-condition/current/shot-01-opening-hook.png` | `image` | opening beat |
+| `A02` | `output/instagram/reels/2026-03-25-daily-condition/current/shot-02-reframe.png` | `image` | reframe beat |
+| `A03` | `output/instagram/reels/2026-03-25-daily-condition/current/shot-03-product-reveal.png` | `image` | product reveal |
+| `A04` | `output/instagram/reels/2026-03-25-daily-condition/current/shot-04-end-frame.png` | `image` | CTA ending |
 
 ## Edit Plan
 

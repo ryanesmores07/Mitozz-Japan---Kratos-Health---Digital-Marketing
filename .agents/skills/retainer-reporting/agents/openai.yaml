@@ -1,0 +1,8 @@
+interface:
+  display_name: "Retainer Reporting"
+  short_description: "Log meaningful retainer work and draft monthly summaries for Jay."
+  brand_color: "#6F8794"
+  default_prompt: "Log this meaningful retainer work and keep the monthly summary materials up to date."
+
+policy:
+  allow_implicit_invocation: true
