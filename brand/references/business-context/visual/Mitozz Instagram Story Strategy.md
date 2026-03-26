@@ -456,9 +456,19 @@ Rule:
 
 Do not rely on fake buttons inside the design.
 
-For posting-time execution, use:
+Posting-time action defaults:
 
-- [Mitozz Story Posting Actions.md](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/brand/references/business-context/visual/Mitozz%20Story%20Posting%20Actions.md)
+- `feed-reinforcement` -> `feed-route`
+- `daily-context` -> `poll` or `slider`
+- `interactive` -> `poll`, `question-box`, or `slider`
+- `proof-trust` -> `save-reminder` or `reply-prompt`
+- `route-cta` -> `link-sticker`
+
+Execution rule:
+
+- use one primary action only
+- let the artwork guide and the native sticker perform the action
+- do not design fake buttons into the artwork
 
 ## Recommended Story Sequence Formula
 

@@ -19,17 +19,17 @@ It locks only the decisions that should not drift:
 
 Approved master set:
 
-- cover: [slide-01-cover.png](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/output/instagram/feed/ig-feed-2026-03-23-mitochondria-basics-v01/slide-01-cover.png)
-- slide 2: [slide-02-core-message.png](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/output/instagram/feed/ig-feed-2026-03-23-mitochondria-basics-v01/slide-02-core-message.png)
-- slide 3: [slide-03-relevance.png](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/output/instagram/feed/ig-feed-2026-03-23-mitochondria-basics-v01/slide-03-relevance.png)
-- slide 4: [slide-04-first-step.png](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/output/instagram/feed/ig-feed-2026-03-23-mitochondria-basics-v01/slide-04-first-step.png)
-- slide 5: [slide-05-daily-care.png](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/output/instagram/feed/ig-feed-2026-03-23-mitochondria-basics-v01/slide-05-daily-care.png)
-- CTA: [slide-06-cta-save.png](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/output/instagram/feed/ig-feed-2026-03-23-mitochondria-basics-v01/slide-06-cta-save.png)
+- cover: [slide-01-cover.png](../../../../output/instagram/feed/ig-feed-2026-03-23-mitochondria-basics-v01/slide-01-cover.png)
+- slide 2: [slide-02-core-message.png](../../../../output/instagram/feed/ig-feed-2026-03-23-mitochondria-basics-v01/slide-02-core-message.png)
+- slide 3: [slide-03-relevance.png](../../../../output/instagram/feed/ig-feed-2026-03-23-mitochondria-basics-v01/slide-03-relevance.png)
+- slide 4: [slide-04-first-step.png](../../../../output/instagram/feed/ig-feed-2026-03-23-mitochondria-basics-v01/slide-04-first-step.png)
+- slide 5: [slide-05-daily-care.png](../../../../output/instagram/feed/ig-feed-2026-03-23-mitochondria-basics-v01/slide-05-daily-care.png)
+- CTA: [slide-06-cta-save.png](../../../../output/instagram/feed/ig-feed-2026-03-23-mitochondria-basics-v01/slide-06-cta-save.png)
 
 Supporting references:
 
-- [education-white-card.png](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/output/instagram/templates/2026-03-21/education-white-card.png)
-- [feed-education-white-card-01.png](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/brand/references/business-context/visual/reference-pack/working-examples/feed-education-white-card-01.png)
+- [education-white-card.png](../../../../output/instagram/templates/2026-03-21/education-white-card.png)
+- [feed-education-white-card-01.png](reference-pack/working-examples/feed-education-white-card-01.png)
 
 ## Canvas Rule
 

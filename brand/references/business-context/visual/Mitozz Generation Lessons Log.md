@@ -100,7 +100,7 @@ Issue:
 
 Rule:
 
-- use [Mitozz Bottle Size Spec.md](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/brand/references/business-context/visual/Mitozz%20Bottle%20Size%20Spec.md) instead of attaching the hand-held guide image directly
+- use [Mitozz Bottle Size Spec.md](Mitozz%20Bottle%20Size%20Spec.md) instead of attaching the hand-held guide image directly
 - keep bottle size believable relative to the hand, mug, and tabletop objects
 - adapt bottle lighting and shadow softness to the surrounding scene before approval
 
@@ -109,7 +109,7 @@ Apply next time:
 - if the bottle feels oversized, regenerate smaller
 - if the bottle lighting feels detached from the scene, regenerate with explicit light-matching instructions
 
-### 6. Bottle Size And Light Must Match The Scene
+### 7. Bottle Size And Light Must Match The Scene
 
 Issue:
 

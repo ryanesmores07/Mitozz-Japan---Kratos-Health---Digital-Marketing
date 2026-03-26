@@ -9,6 +9,8 @@ This workflow starts after the calendar-to-production handoff described in `work
 - selected calendar row
 - relevant strategy and audience context
 - `brand/references/business-context/visual/Brand Visual Direction.md`
+- `brand/references/business-context/visual/Mitozz Instagram Production Standard.md`
+- `brand/references/business-context/visual/Mitozz Instagram Story Strategy.md` when the asset is a Story
 - `brand/references/business-context/visual/Mitozz Template Library Index.md`
 - `brand/references/business-context/visual/template-mapping-rules.json`
 - `brand/references/business-context/visual/reference-pack/reference-pack-index.md`

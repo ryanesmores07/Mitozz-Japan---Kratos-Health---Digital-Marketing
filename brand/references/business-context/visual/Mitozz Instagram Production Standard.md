@@ -15,7 +15,23 @@ It defines:
 
 Feed engagement operating rules:
 
-- [Mitozz Feed Engagement Standard.md](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/brand/references/business-context/visual/Mitozz%20Feed%20Engagement%20Standard.md)
+- [Mitozz Feed Engagement Standard.md](Mitozz%20Feed%20Engagement%20Standard.md)
+
+Story operating rules:
+
+- [Mitozz Instagram Story Strategy.md](Mitozz%20Instagram%20Story%20Strategy.md)
+
+## Default Production Order
+
+Use this order for day-to-day production:
+
+1. read the approved calendar row
+2. resolve the post-calendar production layer:
+   `Template Set`, `Slide Blueprint`, `asset_archetype`, `story_type`, and `story_delivery_mode` when needed
+3. choose the correct approved references from the reference pack
+4. build the creative package
+5. generate the asset or source plate
+6. review against the approval rules before promotion
 
 ## Approved Production System
 
@@ -33,11 +49,11 @@ It should appear most often on the grid and define the premium, unique, educatio
 
 Production master:
 
-- [Mitozz Set 1 Master Template Spec.md](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/brand/references/business-context/visual/Mitozz%20Set%201%20Master%20Template%20Spec.md)
+- [Mitozz Set 1 Master Template Spec.md](Mitozz%20Set%201%20Master%20Template%20Spec.md)
 
 Prompt-ready lock:
 
-- [prompt-template.json](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/prompts/instagram/shared/prompt-template.json)
+- [prompt-template.json](../../../../prompts/instagram/shared/prompt-template.json)
 
 The other sets exist to support `Set 1`, not replace it:
 

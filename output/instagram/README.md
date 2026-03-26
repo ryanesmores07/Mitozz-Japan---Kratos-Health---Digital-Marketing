@@ -14,6 +14,9 @@ Inside each project folder, use this structure when applicable:
 - `rejected/`: rejected variants and rejection notes
 - `archive/`: older approved versions, exploratory keeps, or source byproducts worth keeping for traceability
 
+This is the canonical live structure going forward.
+Do not flatten approved winner files back into the project root when a `current/` folder exists.
+
 For reel projects, prefer this optional archive split when helpful:
 
 - `archive/source-motion/`: approved or kept motion-reference videos used to guide edit direction or future reel production
@@ -27,6 +30,12 @@ For reel projects, prefer this optional archive split when helpful:
 - For reel motion references, prefer role-based names like `source-motion-reference-v01.mp4`
 - For stories, prefer ordered names like `frame-01.png`
 - Do not leave approved finals mixed beside rejected or archived files at the project root if a `current/` folder exists
+
+Practical rule:
+
+- handoff docs should point at `current/` for live assets
+- delivery tooling should resolve `current/` first
+- the project root should mainly hold the structure folders, not duplicate winner files
 
 ## Delivery Rule
 

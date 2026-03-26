@@ -10,12 +10,12 @@
   "recurring_items": [
     {
       "category": "freelance-editor",
-      "description": "Freelance video reel editor fee",
+      "description": "Influencer reel editor fee",
       "amount": 4000,
       "currency": "JPY",
       "recurrence": "per-video",
       "default_quantity": 1,
-      "notes": "Include monthly unless explicitly excluded."
+      "notes": "March quantity is 1 total reel. April quantity is 5 total reels unless explicitly changed."
     },
     {
       "category": "app-subscription",

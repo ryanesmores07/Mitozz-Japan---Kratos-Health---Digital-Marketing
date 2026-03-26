@@ -1,0 +1,8 @@
+interface:
+  display_name: "Shopify Blog SEO"
+  short_description: "Analyze a blog draft and return Shopify-ready SEO metadata plus a hero-image prompt."
+  brand_color: "#6F8794"
+  default_prompt: "Analyze the attached blog document and produce SEO image file names, alt text, English and Japanese excerpt and meta description, a URL handle, and a Shopify Magic hero-image prompt."
+
+policy:
+  allow_implicit_invocation: true

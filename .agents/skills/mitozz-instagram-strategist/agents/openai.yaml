@@ -1,0 +1,8 @@
+interface:
+  display_name: "Mitozz Instagram Strategist"
+  short_description: "Lead ongoing Mitozz Instagram direction, priorities, and next actions from current context."
+  brand_color: "#6F8794"
+  default_prompt: "Assess the current Mitozz Instagram situation, decide the highest-priority move, and give direct next actions for feed and stories."
+
+policy:
+  allow_implicit_invocation: true

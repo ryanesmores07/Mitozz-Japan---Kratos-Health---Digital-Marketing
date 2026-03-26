@@ -13,10 +13,10 @@
     {
       "date": "2026-03-25",
       "category": "freelance-editor",
-      "description": "Freelance video reel editor fee (1 video)",
-      "amount": 4000,
+      "description": "Influencer reel editor fee (6 reels: 1 in March, 5 in April)",
+      "amount": 24000,
       "currency": "JPY",
-      "notes": "Include unless explicitly excluded."
+      "notes": "6 reels total at JPY 4,000 each."
     },
     {
       "date": "2026-03-25",
@@ -35,5 +35,5 @@
       "notes": "Recurring monthly expense unless explicitly excluded."
     }
   ],
-  "summary_notes": "March 2026 monthly retainer plus recurring operating expenses."
+  "summary_notes": "March 2026 monthly retainer plus recurring operating expenses, including 6 reel edits, Nano Banana Pro token costs, and CapCut Pro subscription costs."
 }

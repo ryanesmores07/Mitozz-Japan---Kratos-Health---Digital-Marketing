@@ -16,6 +16,10 @@ The following files are approved as Mitozz bottle source references:
 - `mitozz-bottle.jpg`
 - `mitozz-bottle-with-tablets.jpg`
 
+Support reference:
+
+- `mitozz hand held.webp`: sizing-only support reference for bottle-in-hand proportion checks
+
 These files may be used downstream for:
 
 - bottle shape and cap accuracy
@@ -29,3 +33,4 @@ Guardrails:
 - pair them with `style-anchors/` or other approved layout references when building prompt `image_references`
 - prefer `mitozz-bottle.jpg` for clean hero/product-only shots
 - prefer `mitozz-bottle-with-tablets.jpg` when the concept benefits from tablets in frame
+- use `mitozz hand held.webp` only when checking believable scale, not as a style reference

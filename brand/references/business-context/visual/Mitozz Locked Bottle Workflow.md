@@ -73,7 +73,7 @@ Check these every time:
 - shadow softness matches the rest of the frame
 - reflection intensity matches the surface material
 - bottle scale feels realistic relative to hands, cups, books, or tabletop objects
-- use [Mitozz Bottle Size Spec.md](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/brand/references/business-context/visual/Mitozz%20Bottle%20Size%20Spec.md) whenever the bottle appears near a hand or in a lifestyle desk scene
+- use [Mitozz Bottle Size Spec.md](Mitozz%20Bottle%20Size%20Spec.md) whenever the bottle appears near a hand or in a lifestyle desk scene
 - bottle contact with the surface feels grounded, not floating
 - bottle height feels believable for the desk scene and should usually sit around mug-height or slightly taller, not dominate the tabletop
 - color temperature of the bottle highlights matches the scene
@@ -105,7 +105,7 @@ When placing the bottle into a premium environment:
 - match horizon and camera height
 - keep perspective natural
 - avoid oversized bottle scale
-- if a hand is present, the bottle should follow the locked size ranges in [Mitozz Bottle Size Spec.md](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/brand/references/business-context/visual/Mitozz%20Bottle%20Size%20Spec.md), not enlarged into a hero object unless the frame is a pure product hero
+- if a hand is present, the bottle should follow the locked size ranges in [Mitozz Bottle Size Spec.md](Mitozz%20Bottle%20Size%20Spec.md), not enlarged into a hero object unless the frame is a pure product hero
 - in lifestyle scenes, keep the bottle modest in scale and secondary to the overall environment unless it is a pure product hero
 - use only a small number of props
 - keep the scene quieter than the product

@@ -233,12 +233,35 @@ function Get-SheetClearRange {
     "'{0}'!A:ZZ" -f $SheetTitle.Replace("'", "''")
 }
 
+function Convert-ColumnIndexToLetter {
+    param([Parameter(Mandatory = $true)][int]$ColumnIndex)
+
+    $value = $ColumnIndex + 1
+    $letters = ""
+    while ($value -gt 0) {
+        $remainder = ($value - 1) % 26
+        $letters = [char](65 + $remainder) + $letters
+        $value = [math]::Floor(($value - 1) / 26)
+    }
+
+    return $letters
+}
+
 function Convert-CsvToValues {
     param([Parameter(Mandatory = $true)][string]$Path)
 
-    $rows = Import-Csv -LiteralPath $Path -Encoding UTF8
+    $rows = @(Import-Csv -LiteralPath $Path -Encoding UTF8)
     if ($rows.Count -eq 0) {
-        throw "Calendar CSV has no data rows: $Path"
+        $headerLine = Get-Content -LiteralPath $Path -Encoding UTF8 -TotalCount 1
+        if ([string]::IsNullOrWhiteSpace($headerLine)) {
+            throw "Calendar CSV has no headers: $Path"
+        }
+
+        $headers = @($headerLine.TrimStart([char]0xFEFF).Split(",") | ForEach-Object { $_.Trim('"') })
+        return @{
+            Headers = $headers
+            Values  = @(@($headers))
+        }
     }
 
     $headers = @($rows[0].PSObject.Properties.Name)
@@ -292,13 +315,17 @@ function Format-Sheet {
         [Parameter(Mandatory = $true)][string]$SpreadsheetId,
         [Parameter(Mandatory = $true)][int]$SheetId,
         [Parameter(Mandatory = $true)][int]$ColumnCount,
+        [Parameter(Mandatory = $true)][int]$RowCount,
+        [Parameter(Mandatory = $true)][string[]]$Headers,
         [Parameter(Mandatory = $true)][string]$AccessToken
     )
 
-    $defaultWidths = @(90, 95, 60, 140, 260, 180, 120, 170, 240, 200, 150, 120, 280, 260)
+    $defaultWidths = @(90, 135, 95, 60, 140, 260, 180, 120, 170, 240, 200, 150, 120, 280, 260)
     $widths = for ($i = 0; $i -lt $ColumnCount; $i++) {
         if ($i -lt $defaultWidths.Count) { $defaultWidths[$i] } else { 180 }
     }
+    $sectionColumnIndex = [array]::IndexOf($Headers, "Section")
+    $sectionColumnLetter = if ($sectionColumnIndex -ge 0) { Convert-ColumnIndexToLetter -ColumnIndex $sectionColumnIndex } else { $null }
 
     $requests = @(
         @{
@@ -386,6 +413,67 @@ function Format-Sheet {
         }
     )
 
+    if (($null -ne $sectionColumnLetter) -and ($RowCount -gt 1)) {
+        $requests += @(
+            @{
+                addConditionalFormatRule = @{
+                    index = 0
+                    rule = @{
+                        ranges = @(
+                            @{
+                                sheetId = $SheetId
+                                startRowIndex = 1
+                                startColumnIndex = 0
+                                endColumnIndex = $ColumnCount
+                            }
+                        )
+                        booleanRule = @{
+                            condition = @{
+                                type = "CUSTOM_FORMULA"
+                                values = @(
+                                    @{
+                                        userEnteredValue = "=`$${sectionColumnLetter}2=""Feed"""
+                                    }
+                                )
+                            }
+                            format = @{
+                                backgroundColor = @{ red = 0.92; green = 0.97; blue = 1.0 }
+                            }
+                        }
+                    }
+                }
+            },
+            @{
+                addConditionalFormatRule = @{
+                    index = 1
+                    rule = @{
+                        ranges = @(
+                            @{
+                                sheetId = $SheetId
+                                startRowIndex = 1
+                                startColumnIndex = 0
+                                endColumnIndex = $ColumnCount
+                            }
+                        )
+                        booleanRule = @{
+                            condition = @{
+                                type = "CUSTOM_FORMULA"
+                                values = @(
+                                    @{
+                                        userEnteredValue = "=`$${sectionColumnLetter}2=""Story"""
+                                    }
+                                )
+                            }
+                            format = @{
+                                backgroundColor = @{ red = 1.0; green = 0.96; blue = 0.91 }
+                            }
+                        }
+                    }
+                }
+            }
+        )
+    }
+
     for ($i = 0; $i -lt $widths.Count; $i++) {
         $requests += @{
             updateDimensionProperties = @{
@@ -430,7 +518,7 @@ $sheetId = [int]$firstSheet.sheetId
 $csvData = Convert-CsvToValues -Path $csvAbsolutePath
 Clear-SheetValues -SpreadsheetId $spreadsheet.id -SheetTitle $currentSheetTitle -AccessToken $accessToken
 Write-SheetValues -SpreadsheetId $spreadsheet.id -SheetTitle $currentSheetTitle -Values $csvData.Values -AccessToken $accessToken
-Format-Sheet -SpreadsheetId $spreadsheet.id -SheetId $sheetId -ColumnCount $csvData.Headers.Count -AccessToken $accessToken
+Format-Sheet -SpreadsheetId $spreadsheet.id -SheetId $sheetId -ColumnCount $csvData.Headers.Count -RowCount $csvData.Values.Count -Headers $csvData.Headers -AccessToken $accessToken
 
 if ($CreateLocalXlsx) {
     powershell -NoProfile -ExecutionPolicy Bypass -File (Join-Path -Path $PSScriptRoot -ChildPath "export-csv-to-xlsx.ps1") -CsvPath $csvAbsolutePath | Out-Null

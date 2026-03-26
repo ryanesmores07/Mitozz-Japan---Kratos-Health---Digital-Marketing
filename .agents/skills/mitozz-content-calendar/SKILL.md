@@ -136,6 +136,7 @@ Favor clarity and coherence over novelty.
 Default to one UTF-8 CSV-compatible table with one header row and these columns:
 
 - `Section`
+- `Content Type`
 - `Publish Date`
 - `Day`
 - `Format`
@@ -153,6 +154,8 @@ Default to one UTF-8 CSV-compatible table with one header row and these columns:
 Schema rules:
 
 - keep feed and story rows in the same table
+- keep `Section` as the stable system field with values `Feed` or `Story`
+- use `Content Type` as the human-friendly scan label: `Main Feed` for `Feed`, `Story Support` for `Story`
 - use Japanese for `投稿テーマ`, `切り口`, and `補足メモ`
 - keep system fields and enums stable in English unless the user asks for a different operating system
 - avoid bilingual text in the same cell unless there is a strong review need
@@ -180,6 +183,8 @@ Every story row should include:
 - language light enough for stories but still premium
 
 Map the new schema like this:
+
+- `Content Type` -> the quick review label for feed vs story
 
 - `投稿テーマ` -> the client-facing topic name
 - `切り口` -> the strategic angle or first-frame message direction

@@ -1,22 +1,44 @@
 # Visual References
 
-Use these files as the source of truth for Mitozz Japan Instagram visual execution.
+Use this folder as the lean visual source of truth for Mitozz Japan Instagram production.
 
-- `Brand Visual Direction.md`: overall brand mood, palette, typography, and design principles
-- `Mitozz Instagram Template System.md`: reusable Instagram template family and usage rules
-- `Mitozz Instagram Creative Design System.md`: operational template sets, slide adaptation rules, and post-type usage system
-- `Mitozz Carousel Blueprint System.md`: slide-by-slide maps for 3, 5, 7, and 10 slide posts
-- `Mitozz Template Library Index.md`: mapping layer between calendar rows, template sets, and automated generation rules
-- `Mitozz Locked Bottle Workflow.md`: real-bottle workflow for product-led assets that need exact pack fidelity
-- `Mitozz Set 3 Real Photo Composition Workflow.md`: background-plate plus real-bottle composition workflow for product heroes
-- `Mitozz Instagram Production Standard.md`: locked production rules, rotation logic, and refresh policy
-- `Mitozz Feed Engagement Standard.md`: hook, pacing, CTA, and contextual-engagement rules for future feed posts
-- `Mitozz Instagram Operator Guide.md`: short production guide for day-to-day asset creation
-- `Mitozz Generation Lessons Log.md`: repeatable mistakes, fixes, and permanent production learnings to improve future generations
-- `Mitozz Instagram Story Strategy.md`: approved story mix, interaction rules, image-vs-text guidance, CTA routing, and highlight structure
-- `story-posting-actions-2026-03-23-to-2026-03-31.md`: posting-time CTA and native sticker rules for the current March story batch
-- `Mitozz Approved Reference Assets.md`: the exact images approved for ongoing production reference
-- `template-mapping-rules.json`: deterministic rules that resolve templates from calendar strategy fields without changing the calendar schema
-- `tools/resolve-template-mapping.py` and `tools/resolve-template-mapping.ps1`: cross-platform template resolvers for Mac and Windows
-- `workflows/03-post-calendar-production-flow.md`: the lean handoff model between calendar planning and production execution
-- `reference-pack/`: approved style anchors, product sources, and working examples
+## Canonical Operating Files
+
+These are the files we should treat as the primary system going forward:
+
+- `Brand Visual Direction.md`: brand mood, palette, typography, and visual principles
+- `Mitozz Instagram Production Standard.md`: locked production rules, ratios, batch consistency, and day-to-day operating order
+- `Mitozz Instagram Story Strategy.md`: story mix, interaction behavior, CTA routing, and story-safe execution rules
+- `Mitozz Template Library Index.md`: template-set map between strategy rows and production choices
+- `template-mapping-rules.json`: deterministic template resolver rules used by automation
+- `Mitozz Locked Bottle Workflow.md`: exact pack-truth workflow for bottle-led assets
+- `Mitozz Bottle Size Spec.md`: bottle scale rules for hand, desk, and reel-story scenes
+- `reference-pack/reference-pack-index.md`: approved image-reference registry
+
+## Supporting Specs
+
+Keep these as supporting references when a task specifically needs them:
+
+- `Mitozz Instagram Template System.md`: brand-template family explanation
+- `Mitozz Instagram Creative Design System.md`: set architecture and usage patterns
+- `Mitozz Set 1 Master Template Spec.md`: locked spec for the Set 1 education system
+- `Mitozz Set 3 Real Photo Composition Workflow.md`: background-plate plus real-bottle composition workflow
+- `Mitozz Carousel Blueprint System.md`: optional slide-role maps for longer carousel planning
+- `Mitozz Feed Engagement Standard.md`: optional feed-structure guidance for hook, pacing, and CTA quality
+- `Mitozz Generation Lessons Log.md`: repeatable mistakes and permanent corrections
+
+## Reference Pack
+
+- `reference-pack/style-anchors/`: active style anchors
+- `reference-pack/source-intake/`: approved product-truth sources and support inputs
+- `reference-pack/working-examples/`: only human-approved generated outputs that are safe to reuse
+
+## Workflow Pairing
+
+The visual folder works with:
+
+- `workflows/02-build-creative-package.md`
+- `workflows/03-post-calendar-production-flow.md`
+- `workflows/03-generate-and-approve.md`
+
+If a rule exists in more than one file, prefer the canonical operating files above instead of the older summary docs.

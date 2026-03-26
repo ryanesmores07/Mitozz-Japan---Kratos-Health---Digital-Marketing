@@ -154,6 +154,7 @@ The production calendar now uses one shared table for feed and story rows with a
 
 - Client-facing planning fields stay in Japanese: `投稿テーマ`, `切り口`, `補足メモ`
 - Workflow fields stay stable for downstream skills: `Section`, `Format`, `Objective`, `Primary Persona`, `Workflow Status`
+- Add `Content Type` as the human-friendly scan column: `Main Feed` for feed rows and `Story Support` for story rows
 - Keep feed and story rows in one CSV with one header row
 - The default calendar workflow is now:
   - local CSV in `content-planning/` for the repo copy and downstream skill input

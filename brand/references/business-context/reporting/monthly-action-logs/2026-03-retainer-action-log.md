@@ -107,3 +107,36 @@
 - `Outcome / impact`: The workspace now has a first-version Google Sheets invoice workflow for Jay that reuses the current Drive invoice files as the layout reference and is ready for OAuth-backed live runs.
 - `Status`: `completed`
 - `Notes for monthly summary`: Added a repeatable monthly invoice-sheet workflow for salary and reimbursable expenses, built on the existing Google Drive API setup.
+
+### Entry 09
+
+- `Date`: `2026-03-26`
+- `Workstream`: `Content planning workflow usability`
+- `Action`: Made the Mitozz content calendars easier to scan by adding a human-friendly `Content Type` column and updating the Drive publisher to color-code feed versus story rows automatically.
+- `Why it matters`: This keeps the downstream system field stable while making both the repo CSVs and the client-facing Google Sheets much easier to review quickly.
+- `Artifacts updated`: `tools/publish-content-calendar-to-drive.ps1`, `.agents/skills/mitozz-content-calendar/SKILL.md`, `README.md`, `brand/references/business-context/content-planning/Mitozz Instagram Content Calendar - 2026 - March.csv`, `brand/references/business-context/content-planning/Mitozz Instagram Content Calendar - 2026 - April.csv`, `brand/references/business-context/content-planning/Mitozz Instagram Content Calendar - 2026 - May.csv`
+- `Outcome / impact`: Feed rows now read as `Main Feed`, story rows read as `Story Support`, and republished calendar sheets can visually separate the two content types at a glance.
+- `Status`: `completed`
+- `Notes for monthly summary`: Strong quality-of-life improvement for calendar reviews and client-facing planning clarity.
+
+### Entry 10
+
+- `Date`: `2026-03-26`
+- `Workstream`: `Instagram strategy system design`
+- `Action`: Added a dedicated Mitozz Instagram strategist skill that sits above calendar planning and creative production so account decisions can now be made from current context, launch sequencing, trend fit, and near-term execution needs.
+- `Why it matters`: This creates a clear operating layer for deciding what Mitozz should do next on Instagram instead of treating every request as isolated content production, which should improve consistency, story support, and strategic revisions over time.
+- `Artifacts updated`: `.agents/skills/mitozz-instagram-strategist/SKILL.md`, `.agents/skills/mitozz-instagram-strategist/agents/openai.yaml`, `brand/references/business-context/reporting/monthly-action-logs/2026-03-retainer-action-log.md`
+- `Outcome / impact`: Future Mitozz guidance can now follow one consistent decision system that assesses the live calendar, chooses a primary priority, issues concrete execution actions, and routes work into the existing calendar, creative, prompt, and generation skills.
+- `Status`: `completed`
+- `Notes for monthly summary`: Good example of strategic infrastructure work that should make ongoing Instagram direction more consistent and easier to execute.
+
+### Entry 11
+
+- `Date`: `2026-03-26`
+- `Workstream`: `Instagram launch-phase strategy`
+- `Action`: Assessed the current zero-follower Instagram state and set a launch-phase direction that prioritizes distribution, profile conversion, and audience seeding around the existing March-April calendar instead of adding more standalone story volume.
+- `Why it matters`: This keeps the team focused on the real growth constraint at launch, which is getting the first qualified people to the profile and giving them enough trust signals to follow, rather than overproducing content for an audience that does not yet exist.
+- `Artifacts updated`: `brand/references/business-context/content-planning/Mitozz Launch Phase Posting Strategy.md`, `brand/references/business-context/reporting/monthly-action-logs/2026-03-retainer-action-log.md`
+- `Outcome / impact`: The account now has a clearer operating call for the next phase: keep the calendar, reduce dependence on stories for growth, and add deliberate distribution and conversion actions around each feed post.
+- `Status`: `completed`
+- `Notes for monthly summary`: Strong strategic clarification for launch-phase Instagram work while the account is still at zero followers.

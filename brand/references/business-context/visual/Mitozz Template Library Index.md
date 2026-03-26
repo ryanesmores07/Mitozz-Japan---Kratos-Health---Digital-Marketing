@@ -34,7 +34,7 @@ The other sets are support systems:
 
 Primary config:
 
-- [template-mapping-rules.json](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/brand/references/business-context/visual/template-mapping-rules.json)
+- [template-mapping-rules.json](template-mapping-rules.json)
 
 ## Template Library
 
@@ -60,7 +60,7 @@ Default prompt direction:
 
 Production master:
 
-- [Mitozz Set 1 Master Template Spec.md](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/brand/references/business-context/visual/Mitozz%20Set%201%20Master%20Template%20Spec.md)
+- [Mitozz Set 1 Master Template Spec.md](Mitozz%20Set%201%20Master%20Template%20Spec.md)
 
 ### `Set 2`
 
@@ -97,8 +97,8 @@ Primary use:
 
 Default prompt file:
 
-- [ig-feed-2026-03-21-template-set-3-product-hero-v01.json](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/prompts/instagram/feed/ig-feed-2026-03-21-template-set-3-product-hero-v01.json)
-- locked bottle version: [ig-feed-2026-03-21-template-set-3-locked-bottle-v01.json](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/prompts/instagram/feed/ig-feed-2026-03-21-template-set-3-locked-bottle-v01.json)
+- [ig-feed-2026-03-21-template-set-3-product-hero-v01.json](../../../../prompts/instagram/feed/ig-feed-2026-03-21-template-set-3-product-hero-v01.json)
+- locked bottle version: [ig-feed-2026-03-21-template-set-3-locked-bottle-v01.json](../../../../prompts/instagram/feed/ig-feed-2026-03-21-template-set-3-locked-bottle-v01.json)
 
 ### `Set 4`
 
@@ -115,7 +115,7 @@ Primary use:
 
 Default prompt file:
 
-- [ig-feed-2026-03-21-template-set-4-ritual-lifestyle-v01.json](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/prompts/instagram/feed/ig-feed-2026-03-21-template-set-4-ritual-lifestyle-v01.json)
+- [ig-feed-2026-03-21-template-set-4-ritual-lifestyle-v01.json](../../../../prompts/instagram/feed/ig-feed-2026-03-21-template-set-4-ritual-lifestyle-v01.json)
 
 ### `Set 5`
 
@@ -132,7 +132,7 @@ Primary use:
 
 Default prompt file:
 
-- [ig-feed-2026-03-21-template-set-5-trust-portrait-v01.json](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/prompts/instagram/feed/ig-feed-2026-03-21-template-set-5-trust-portrait-v01.json)
+- [ig-feed-2026-03-21-template-set-5-trust-portrait-v01.json](../../../../prompts/instagram/feed/ig-feed-2026-03-21-template-set-5-trust-portrait-v01.json)
 
 ## Mapping Rules
 

@@ -1,4 +1,4 @@
-# Mitozz Story Posting Actions 01
+# Mitozz Story Posting Actions
 
 ## Window
 
@@ -6,7 +6,7 @@
 
 Use this file at posting time.
 
-This file removes guesswork by telling you the exact native Instagram action to attach to each story date.
+This is the lightweight native-action guide for the active March story window. It tells you which Instagram sticker or routing behavior to use so posting does not depend on memory.
 
 ## Core Rule
 
@@ -18,26 +18,20 @@ Priority order:
 
 1. route to feed when the story is reinforcement
 2. use a poll when the story is meant to gather a quick signal
-3. use a question box when the story is meant to open replies
+3. use a question box when the story is meant to invite replies
 4. use a save reminder only when the story is reflective and not interaction-led
 
 ## Sticker Placement Rule
 
-- Keep stickers in the lower third unless the design clearly leaves safer room elsewhere.
-- Do not cover the main text block.
-- Leave at least one finger-width of margin from the bottom edge.
-- Match the cleanest native style available inside Instagram.
-- Do not add decorative GIFs, arrows, or extra UI unless the story specifically needs it.
+- keep stickers in the lower third unless the design clearly leaves safer room elsewhere
+- do not cover the main text block
+- leave at least one finger-width of margin from the bottom edge
+- match the cleanest native style available inside Instagram
+- do not add decorative GIFs, arrows, or extra UI unless the story specifically needs it
 
 ## Posting Actions By Date
 
 ### `2026-03-23` Story
-
-Story files:
-
-- [frame-01-hook.png](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/output/instagram/stories/ig-story-2026-03-23-mitochondria-basics-reinforcement-v01/frame-01-hook.png)
-- [frame-02-context.png](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/output/instagram/stories/ig-story-2026-03-23-mitochondria-basics-reinforcement-v01/frame-02-context.png)
-- [frame-03-cta.png](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/output/instagram/stories/ig-story-2026-03-23-mitochondria-basics-reinforcement-v01/frame-03-cta.png)
 
 Posting action:
 
@@ -45,10 +39,10 @@ Posting action:
 
 What to do:
 
-- Add a `Link Sticker` on frame 3 only.
-- Link target: the matching March 23 feed post.
-- Sticker label: `投稿を見る`
-- Placement: lower third, centered or slightly below center, without covering the text.
+- add a `Link Sticker` on frame 3 only
+- link target: the matching March 23 feed post
+- recommended sticker label: `フィードで見る`
+- placement: lower third, centered or slightly below center, without covering the text
 
 What not to do:
 
@@ -57,11 +51,11 @@ What not to do:
 
 ### `2026-03-25` Story
 
-Story files:
+Approved live story frames:
 
-- [frame-01-hook.png](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/output/instagram/stories/ig-story-2026-03-25-busy-day-context-v01/frame-01-hook.png)
-- [frame-02-context.png](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/output/instagram/stories/ig-story-2026-03-25-busy-day-context-v01/frame-02-context.png)
-- [frame-03-cta.png](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/output/instagram/stories/ig-story-2026-03-25-busy-day-context-v01/frame-03-cta.png)
+- [frame-01.png](../../../../output/instagram/stories/2026-03-25-busy-day-context/current/frame-01.png)
+- [frame-02.png](../../../../output/instagram/stories/2026-03-25-busy-day-context/current/frame-02.png)
+- [frame-03.png](../../../../output/instagram/stories/2026-03-25-busy-day-context/current/frame-03.png)
 
 Posting action:
 
@@ -69,11 +63,11 @@ Posting action:
 
 What to do:
 
-- Add a `Poll Sticker` on frame 3 only.
-- Poll question: `こんな日、ありますか？`
-- Option 1: `あります`
-- Option 2: `今日は大丈夫`
-- Placement: lower third, centered, using the open desk area.
+- add a `Poll Sticker` on frame 3 only
+- recommended poll question: `こんな日、ありますか？`
+- option 1: `ある`
+- option 2: `今日は大丈夫`
+- placement: lower third, centered, using the open desk area
 
 What not to do:
 
@@ -86,13 +80,13 @@ Posting action:
 
 - `poll`
 
-What to do when we generate it:
+What to do when posting:
 
-- Use a `Poll Sticker` on frame 3.
-- Poll question: `刺激より整える方が合う？`
-- Option 1: `そう思う`
-- Option 2: `まだ半々`
-- Placement: lower third, centered.
+- use a `Poll Sticker` on frame 3
+- recommended poll question: `今日は、整える方が合いそうですか？`
+- option 1: `はい`
+- option 2: `刺激が必要`
+- placement: lower third, centered
 
 ### `2026-03-27` Story
 
@@ -100,12 +94,12 @@ Posting action:
 
 - `question-box`
 
-What to do when we generate it:
+What to do when posting:
 
-- Use a `Question Sticker` on frame 3.
-- Prompt text: `気になることを送ってください`
-- Box prompt: `質問を入力`
-- Placement: lower third, centered or slightly lower.
+- use a `Question Sticker` on frame 3
+- prompt text above the box: `気になることを送ってください。`
+- box prompt: `質問はこちら`
+- placement: lower third, centered or slightly lower
 
 ### `2026-03-30` Story
 
@@ -113,13 +107,13 @@ Posting action:
 
 - `poll`
 
-What to do when we generate it:
+What to do when posting:
 
-- Use a `Poll Sticker` on frame 3.
-- Poll question: `最初に見るのは？`
-- Option 1: `成分`
-- Option 2: `ブランド姿勢`
-- Placement: lower third, centered.
+- use a `Poll Sticker` on frame 3
+- recommended poll question: `まず見るのはどちらですか？`
+- option 1: `成分`
+- option 2: `信頼感`
+- placement: lower third, centered
 
 ## Simple Posting Rule
 
@@ -144,12 +138,10 @@ Before you publish any story:
 
 These generated stories exist, but they are no longer active calendar rows:
 
-- [March 24 story set](/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/output/instagram/stories/ig-story-2026-03-24-daily-foundation-bridge-v01)
+- [March 25 rejected v02 set](../../../../output/instagram/stories/2026-03-25-busy-day-context/rejected/v02-replaced)
 
 Treat them as:
 
-- backup content
-- Highlight support
-- reusable support assets when needed
-
-Do not treat them as mandatory posting actions unless they are added back to the calendar.
+- backup context only
+- reference for what was replaced
+- non-live assets unless explicitly restored

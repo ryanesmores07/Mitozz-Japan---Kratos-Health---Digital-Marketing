@@ -3,7 +3,7 @@
 Use this file to turn the approved March 25 reel stills into short Sora 2 source clips.
 
 Primary guide:
-- [workflows/05A-sora-2-prompting-guide.md](C:/Users/esmoresernieryanocam/Desktop/Workspace/Nano banana/workflows/05A-sora-2-prompting-guide.md)
+- [workflows/05A-sora-2-prompting-guide.md](../../../../workflows/05A-sora-2-prompting-guide.md)
 
 ## Shared Sora 2 Setup
 
