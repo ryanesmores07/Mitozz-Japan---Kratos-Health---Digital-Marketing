@@ -1,0 +1,15 @@
+{
+  "template": "trust-carousel",
+  "variant": "editorial-close",
+  "canvas": {
+    "width": 928,
+    "height": 1152
+  },
+  "copy": {
+    "headline_lines": [
+      "納得して選ぶことが",
+      "毎日の安心につながる"
+    ]
+  },
+  "rule": true
+}

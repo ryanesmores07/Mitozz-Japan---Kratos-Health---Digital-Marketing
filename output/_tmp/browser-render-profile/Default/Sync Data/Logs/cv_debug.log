@@ -1,0 +1,1 @@
+{"logTime": "0327/091506", "correlationVector":"bxPJT0o3Ei5Ss3PDwhyao8.1","action":"SyncServerConnectionManagerRequest", "result":"SYNC_SERVER_OK", "context":{"environment":"Prod_japaneast_prod-s01-061-apac-japaneast", "migrationStage":"NotStarted", "server":"akswtt11200000v"}}

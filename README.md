@@ -36,6 +36,7 @@ The recommended operating split is:
 - mapping layer = template and structure
 - creative package = art direction
 - prompt = execution input
+- design system = final layout engine for text-led assets
 
 See:
 
@@ -99,10 +100,11 @@ Do not use it for:
 6. If the asset is visually high-stakes or the first-pass direction feels weak, apply the frontend-skill lens to strengthen the visual thesis, hierarchy, composition, and motion logic before prompt writing.
 7. Resolve the asset's `template_set` and `slide_blueprint` from the central mapping rules.
 8. Use `mitozz-prompt-engineer` to create or update prompt JSON in `prompts/instagram/feed/` or `prompts/instagram/stories/`.
-9. Use `nano-banana-instagram` to execute Nano Banana MCP using those prompt files.
-10. Review the outputs, approve winners, and promote only the best assets into the visual reference pack when appropriate.
-11. When delivery to Google Drive is needed, use `drive-delivery` to upload only the approved assets and create a delivery receipt.
-12. When meaningful retainer work is completed, use `retainer-reporting` to add it to the current monthly action log.
+9. For text-led carousels or Stories, use `design-system/instagram/` so HTML/CSS controls typography, spacing, and final layout while Nano Banana generates image plates only.
+10. Use `nano-banana-instagram` to execute Nano Banana MCP using those prompt files when AI generation is still needed.
+11. Review the outputs, approve winners, and promote only the best assets into the visual reference pack when appropriate.
+12. When delivery to Google Drive is needed, use `drive-delivery` to upload only the approved assets and create a delivery receipt.
+13. When meaningful retainer work is completed, use `retainer-reporting` to add it to the current monthly action log.
 
 If a campaign expands into a real webpage or interface, or if an Instagram asset needs the frontend-skill lens, insert one extra step between creative direction and implementation:
 
@@ -110,6 +112,14 @@ If a campaign expands into a real webpage or interface, or if an Instagram asset
 2. write a content plan: hero, support, detail, final CTA
 3. write an interaction thesis with 2 to 3 motion ideas
 4. apply the frontend skill before building the page
+
+For text-led Instagram assets, the same design-first logic now applies in a lighter form:
+
+1. define the visual thesis and copy structure
+2. decide whether the asset should be code-composited
+3. if yes, build or reuse the HTML/CSS template in `design-system/instagram/`
+4. generate only the required image slot assets
+5. render the final export from the compositor instead of asking AI to redraw the whole card
 
 When you want image generation in this workspace without going through the Nano Banana pipeline, use `imagen` instead. It saves selected finals into `output/imagegen/` by default.
 

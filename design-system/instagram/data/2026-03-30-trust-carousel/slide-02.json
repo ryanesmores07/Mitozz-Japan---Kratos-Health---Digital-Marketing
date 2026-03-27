@@ -1,0 +1,15 @@
+{
+  "template": "trust-carousel",
+  "variant": "editorial-criteria",
+  "canvas": {
+    "width": 928,
+    "height": 1152
+  },
+  "copy": {
+    "headline_lines": [
+      "見た目だけでなく",
+      "成分 伝え方 ブランド姿勢を見る"
+    ]
+  },
+  "rule": true
+}

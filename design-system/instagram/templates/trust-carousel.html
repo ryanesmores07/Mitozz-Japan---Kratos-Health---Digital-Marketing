@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mitozz Instagram Template</title>
+    <style>
+__INLINE_CSS__
+    </style>
+  </head>
+  <body>
+    <main class="artboard">
+      <section class="card">
+        <div class="variant" id="variantRoot"></div>
+      </section>
+    </main>
+
+    <script>
+      var data = __DATA_JSON__;
+      var variantRoot = document.getElementById("variantRoot");
+      variantRoot.className = "variant " + data.variant;
+
+      if (data.canvas && data.canvas.width) {
+        document.documentElement.style.width = data.canvas.width + "px";
+        document.documentElement.style.height = data.canvas.height + "px";
+        document.body.style.width = data.canvas.width + "px";
+        document.body.style.height = data.canvas.height + "px";
+        document.getElementsByClassName("artboard")[0].style.width = data.canvas.width + "px";
+        document.getElementsByClassName("artboard")[0].style.height = data.canvas.height + "px";
+      }
+
+      function appendHeadlineLines(target, lines, small) {
+        var i;
+        for (i = 0; i < lines.length; i += 1) {
+          var headline = document.createElement("p");
+          headline.className = small ? "headline small" : "headline";
+          headline.textContent = lines[i];
+          target.appendChild(headline);
+        }
+      }
+
+      if (data.variant === "portrait-cover") {
+        var media = document.createElement("div");
+        media.className = "media";
+        media.style.backgroundImage = "url('" + data.image.uri + "')";
+        if (data.image.position) {
+          media.style.backgroundPosition = data.image.position;
+        }
+        variantRoot.appendChild(media);
+
+        var mask = document.createElement("div");
+        mask.className = "media-mask";
+        variantRoot.appendChild(mask);
+
+        var copy = document.createElement("div");
+        copy.className = "copy-block";
+
+        if (data.copy.eyebrow) {
+          var eyebrow = document.createElement("p");
+          eyebrow.className = "eyebrow";
+          eyebrow.textContent = data.copy.eyebrow;
+          copy.appendChild(eyebrow);
+        }
+
+        var lines = document.createElement("div");
+        lines.className = "copy-lines";
+        appendHeadlineLines(lines, data.copy.headline_lines, false);
+        copy.appendChild(lines);
+        variantRoot.appendChild(copy);
+      }
+
+      if (data.variant === "editorial-criteria" || data.variant === "editorial-close") {
+        var editorialCopy = document.createElement("div");
+        var editorialLines = document.createElement("div");
+
+        editorialCopy.className = "copy-block";
+        editorialLines.className = "copy-lines";
+        appendHeadlineLines(editorialLines, data.copy.headline_lines, data.variant === "editorial-close");
+
+        editorialCopy.appendChild(editorialLines);
+        variantRoot.appendChild(editorialCopy);
+
+        if (data.rule !== false) {
+          var rule = document.createElement("div");
+          rule.className = "rule";
+          variantRoot.appendChild(rule);
+        }
+      }
+    </script>
+  </body>
+</html>

@@ -9,7 +9,10 @@ For reel batches, run `workflows/03A-reel-preflight-and-hard-locks.md` before ge
 - Do not generate until the prompt has explicit hard-fail conditions for the asset's biggest risks.
 - If the asset has known high-cost failure modes such as text contamination, pack mismatch, or Story batch drift, encode those as rejection rules in the prompt before running generation.
 - If the tool parameter already controls variant count, do not also ask for "multiple variants" inside the prompt text. The prompt should request one finished image only.
-- Generate 3 variants per asset in the first batch.
+- If the asset is text-led and layout-sensitive, use the HTML/CSS design-first compositor instead of generating the whole card with AI.
+- Generate `1-3` variants per AI-generated asset in the first batch:
+  - default to `1` for code-composited slot assets
+  - use `3` only for full AI-led compositions or higher-risk visual exploration
 - Keep the same `image_references` across the batch.
 - Keep approved `product-source` references in the batch whenever product accuracy matters.
 - Vary composition only through:
@@ -54,8 +57,32 @@ Do not generate if the validator returns `FAILED`.
 
 - Do not rerun the full set by default when only one slide or frame failed.
 - Fix the prompt first, then regenerate only the failing asset.
-- Use low-cost settings for exploration, but spend on 3-variant batches only after the prompt passes the preflight gate.
+- Use low-cost settings for exploration, but spend on 3-variant batches only after the prompt passes the preflight gate and the asset actually needs them.
 - If a reference is causing repeat text contamination or layout copying, remove or replace that reference before the next paid run.
+
+## Design-First Path
+
+Use the design-first compositor for feed or Story assets when:
+
+- typography accuracy matters
+- the asset is mostly copy plus one image zone
+- layout consistency matters more than AI novelty
+- you want to reduce token waste from regenerating whole cards
+
+In that path:
+
+- HTML/CSS owns layout, spacing, line breaks, and type hierarchy
+- Nano Banana generates image plates only
+- image-slot assets must be text-free and free of template labels or baked-in UI
+- final export comes from:
+  - `tools/render-instagram-template.ps1`
+  - `tools/render-instagram-batch.ps1`
+
+Do not use this path by default for:
+
+- reel source frames
+- bottle-led realism scenes
+- full-bleed lifestyle posts where the whole image is the asset
 
 ## Reel Execution Loop
 

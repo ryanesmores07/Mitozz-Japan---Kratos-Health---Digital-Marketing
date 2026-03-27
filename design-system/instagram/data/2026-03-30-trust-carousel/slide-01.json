@@ -1,0 +1,20 @@
+{
+  "template": "trust-carousel",
+  "variant": "portrait-cover",
+  "canvas": {
+    "width": 928,
+    "height": 1152
+  },
+  "copy": {
+    "eyebrow": "なぜ今",
+    "headline_lines": [
+      "信頼できる",
+      "サプリ選びが",
+      "大切なのか"
+    ]
+  },
+  "image": {
+    "path": "design-system/instagram/assets/2026-03-30-trust-carousel/slide-01-portrait-plate.png",
+    "position": "center center"
+  }
+}
