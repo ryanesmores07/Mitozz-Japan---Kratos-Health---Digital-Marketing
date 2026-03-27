@@ -41,6 +41,10 @@ Then resolve the downstream production layer:
 - Resolve `Template Set` and `Slide Blueprint` from the mapping rules before deciding layout details.
   - canonical resolver: `tools/resolve-template-mapping.py`
   - windows wrapper: `tools/resolve-template-mapping.ps1`
+- Decide whether the asset needs the optional frontend-skill lens before prompt writing.
+  - use it when the asset is campaign-critical, visually high-stakes, landing-page-connected, or weak in first-pass composition
+  - use it to sharpen visual thesis, hierarchy, image dominance, spacing, and motion logic
+  - do not use it to replace normal Mitozz prompt or production workflow
 - Assign the right `asset_archetype`.
 - Choose 2 to 4 `image_references`.
 - Include at least 1 `style-anchor` when available.
@@ -57,6 +61,12 @@ Then resolve the downstream production layer:
 - Write `reference_strategy` in one short sentence.
 - Write `variation_guardrails` as explicit change rules.
 - Specify what must vary from the references so the result feels on-theme but not repetitive.
+
+If the frontend-skill lens is used, add these internal planning notes before finalizing the package:
+
+- `visual thesis`: one sentence describing mood, material, and energy
+- `content plan`: hero, support, detail, final CTA
+- `interaction thesis`: 2 to 3 motion ideas when the asset is a reel, animated story, or motion-led concept
 
 ## Reel Planning Add-On
 

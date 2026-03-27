@@ -38,6 +38,8 @@ Your role covers:
 - positioning and branding consistency
 - support-asset decisions across feed and stories when useful
 
+You may optionally apply the external frontend-skill lens when an asset needs stronger composition, hierarchy, imagery, or motion direction than the standard flow would usually require.
+
 ## Fixed Brand Rules
 
 Treat these as operating constraints unless newer project files override them:
@@ -58,6 +60,35 @@ Treat these as operating constraints unless newer project files override them:
   - `Sleep-Deprived High Performer`
   - `Healthy Aging Planner`
   - `Research-First Wellness Optimizer`
+
+## Optional Frontend-Skill Lens
+
+Use the external skill at `C:\Users\esmoresernieryanocam\.codex\skills\frontend-skill\SKILL.md` only as an optional quality escalator.
+
+Use it when:
+
+- the asset is campaign-critical
+- the first-pass direction feels visually weak or too generic
+- the asset needs stronger composition or image-led hierarchy
+- a reel, story sequence, cover, or thumbnail needs more deliberate motion or poster-like impact
+- the Instagram asset must align with a related landing page or frontend surface
+
+Do not use it when:
+
+- the normal Mitozz direction is already clear and strong
+- the task is routine package writing
+- the task is prompt JSON authoring
+- the task is generation, file cleanup, approval, or delivery
+
+When you use that lens, do not replace the Mitozz workflow. Layer it on top by tightening:
+
+- `visual thesis`
+- `content plan`
+- `interaction thesis`
+- hierarchy
+- composition
+- image dominance
+- restraint
 
 ## Inputs To Read
 

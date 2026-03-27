@@ -14,12 +14,15 @@ Use these rules when building or executing Instagram image prompts for Mitozz.
 - State the exact aspect ratio explicitly.
 - State the asset archetype explicitly: `education-card`, `product-hero`, `portrait-trust`, or `story-reinforcement`.
 - Include the exact on-image Japanese text in quotes when text is required.
+- Verify the final Japanese strings are clean UTF-8 before paid generation. Do not generate from mojibake or corrupted copy.
+- Use `tools/validate-text-integrity.ps1` when a prompt or supporting doc looks suspicious in the terminal. Validate the bytes instead of trusting terminal rendering.
 - Separate document references from image references:
   - `reference_files` for business context, strategy, and visual-direction docs
   - `image_references` for actual visual inputs
 - Use `reference_strategy` to explain which references should dominate and why.
 - Use `variation_guardrails` to state what must change from the references.
 - Pass negative prompts explicitly.
+- If the tool parameter already controls variant count, ask for one finished image only in the prompt text. Do not also request "3 variants" inside the image prompt or the model may generate contact sheets.
 
 ## Reference Selection
 
@@ -31,6 +34,7 @@ Use these rules when building or executing Instagram image prompts for Mitozz.
 - Match product heroes primarily to lighting, palette, and product framing references.
 - Match stories primarily to vertical breathing room and simplified composition references.
 - Use product-source references only for bottle silhouette, cap finish, label fidelity, and tablet relationship.
+- If a reference contains readable English, template labels, page numbers, or footer text, do not use it for text-led cards unless the prompt explicitly rejects inherited Latin-text contamination.
 
 ## Generation Method
 
@@ -38,3 +42,4 @@ Use these rules when building or executing Instagram image prompts for Mitozz.
 - Keep the same `image_references` across the first batch.
 - Vary crop, camera distance, angle, and focal treatment across the variants.
 - Select 1 winner and refine once if needed.
+- If the failure mode is systemic, stop and tighten the prompt before the next batch instead of spending on another blind rerun.

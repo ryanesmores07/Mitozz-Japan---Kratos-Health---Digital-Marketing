@@ -126,3 +126,35 @@ Apply next time:
 - reduce bottle scale if it starts to dominate a lifestyle scene
 - match highlight direction, shadow softness, and local contrast to the surrounding desk light
 - reject any product frame that looks pasted in even if the label is technically closer to the real pack
+
+### 8. Do Not Double-Ask For Variants
+
+Issue:
+
+- when the tool already generated multiple outputs through its own variant count, asking for "3 variants" again inside the image prompt encouraged contact-sheet or multi-panel outputs
+
+Rule:
+
+- if the tool parameter controls variant count, the prompt must ask for one finished image only
+
+Apply next time:
+
+- keep `n` or the tool-level variant control outside the prompt text
+- explicitly reject contact sheets, collages, multi-panel layouts, and variant labels
+- treat any multi-version canvas as a failed output
+
+### 9. Text-Led Cards Need A Copy Integrity Gate
+
+Issue:
+
+- text-led assets can waste spend when the saved prompt copy is mojibake, when a reference leaks English template labels, or when the output inherits unwanted Latin text
+
+Rule:
+
+- text-led prompts must pass a copy-integrity and reference-contamination check before paid generation
+
+Apply next time:
+
+- verify Japanese copy is clean UTF-8 in the saved prompt
+- reject references that carry page numbers, English footers, or template labels unless explicitly needed
+- add `no English words`, `no Latin letters`, and similar rejection wording when the asset should be Japanese-only

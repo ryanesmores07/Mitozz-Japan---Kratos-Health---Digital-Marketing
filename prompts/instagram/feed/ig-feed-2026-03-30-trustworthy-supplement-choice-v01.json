@@ -1,0 +1,136 @@
+{
+  "asset_type": "instagram-feed-carousel",
+  "campaign_name": "March 2026 Trust And Reassurance",
+  "topic": "How to choose a trustworthy supplement brand",
+  "objective": "Build trust",
+  "template_set": "Set 5 + Set 1",
+  "slide_blueprint": "3-slide",
+  "asset_archetype": "trust-carousel",
+  "platform": "instagram",
+  "aspect_ratio": "4:5",
+  "audience": "Healthy Aging Planner",
+  "motion_role": "",
+  "shot_id": "",
+  "shot_position": 0,
+  "continuity_tokens": [],
+  "visual_intent": [
+    "warm premium trust portrait blended with editorial white-card clarity",
+    "calm Japanese wellness reassurance",
+    "measured confidence rather than sales pressure",
+    "month-end trust-building tone",
+    "save-worthy premium carousel with short readable copy",
+    "advisor-like credibility rather than generic wellness stock mood"
+  ],
+  "brand_guardrails": [
+    "use Set 5 as the emotional lead and Set 1 as structural support",
+    "keep text-safe whitespace generous",
+    "avoid ad-like supplement promotion",
+    "avoid medical-authority cosplay",
+    "avoid anxiety-led comparison framing",
+    "make slides 2 and 3 feel like designed editorial pages with a quiet grid rather than blank quote cards",
+    "keep any prismatic or pearlescent texture extremely subtle so the card still reads calm and premium",
+    "match mood, palette, light quality, whitespace, and restraint from the selected references without duplicating exact crop, pose, object placement, or gradient pattern"
+  ],
+  "composition": [
+    "4:5 portrait carousel",
+    "slide 1 is a half-body trust portrait near a softly lit window with strong left-side whitespace, calm direct gaze, and no props",
+    "slide 2 is a clean editorial white-card criteria slide with slightly offset text hierarchy, no portrait hero, no icon, and no abstract droplet motif",
+    "slide 3 is a calm closing white-card with one resolved two-line message block and a subtle editorial finishing cue such as a thin rule or soft lower band only if it stays clean",
+    "one clear message block per slide",
+    "short Japanese text only",
+    "quiet premium readability on mobile",
+    "avoid perfectly centered placeholder-card symmetry on slides 2 and 3"
+  ],
+  "image_references": [
+    {
+      "path": "output/instagram/templates/2026-03-21-approved-pass/set-5-trust-portrait-v01.png",
+      "role": "working-example",
+      "influence": [
+        "warm trust tone",
+        "portrait framing",
+        "credible premium softness"
+      ],
+      "match_strength": "high"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/working-examples/feed-education-white-card-01.png",
+      "role": "working-example",
+      "influence": [
+        "card restraint",
+        "typography hierarchy",
+        "editorial cleanliness"
+      ],
+      "match_strength": "high"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-portrait-trust-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "premium portrait mood",
+        "composed expression",
+        "human trust"
+      ],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-editorial-whitespace-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "editorial breathing room",
+        "restraint",
+        "calm whitespace"
+      ],
+      "match_strength": "medium"
+    }
+  ],
+  "reference_strategy": "Use the approved Set 5 trust portrait as the emotional anchor for slide 1, the approved white-card example as the structural anchor for slides 2 and 3, portrait-trust for calm human credibility, and editorial-whitespace for breathing room. Keep the set quiet, premium, and trust-led rather than campaign-like.",
+  "variation_guardrails": [
+    "do not clone the exact March 21 trust portrait crop",
+    "do not turn the carousel into a comparison chart or medical brochure",
+    "keep slide 1 warmer and more human, then simplify slides 2 and 3 into cleaner editorial cards",
+    "slide 1 must stay object-free with no science prop, no glowing orb, no product in hand, and no over-smiling stock-photo energy",
+    "slide 2 must read like a trust-judgment framework rather than a generic quote card, with no droplet, no teardrop icon, no arbitrary abstract token, and no centered decorative object",
+    "slide 3 must stay clean with no floating object, tablet, droplet, icon, decorative flourish, ornamental support motif, or oversized empty field that makes the card feel unfinished",
+    "avoid decorative luxury signals such as gold, glossy black, or beauty-ad lighting",
+    "do not let any slide feel like a placeholder template or generic wellness quote graphic",
+    "keep slides 2 and 3 more editorial than mystical, with structure coming from typography and grid rather than symbolic objects",
+    "make the set feel reassuring and intelligent rather than sales-led",
+    "reject and regenerate if Japanese text becomes garbled, invented, duplicated, or unreadable"
+  ],
+  "text_overlay": {
+    "allowed": true,
+    "max_words": 16,
+    "tone": "calm, quietly premium, reassuring, mobile-readable",
+    "font_reference": "Noto Sans JP Bold / Medium",
+    "headline_ja": "なぜ今\n信頼できるサプリ選びが大切なのか",
+    "slides_ja": [
+      "なぜ今\n信頼できるサプリ選びが大切なのか",
+      "見た目だけでなく\n成分 伝え方 ブランド姿勢を見る",
+      "納得して選ぶことが\n毎日の安心につながる"
+    ]
+  },
+  "negative_prompts": [
+    "medical brochure aesthetic",
+    "luxury beauty ad cliches",
+    "hard-sell supplement campaign energy",
+    "dense comparison table",
+    "corporate medical stock look",
+    "discount ecommerce ad feeling",
+    "tiny unreadable Japanese text",
+    "generic quote card",
+    "arbitrary droplet icon",
+    "floating abstract token",
+    "glowing orb prop",
+    "supplement ecommerce ad mood",
+    "blank centered placeholder card",
+    "rainbow soap-bubble texture",
+    "mystical wellness symbol"
+  ],
+  "reference_files": [
+    "brand/references/business-context/creative-packages/creative-package-2026-03-30.md",
+    "brand/references/business-context/creative-packages/production-batch-2026-03-23-to-2026-03-31.md",
+    "brand/references/business-context/visual/Brand Visual Direction.md",
+    "brand/references/business-context/visual/reference-pack/reference-pack-index.md"
+  ],
+  "notes": "March 30 trust-building feed carousel. Use Set 5 warmth to establish human trust, then let Set 1 simplify the reasoning into quiet white-card clarity. Keep the set premium and reflective, not promotional. Slide 1 should feel like an advisor-style trust portrait with real presence, not a generic wellness stock photo. Slide 2 should feel like a clear judgment framework with typographic structure, not a generic abstract card. Slide 3 should resolve as a calm closing card with intentional editorial finish, not a blank placeholder. The Japanese text must render exactly as written."
+}

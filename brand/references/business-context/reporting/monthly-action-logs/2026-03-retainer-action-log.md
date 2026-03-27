@@ -151,3 +151,14 @@
 - `Outcome / impact`: The team now has a concrete recommendation for what the Mitozz Instagram profile should contain during launch so discovery traffic lands on a more trust-building, conversion-ready account surface.
 - `Status`: `completed`
 - `Notes for monthly summary`: Useful strategic guidance for turning launch-phase profile visits into follows without leaning on hype or premature social proof.
+
+### Entry 13
+
+- `Date`: `2026-03-27`
+- `Workstream`: `Instagram feed prompt quality control`
+- `Action`: Rebuilt the March 30 trust-carousel prompt to add harder editorial guardrails, repaired the intended Japanese overlay copy, and regenerated controlled first-pass variants slide by slide before promoting the strongest winners into the live output folder.
+- `Why it matters`: This replaced a weak generic first pass with a more deliberate production-ready set and established a better pattern for using Nano Banana constraints to avoid wasting generation budget on vague prompt retries.
+- `Artifacts updated`: `prompts/instagram/feed/ig-feed-2026-03-30-trustworthy-supplement-choice-v01.json`, `output/instagram/feed/ig-feed-2026-03-30-trustworthy-supplement-choice-v01/slide-01-cover.jpg`, `output/instagram/feed/ig-feed-2026-03-30-trustworthy-supplement-choice-v01/slide-02-trust-criteria.jpg`, `output/instagram/feed/ig-feed-2026-03-30-trustworthy-supplement-choice-v01/slide-03-end-frame.jpg`, `output/instagram/feed/ig-feed-2026-03-30-trustworthy-supplement-choice-v01/archive/first-pass/`, `brand/references/business-context/reporting/monthly-action-logs/2026-03-retainer-action-log.md`
+- `Outcome / impact`: March 30 now has a much stronger trust-led carousel candidate, with cleaner editorial structure on slides 2 and 3 and a more credible cover portrait, while the prompt itself is now tighter for future refinements.
+- `Status`: `completed`
+- `Notes for monthly summary`: Good example of execution-quality rescue work plus stronger prompt discipline that should reduce wasted image-generation spend.

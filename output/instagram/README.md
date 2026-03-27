@@ -7,6 +7,7 @@ This folder holds generated and approved Instagram production assets used across
 - `feed/`: approved feed assets and feed project folders
 - `reels/`: reel source-frame projects
 - `stories/`: story-set projects
+- `templates/`: reusable template explorations, approved template winners, and human-browsable current template aliases
 
 Inside each project folder, use this structure when applicable:
 

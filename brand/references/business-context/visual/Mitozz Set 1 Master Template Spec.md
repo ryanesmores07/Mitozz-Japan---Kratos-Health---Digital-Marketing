@@ -28,7 +28,7 @@ Approved master set:
 
 Supporting references:
 
-- [education-white-card.png](../../../../output/instagram/templates/2026-03-21/education-white-card.png)
+- [set-1-education-white-card.png](../../../../output/instagram/templates/current/set-1-education-white-card.png)
 - [feed-education-white-card-01.png](reference-pack/working-examples/feed-education-white-card-01.png)
 
 ## Canvas Rule

@@ -8,6 +8,7 @@ For reel batches, run `workflows/03A-reel-preflight-and-hard-locks.md` before ge
 
 - Do not generate until the prompt has explicit hard-fail conditions for the asset's biggest risks.
 - If the asset has known high-cost failure modes such as text contamination, pack mismatch, or Story batch drift, encode those as rejection rules in the prompt before running generation.
+- If the tool parameter already controls variant count, do not also ask for "multiple variants" inside the prompt text. The prompt should request one finished image only.
 - Generate 3 variants per asset in the first batch.
 - Keep the same `image_references` across the batch.
 - Keep approved `product-source` references in the batch whenever product accuracy matters.
@@ -19,6 +20,7 @@ For reel batches, run `workflows/03A-reel-preflight-and-hard-locks.md` before ge
   - foreground or glow treatment
 - Pick 1 winner.
 - Refine once if needed.
+- If the failure is systemic rather than aesthetic, stop and tighten the prompt before spending on the next batch.
 
 ## Preflight Gate
 
@@ -29,7 +31,17 @@ Before any paid generation, verify the prompt already contains the right lock ty
 - `batch-uniformity lock` when a Story or carousel set must read as one system
 - `continuity lock` when multiple reel shots must feel like one scene family
 
+Also verify:
+
+- `text-integrity lock`: final Japanese strings are clean UTF-8 with no mojibake, replacement characters, or accidental English contamination
+- `reference-contamination lock`: text-led cards are not inheriting template labels, English footer text, or page numbers from references
+- `single-output lock`: the prompt asks for one finished image only and explicitly rejects contact sheets or multi-panel outputs when the tool uses `n > 1`
+
 If any of those locks are missing, stop and tighten the prompt first.
+
+Recommended text-integrity check before paid generation:
+
+- `powershell -NoProfile -ExecutionPolicy Bypass -File tools/validate-text-integrity.ps1 "<your prompt or doc path here>"`
 
 For reel source-frame batches, also run:
 
@@ -37,6 +49,13 @@ For reel source-frame batches, also run:
 - `powershell -NoProfile -ExecutionPolicy Bypass -File tools/validate-reel-prompt-batch.ps1 "<your reel prompt glob here>"`
 
 Do not generate if the validator returns `FAILED`.
+
+## Token Control
+
+- Do not rerun the full set by default when only one slide or frame failed.
+- Fix the prompt first, then regenerate only the failing asset.
+- Use low-cost settings for exploration, but spend on 3-variant batches only after the prompt passes the preflight gate.
+- If a reference is causing repeat text contamination or layout copying, remove or replace that reference before the next paid run.
 
 ## Reel Execution Loop
 

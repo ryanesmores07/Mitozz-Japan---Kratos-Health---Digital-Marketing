@@ -3,6 +3,8 @@ Nano Banana Instagram Workspace
 
 This workspace is organized for creating and maintaining reusable JSON prompts for Nano Banana, focused on Instagram organic marketing for Mitozz Japan.
 
+It can also support adjacent frontend work when a campaign needs a landing page, article page, Shopify surface, or other branded UI extension.
+
 Current model standard:
 
 - Nano Banana 2 = `gemini-3.1-flash-image-preview`
@@ -68,6 +70,25 @@ This project is wired into Codex using eight project-local skills under `.agents
 
 The repository treats `.agents/skills/` as the single source of truth for skill discovery and maintenance.
 
+In addition to the project-local skills, this workspace can also make use of the external Codex skill at `C:\Users\esmoresernieryanocam\.codex\skills\frontend-skill\SKILL.md` as an optional art-direction layer when the task needs stronger composition, hierarchy, imagery, or motion thinking.
+
+Use that frontend skill for:
+
+- landing pages tied to Instagram campaigns
+- Shopify or article surfaces that need stronger art direction
+- branded microsites, demos, or UI prototypes
+- frontend polish where hierarchy, imagery, restraint, and motion matter
+- campaign-critical Instagram assets that need a stronger visual thesis before prompt writing
+- reels, covers, thumbnails, and story sequences that feel compositionally weak in first-pass direction
+
+Do not use it for:
+
+- normal prompt JSON authoring
+- routine creative-package writing
+- Nano Banana generation tasks
+- asset filing, approval, or delivery work
+- replacing the Mitozz-specific creative decision flow by default
+
 ## Typical Flow
 
 1. Use `mitozz-content-calendar` to create or revise the monthly calendar under `brand/references/business-context/content-planning/`.
@@ -75,12 +96,20 @@ The repository treats `.agents/skills/` as the single source of truth for skill 
 3. Publish that CSV to the shared Google Drive calendar folder with `tools/publish-content-calendar-to-drive.ps1` so Drive stays current while the repo keeps the working copy.
 4. Use the post-calendar flow in `workflows/03-post-calendar-production-flow.md` to resolve the production layer from the approved row.
 5. Use `mitozz-creatives-director` to turn selected calendar rows into creative packages under `brand/references/business-context/creative-packages/`.
-6. Resolve the asset's `template_set` and `slide_blueprint` from the central mapping rules.
-7. Use `mitozz-prompt-engineer` to create or update prompt JSON in `prompts/instagram/feed/` or `prompts/instagram/stories/`.
-8. Use `nano-banana-instagram` to execute Nano Banana MCP using those prompt files.
-9. Review the outputs, approve winners, and promote only the best assets into the visual reference pack when appropriate.
-10. When delivery to Google Drive is needed, use `drive-delivery` to upload only the approved assets and create a delivery receipt.
-11. When meaningful retainer work is completed, use `retainer-reporting` to add it to the current monthly action log.
+6. If the asset is visually high-stakes or the first-pass direction feels weak, apply the frontend-skill lens to strengthen the visual thesis, hierarchy, composition, and motion logic before prompt writing.
+7. Resolve the asset's `template_set` and `slide_blueprint` from the central mapping rules.
+8. Use `mitozz-prompt-engineer` to create or update prompt JSON in `prompts/instagram/feed/` or `prompts/instagram/stories/`.
+9. Use `nano-banana-instagram` to execute Nano Banana MCP using those prompt files.
+10. Review the outputs, approve winners, and promote only the best assets into the visual reference pack when appropriate.
+11. When delivery to Google Drive is needed, use `drive-delivery` to upload only the approved assets and create a delivery receipt.
+12. When meaningful retainer work is completed, use `retainer-reporting` to add it to the current monthly action log.
+
+If a campaign expands into a real webpage or interface, or if an Instagram asset needs the frontend-skill lens, insert one extra step between creative direction and implementation:
+
+1. write a visual thesis
+2. write a content plan: hero, support, detail, final CTA
+3. write an interaction thesis with 2 to 3 motion ideas
+4. apply the frontend skill before building the page
 
 When you want image generation in this workspace without going through the Nano Banana pipeline, use `imagen` instead. It saves selected finals into `output/imagegen/` by default.
 
