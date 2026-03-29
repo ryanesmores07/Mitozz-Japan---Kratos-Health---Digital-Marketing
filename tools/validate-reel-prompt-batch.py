@@ -37,10 +37,25 @@ BOTTLE_NEGATIVE_TERMS = (
     "unreadable label",
 )
 
+LABEL_COPY_TERMS = (
+    "mitozz",
+    "60 capsules",
+    "net weight: 30 g",
+)
+
+APPEARANCE_TERMS = (
+    "deep matte black",
+    "black ribbed cap",
+    "white neck band",
+    "predominantly black front face",
+)
+
 LOCKED_BOTTLE_WORKFLOW = (
     "brand/references/business-context/visual/Mitozz Locked Bottle Workflow.md"
 )
 BOTTLE_SIZE_SPEC = "brand/references/business-context/visual/Mitozz Bottle Size Spec.md"
+BOTTLE_LABEL_SPEC = "brand/references/business-context/visual/Mitozz Bottle Label Spec.md"
+BOTTLE_APPEARANCE_SPEC = "brand/references/business-context/visual/Mitozz Bottle Appearance Spec.md"
 
 
 def flatten_strings(value: object) -> str:
@@ -164,9 +179,35 @@ def validate_prompt(path: Path) -> tuple[list[str], list[str], dict]:
                 f"{path.name}: bottle-led shots must reference Mitozz Bottle Size Spec.md"
             )
 
+        if BOTTLE_LABEL_SPEC.lower() not in reference_text:
+            errors.append(
+                f"{path.name}: bottle-led shots must reference Mitozz Bottle Label Spec.md"
+            )
+
+        if BOTTLE_APPEARANCE_SPEC.lower() not in reference_text:
+            errors.append(
+                f"{path.name}: bottle-led shots must reference Mitozz Bottle Appearance Spec.md"
+            )
+
         if not has_term(bottle_text, BOTTLE_LOCK_TERMS):
             errors.append(
                 f"{path.name}: bottle-led shots must explicitly say the real bottle stays intact"
+            )
+
+        missing_label_terms = [
+            term for term in LABEL_COPY_TERMS if term not in bottle_text
+        ]
+        if missing_label_terms:
+            errors.append(
+                f"{path.name}: bottle-led shots must explicitly describe visible label copy: {', '.join(missing_label_terms)}"
+            )
+
+        missing_appearance_terms = [
+            term for term in APPEARANCE_TERMS if term not in bottle_text
+        ]
+        if missing_appearance_terms:
+            errors.append(
+                f"{path.name}: bottle-led shots must explicitly describe bottle appearance: {', '.join(missing_appearance_terms)}"
             )
 
         if "bottle size spec" not in bottle_text and "locked size spec" not in bottle_text:

@@ -34,6 +34,8 @@ This makes code the source of truth for:
 - border / perimeter wash
 - CTA micro-cues
 
+When Japanese copy quality matters, use explicit `headline_lines` and `subline_lines` in the data JSON instead of relying on browser wraps.
+
 ## Structure
 
 - `templates/`

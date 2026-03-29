@@ -1,0 +1,23 @@
+{
+  "template": "story-reinforcement",
+  "variant": "story-context",
+  "canvas": {
+    "width": 1080,
+    "height": 1920
+  },
+  "accent": {
+    "type": "rings"
+  },
+  "copy": {
+    "kicker": "選ぶ前の視点",
+    "headline_lines": [
+      "見た目だけでなく",
+      "成分や姿勢も",
+      "判断軸に。"
+    ],
+    "body_lines": [
+      "続けるものだからこそ、",
+      "理由で選べることが安心につながる。"
+    ]
+  }
+}

@@ -1,0 +1,149 @@
+{
+  "asset_type": "instagram-feed",
+  "campaign_name": "April 2026 Organic Education",
+  "topic": "Energy is not only about stimulation",
+  "objective": "Educate",
+  "template_set": "Set 4 + Set 3",
+  "slide_blueprint": "reel-4-shot",
+  "asset_archetype": "reel-source-frame",
+  "platform": "instagram",
+  "aspect_ratio": "4:5",
+  "audience": "Sleep-Deprived High Performer",
+  "motion_role": "clean-end-frame",
+  "shot_id": "shot-04",
+  "shot_position": 4,
+  "continuity_tokens": [
+    "same pale morning apartment light world as shots 01 through 03",
+    "same mist-blue and cloud-white atmosphere",
+    "same light oak table surface and window-side domestic setting as shots 02 and 03",
+    "same calm resolution beat after the bottle reveal in shot 03",
+    "Mitozz bottle stays deep matte black with a black ribbed cap, a visible pale white neck band below the cap, and an exact white MITOZZ wordmark on a predominantly black front face",
+    "front pack must match the approved bottle reference label structure, side blocks, and small footer text behavior",
+    "visible front label must keep MITOZZ centered on the front, with 60 Capsules at bottom left and Net Weight: 30 g at bottom right when readable in frame",
+    "keep the real bottle design intact and do not redesign, recolor, simplify, or relabel the bottle",
+    "use the Mitozz bottle size spec for believable lifestyle scale",
+    "no baked-in text"
+  ],
+  "visual_intent": [
+    "quiet premium product end frame",
+    "CTA-safe negative space",
+    "same foundation-first morning world",
+    "feel like the natural final beat of the same reel, not a separate studio setup",
+    "restrained product clarity instead of ad-like heroics"
+  ],
+  "brand_guardrails": [
+    "avoid beauty-ad gloss or theatrical glow",
+    "keep the frame quieter than a classic supplement end card",
+    "preserve exact bottle truth on color, silhouette, cap, and label",
+    "preserve the bottle appearance exactly: deep matte black body, black ribbed cap, visible pale white neck band below the cap, and predominantly black front face",
+    "the visible front label must read MITOZZ, with 60 Capsules and Net Weight: 30 g in the footer when readable in frame",
+    "the scene must be true full-bleed 4:5",
+    "reject and regenerate if bottle color changes or label readability breaks",
+    "reject and regenerate if the front label design, side label blocks, or footer copy behavior drift from the approved bottle reference",
+    "reject and regenerate if MITOZZ, 60 Capsules, or Net Weight: 30 g drift from the approved pack when readable in frame",
+    "reject and regenerate if extra invented subtitle text appears on the front label",
+    "reject and regenerate if the bottle body shifts away from deep matte black, the cap stops being black and ribbed, or the white neck band disappears",
+    "reject and regenerate if the corrected bottle looks pasted in and does not match the scene lighting, reflections, shadows, and camera angle"
+  ],
+  "composition": [
+    "true full-bleed vertical 4:5 framing",
+    "bottle placed slightly off-center on the same light oak morning surface world established in shots 02 and 03",
+    "clear negative space on one side for CTA",
+    "soft curtain daylight context and airy apartment depth should remain in background",
+    "camera should feel like the next nearby angle after shot 03, not a new studio product setup",
+    "stable near-static composition",
+    "no isolated cutout feel"
+  ],
+  "image_references": [
+    {
+      "path": "brand/references/business-context/visual/reference-pack/working-examples/template-set-3-background-plate-v02b-clean-curtain-light.png",
+      "role": "working-example",
+      "influence": [
+        "soft background plate",
+        "morning curtain light",
+        "calm product environment"
+      ],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/source-intake/mitozz-bottle.png",
+      "role": "product-source",
+      "influence": [
+        "bottle silhouette",
+        "true bottle color",
+        "matte black finish",
+        "cap color",
+        "front label fidelity",
+        "footer text visibility"
+      ],
+      "match_strength": "high"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/source-intake/mitozz-bottle-with-tablets.jpg",
+      "role": "product-source",
+      "influence": [
+        "front label structure",
+        "wordmark behavior",
+        "footer text placement",
+        "side block behavior"
+      ],
+      "match_strength": "high"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-product-glow-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "restrained product luminance",
+        "premium finish",
+        "quiet warmth"
+      ],
+      "match_strength": "medium"
+    }
+  ],
+  "reference_strategy": "Use the approved Set 3 background plate for a calm morning end-frame world, use mitozz-bottle.png as the dominant source for true bottle color, matte finish, cap truth, and visible footer text, use mitozz-bottle-with-tablets.jpg to double-lock the front label structure, side blocks, and footer placement, and let the product-glow anchor add only restrained polish.",
+  "variation_guardrails": [
+    "do not make the background too bright or theatrical",
+    "do not center the bottle too aggressively like a hard-sell ad",
+    "keep enough negative space for later CTA text",
+    "reject and regenerate if the product frame looks like a generic supplement commercial",
+    "do not change the existing room, surface, crop, or bottle placement when fixing pack truth"
+  ],
+  "text_overlay": {
+    "allowed": false,
+    "max_words": 0,
+    "tone": "premium, clear, restrained",
+    "font_reference": "Hiragino Sans",
+    "headline_ja": "",
+    "slides_ja": []
+  },
+  "negative_prompts": [
+    "beauty-ad gloss",
+    "invented label",
+    "fitness supplement styling",
+    "hard-sell end card mood",
+    "wrong MITOZZ wordmark",
+    "missing footer text",
+    "white bottle",
+    "white cap",
+    "unreadable label",
+    "white bars",
+    "baked-in text"
+  ],
+  "reference_files": [
+    "brand/references/business-context/creative-packages/creative-package-2026-04-01.md",
+    "brand/references/business-context/visual/Brand Visual Direction.md",
+    "brand/references/business-context/visual/Mitozz Locked Bottle Workflow.md",
+    "brand/references/business-context/visual/Mitozz Bottle Size Spec.md",
+    "brand/references/business-context/visual/Mitozz Bottle Label Spec.md",
+    "brand/references/business-context/visual/Mitozz Bottle Appearance Spec.md"
+  ],
+  "notes": "April 1 reel shot 04. Quiet bottle end frame with true pack fidelity and one clean CTA-safe area. This frame must feel like the natural continuation and closing beat of shots 01, 02, and 03: same pale morning apartment light, same light oak table world, same soft curtain daylight, same restrained domestic calm. Keep the real bottle design intact and do not redesign, recolor, simplify, or relabel the bottle. Use mitozz-bottle.png as the main source for bottle color, matte black material, black cap truth, visible pale white neck band below the cap, MITOZZ wordmark shape, and the visible footer text. Use mitozz-bottle-with-tablets.jpg to double-lock the front label structure and side blocks. The bottle must stay deep matte black, not charcoal-gray, not glossy, and not washed out by the room light. The bottle must keep a black ribbed cap, a visible pale white neck band below the cap, and a predominantly black front face. The visible front label must read MITOZZ, with 60 Capsules at bottom left and Net Weight: 30 g at bottom right when readable in frame. Do not invent extra subtitle copy that is not clearly supported by the approved reference. Use the Mitozz bottle size spec for believable lifestyle scale. Product should feel premium and calm, never loud.",
+  "product_realism_lock": [
+    "keep the current shot composition, room, curtain light, surface, and bottle placement intact",
+    "fix only the bottle design so it matches the approved Mitozz reference",
+    "preserve the bottle appearance exactly: deep matte black body, black ribbed cap, visible pale white neck band below the cap, and predominantly black front face",
+    "lock the exact label structure, centered white MITOZZ wordmark, 60 Capsules footer at bottom left, Net Weight: 30 g footer at bottom right, side label blocks, and footer text behavior to the approved bottle reference",
+    "keep the bottle color and material as deep matte black from mitozz-bottle.png even after adapting it to the scene light",
+    "match the corrected bottle to the shot's existing lighting, reflections, shadow falloff, and viewing angle"
+  ]
+}

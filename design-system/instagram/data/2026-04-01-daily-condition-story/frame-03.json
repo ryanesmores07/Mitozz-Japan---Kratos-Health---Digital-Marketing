@@ -1,0 +1,25 @@
+{
+  "template": "story-reinforcement",
+  "variant": "story-context",
+  "canvas": {
+    "width": 1080,
+    "height": 1920
+  },
+  "accent": {
+    "type": "waves"
+  },
+  "copy": {
+    "kicker": "今日のリールへ",
+    "headline_lines": [
+      "今の自分の",
+      "リズムを",
+      "見てみる。"
+    ],
+    "body_lines": [
+      "気になったら、フィードへ。"
+    ]
+  },
+  "prompt": {
+    "label": "共感したらタップ"
+  }
+}

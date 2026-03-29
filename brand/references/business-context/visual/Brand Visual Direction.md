@@ -67,20 +67,22 @@ Keep the system to two families.
 
 Primary body and Japanese copy:
 
-- Noto Sans JP
-- Weights: Regular, Medium, Bold
+- Hiragino Sans
+- Weights: W3, W4, W6
 
 Editorial accent for English words, campaign titles, and premium moments:
 
-- Cormorant Garamond
-- Weights: SemiBold, Italic
+- Hiragino Mincho ProN
+- Weights: W3, W6
 
 Typography rules:
 
-- Japanese educational text should stay in Noto Sans JP for readability.
-- Use the serif only for short English accents, not dense paragraphs.
+- Japanese educational text should stay in Hiragino Sans for readability and a less-generic premium feel.
+- Use Hiragino Mincho ProN only for short editorial accents, labels, or one-line premium pull moments.
+- Dense education slides should remain sans-serif.
 - Headline spacing should feel open and elegant.
 - Avoid more than two font families in one asset.
+- One font family per slide is preferred unless the accent is intentionally sparse.
 - Keep text blocks short and save-heavy rather than caption-heavy on the artwork.
 
 ## Instagram Design System

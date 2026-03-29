@@ -1,0 +1,111 @@
+{
+  "asset_type": "instagram-feed",
+  "campaign_name": "April 2026 Organic Education",
+  "topic": "Energy is not only about stimulation",
+  "objective": "Educate",
+  "template_set": "Set 4 + Set 3",
+  "slide_blueprint": "reel-4-shot",
+  "asset_archetype": "reel-source-frame",
+  "platform": "instagram",
+  "aspect_ratio": "4:5",
+  "audience": "Sleep-Deprived High Performer",
+  "motion_role": "opening-hook",
+  "shot_id": "shot-01",
+  "shot_position": 1,
+  "continuity_tokens": [
+    "same Japanese professional in early 30s across shots 01 to 03",
+    "quiet premium home-morning environment",
+    "pale oak surfaces, cloud white, mist blue, soft daylight",
+    "oatmeal knit or pale blue home-work styling",
+    "no coffee hero prop and no baked-in text"
+  ],
+  "visual_intent": [
+    "premium Japanese wellness editorial",
+    "home-morning foundation rhythm",
+    "calm self-check before the day accelerates",
+    "strong text-safe negative space"
+  ],
+  "brand_guardrails": [
+    "avoid repeating the March 25 seated desk composition",
+    "avoid caffeine-ad or productivity-hack energy",
+    "avoid gym or performance-supplement cues",
+    "keep the scene calm, premium, and believable",
+    "the scene must fill the entire 4:5 canvas with no white bands, blank bars, inset-card framing, or smaller image area inside the frame"
+  ],
+  "composition": [
+    "true full-bleed vertical 4:5 framing",
+    "medium shot",
+    "subject standing or lightly leaning near a window or kitchen counter",
+    "subject slightly right of center",
+    "generous left-side breathing room inside the scene itself",
+    "one clear action only",
+    "extend the environment naturally to all canvas edges"
+  ],
+  "image_references": [
+    {
+      "path": "brand/references/business-context/visual/reference-pack/working-examples/template-set-4-lifestyle-v02-no-bottle.png",
+      "role": "working-example",
+      "influence": [
+        "routine realism",
+        "vertical breathing room",
+        "premium everyday calm"
+      ],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-editorial-whitespace-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "whitespace",
+        "editorial restraint",
+        "soft light calm"
+      ],
+      "match_strength": "high"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "palette",
+        "mist-blue atmosphere",
+        "soft daylight control"
+      ],
+      "match_strength": "medium"
+    }
+  ],
+  "reference_strategy": "Use the approved Set 4 lifestyle working example for routine realism, then let the whitespace and cool-palette anchors hold premium restraint and a calm morning atmosphere.",
+  "variation_guardrails": [
+    "do not reuse the seated laptop-desk setup from March 25",
+    "switch to a home-morning foundation scene instead of visible work strain",
+    "keep the subject composed rather than obviously exhausted",
+    "reject and regenerate if coffee, laptop focus, or office-desk coding dominates the frame",
+    "reject and regenerate if the image is not true full-bleed 4:5"
+  ],
+  "text_overlay": {
+    "allowed": false,
+    "max_words": 0,
+    "tone": "premium, clear, restrained",
+    "font_reference": "Hiragino Sans",
+    "headline_ja": "",
+    "slides_ja": []
+  },
+  "negative_prompts": [
+    "cheap stock photo energy",
+    "dramatic exhaustion acting",
+    "coffee commercial mood",
+    "messy room clutter",
+    "startup hustle cliches",
+    "fitness-ad styling",
+    "white bars",
+    "letterboxing",
+    "pillarboxing",
+    "floating card layout",
+    "baked-in text"
+  ],
+  "reference_files": [
+    "brand/references/business-context/creative-packages/creative-package-2026-04-01.md",
+    "brand/references/business-context/visual/Brand Visual Direction.md",
+    "brand/references/business-context/visual/Mitozz Approved Post Library.csv"
+  ],
+  "notes": "April 1 reel shot 01. Opening hook should feel like a soft morning self-check before momentum takes over. Full-bleed 4:5 only, with real in-scene negative space."
+}

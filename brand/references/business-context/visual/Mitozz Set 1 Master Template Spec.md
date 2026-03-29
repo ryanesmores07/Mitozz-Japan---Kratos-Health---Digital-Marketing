@@ -69,11 +69,11 @@ Card:
 
 Typography:
 
-- family = `Noto Sans JP`
-- cover headline weight = `Bold`
-- cover supporting line weight = `Medium`
-- inner slide weight = `Medium`
-- CTA slide weight = `Medium`
+- family = `Hiragino Sans`
+- cover headline weight = `W6`
+- cover supporting line weight = `W4`
+- inner slide weight = `W4`
+- CTA slide weight = `W4`
 - text color = dark charcoal, approximately `#2F3338` to `#3A3F45`
 - text opacity = visually full, stable across the batch
 - do not use pure black
@@ -125,14 +125,14 @@ Practical rule:
 
 Use one family only:
 
-- `Noto Sans JP`
+- `Hiragino Sans`
 
 Weights:
 
-- cover headline = `Bold`
-- cover supporting line = `Medium`
-- inner slides = `Medium`
-- CTA slides = `Medium`
+- cover headline = `W6`
+- cover supporting line = `W4`
+- inner slides = `W4`
+- CTA slides = `W4`
 
 Text behavior:
 
@@ -249,7 +249,7 @@ If any of those drift, regenerate before approval.
 Use this block as the default `Set 1` generation instruction. Add only the slide-specific copy and motif.
 
 ```text
-Create a premium Japanese Instagram carousel slide for Mitozz in the locked Set 1 Education White Card system. Use a 4:5 portrait canvas at 928x1152. The canvas must behave as one full rounded white card, not a floating card on a separate background. Match the March 23 master exactly: full-card composition, large soft rounded corners, very thin mist-blue perimeter wash close to the edge, no thick outer border, no empty gradient frame, no hard stroke. Use Noto Sans JP only. Text must be dark charcoal, not pure black, with stable weight and opacity across the batch. Cover headline uses Bold. Supporting line, inner slides, and CTA text use Medium. Keep generous top breathing room, even side margins, and clear separation between text and supporting visual. Text lives in the upper half to upper-middle zone. Supporting motif lives in the lower half and stays secondary to the copy. Base feel is cloud white, mist blue, restrained apricot warmth, calm premium editorial softness, minimal but subtly interactive. Reject decorative drift: no heavy borders, no mixed font personalities, no fake buttons, no rogue CTA labels, no random darker text, no louder slide than the rest. If this slide is part of a batch, it must match the March 23 border thickness, card size, corner behavior, typography density, spacing rhythm, support-visual opacity, and edge-glow softness.
+Create a premium Japanese Instagram carousel slide for Mitozz in the locked Set 1 Education White Card system. Use a 4:5 portrait canvas at 928x1152. The canvas must behave as one full rounded white card, not a floating card on a separate background. Match the March 23 master exactly: full-card composition, large soft rounded corners, very thin mist-blue perimeter wash close to the edge, no thick outer border, no empty gradient frame, no hard stroke. Use Hiragino Sans only. Text must be dark charcoal, not pure black, with stable weight and opacity across the batch. Cover headline uses W6. Supporting line, inner slides, and CTA text use W4. Keep generous top breathing room, even side margins, and clear separation between text and supporting visual. Text lives in the upper half to upper-middle zone. Supporting motif lives in the lower half and stays secondary to the copy. Base feel is cloud white, mist blue, restrained apricot warmth, calm premium editorial softness, minimal but subtly interactive. Reject decorative drift: no heavy borders, no mixed font personalities, no fake buttons, no rogue CTA labels, no random darker text, no louder slide than the rest. If this slide is part of a batch, it must match the March 23 border thickness, card size, corner behavior, typography density, spacing rhythm, support-visual opacity, and edge-glow softness.
 ```
 
 ## Slide Role Add-Ons

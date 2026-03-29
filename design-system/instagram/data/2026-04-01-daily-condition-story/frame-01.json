@@ -1,0 +1,24 @@
+{
+  "template": "story-reinforcement",
+  "variant": "story-question",
+  "canvas": {
+    "width": 1080,
+    "height": 1920
+  },
+  "accent": {
+    "type": "portrait",
+    "path": "/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/output/instagram/reels/2026-04-01-daily-foundation-reel/current/shot-01-opening-hook.png"
+  },
+  "copy": {
+    "kicker": "今日の見方",
+    "headline_lines": [
+      "その日の調子を",
+      "勢いだけで",
+      "進めていませんか。"
+    ],
+    "body_lines": [
+      "忙しい日ほど、まず見たいのは",
+      "その日の土台かもしれません。"
+    ]
+  }
+}

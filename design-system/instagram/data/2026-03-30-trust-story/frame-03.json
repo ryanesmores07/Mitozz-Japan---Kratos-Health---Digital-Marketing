@@ -1,0 +1,27 @@
+{
+  "template": "story-reinforcement",
+  "variant": "story-poll",
+  "canvas": {
+    "width": 1080,
+    "height": 1920
+  },
+  "accent": {
+    "type": "waves"
+  },
+  "copy": {
+    "kicker": "投票で教えてください",
+    "headline_lines": [
+      "あなたが最初に",
+      "見る点は？"
+    ],
+    "body_lines": [
+      "下の投票で教えてください。"
+    ]
+  },
+  "prompt": {
+    "label": "まず見るのはどちらですか？"
+  },
+  "safe_zone": {
+    "type": "poll"
+  }
+}

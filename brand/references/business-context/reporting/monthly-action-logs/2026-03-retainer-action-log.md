@@ -162,3 +162,91 @@
 - `Outcome / impact`: March 30 now has a much stronger trust-led carousel candidate, with cleaner editorial structure on slides 2 and 3 and a more credible cover portrait, while the prompt itself is now tighter for future refinements.
 - `Status`: `completed`
 - `Notes for monthly summary`: Good example of execution-quality rescue work plus stronger prompt discipline that should reduce wasted image-generation spend.
+
+### Entry 14
+
+- `Date`: `2026-03-29`
+- `Workstream`: `Instagram brand-system strategy`
+- `Action`: Evaluated whether Mitozz should introduce a character or animated trademark icon for organic Instagram and compared that idea against current Japanese brand patterns and Mitozz’s premium science-led positioning.
+- `Why it matters`: A mascot-like system could increase memorability, but it could also undermine trust and premium restraint if it pushes the account toward a cute or mass-market tone that does not fit Mitozz’s launch-stage conversion goals.
+- `Artifacts updated`: `brand/references/business-context/reporting/monthly-action-logs/2026-03-retainer-action-log.md`
+- `Outcome / impact`: The team now has a clearer strategic recommendation to avoid a full mascot-led Instagram identity for Mitozz and to consider only a restrained explainer motif if a recurring branded device is needed later.
+- `Status`: `completed`
+- `Notes for monthly summary`: Useful strategic decision on what kind of recurring brand device supports organic growth without diluting Mitozz’s premium science-first positioning.
+
+### Entry 15
+
+- `Date`: `2026-03-29`
+- `Workstream`: `Instagram asset-system strategy`
+- `Action`: Researched how many reusable asset sets Mitozz should operate with, compared the current visual system against Japanese brand account patterns, and defined a tighter template-family architecture intended to reduce Nano Banana prompt waste and design inconsistency.
+- `Why it matters`: The current risk is not a lack of design ideas, but too much layout reinvention per prompt. A smaller, better-structured set library should improve brand recognition, reduce drift in typography and spacing, and lower wasted generation spend.
+- `Artifacts updated`: `brand/references/business-context/visual/Mitozz Asset Set Architecture Recommendation.md`, `brand/references/business-context/reporting/monthly-action-logs/2026-03-retainer-action-log.md`
+- `Outcome / impact`: The workspace now has a clear strategic recommendation to operate with `5` master template families and `8` locked operational sets, with product variation handled through a small plate library instead of constant new layouts.
+- `Status`: `completed`
+- `Notes for monthly summary`: Strong strategic systems work that should improve creative consistency and make future prompt-building materially more efficient.
+
+### Entry 16
+
+- `Date`: `2026-03-29`
+- `Workstream`: `Instagram visual system refinement`
+- `Action`: Audited the newly added external reference sets `A` through `H`, mapped the strongest reusable patterns into the Mitozz asset system, and upgraded the typography direction and compositor stack toward a more premium, less-generic Japanese editorial feel.
+- `Why it matters`: The external references are structurally useful, but they also expose where mass-market typography and repeated promo behaviors would weaken Mitozz. Translating them selectively into a cleaner system should improve both prompt control and perceived brand quality.
+- `Artifacts updated`: `brand/references/business-context/visual/Mitozz External Set Audit And Adaptation.md`, `brand/references/business-context/visual/Brand Visual Direction.md`, `brand/references/business-context/visual/Mitozz Instagram Template System.md`, `brand/references/business-context/visual/Mitozz Instagram Production Standard.md`, `brand/references/business-context/visual/Mitozz Set 1 Master Template Spec.md`, `design-system/instagram/styles/system.css`, `brand/references/business-context/reporting/monthly-action-logs/2026-03-retainer-action-log.md`
+- `Outcome / impact`: The workspace now has a set-by-set adaptation memo for the new references plus an executable typography upgrade that shifts the design system toward `Hiragino Sans` with restrained editorial serif support instead of relying on the previous generic `Noto Sans JP` baseline.
+- `Status`: `completed`
+- `Notes for monthly summary`: High-value visual-systems work that should make future Mitozz assets look more premium while keeping production more repeatable.
+
+### Entry 17
+
+- `Date`: `2026-03-29`
+- `Workstream`: `Instagram asset refresh and compositor production`
+- `Action`: Rebuilt the March 30 trust carousel using the upgraded Mitozz typography system and a stronger compositor structure influenced by the new external reference-set audit, then rendered refreshed PNG slides for the three-frame feed asset.
+- `Why it matters`: The earlier March 30 set proved the direction, but the middle and closing slides were still too sparse. Rebuilding them through the compositor adds a more intentional editorial hierarchy while reducing dependence on full-slide AI invention.
+- `Artifacts updated`: `design-system/instagram/templates/trust-carousel.html`, `design-system/instagram/styles/system.css`, `design-system/instagram/data/2026-03-30-trust-carousel/slide-01.json`, `design-system/instagram/data/2026-03-30-trust-carousel/slide-02.json`, `design-system/instagram/data/2026-03-30-trust-carousel/slide-03.json`, `tools/render-instagram-template.ps1`, `output/instagram/feed/ig-feed-2026-03-30-trustworthy-supplement-choice-v01/rebuild/slide-01.png`, `output/instagram/feed/ig-feed-2026-03-30-trustworthy-supplement-choice-v01/rebuild/slide-02.png`, `output/instagram/feed/ig-feed-2026-03-30-trustworthy-supplement-choice-v01/rebuild/slide-03.png`, `brand/references/business-context/reporting/monthly-action-logs/2026-03-retainer-action-log.md`
+- `Outcome / impact`: March 30 now has a cleaner compositor-based rebuild with a more premium Japanese editorial feel, clearer trust-criteria framing, and a reusable cross-platform rendering path for future text-led Mitozz carousels.
+- `Status`: `completed`
+- `Notes for monthly summary`: Strong example of turning strategic design-system refinement into a concrete production asset refresh with reusable tooling improvements.
+
+### Entry 18
+
+- `Date`: `2026-03-29`
+- `Workstream`: `Instagram production workflow hardening`
+- `Action`: Refined the March 30 trust-carousel middle and closing slides to a more finished editorial standard, added explicit compositor support for controlled Japanese subline breaks, and introduced a mandatory Mitozz asset review gate across the active workflow, production standard, and generation skills.
+- `Why it matters`: The main risk was no longer just weak individual slides, but a workflow that could still let first-pass assets through with unresolved critique holes, especially around Japanese typography and closing-slide finish. Locking the review pass into the system should improve final quality while reducing wasted reruns.
+- `Artifacts updated`: `design-system/instagram/templates/trust-carousel.html`, `design-system/instagram/styles/system.css`, `design-system/instagram/data/2026-03-30-trust-carousel/slide-02.json`, `design-system/instagram/data/2026-03-30-trust-carousel/slide-03.json`, `output/instagram/feed/ig-feed-2026-03-30-trustworthy-supplement-choice-v01/rebuild/slide-02.png`, `output/instagram/feed/ig-feed-2026-03-30-trustworthy-supplement-choice-v01/rebuild/slide-03.png`, `brand/references/business-context/visual/Mitozz Asset Review Gate.md`, `brand/references/business-context/visual/Mitozz Instagram Production Standard.md`, `workflows/03-generate-and-approve.md`, `.agents/skills/mitozz-creatives-director/SKILL.md`, `.agents/skills/mitozz-prompt-engineer/SKILL.md`, `.agents/skills/nano-banana-instagram/SKILL.md`, `design-system/instagram/README.md`, `brand/references/business-context/visual/Mitozz Generation Lessons Log.md`, `brand/references/business-context/visual/README.md`, `brand/references/business-context/reporting/monthly-action-logs/2026-03-retainer-action-log.md`
+- `Outcome / impact`: Mitozz now has an explicit internal review gate that forces critique and refinement before an asset is treated as final, plus a stronger text-led compositor path that keeps Japanese line breaks under design control instead of leaving them to accidental browser wraps.
+- `Status`: `completed`
+- `Notes for monthly summary`: High-value production-systems work that should materially improve final asset quality and make future Mitozz approvals more consistent and less wasteful.
+
+### Entry 19
+
+- `Date`: `2026-03-29`
+- `Workstream`: `Instagram asset memory and source-image workflow`
+- `Action`: Added an approved-post memory system for feed posts and Story sets, backfilled the current March asset history into a structured library, and routed future stock-style image needs through Nano Banana source-image prompts owned by the prompt-engineering workflow instead of outside stock libraries.
+- `Why it matters`: The main efficiency problem is not only prompt quality, but forgetting what has already been published and then either repeating ourselves accidentally or reinventing too much. A lightweight post library plus a locked source-image rule should improve reuse discipline, reduce repetitive outputs, and keep stock-style imagery more brand-aligned.
+- `Artifacts updated`: `brand/references/business-context/visual/Mitozz Approved Post Library.md`, `brand/references/business-context/visual/Mitozz Approved Post Library.csv`, `brand/references/business-context/visual/README.md`, `workflows/02-build-creative-package.md`, `workflows/03-post-calendar-production-flow.md`, `workflows/03-generate-and-approve.md`, `.agents/skills/mitozz-instagram-strategist/SKILL.md`, `.agents/skills/mitozz-creatives-director/SKILL.md`, `.agents/skills/mitozz-prompt-engineer/SKILL.md`, `.agents/skills/nano-banana-instagram/SKILL.md`, `prompts/instagram/README.md`, `prompts/instagram/stories/ig-story-2026-03-30-trust-question-story-v01.json`, `brand/references/business-context/reporting/monthly-action-logs/2026-03-retainer-action-log.md`
+- `Outcome / impact`: Mitozz now has one lightweight memory layer for approved feed and Story assets, current March outputs are already registered for reuse and switch-up decisions, and future stock-style support imagery is explicitly routed through Nano Banana plus the prompt-engineer layer instead of outside stock.
+- `Status`: `completed`
+- `Notes for monthly summary`: Strong systems improvement that should reduce wasted creative iterations, improve controlled reuse, and make future prompt execution more brand-consistent.
+
+### Entry 20
+
+- `Date`: `2026-03-29`
+- `Workstream`: `April production execution and workflow validation`
+- `Action`: Produced the April 1 feed-and-story package under the new memory-based workflow, including a new reel creative package, four approved Nano Banana source frames for the April 1 reel, a compositor-led same-day Story set, a freelancer-ready reel handoff, and a renderer fix after the local Story export path exposed a file-access issue.
+- `Why it matters`: This was the first real proof that the new system can do more than document rules. It mapped the next calendar row automatically, reused the right template family without repeating March 25 too literally, and generated real April production assets while keeping Japanese line breaks, pack truth, and output hygiene under tighter control.
+- `Artifacts updated`: `brand/references/business-context/creative-packages/creative-package-2026-04-01.md`, `brand/references/business-context/creative-packages/reel-edit-blueprint-2026-04-01.md`, `brand/references/business-context/creative-packages/reel-freelancer-handoff-2026-04-01.md`, `prompts/instagram/feed/ig-feed-reel-2026-04-01-daily-foundation-shot-01-v01.json`, `prompts/instagram/feed/ig-feed-reel-2026-04-01-daily-foundation-shot-02-v01.json`, `prompts/instagram/feed/ig-feed-reel-2026-04-01-daily-foundation-shot-03-v01.json`, `prompts/instagram/feed/ig-feed-reel-2026-04-01-daily-foundation-shot-04-v01.json`, `prompts/instagram/stories/ig-story-2026-04-01-daily-condition-view-v01.json`, `design-system/instagram/data/2026-04-01-daily-condition-story/frame-01.json`, `design-system/instagram/data/2026-04-01-daily-condition-story/frame-02.json`, `design-system/instagram/data/2026-04-01-daily-condition-story/frame-03.json`, `tools/render-instagram-template.ps1`, `output/instagram/reels/2026-04-01-daily-foundation-reel/current/shot-01-opening-hook.png`, `output/instagram/reels/2026-04-01-daily-foundation-reel/current/shot-02-reframe.png`, `output/instagram/reels/2026-04-01-daily-foundation-reel/current/shot-03-product-reveal.png`, `output/instagram/reels/2026-04-01-daily-foundation-reel/current/shot-04-end-frame.png`, `output/instagram/stories/ig-story-2026-04-01-daily-condition-view-v01/production/frame-01-hook.png`, `output/instagram/stories/ig-story-2026-04-01-daily-condition-view-v01/production/frame-02-context.png`, `output/instagram/stories/ig-story-2026-04-01-daily-condition-view-v01/production/frame-03-cta.png`, `brand/references/business-context/visual/Mitozz Approved Post Library.md`, `brand/references/business-context/visual/Mitozz Approved Post Library.csv`, `brand/references/business-context/reporting/monthly-action-logs/2026-03-retainer-action-log.md`
+- `Outcome / impact`: April 1 is now production-ready at the source-asset level for the reel and fully production-ready for the Story set, the approved-post library has its first April entries, and the shared renderer has a practical fix for future local-image Story exports.
+- `Status`: `completed`
+- `Notes for monthly summary`: Strong example of using the new production system on a live upcoming date, not just as documentation, while also tightening the toolchain through a real export bug.
+
+### Entry 21
+
+- `Date`: `2026-03-30`
+- `Workstream`: `Production delivery and calendar sync`
+- `Action`: Normalized the approved April 1 reel and Story deliverables into a consistent client-facing naming pattern, uploaded both approved sets to their mapped Google Drive destinations, and synced the resulting Drive folder links back into the April content calendar locally and in the shared Google Sheet.
+- `Why it matters`: Production quality is not only about making the assets, but also about handing them off cleanly. Consistent filenames, reliable Drive delivery, and a live calendar link column reduce downstream confusion and make it much easier to locate the final approved assets later.
+- `Artifacts updated`: `output/instagram/reels/2026-04-01-daily-foundation-reel/delivery/2026-04-01-mitozz-feed-reel.mp4`, `output/instagram/stories/ig-story-2026-04-01-daily-condition-view-v01/delivery/2026-04-01-mitozz-story-support-01-hook.png`, `output/instagram/stories/ig-story-2026-04-01-daily-condition-view-v01/delivery/2026-04-01-mitozz-story-support-02-context.png`, `output/instagram/stories/ig-story-2026-04-01-daily-condition-view-v01/delivery/2026-04-01-mitozz-story-support-03-cta.png`, `brand/references/business-context/content-planning/Mitozz Instagram Content Calendar - 2026 - April.csv`, `brand/references/business-context/reporting/delivery-receipts/2026-03-30-001745-reels-drive-delivery.md`, `brand/references/business-context/reporting/delivery-receipts/2026-03-30-001801-stories-drive-delivery.md`, `brand/references/business-context/reporting/monthly-action-logs/2026-03-retainer-action-log.md`
+- `Outcome / impact`: April 1 now has clean delivery-ready filenames, live Drive folders for both the feed reel and Story support set, and matching asset links visible in the working CSV and shared April calendar sheet.
+- `Status`: `completed`
+- `Notes for monthly summary`: Good delivery-operations milestone that closes the loop from production to client-facing handoff and reduces future asset-tracking friction.

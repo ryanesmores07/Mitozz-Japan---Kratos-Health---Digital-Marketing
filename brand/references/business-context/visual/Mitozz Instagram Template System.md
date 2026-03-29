@@ -37,7 +37,7 @@ These elements should stay consistent across almost every asset:
 - palette built around Cloud White, Mist Blue, Steel Blue, and restrained Apricot Glow
 - large amounts of whitespace
 - minimal composition with one clear message per frame
-- clean Japanese-premium typography led by `Noto Sans JP`
+- clean Japanese-premium typography led by `Hiragino Sans`, with very restrained `Hiragino Mincho ProN` accents only when the slide benefits from a more editorial pull
 - editorial restraint with short English accents only when useful
 - soft, luminous lighting
 - calm, touchable surfaces and frosted atmosphere

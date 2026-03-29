@@ -21,6 +21,7 @@ If the prompt work materially improves production readiness, consistency, or exe
    - `brand/references/business-context/visual/Brand Visual Direction.md`
    - `brand/references/business-context/visual/Brand Visual Direction.pdf`
    - `brand/references/business-context/visual/Mitozz Template Library Index.md`
+   - `brand/references/business-context/visual/Mitozz Approved Post Library.csv`
    - `brand/references/business-context/visual/template-mapping-rules.json`
    - `brand/references/business-context/visual/reference-pack/reference-pack-index.md`
    - `brand/references/business-context/visual/reference-pack/style-anchors/`
@@ -115,13 +116,26 @@ Product-source rules:
 - set `role` to `product-source`
 - keep `influence` focused on pack fidelity, label placement, cap finish, bottle silhouette, or tablet relationship
 - do not use product-source references to control palette, typography, or overall composition
+- treat the bottle design as locked, but still describe how it should inherit the target shot's light direction, reflection behavior, shadow softness, and camera angle so it belongs naturally inside the scene
+- when the bottle label is visible, explicitly write the visible front-label copy and structure into the prompt, not just "accurate label" language
+- use `brand/references/business-context/visual/Mitozz Bottle Label Spec.md` whenever visible label truth matters
+- use `brand/references/business-context/visual/Mitozz Bottle Appearance Spec.md` whenever the bottle appears
+
+Stock-style source-image rule:
+
+- when a feed or Story needs human, object, lifestyle, or environment imagery and no owned photo or product-truth source is required, create a dedicated Nano Banana source-image prompt instead of assuming outside stock
+- keep that prompt focused on the image plate or background, not the full text-led asset, when a compositor path is available
+- use the approved post library to check whether a similar source-image strategy already exists and whether it should be reused or switched up
 
 When a reel shot includes the Mitozz bottle as a visible focal element:
 
 - do not rely on the `product-source` image alone
 - explicitly write the bottle description into the prompt fields
+- explicitly write the bottle appearance into the prompt fields: deep matte black body, black ribbed cap, visible pale white neck band, and predominantly black front face
 - explicitly describe the front label orientation and readability
 - include the bottle's visible form details such as silhouette, cap finish, bottle material/color, and label block structure
+- explicitly spell out the visible front-label copy when readable in frame: `MITOZZ`, `60 Capsules`, and `Net Weight: 30 g`
+- do not invent extra subtitle copy unless a separate approved reference clearly shows it
 - treat this written pack description as mandatory for bottle-led reel shots, especially product reveals and CTA end frames
 - prefer concise factual wording such as "Mitozz supplement bottle with the real label facing forward, clean white bottle body, white cap, and clear centered front label blocks" unless a newer approved source photo requires a more exact description
 
@@ -157,7 +171,12 @@ Add explicit hard-fail wording whenever relevant:
 For bottle-led shots, encode a rejection rule in plain language:
 
 - `reject and regenerate if bottle color changes`
+- `reject and regenerate if the bottle body is no longer deep matte black`
+- `reject and regenerate if the black ribbed cap or pale white neck band disappear`
 - `reject and regenerate if label becomes unreadable, simplified, or invented`
+- `reject and regenerate if the visible front-label copy no longer matches the approved Mitozz bottle reference`
+- `reject and regenerate if the bottle looks pasted on and does not match the scene's lighting, reflections, shadows, or angle`
+- `do not mark done until the generated bottle frame has been visually checked against the approved bottle reference image`
 
 ## Story Batch Rules
 
@@ -182,12 +201,16 @@ Before finalizing a prompt, verify:
 - the prompt includes `asset_archetype` and `reference_strategy`
 - the prompt includes variation guardrails so outputs stay cohesive without becoming repetitive
 - reel prompt sets carry consistent continuity tokens and clear shot roles per asset
+- text-led assets route key Japanese line breaks into controlled design data or otherwise avoid relying on accidental auto-wrap
+- the approved post library has been checked so the prompt is not reusing the last successful asset too literally
 
 Do not finalize a prompt if:
 
 - the prompt leaves text contamination ambiguous on a text-free source asset
 - the prompt leaves bottle color or label fidelity ambiguous on a bottle-led asset
+- the prompt leaves bottle realism ambiguous on a bottle-led asset, including whether the locked pack design should still adapt to the shot's light and perspective
 - the prompt leaves Story batch architecture ambiguous across frames
+- the prompt or paired design data leaves key Japanese headline or subline breaks ambiguous on a text-led asset
 
 ## Output
 

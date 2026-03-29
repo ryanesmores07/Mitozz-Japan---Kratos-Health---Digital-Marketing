@@ -55,6 +55,7 @@ These belong downstream.
 7. Review against the batch consistency rules and the lessons log.
 8. Regenerate only the failing outputs or revise only the unclear handoff sections.
 9. Promote only approved outputs into the working set.
+10. Register approved feed posts and Story sets in `brand/references/business-context/visual/Mitozz Approved Post Library.csv`.
 
 ## Minimal Post-Calendar Data Model
 
@@ -112,6 +113,27 @@ Approved story types:
 - `route-cta`
 
 This keeps the story strategy operational without cluttering the planning sheet.
+
+## Asset Memory Rule
+
+Approved feed posts and Story sets should not live only in output folders.
+
+After approval:
+
+- log the asset in `brand/references/business-context/visual/Mitozz Approved Post Library.csv`
+- note what was reused successfully
+- note what should change next time
+- record the `source_strategy` so we know whether the asset used full AI, a compositor path, a real-photo workflow, or a Nano Banana source image
+
+This is the lightweight way to behave more like a brand system without overbuilding tooling.
+
+## Stock-Image Rule
+
+If a feed or Story needs stock-style human, object, lifestyle, or environment imagery:
+
+- do not default to outside stock libraries
+- have the prompt engineer create a dedicated Nano Banana prompt for the source image
+- keep text-led assets design-first when possible so Nano Banana only has to generate the image plate
 
 ## Best-Practice Rule
 

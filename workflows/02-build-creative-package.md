@@ -11,6 +11,7 @@ This workflow starts after the calendar-to-production handoff described in `work
 - `brand/references/business-context/visual/Brand Visual Direction.md`
 - `brand/references/business-context/visual/Mitozz Instagram Production Standard.md`
 - `brand/references/business-context/visual/Mitozz Instagram Story Strategy.md` when the asset is a Story
+- `brand/references/business-context/visual/Mitozz Approved Post Library.csv`
 - `brand/references/business-context/visual/Mitozz Template Library Index.md`
 - `brand/references/business-context/visual/template-mapping-rules.json`
 - `brand/references/business-context/visual/reference-pack/reference-pack-index.md`
@@ -41,6 +42,7 @@ Then resolve the downstream production layer:
 - Resolve `Template Set` and `Slide Blueprint` from the mapping rules before deciding layout details.
   - canonical resolver: `tools/resolve-template-mapping.py`
   - windows wrapper: `tools/resolve-template-mapping.ps1`
+- Check `brand/references/business-context/visual/Mitozz Approved Post Library.csv` before locking the concept so reuse stays intentional and recent assets are not repeated too literally.
 - Decide whether the asset needs the optional frontend-skill lens before prompt writing.
   - use it when the asset is campaign-critical, visually high-stakes, landing-page-connected, or weak in first-pass composition
   - use it to sharpen visual thesis, hierarchy, image dominance, spacing, and motion logic
@@ -61,6 +63,7 @@ Then resolve the downstream production layer:
 - Write `reference_strategy` in one short sentence.
 - Write `variation_guardrails` as explicit change rules.
 - Specify what must vary from the references so the result feels on-theme but not repetitive.
+- If stock-style human, object, lifestyle, or environment imagery is needed and no owned or product-truth source is required, route it to a Nano Banana source-image prompt instead of outside stock.
 
 If the frontend-skill lens is used, add these internal planning notes before finalizing the package:
 

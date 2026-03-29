@@ -32,14 +32,18 @@ Approved real bottle sources:
 Supporting scale documentation:
 
 - `brand/references/business-context/visual/Mitozz Bottle Size Spec.md`
+- `brand/references/business-context/visual/Mitozz Bottle Label Spec.md`
+- `brand/references/business-context/visual/Mitozz Bottle Appearance Spec.md`
 
 These images control:
 
 - bottle silhouette
 - body color
 - cap finish
+- neck band visibility
 - label placement
 - label structure
+- visible front-label copy
 - tablet scale and relationship
 - realistic hand-to-bottle size relationship
 
@@ -153,6 +157,9 @@ When building prompts for bottle-led assets, explicitly state:
 
 - `keep the real bottle design intact`
 - `do not redesign, recolor, simplify, or relabel the bottle`
+- `preserve the deep matte black body, black ribbed cap, and visible pale white neck band`
+- `preserve the visible front-label wording MITOZZ, 60 Capsules, and Net Weight: 30 g when visible`
+- `do not invent subtitle copy that is not clearly supported by the approved reference`
 - `match surrounding light direction and shadow behavior to the bottle`
 - `make the bottle feel grounded on the surface`
 - `preserve realistic scale and contact shadow`
@@ -165,6 +172,8 @@ When building prompts for bottle-led assets, explicitly state:
 Approve a bottle-led asset only if:
 
 - the bottle still looks like the real Mitozz package
+- the bottle appearance still matches the approved pack: deep matte black body, black ribbed cap, visible pale white neck band, and predominantly black front face
+- the visible front-label wording and footer structure still match the approved pack when readable in frame
 - the environment feels premium and natural
 - the bottle does not look pasted in
 - lighting feels consistent across the full frame

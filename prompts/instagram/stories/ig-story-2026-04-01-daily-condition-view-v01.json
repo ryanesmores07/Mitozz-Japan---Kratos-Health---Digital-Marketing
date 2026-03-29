@@ -1,0 +1,96 @@
+{
+  "asset_type": "instagram-story",
+  "campaign_name": "April 2026 Organic Education",
+  "topic": "Daily condition perspective story",
+  "objective": "Reinforce the April 1 reel with a softer self-check prompt",
+  "template_set": "Set 1",
+  "slide_blueprint": "story-3-frame",
+  "asset_archetype": "story-reinforcement",
+  "platform": "instagram",
+  "aspect_ratio": "9:16",
+  "audience": "Sleep-Deprived High Performer",
+  "visual_intent": [
+    "design-first Story reinforcement",
+    "daily-foundation copy rhythm",
+    "same-day routing support for the April 1 reel",
+    "Japanese-premium mobile readability"
+  ],
+  "brand_guardrails": [
+    "keep it lighter than the reel",
+    "protect Story-safe top and bottom zones",
+    "keep all three frames in one calm system",
+    "avoid visible English-facing internal labels",
+    "keep the CTA frame as a soft route to the feed, not a sales push"
+  ],
+  "composition": [
+    "9:16 vertical framing",
+    "frame 1 may borrow a soft accent plate from the reel opening frame",
+    "frames 2 and 3 stay design-first with controlled text spacing",
+    "keep Japanese copy short and authored by line",
+    "do not rely on auto-wrapping for key lines"
+  ],
+  "image_references": [
+    {
+      "path": "brand/references/business-context/visual/reference-pack/working-examples/story-busy-day-context-hook-01.png",
+      "role": "working-example",
+      "influence": [
+        "Story pacing",
+        "quiet support tone",
+        "mobile-safe rhythm"
+      ],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-editorial-whitespace-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "spacing",
+        "restraint",
+        "vertical breathing room"
+      ],
+      "match_strength": "high"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-body-copy-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "body-copy readability",
+        "text rhythm",
+        "calm Japanese layout"
+      ],
+      "match_strength": "medium"
+    }
+  ],
+  "reference_strategy": "Use the approved busy-day Story example only for pacing and support tone, while the whitespace and body-copy anchors keep the April 1 story calmer, cleaner, and more authored by line.",
+  "variation_guardrails": [
+    "do not duplicate the March 25 Story wording or exact cue",
+    "keep the set lighter than the reel and more reflective than explanatory",
+    "if the opening accent image is refreshed later, generate only the plate and keep layout in the compositor",
+    "maintain one card architecture across all three frames"
+  ],
+  "text_overlay": {
+    "allowed": true,
+    "max_words": 12,
+    "tone": "soft, clear, conversational",
+    "font_reference": "Hiragino Sans",
+    "headline_ja": "その日の調子を 勢いだけで 進めていませんか。",
+    "slides_ja": [
+      "その日の調子を 勢いだけで 進めていませんか。",
+      "瞬間的な強さより 毎日の土台を 見ること。",
+      "今の自分の リズムを 見てみる。"
+    ]
+  },
+  "negative_prompts": [
+    "busy Story layout",
+    "hard-sell supplement ad energy",
+    "fake UI clutter",
+    "tiny unreadable typography",
+    "visible internal English labels"
+  ],
+  "reference_files": [
+    "brand/references/business-context/creative-packages/creative-package-2026-04-01.md",
+    "brand/references/business-context/visual/Brand Visual Direction.md",
+    "brand/references/business-context/visual/Mitozz Approved Post Library.md"
+  ],
+  "notes": "April 1 same-day reinforcement Story. This should stay compositor-led. If a new support image plate is needed later, generate only that plate through Nano Banana and keep the text/layout in the design system."
+}

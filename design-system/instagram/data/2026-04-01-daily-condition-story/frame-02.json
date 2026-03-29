@@ -1,0 +1,23 @@
+{
+  "template": "story-reinforcement",
+  "variant": "story-context",
+  "canvas": {
+    "width": 1080,
+    "height": 1920
+  },
+  "accent": {
+    "type": "rings"
+  },
+  "copy": {
+    "kicker": "見直す視点",
+    "headline_lines": [
+      "瞬間的な強さより",
+      "毎日の土台を",
+      "見ること。"
+    ],
+    "body_lines": [
+      "今日のリールで、その考え方を",
+      "やさしく整理しています。"
+    ]
+  }
+}

@@ -23,6 +23,7 @@ For reel batches, run `workflows/03A-reel-preflight-and-hard-locks.md` before ge
   - foreground or glow treatment
 - Pick 1 winner.
 - Refine once if needed.
+- Do not present a raw first pass as the final asset.
 - If the failure is systemic rather than aesthetic, stop and tighten the prompt before spending on the next batch.
 
 ## Preflight Gate
@@ -53,6 +54,13 @@ For reel source-frame batches, also run:
 
 Do not generate if the validator returns `FAILED`.
 
+For Mitozz reels, default both:
+
+- reel source images to `4:5`
+- final reel exports to `4:5`
+
+Only use `9:16` if the user explicitly overrides that default.
+
 ## Token Control
 
 - Do not rerun the full set by default when only one slide or frame failed.
@@ -74,6 +82,7 @@ In that path:
 - HTML/CSS owns layout, spacing, line breaks, and type hierarchy
 - Nano Banana generates image plates only
 - image-slot assets must be text-free and free of template labels or baked-in UI
+- use explicit `headline_lines` and `subline_lines` data when Japanese line-break quality matters
 - final export comes from:
   - `tools/render-instagram-template.ps1`
   - `tools/render-instagram-batch.ps1`
@@ -83,6 +92,18 @@ Do not use this path by default for:
 - reel source frames
 - bottle-led realism scenes
 - full-bleed lifestyle posts where the whole image is the asset
+
+## Internal Review Gate
+
+Before presenting any asset as final, run one internal review pass using [Mitozz Asset Review Gate.md](../brand/references/business-context/visual/Mitozz%20Asset%20Review%20Gate.md).
+
+Minimum expectations:
+
+- review the first rendered or generated asset before showing it as the final answer
+- for text-led compositor assets, inspect the rendered PNG, not just the JSON or HTML
+- if Japanese line breaks, spacing, hierarchy, or closure feel unresolved, fix them before promotion
+- if only one slide fails, refine only that slide instead of rerunning the full batch
+- present finalists or clearly marked tradeoff candidates only
 
 ## Reel Execution Loop
 
@@ -110,6 +131,9 @@ Hard rejection rules for reel source assets:
 - reject any source frame with readable text, logos, UI, or unintended wordmarks unless baked-in text was explicitly requested
 - reject any frame that does not clearly serve its assigned beat
 - reject any bottle-led shot with wrong bottle color, wrong cap finish, weak label fidelity, or invented label structure
+- do a side-by-side compare against the approved `source-intake/` bottle reference before calling any bottle-led frame done
+- reject and regenerate if the black bottle body, black cap, MITOZZ wordmark, or visible label structure do not match the real pack closely enough
+- reject and regenerate if the bottle looks pasted into the shot instead of sharing the scene's real lighting, reflections, shadows, and perspective
 - reject any shot that looks like a generic ad or stock still instead of an edit-ready reel beat
 - reject any shot that breaks continuity with adjacent frames in environment, light direction, subject identity, or styling
 
@@ -202,6 +226,7 @@ For Stories and carousels, also score:
 - batch uniformity
 - card-layout consistency
 - typography consistency
+- Japanese line-break quality
 - CTA-system consistency
 
 ## Story Approval Rule
@@ -232,6 +257,7 @@ Promotion stays human-approved, not automatic.
 - final selected asset for publishing
 - optional approved asset copied into `working-examples/` only after explicit approval
 - for reels: approved source asset set, one freelancer handoff packet, first draft notes, and one final edited cut
+- for feed posts and Story sets: approved asset registered in `brand/references/business-context/visual/Mitozz Approved Post Library.csv` with reuse notes and source strategy
 
 ## Replacement Rule
 

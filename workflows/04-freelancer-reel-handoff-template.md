@@ -161,6 +161,9 @@ State the exact hook behavior:
 - Use typography that feels modern, calm, and premium.
 - Keep text readable on mobile without looking oversized or cheap.
 - If the reel includes bottle or product shots, preserve pack fidelity and label orientation.
+- Treat the product pack as locked to the approved Mitozz reference, not as a redesignable object.
+- If a bottle appears, match the scene's actual light direction, reflection behavior, shadow falloff, and camera angle so the bottle feels native to the shot.
+- Do not allow a pasted-on or composited-looking bottle even when pack fidelity is correct.
 
 ## Motion And Transition Rules
 
@@ -209,6 +212,8 @@ Avoid by default:
 - Do not introduce off-brand fonts, colors, stickers, or effects.
 - Do not over-edit the reel into a generic social ad.
 - Do not distort the product, label, or package appearance.
+- Do not recolor, simplify, or reinterpret the approved bottle design.
+- Do not approve any bottle shot that matches the label loosely but fails the scene's lighting or perspective realism.
 - Keep the final tone premium, calm, and trustworthy.
 
 ## Revision Policy

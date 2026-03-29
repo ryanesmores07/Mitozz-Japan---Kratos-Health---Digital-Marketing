@@ -1,0 +1,97 @@
+{
+  "asset_type": "instagram-story",
+  "campaign_name": "March 2026 Organic Education",
+  "topic": "Trust question story",
+  "objective": "Encourage light interaction after the March 30 feed post",
+  "template_set": "Set 5 + Set 1",
+  "slide_blueprint": "story-3-frame",
+  "asset_archetype": "story-reinforcement",
+  "platform": "instagram",
+  "aspect_ratio": "9:16",
+  "audience": "Healthy Aging Planner",
+  "visual_intent": [
+    "trust-led story reinforcement",
+    "Japanese-premium vertical pacing",
+    "portrait-led first frame with white-card follow-through",
+    "poll-safe final frame"
+  ],
+  "brand_guardrails": [
+    "keep it lighter than the feed carousel",
+    "protect top and bottom Story-safe zones",
+    "keep all three frames in one calm system",
+    "avoid English-facing internal labels on the visible asset",
+    "keep the CTA frame interactive rather than salesy"
+  ],
+  "composition": [
+    "9:16 vertical framing",
+    "frame 1 may use a calm trust portrait as a soft image plate",
+    "frames 2 and 3 should simplify toward white-card Story clarity",
+    "leave a clear lower-third zone for the poll sticker on frame 3",
+    "keep Japanese copy short and authored by line"
+  ],
+  "image_references": [
+    {
+      "path": "output/instagram/templates/2026-03-21-approved-pass/set-5-trust-portrait-v01.png",
+      "role": "style-anchor",
+      "influence": [
+        "trust portrait warmth",
+        "calm human tone",
+        "soft premium light"
+      ],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-portrait-trust-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "portrait mood",
+        "restraint",
+        "gentle credibility"
+      ],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/working-examples/feed-education-white-card-01.png",
+      "role": "working-example",
+      "influence": [
+        "white-card discipline",
+        "typography restraint",
+        "calm educational hierarchy"
+      ],
+      "match_strength": "medium"
+    }
+  ],
+  "reference_strategy": "Use the trust portrait anchors for the opening frame mood and the approved education white-card example for spacing restraint and Story-safe text hierarchy.",
+  "variation_guardrails": [
+    "do not duplicate the exact March 30 feed layout",
+    "keep the Story lighter and faster than the feed",
+    "change crop, exact copy rhythm, and support cue if the story is refreshed later",
+    "for any future source-image refresh, generate the portrait or support plate only rather than the full text-led frame"
+  ],
+  "text_overlay": {
+    "allowed": true,
+    "max_words": 10,
+    "tone": "soft, clear, conversational",
+    "font_reference": "Hiragino Sans",
+    "headline_ja": "ブランドを 信頼する時、 何を見ますか？",
+    "slides_ja": [
+      "ブランドを 信頼する時、 何を見ますか？",
+      "見た目だけでなく 成分や姿勢も 判断軸に。",
+      "あなたが最初に 見る点は？"
+    ]
+  },
+  "negative_prompts": [
+    "busy Story layout",
+    "hard-sell supplement ad energy",
+    "fake UI or sticker clutter",
+    "English template labels in the visible artwork",
+    "poll area blocked by decorative elements"
+  ],
+  "reference_files": [
+    "brand/references/business-context/creative-packages/creative-package-2026-03-30.md",
+    "brand/references/business-context/creative-packages/story-posting-actions-2026-03-23-to-2026-03-31.md",
+    "brand/references/business-context/visual/Brand Visual Direction.md",
+    "brand/references/business-context/visual/Mitozz Approved Post Library.md"
+  ],
+  "notes": "March 30 Story companion. This asset is best handled as a design-first Story. If a stock-style portrait or environment plate is needed later, the prompt engineer should create a dedicated Nano Banana source-image prompt and keep the layout itself in the compositor."
+}

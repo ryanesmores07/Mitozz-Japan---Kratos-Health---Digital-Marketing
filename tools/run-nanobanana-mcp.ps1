@@ -36,7 +36,7 @@ if ([string]::IsNullOrWhiteSpace($env:GEMINI_API_KEY)) {
 }
 
 # Default this workspace to the Flash tier so the MCP runtime resolves to
-# Nano Banana 2 / Gemini 3.1 Flash Image unless a caller explicitly overrides it.
+# Gemini 3.1 Flash-Lite Image Preview unless a caller explicitly overrides it.
 if ([string]::IsNullOrWhiteSpace($env:NANOBANANA_MODEL)) {
     $env:NANOBANANA_MODEL = "flash"
 }

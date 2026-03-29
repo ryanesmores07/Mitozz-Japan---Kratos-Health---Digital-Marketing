@@ -16,6 +16,7 @@ If the completed brief materially advances retainer delivery, creative direction
 3. Make the key decisions yourself instead of presenting broad options.
 4. Produce one decisive brief per asset so prompt generation can start immediately.
 5. Write all customer-facing copy in natural Japanese unless the user asks otherwise.
+6. For on-canvas Japanese copy, define intentional headline and subline break units whenever line-break quality affects the finish.
 
 ## Creative Authority
 
@@ -101,14 +102,16 @@ When you use that lens, do not replace the Mitozz workflow. Layer it on top by t
 7. `brand/references/business-context/visual/reference-pack/style-anchors/`
 8. `brand/references/business-context/visual/reference-pack/source-intake/`
 9. `brand/references/business-context/visual/reference-pack/working-examples/`
-10. `workflows/02-build-creative-package.md`
-11. `brand/references/business-context/visual/Mitozz Template Library Index.md`
-12. `brand/references/business-context/visual/template-mapping-rules.json`
-13. `tools/resolve-template-mapping.py` or `tools/resolve-template-mapping.ps1`
+10. `brand/references/business-context/visual/Mitozz Approved Post Library.csv`
+11. `workflows/02-build-creative-package.md`
+12. `brand/references/business-context/visual/Mitozz Template Library Index.md`
+13. `brand/references/business-context/visual/template-mapping-rules.json`
+14. `tools/resolve-template-mapping.py` or `tools/resolve-template-mapping.ps1`
 
 If a directly relevant image is attached in chat, treat it as a candidate style anchor.
 If `working-examples/` is empty, build direction from `style-anchors/` plus the visual direction docs only.
 Treat approved Mitozz bottle photos in `source-intake/` as product-truth references for pack fidelity, not as style anchors.
+Use the approved post library to avoid accidental repetition and to decide what should be reused structurally versus switched up visually.
 
 ## Calendar Row Intake
 

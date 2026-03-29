@@ -31,7 +31,7 @@ Use this order for day-to-day production:
 3. choose the correct approved references from the reference pack
 4. build the creative package
 5. generate the asset or source plate
-6. review against the approval rules before promotion
+6. review against the approval rules and [Mitozz Asset Review Gate.md](Mitozz%20Asset%20Review%20Gate.md) before promotion
 
 ## Approved Production System
 
@@ -127,11 +127,12 @@ For `Set 1` and `Set 2`:
 
 Production lock:
 
-- cover headline: `Noto Sans JP Bold`
-- cover supporting line: `Noto Sans JP Medium`
-- inner carousel slides: `Noto Sans JP Medium`
-- carousel CTA slide: `Noto Sans JP Medium`
-- story frames: `Noto Sans JP Medium`
+- cover headline: `Hiragino Sans W6`
+- cover supporting line: `Hiragino Sans W4`
+- inner carousel slides: `Hiragino Sans W4`
+- carousel CTA slide: `Hiragino Sans W4`
+- story frames: `Hiragino Sans W4`
+- optional editorial accent: `Hiragino Mincho ProN W3` or `W6` for very short labels, numerals, or micro-accents only when the full batch was intentionally designed that way
 
 Emphasis should come from:
 
@@ -140,6 +141,13 @@ Emphasis should come from:
 - card scale
 - placement
 - contrast against whitespace
+
+Japanese line-break lock:
+
+- define key headline lines by meaning unit
+- define sublines explicitly when auto-wrap produces awkward rhythm
+- do not let cover hooks or CTA lines depend on accidental browser wraps
+- if punctuation, particles, or compound phrases land awkwardly, refine the layout before approval
 
 Emphasis should not come from:
 
@@ -197,6 +205,7 @@ Automatic QA rule:
 - compare it against the locked master references
 - if border thickness, card size, spacing, typography presence, or edge treatment drift, regenerate the incorrect slide
 - only promote slides that pass the locked system checks
+- do not present first-pass assets as final delivery before they pass the review gate
 
 ## Aspect Ratio Lock
 

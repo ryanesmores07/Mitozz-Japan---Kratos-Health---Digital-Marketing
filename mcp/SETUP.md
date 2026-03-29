@@ -23,6 +23,7 @@ These are intentionally excluded by `.gitignore`.
    - `mcp/nanobanana.cursor.local.json`
 2. Put your real `GEMINI_API_KEY` in that local file.
 3. Keep `NANOBANANA_MODEL` set to `flash`.
+   In this workspace, the `flash` tier is patched to `gemini-3.1-flash-lite-preview`.
    If omitted, the repo launcher now defaults it to `flash` automatically.
 4. Open the repo in Codex. This workspace now includes a project-local MCP config at:
    - `.codex/config.toml`
@@ -84,8 +85,8 @@ tool_timeout_sec = 120
 
 This project standard is:
 
-- Nano Banana 2
-- `gemini-3.1-flash-image-preview`
+- Nano Banana
+- `gemini-3.1-flash-lite-preview`
 - default tier: `flash`
 
 The launcher enforces the runtime alignment automatically.
@@ -97,7 +98,7 @@ After restart, Codex should be able to see the `nanobanana` MCP server.
 Expected signs:
 
 - MCP resources are available from `nanobanana`
-- server startup resolves to `gemini-3.1-flash-image-preview`
+- server startup resolves to `gemini-3.1-flash-lite-preview`
 
 ## Notes
 

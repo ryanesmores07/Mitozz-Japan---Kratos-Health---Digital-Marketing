@@ -8,6 +8,9 @@ These are the files we should treat as the primary system going forward:
 
 - `Brand Visual Direction.md`: brand mood, palette, typography, and visual principles
 - `Mitozz Instagram Production Standard.md`: locked production rules, ratios, batch consistency, and day-to-day operating order
+- `Mitozz Asset Review Gate.md`: mandatory internal review gate before any asset is treated as final
+- `Mitozz Approved Post Library.md`: approved-post memory layer and reuse-tracking rules for feed and stories
+- `Mitozz Approved Post Library.csv`: structured tracker for approved and production-ready feed/story assets
 - `Mitozz Instagram Story Strategy.md`: story mix, interaction behavior, CTA routing, and story-safe execution rules
 - `Mitozz Template Library Index.md`: template-set map between strategy rows and production choices
 - `template-mapping-rules.json`: deterministic template resolver rules used by automation

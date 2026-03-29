@@ -40,10 +40,59 @@ __INLINE_CSS__
         }
       }
 
+      function appendMetaBlock(target, data) {
+        if (!data) {
+          return;
+        }
+
+        if (data.label) {
+          var label = document.createElement("p");
+          label.className = "meta-label";
+          label.textContent = data.label;
+          target.appendChild(label);
+        }
+
+        if (data.body_lines && data.body_lines.length) {
+          var body = document.createElement("div");
+          body.className = "meta-body";
+          var i;
+          for (i = 0; i < data.body_lines.length; i += 1) {
+            var line = document.createElement("p");
+            line.className = "meta-line";
+            line.textContent = data.body_lines[i];
+            body.appendChild(line);
+          }
+          target.appendChild(body);
+        }
+
+        if (data.tags && data.tags.length) {
+          var tags = document.createElement("div");
+          tags.className = "meta-tags";
+          var j;
+          for (j = 0; j < data.tags.length; j += 1) {
+            var tag = document.createElement("span");
+            tag.className = "meta-tag";
+            tag.textContent = data.tags[j];
+            tags.appendChild(tag);
+          }
+          target.appendChild(tags);
+        }
+      }
+
       if (data.variant === "portrait-cover") {
         var media = document.createElement("div");
         media.className = "media";
-        media.style.backgroundImage = "url('" + data.image.uri + "')";
+        var imageSource = data.image.uri;
+        if (!imageSource && data.image.path) {
+          if (data.image.path.indexOf("file://") === 0) {
+            imageSource = data.image.path;
+          } else if (data.image.path.charAt(0) === "/") {
+            imageSource = "file://" + data.image.path;
+          } else {
+            imageSource = data.image.path;
+          }
+        }
+        media.style.backgroundImage = "url('" + imageSource + "')";
         if (data.image.position) {
           media.style.backgroundPosition = data.image.position;
         }
@@ -71,6 +120,44 @@ __INLINE_CSS__
       }
 
       if (data.variant === "editorial-criteria" || data.variant === "editorial-close") {
+        if (data.panel) {
+          var panel = document.createElement("div");
+          panel.className = "editorial-panel";
+
+          if (data.panel.index) {
+            var indexBubble = document.createElement("div");
+            indexBubble.className = "panel-index";
+            indexBubble.textContent = data.panel.index;
+            panel.appendChild(indexBubble);
+          }
+
+          if (data.panel.kicker || data.panel.eyebrow) {
+            var panelCopy = document.createElement("div");
+            panelCopy.className = "panel-copy";
+            if (!data.panel.kicker) {
+              panelCopy.className += " no-kicker";
+            }
+
+            if (data.panel.kicker) {
+              var kicker = document.createElement("p");
+              kicker.className = "panel-kicker";
+              kicker.textContent = data.panel.kicker;
+              panelCopy.appendChild(kicker);
+            }
+
+            if (data.panel.eyebrow) {
+              var panelEyebrow = document.createElement("p");
+              panelEyebrow.className = "panel-eyebrow";
+              panelEyebrow.textContent = data.panel.eyebrow;
+              panelCopy.appendChild(panelEyebrow);
+            }
+
+            panel.appendChild(panelCopy);
+          }
+
+          variantRoot.appendChild(panel);
+        }
+
         var editorialCopy = document.createElement("div");
         var editorialLines = document.createElement("div");
 
@@ -79,7 +166,33 @@ __INLINE_CSS__
         appendHeadlineLines(editorialLines, data.copy.headline_lines, data.variant === "editorial-close");
 
         editorialCopy.appendChild(editorialLines);
+
+        if (data.copy.subline_lines && data.copy.subline_lines.length) {
+          var sublineBlock = document.createElement("div");
+          sublineBlock.className = "subline-block";
+          var k;
+          for (k = 0; k < data.copy.subline_lines.length; k += 1) {
+            var sublineLine = document.createElement("p");
+            sublineLine.className = "subline";
+            sublineLine.textContent = data.copy.subline_lines[k];
+            sublineBlock.appendChild(sublineLine);
+          }
+          editorialCopy.appendChild(sublineBlock);
+        } else if (data.copy.subline) {
+          var subline = document.createElement("p");
+          subline.className = "subline";
+          subline.textContent = data.copy.subline;
+          editorialCopy.appendChild(subline);
+        }
+
         variantRoot.appendChild(editorialCopy);
+
+        if (data.meta) {
+          var meta = document.createElement("div");
+          meta.className = "editorial-meta";
+          appendMetaBlock(meta, data.meta);
+          variantRoot.appendChild(meta);
+        }
 
         if (data.rule !== false) {
           var rule = document.createElement("div");

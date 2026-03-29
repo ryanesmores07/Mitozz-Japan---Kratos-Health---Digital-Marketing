@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mitozz Instagram Story Template</title>
+    <style>
+__INLINE_CSS__
+    </style>
+  </head>
+  <body>
+    <main class="artboard">
+      <section class="card">
+        <div class="variant" id="variantRoot"></div>
+      </section>
+    </main>
+
+    <script>
+      var data = __DATA_JSON__;
+      var variantRoot = document.getElementById("variantRoot");
+      variantRoot.className = "variant " + data.variant;
+
+      if (data.canvas && data.canvas.width) {
+        document.documentElement.style.width = data.canvas.width + "px";
+        document.documentElement.style.height = data.canvas.height + "px";
+        document.body.style.width = data.canvas.width + "px";
+        document.body.style.height = data.canvas.height + "px";
+        document.getElementsByClassName("artboard")[0].style.width = data.canvas.width + "px";
+        document.getElementsByClassName("artboard")[0].style.height = data.canvas.height + "px";
+      }
+
+      function appendLines(target, lines, className) {
+        var i;
+        for (i = 0; i < lines.length; i += 1) {
+          var line = document.createElement("p");
+          line.className = className;
+          line.textContent = lines[i];
+          target.appendChild(line);
+        }
+      }
+
+      if (data.accent && data.accent.type === "portrait") {
+        var portrait = document.createElement("div");
+        var imageSource = data.accent.path;
+        portrait.className = "story-portrait-wash";
+        if (data.accent.path && data.accent.path.charAt(0) === "/") {
+          imageSource = "file://" + data.accent.path;
+        }
+        portrait.style.backgroundImage = "url('" + imageSource + "')";
+        variantRoot.appendChild(portrait);
+
+        var portraitMask = document.createElement("div");
+        portraitMask.className = "story-portrait-mask";
+        variantRoot.appendChild(portraitMask);
+      }
+
+      if (data.accent && data.accent.type === "rings") {
+        var rings = document.createElement("div");
+        rings.className = "story-rings";
+        variantRoot.appendChild(rings);
+      }
+
+      if (data.accent && data.accent.type === "waves") {
+        var waves = document.createElement("div");
+        waves.className = "story-waves";
+        variantRoot.appendChild(waves);
+      }
+
+      var copy = document.createElement("div");
+      copy.className = "story-copy-block";
+
+      if (data.copy && data.copy.kicker) {
+        var kicker = document.createElement("p");
+        kicker.className = "story-kicker";
+        kicker.textContent = data.copy.kicker;
+        copy.appendChild(kicker);
+      }
+
+      if (data.copy && data.copy.headline_lines) {
+        var headlineBlock = document.createElement("div");
+        headlineBlock.className = "story-headlines";
+        appendLines(headlineBlock, data.copy.headline_lines, "story-headline");
+        copy.appendChild(headlineBlock);
+      }
+
+      if (data.copy && data.copy.body_lines) {
+        var bodyBlock = document.createElement("div");
+        bodyBlock.className = "story-body-block";
+        appendLines(bodyBlock, data.copy.body_lines, "story-body-line");
+        copy.appendChild(bodyBlock);
+      }
+
+      variantRoot.appendChild(copy);
+
+      if (data.prompt && data.prompt.label) {
+        var prompt = document.createElement("div");
+        prompt.className = "story-interaction-prompt";
+        prompt.textContent = data.prompt.label;
+        variantRoot.appendChild(prompt);
+      }
+
+      if (data.safe_zone && data.safe_zone.type === "poll") {
+        var pollZone = document.createElement("div");
+        pollZone.className = "story-poll-zone";
+        variantRoot.appendChild(pollZone);
+      }
+    </script>
+  </body>
+</html>

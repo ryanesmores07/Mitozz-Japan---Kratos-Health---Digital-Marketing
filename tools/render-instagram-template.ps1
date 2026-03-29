@@ -22,19 +22,25 @@ function Resolve-BrowserPath {
 
     $edgePath = "C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
     $chromePath = "C:\Program Files\Google\Chrome\Application\chrome.exe"
+    $macEdgePath = "/Applications/Microsoft Edge.app/Contents/MacOS/Microsoft Edge"
+    $macChromePath = "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome"
 
     if ($RequestedBrowser -eq "edge") {
-        if (-not (Test-Path $edgePath)) { throw "Edge not found at $edgePath" }
-        return $edgePath
+        if (Test-Path $edgePath) { return $edgePath }
+        if (Test-Path $macEdgePath) { return $macEdgePath }
+        throw "Edge not found."
     }
 
     if ($RequestedBrowser -eq "chrome") {
-        if (-not (Test-Path $chromePath)) { throw "Chrome not found at $chromePath" }
-        return $chromePath
+        if (Test-Path $chromePath) { return $chromePath }
+        if (Test-Path $macChromePath) { return $macChromePath }
+        throw "Chrome not found."
     }
 
     if (Test-Path $edgePath) { return $edgePath }
     if (Test-Path $chromePath) { return $chromePath }
+    if (Test-Path $macEdgePath) { return $macEdgePath }
+    if (Test-Path $macChromePath) { return $macChromePath }
 
     throw "No supported browser found for headless rendering."
 }
@@ -219,7 +225,7 @@ if (-not [string]::IsNullOrWhiteSpace($ImageOutputPath)) {
 
     if (-not $shouldRenderWithWinForms) {
         $htmlUri = ([System.Uri](Resolve-Path -LiteralPath $HtmlOutputPath).Path).AbsoluteUri
-        $browserProfileDir = Join-Path (Resolve-Path ".").Path "output\_tmp\browser-render-profile"
+        $browserProfileDir = Join-Path (Resolve-Path ".").Path "output/_tmp/browser-render-profile"
         if (-not (Test-Path $browserProfileDir)) {
             New-Item -ItemType Directory -Path $browserProfileDir -Force | Out-Null
         }
@@ -232,6 +238,7 @@ if (-not [string]::IsNullOrWhiteSpace($ImageOutputPath)) {
             "--disable-breakpad",
             "--disable-gpu",
             "--hide-scrollbars",
+            "--allow-file-access-from-files",
             "--force-device-scale-factor=1",
             "--user-data-dir=$browserProfileDir",
             "--window-size=$width,$height",

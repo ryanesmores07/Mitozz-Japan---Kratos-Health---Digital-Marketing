@@ -1,0 +1,129 @@
+{
+  "asset_type": "instagram-feed",
+  "campaign_name": "April 2026 Organic Education",
+  "topic": "Energy is not only about stimulation",
+  "objective": "Educate",
+  "template_set": "Set 4 + Set 3",
+  "slide_blueprint": "reel-4-shot",
+  "asset_archetype": "reel-source-frame",
+  "platform": "instagram",
+  "aspect_ratio": "4:5",
+  "audience": "Sleep-Deprived High Performer",
+  "motion_role": "product-relevance",
+  "shot_id": "shot-03",
+  "shot_position": 3,
+  "continuity_tokens": [
+    "same Japanese professional in early 30s across shots 01 to 03",
+    "same home-morning environment and daylight",
+    "same pale oak and mist-blue palette",
+    "same premium calm routine world",
+    "Mitozz bottle must stay deep matte black with a black ribbed cap, a visible pale white neck band below the cap, and a predominantly black front face with centered white MITOZZ wordmark",
+    "visible front label must keep MITOZZ centered on the front, with 60 Capsules at bottom left and Net Weight: 30 g at bottom right when readable in frame"
+  ],
+  "visual_intent": [
+    "product introduced naturally into the same routine world",
+    "quiet editorial product-entry shot",
+    "foundation-first lifestyle scene with pack truth",
+    "negative space preserved for edit text"
+  ],
+  "brand_guardrails": [
+    "avoid hard-sell product reveal energy",
+    "preserve the real Mitozz bottle silhouette, cap, and label",
+    "preserve the bottle appearance exactly: deep matte black body, black ribbed cap, visible pale white neck band below the cap, and predominantly black front face",
+    "the visible front label must read MITOZZ, with 60 Capsules and Net Weight: 30 g in the footer when readable in frame",
+    "the bottle should feel integrated into the ritual, not isolated like an ad cutout",
+    "the scene must be true full-bleed 4:5",
+    "reject and regenerate if bottle color changes or if the label becomes unreadable, simplified, or invented",
+    "reject and regenerate if MITOZZ, 60 Capsules, or Net Weight: 30 g drift from the approved pack when readable in frame",
+    "reject and regenerate if extra invented subtitle text appears on the front label",
+    "reject and regenerate if the bottle body shifts away from deep matte black, the cap stops being black and ribbed, or the white neck band disappears",
+    "reject and regenerate if the bottle does not match the scene's lighting, reflections, shadows, and camera angle naturally"
+  ],
+  "composition": [
+    "true full-bleed vertical 4:5 framing",
+    "same routine environment as shots 01 and 02",
+    "hand entering frame to place the bottle beside water or a notebook",
+    "product occupies roughly one-third of the frame",
+    "leave calm breathing room around the product",
+    "real environment to all edges"
+  ],
+  "image_references": [
+    {
+      "path": "brand/references/business-context/visual/reference-pack/working-examples/template-set-4-lifestyle-v02-no-bottle.png",
+      "role": "working-example",
+      "influence": [
+        "routine-world continuity",
+        "lifestyle realism",
+        "quiet composition"
+      ],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/source-intake/mitozz hand held.webp",
+      "role": "product-source",
+      "influence": [
+        "hand-to-bottle relationship",
+        "pack scale",
+        "front-label behavior"
+      ],
+      "match_strength": "high"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-product-glow-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "quiet product luminance",
+        "soft warmth",
+        "premium finish"
+      ],
+      "match_strength": "medium"
+    }
+  ],
+  "reference_strategy": "Keep the April 1 lifestyle world from the Set 4 working example, use the hand-held source for true product scale and hand relationship, and let the product-glow anchor add only subtle polish.",
+  "variation_guardrails": [
+    "do not isolate the bottle on a plain ad background",
+    "do not make the product feel louder than the human routine context",
+    "keep the reveal softer and more integrated than March 25",
+    "reject and regenerate if the bottle looks glossy, metallic, or not matte black"
+  ],
+  "text_overlay": {
+    "allowed": false,
+    "max_words": 0,
+    "tone": "premium, clear, restrained",
+    "font_reference": "Hiragino Sans",
+    "headline_ja": "",
+    "slides_ja": []
+  },
+  "negative_prompts": [
+    "hard-sell supplement ad energy",
+    "glossy commercial bottle treatment",
+    "invented label design",
+    "wrong MITOZZ wordmark",
+    "missing footer text",
+    "white bottle",
+    "white cap",
+    "unreadable label",
+    "floating isolated product cutout",
+    "coffee commercial scene",
+    "white bars",
+    "baked-in text"
+  ],
+  "reference_files": [
+    "brand/references/business-context/creative-packages/creative-package-2026-04-01.md",
+    "brand/references/business-context/visual/Brand Visual Direction.md",
+    "brand/references/business-context/visual/Mitozz Approved Post Library.csv",
+    "brand/references/business-context/visual/Mitozz Locked Bottle Workflow.md",
+    "brand/references/business-context/visual/Mitozz Bottle Size Spec.md",
+    "brand/references/business-context/visual/Mitozz Bottle Label Spec.md",
+    "brand/references/business-context/visual/Mitozz Bottle Appearance Spec.md"
+  ],
+  "notes": "April 1 reel shot 03. Introduce the real Mitozz bottle naturally into the same calm morning ritual. Keep the real bottle design intact and do not redesign, recolor, simplify, or relabel the bottle. The bottle must stay deep matte black with a black ribbed cap, a visible pale white neck band below the cap, and a predominantly black front face with a readable white MITOZZ wordmark. The visible front label must also keep 60 Capsules at bottom left and Net Weight: 30 g at bottom right when readable in frame. Do not invent extra subtitle copy that is not clearly supported by the approved reference. Use the Mitozz bottle size spec for believable lifestyle scale.",
+  "product_realism_lock": [
+    "keep the approved Mitozz bottle design locked",
+    "do not redesign the label or simplify the visible pack blocks",
+    "preserve the bottle appearance exactly: deep matte black body, black ribbed cap, visible pale white neck band below the cap, and predominantly black front face",
+    "preserve the visible front-label wording MITOZZ, 60 Capsules, and Net Weight: 30 g when readable in frame",
+    "adapt the locked bottle to the surrounding shot's light direction, reflections, shadow falloff, and camera angle",
+    "the bottle must feel photographed in the scene, not pasted on top"
+  ]
+}

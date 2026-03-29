@@ -1,0 +1,104 @@
+{
+  "asset_type": "instagram-feed",
+  "campaign_name": "April 2026 Organic Education",
+  "topic": "Energy is not only about stimulation",
+  "objective": "Educate",
+  "template_set": "Set 4 + Set 3",
+  "slide_blueprint": "reel-4-shot",
+  "asset_archetype": "reel-source-frame",
+  "platform": "instagram",
+  "aspect_ratio": "4:5",
+  "audience": "Sleep-Deprived High Performer",
+  "motion_role": "reframe",
+  "shot_id": "shot-02",
+  "shot_position": 2,
+  "continuity_tokens": [
+    "same Japanese professional in early 30s across shots 01 to 03",
+    "same home-morning environment",
+    "same pale oak, cloud white, mist blue palette",
+    "same soft side daylight",
+    "no baked-in text"
+  ],
+  "visual_intent": [
+    "premium routine detail shot",
+    "daily foundation instead of stimulation",
+    "quiet ritual logic",
+    "clean close framing for editorial text overlay later"
+  ],
+  "brand_guardrails": [
+    "avoid turning the shot into a generic tabletop stock photo",
+    "avoid caffeine, energy-drink, or supplement-first storytelling",
+    "keep the action clear and singular",
+    "the scene must fill the entire 4:5 canvas with no blank bars or inset composition"
+  ],
+  "composition": [
+    "true full-bleed vertical 4:5 framing",
+    "close detail shot",
+    "same person's hands only",
+    "one action such as setting down a phone beside water and notebook",
+    "clean negative space around the action",
+    "real environment at every edge of the frame"
+  ],
+  "image_references": [
+    {
+      "path": "brand/references/business-context/visual/reference-pack/working-examples/template-set-4-lifestyle-v02-no-bottle.png",
+      "role": "working-example",
+      "influence": [
+        "routine realism",
+        "material tone",
+        "calm lifestyle framing"
+      ],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-editorial-whitespace-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "restraint",
+        "negative space",
+        "editorial quiet"
+      ],
+      "match_strength": "high"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "palette",
+        "soft daylight",
+        "mist-blue control"
+      ],
+      "match_strength": "medium"
+    }
+  ],
+  "reference_strategy": "Use the Set 4 lifestyle working example to keep the routine world believable, while the whitespace and cool-palette anchors keep the shot airy and premium.",
+  "variation_guardrails": [
+    "do not let the shot become cluttered breakfast content",
+    "keep the action more reflective than productive",
+    "reject and regenerate if the composition feels like a square crop inside a tall canvas",
+    "reject and regenerate if the shot reads as a generic supplement lifestyle ad"
+  ],
+  "text_overlay": {
+    "allowed": false,
+    "max_words": 0,
+    "tone": "premium, clear, restrained",
+    "font_reference": "Hiragino Sans",
+    "headline_ja": "",
+    "slides_ja": []
+  },
+  "negative_prompts": [
+    "generic tabletop stock photo",
+    "coffee shop scene",
+    "energy drink props",
+    "messy breakfast spread",
+    "overdesigned flat lay",
+    "white bars",
+    "floating card layout",
+    "baked-in text"
+  ],
+  "reference_files": [
+    "brand/references/business-context/creative-packages/creative-package-2026-04-01.md",
+    "brand/references/business-context/visual/Brand Visual Direction.md"
+  ],
+  "notes": "April 1 reel shot 02. The action should quietly shift the idea from drive and momentum toward daily foundation and self-regulation."
+}

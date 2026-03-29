@@ -87,6 +87,7 @@ Start lean. Read only what is needed for the decision.
    - the relevant files in `brand/references/business-context/audience/`
 4. Performance and operating context
    - the latest monthly retainer action log
+   - `brand/references/business-context/visual/Mitozz Approved Post Library.csv`
    - any insights, metrics, screenshots, or account observations supplied by the user
 
 When the request is about immediate execution, prioritize the current calendar and nearby dates first.
@@ -101,6 +102,7 @@ Determine:
 - whether feed and story cadence are intact
 - which persona and pillar are currently being served
 - whether the system is too promotional, too repetitive, or too abstract
+- what the last approved feed and Story assets already covered structurally
 - whether there is a gap in reinforcement, trust-building, or audience interaction
 
 ### 2. Choose the real priority

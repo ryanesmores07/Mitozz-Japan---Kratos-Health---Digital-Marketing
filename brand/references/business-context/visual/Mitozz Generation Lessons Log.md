@@ -126,6 +126,7 @@ Apply next time:
 - reduce bottle scale if it starts to dominate a lifestyle scene
 - match highlight direction, shadow softness, and local contrast to the surrounding desk light
 - reject any product frame that looks pasted in even if the label is technically closer to the real pack
+- do a side-by-side check against the real bottle reference before approval, because bottle color, MITOZZ wordmark shape, and visible label structure often drift even when the scene feels believable
 
 ### 8. Do Not Double-Ask For Variants
 
@@ -158,3 +159,19 @@ Apply next time:
 - verify Japanese copy is clean UTF-8 in the saved prompt
 - reject references that carry page numbers, English footers, or template labels unless explicitly needed
 - add `no English words`, `no Latin letters`, and similar rejection wording when the asset should be Japanese-only
+
+### 10. Japanese Line Breaks Must Be Designed
+
+Issue:
+
+- text-led slides can still look unfinished when the headline or subline wraps technically correctly but feels browser-made instead of intentionally composed
+
+Rule:
+
+- Japanese line breaks for covers, hooks, and closing slides must be authored as part of the layout
+
+Apply next time:
+
+- define headline lines by meaning unit
+- define subline lines explicitly when needed
+- inspect the rendered PNG before approval, not only the source JSON

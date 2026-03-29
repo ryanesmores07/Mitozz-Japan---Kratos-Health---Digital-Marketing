@@ -1,0 +1,24 @@
+{
+  "template": "story-reinforcement",
+  "variant": "story-question",
+  "canvas": {
+    "width": 1080,
+    "height": 1920
+  },
+  "accent": {
+    "type": "portrait",
+    "path": "/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/design-system/instagram/assets/2026-03-30-trust-carousel/slide-01-portrait-plate.png"
+  },
+  "copy": {
+    "kicker": "信頼の見方",
+    "headline_lines": [
+      "ブランドを",
+      "信頼する時、",
+      "何を見ますか？"
+    ],
+    "body_lines": [
+      "なんとなくの印象ではなく、",
+      "自分なりの判断軸を持ちたい。"
+    ]
+  }
+}

@@ -11,6 +11,8 @@ Keep it lean.
 - `profile/` holds rare profile-specific reference prompts unless a profile refresh is actively underway
 - `shared/` holds the reusable system template and shared locks
 
+For feed or Story assets that need stock-style support imagery, keep the prompt in the normal `feed/` or `stories/` folder and let Nano Banana act as the source-image generator rather than defaulting to outside stock.
+
 ## Keep Rules
 
 Keep a prompt here if at least one of these is true:
@@ -20,6 +22,7 @@ Keep a prompt here if at least one of these is true:
 - it is a reusable template-set anchor
 - it is the current approved version for a live asset
 - it is the current reusable reference prompt for a low-frequency area such as profile work
+- it is the current prompt record for an approved post tracked in the approved post library
 
 Remove or archive a prompt if all of these are true:
 
