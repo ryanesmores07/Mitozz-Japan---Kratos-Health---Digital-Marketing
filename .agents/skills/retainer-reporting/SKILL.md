@@ -23,6 +23,8 @@ Use this skill when the user asks to:
 - clean up, deduplicate, or tighten a monthly action log
 - turn a monthly action log into a Jay-ready summary report
 
+Also use this skill automatically whenever a significant Jay retainer action has just been completed, even if the user did not explicitly ask for a log entry in that moment.
+
 ## Significance Rule
 
 Log work when it is meaningfully within retainer scope and has a defensible outcome.
@@ -55,9 +57,15 @@ Every entry should include:
 1. Identify the relevant month from the work date.
 2. Open the current monthly action log or create it from the template if missing.
 3. Decide whether the action passes the significance rule.
-4. Add one concise entry per meaningful completed action.
+4. Add one concise entry per meaningful completed action as part of the normal completion workflow, not as a separate optional step.
 5. Keep language outcome-oriented and easy to roll up into a monthly report.
 6. When asked for a monthly summary, group the month into a few client-facing themes instead of dumping raw entries.
+
+## Default Behavior
+
+For Jay retainer work, assume significant completed actions should be logged automatically unless there is a clear reason not to.
+
+Do not rely on the user to remember to ask for logging each time.
 
 ## Summary Writing Rule
 

@@ -250,3 +250,36 @@
 - `Outcome / impact`: April 1 now has clean delivery-ready filenames, live Drive folders for both the feed reel and Story support set, and matching asset links visible in the working CSV and shared April calendar sheet.
 - `Status`: `completed`
 - `Notes for monthly summary`: Good delivery-operations milestone that closes the loop from production to client-facing handoff and reduces future asset-tracking friction.
+
+### Entry 22
+
+- `Date`: `2026-03-30`
+- `Workstream`: `Shopify lifecycle marketing and retention setup`
+- `Action`: Defined and validated the first-version Mitozz Shopify email-capture and discount system, including the native discount-type mapping, welcome and lifecycle coupon structure, customer-segment logic for `WELCOME10`, `REORDER10`, and `WINBACK10`, and the practical setup order for signup capture, email flows, and retention offers.
+- `Why it matters`: This moves Mitozz beyond one-off coupon usage into a clearer owned-audience system with reusable discount logic, segment-based targeting, and a more defensible lifecycle-marketing structure that can support future Shopify email or app-based automation.
+- `Artifacts updated`: `Shopify admin: Discounts`, `Shopify admin: Customer segments`, `README.md`, `brand/references/business-context/reporting/README.md`, `.agents/skills/retainer-reporting/SKILL.md`, `brand/references/business-context/reporting/monthly-action-logs/2026-03-retainer-action-log.md`
+- `Outcome / impact`: Mitozz now has a concrete native-Shopify discount architecture for welcome, reorder, bundle, and winback use cases, plus working customer segments for reorder and winback targeting and a clearer implementation path for the email-marketing system.
+- `Status`: `completed`
+- `Notes for monthly summary`: Strong strategic and technical setup work that expands the retainer beyond Instagram into Shopify retention infrastructure and gives Jay a clearer view of lifecycle-marketing progress.
+
+### Entry 23
+
+- `Date`: `2026-03-30`
+- `Workstream`: `Production delivery and content tracking`
+- `Action`: Delivered the approved March 30 trust feed carousel and trust-question Story set from their locked `current/` folders into the mapped Google Drive destinations and reflected those live asset links in the March calendar.
+- `Why it matters`: This closes the loop on the March 30 organic package by turning approved assets into client-accessible deliverables and keeping the planning record aligned with the real final files instead of leaving delivery status implicit.
+- `Artifacts updated`: `output/instagram/feed/ig-feed-2026-03-30-trustworthy-supplement-choice-v01/current/`, `output/instagram/stories/ig-story-2026-03-30-trust-question-story-v01/current/`, `brand/references/business-context/content-planning/Mitozz Instagram Content Calendar - 2026 - March.csv`, `brand/references/business-context/reporting/delivery-receipts/2026-03-30-113646-feed-drive-delivery.md`, `brand/references/business-context/reporting/delivery-receipts/2026-03-30-113646-stories-drive-delivery.md`, `brand/references/business-context/reporting/delivery-receipts/2026-03-30-114027-feed-drive-delivery.md`, `brand/references/business-context/reporting/delivery-receipts/2026-03-30-114027-stories-drive-delivery.md`, `brand/references/business-context/reporting/monthly-action-logs/2026-03-retainer-action-log.md`
+- `Outcome / impact`: The March 30 feed and Story support assets now have live Drive delivery records tied to the approved `current/` source sets, and the March calendar has direct links to the client-facing deliverables for easier tracking and reuse.
+- `Status`: `completed`
+- `Notes for monthly summary`: Useful delivery-and-tracking milestone that shows March content moved all the way from production into approved client-accessible handoff.
+
+### Entry 24
+
+- `Date`: `2026-03-30`
+- `Workstream`: `Reporting system hardening`
+- `Action`: Tightened the workspace reporting rules so significant Jay retainer work is now treated as auto-loggable by default, updated the central README and reporting skill instructions to reflect that expectation, and backfilled the March log with missing Shopify and delivery items.
+- `Why it matters`: The reporting structure already existed, but the default behavior still left too much room for missed logging unless someone remembered to ask. Making auto-logging explicit should produce a cleaner month-end record and reduce the risk of underreporting retainer value.
+- `Artifacts updated`: `README.md`, `brand/references/business-context/reporting/README.md`, `.agents/skills/retainer-reporting/SKILL.md`, `brand/references/business-context/reporting/monthly-action-logs/2026-03-retainer-action-log.md`
+- `Outcome / impact`: The workspace now has a clearer operating rule that significant Jay work should be logged automatically, and the March action log is more complete ahead of month-end summary preparation.
+- `Status`: `completed`
+- `Notes for monthly summary`: Strong internal process improvement that should make monthly reporting more reliable and easier to defend to Jay.

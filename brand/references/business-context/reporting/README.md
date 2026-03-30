@@ -76,11 +76,13 @@ Every logged action should include:
 - `Status`
 - `Notes for monthly summary`
 
-## Recommended Workflow
+## Default Logging Workflow
 
-1. Add a new entry to the current month's action log whenever we complete a meaningful retainer action.
-2. Keep entries short but concrete.
-3. At month end, group entries into a clean client-facing summary under:
+1. Treat logging as the default for significant retainer work, not an optional follow-up step.
+2. Add a new entry to the current month's action log as soon as a meaningful retainer action is completed.
+3. Do not wait for the user to explicitly ask for logging when the action clearly passes the significance gate.
+4. Keep entries short but concrete.
+5. At month end, group entries into a clean client-facing summary under:
    - strategy and planning
    - creative and production
    - systems and process improvements
@@ -123,3 +125,9 @@ Use the project skill `jay-invoice-sheets` when you want Codex to:
 ## Current Operating Rule
 
 If we finish a significant action in this workspace, we should add it to the current month's action log before moving on whenever practical.
+
+For Jay retainer work, the default expectation is:
+
+- significant completed actions are logged automatically without needing a user reminder
+- the current monthly action log should stay current enough that month-end reporting can be built from it directly
+- only low-signal or clearly non-retainer noise should be skipped
