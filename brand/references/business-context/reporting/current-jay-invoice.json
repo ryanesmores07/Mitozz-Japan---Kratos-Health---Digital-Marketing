@@ -21,10 +21,18 @@
     {
       "date": "2026-03-25",
       "category": "app-subscription",
-      "description": "Google Nano Banana Pro token fee",
-      "amount": 5000,
+      "description": "Google Nano Banana Pro API token usage",
+      "amount": 5655,
       "currency": "JPY",
-      "notes": "Recurring monthly expense unless explicitly excluded."
+      "notes": "Actual March 2026 token usage total."
+    },
+    {
+      "date": "2026-03-30",
+      "category": "app-subscription",
+      "description": "OpenArt Advanced plan",
+      "amount": 29,
+      "currency": "USD",
+      "notes": "Monthly subscription for AI video generation support."
     },
     {
       "date": "2026-03-25",
@@ -35,5 +43,5 @@
       "notes": "Recurring monthly expense unless explicitly excluded."
     }
   ],
-  "summary_notes": "March 2026 monthly retainer plus recurring operating expenses, including 6 reel edits, Nano Banana Pro token costs, and CapCut Pro subscription costs."
+  "summary_notes": "March 2026 monthly retainer plus operating expenses, including freelancer reel editing fees, Google Nano Banana Pro API token usage, OpenArt Advanced plan, and CapCut Pro subscription costs."
 }
