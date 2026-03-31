@@ -15,6 +15,7 @@ Use this file as the running source of truth for meaningful monthly retainer wor
 
 - `Date`:
 - `Workstream`:
+- `Request / prompt context`:
 - `Action`:
 - `Why it matters`:
 - `Artifacts updated`:
@@ -26,6 +27,7 @@ Use this file as the running source of truth for meaningful monthly retainer wor
 
 - `Date`:
 - `Workstream`:
+- `Request / prompt context`:
 - `Action`:
 - `Why it matters`:
 - `Artifacts updated`:

@@ -103,15 +103,26 @@ When you use that lens, do not replace the Mitozz workflow. Layer it on top by t
 8. `brand/references/business-context/visual/reference-pack/source-intake/`
 9. `brand/references/business-context/visual/reference-pack/working-examples/`
 10. `brand/references/business-context/visual/Mitozz Approved Post Library.csv`
-11. `workflows/02-build-creative-package.md`
-12. `brand/references/business-context/visual/Mitozz Template Library Index.md`
-13. `brand/references/business-context/visual/template-mapping-rules.json`
-14. `tools/resolve-template-mapping.py` or `tools/resolve-template-mapping.ps1`
+11. `brand/references/business-context/reporting/instagram-metrics/`
+12. `workflows/02-build-creative-package.md`
+13. `brand/references/business-context/visual/Mitozz Template Library Index.md`
+14. `brand/references/business-context/visual/template-mapping-rules.json`
+15. `tools/resolve-template-mapping.py` or `tools/resolve-template-mapping.ps1`
 
 If a directly relevant image is attached in chat, treat it as a candidate style anchor.
 If `working-examples/` is empty, build direction from `style-anchors/` plus the visual direction docs only.
 Treat approved Mitozz bottle photos in `source-intake/` as product-truth references for pack fidelity, not as style anchors.
 Use the approved post library to avoid accidental repetition and to decide what should be reused structurally versus switched up visually.
+
+## Performance-Aware Direction
+
+When a metrics snapshot exists, use it as a directional input for the brief:
+
+- reinforce formats that are clearly driving discovery
+- strengthen hooks, first-frame clarity, and profile-trust support when reach is outpacing follows
+- do not blindly copy one winning asset; reuse the lesson, not the exact execution
+- treat weak results as signal only when the pattern repeats across more than one asset
+- keep premium positioning intact even when optimizing for better reach
 
 ## Calendar Row Intake
 

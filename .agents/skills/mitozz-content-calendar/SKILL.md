@@ -77,6 +77,7 @@ Prefer these sources when available:
    - `brand/references/business-context/visual/Brand Visual Direction.md`
 4. Existing calendars and internal guidance
    - the most recent calendar in `brand/references/business-context/content-planning/`
+   - the latest metrics snapshot in `brand/references/business-context/reporting/instagram-metrics/`
    - the internal guideline PDF in `brand/references/business-context/content-planning/` that covers organic Instagram copy and calendar rules for Mitozz Japan
 
 If a calendar for the requested month already exists, treat the task as a refinement task unless the user explicitly asks for a rebuild.
@@ -97,14 +98,15 @@ Do not make the user ask for those as separate steps.
    - trust building
    - soft conversion support
    - mixed month
-2. Set cadence using the existing operating pattern unless a change is justified.
-3. Build the month around a clean sequence:
+2. Review the latest metrics snapshot when available and identify which patterns deserve reinforcement or correction.
+3. Set cadence using the existing operating pattern unless a change is justified.
+4. Build the month around a clean sequence:
    - foundational education
    - relevance and routine framing
    - ingredient and science translation
    - trust and proof
    - light conversion support when appropriate
-4. Pair feed and story content intentionally:
+5. Pair feed and story content intentionally:
    - reinforcement
    - FAQ
    - objection handling
@@ -112,13 +114,23 @@ Do not make the user ask for those as separate steps.
    - question box
    - premium proof
    - education mini-slide
-5. Make each row specific enough for creative production:
+6. Make each row specific enough for creative production:
    - one clear topic
    - one primary persona
    - one core angle
    - one objective
    - one brand-safe CTA
-6. Review the month as a system before saving.
+7. Review the month as a system before saving.
+
+## Performance Feedback Rules
+
+When a metrics snapshot exists:
+
+- keep or increase reels when they are clearly driving most discovery
+- strengthen profile-trust, story reinforcement, and follow-conversion support when profile visits are happening but follows remain weak
+- do not remove carousels just because reels reach more; use carousels to deepen trust and save value
+- use story interactions to gather signals, not to replace feed-level discovery formats
+- revise weak patterns only when the metrics show more than one isolated miss
 
 ## Format Decision Rules
 

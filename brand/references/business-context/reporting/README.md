@@ -14,6 +14,7 @@ This system should answer three questions clearly at the end of each month:
 
 - `monthly-action-logs/`: running logs of significant actions taken during each month
 - `monthly-summary-reports/`: draft and final monthly summaries for Jay
+- `instagram-metrics/`: normalized monthly Instagram performance snapshots used as a reusable decision layer
 - `delivery-receipts/`: upload receipts for manual Google Drive delivery runs
 - `templates/`: reusable templates for both logs and summaries
 - `templates/jay-monthly-invoice-data-template.json`: local JSON starter for salary and expense sheet payloads
@@ -27,6 +28,8 @@ Good examples:
 
 - monthly calendar planning or revision
 - creative package creation or major revision
+- meaningful user prompts or requests that materially changed direction, priorities, or deliverables
+- performance snapshot creation or interpretation that changes planning or execution
 - prompt system upgrades
 - generation workflow improvements
 - approved production batch completion
@@ -69,6 +72,7 @@ Every logged action should include:
 
 - `Date`
 - `Workstream`
+- `Request / prompt context`
 - `Action`
 - `Why it matters`
 - `Artifacts updated`
@@ -80,9 +84,10 @@ Every logged action should include:
 
 1. Treat logging as the default for significant retainer work, not an optional follow-up step.
 2. Add a new entry to the current month's action log as soon as a meaningful retainer action is completed.
-3. Do not wait for the user to explicitly ask for logging when the action clearly passes the significance gate.
-4. Keep entries short but concrete.
-5. At month end, group entries into a clean client-facing summary under:
+3. When a user prompt or request materially triggered the work, capture that context inside the entry so later monthly reporting can trace why the work happened.
+4. Do not wait for the user to explicitly ask for logging when the action clearly passes the significance gate.
+5. Keep entries short but concrete.
+6. At month end, group entries into a clean client-facing summary under:
    - strategy and planning
    - creative and production
    - systems and process improvements
@@ -90,9 +95,20 @@ Every logged action should include:
 
 ## Operating Cadence
 
-- During the month: append meaningful actions to the current log as soon as the work lands.
+- During the month: append meaningful actions to the current log as soon as the work lands, and include the triggering request context when it materially shaped the work.
 - At week checkpoints: clean wording if needed so entries stay client-readable and outcome-led.
 - At month end: convert the log into one concise summary for Jay instead of rebuilding the month from memory.
+
+## Instagram Metrics Workflow
+
+When Instagram insights, screenshots, or exports are provided:
+
+1. normalize them into `instagram-metrics/YYYY-MM-instagram-metrics-snapshot.md`
+2. preserve the useful numbers and interpretation in a durable text file instead of leaving them only in screenshots
+3. summarize what the data suggests about discovery, profile curiosity, engagement, conversion, and format strength
+4. use the latest snapshot as a live input for strategy, calendar planning, creative direction, and monthly reporting
+
+Keep the interpretation directional, not overconfident. Use metrics to sharpen the next decisions, not to overreact to one post.
 
 ## Skill Support
 
@@ -121,6 +137,7 @@ Use the project skill `jay-invoice-sheets` when you want Codex to:
 
 - monthly action log: `YYYY-MM-retainer-action-log.md`
 - monthly summary report: `YYYY-MM-monthly-summary-for-jay.md`
+- instagram metrics snapshot: `YYYY-MM-instagram-metrics-snapshot.md`
 
 ## Current Operating Rule
 
@@ -129,5 +146,6 @@ If we finish a significant action in this workspace, we should add it to the cur
 For Jay retainer work, the default expectation is:
 
 - significant completed actions are logged automatically without needing a user reminder
+- significant project-related prompts and requests are folded into those log entries when they materially shaped the work
 - the current monthly action log should stay current enough that month-end reporting can be built from it directly
 - only low-signal or clearly non-retainer noise should be skipped

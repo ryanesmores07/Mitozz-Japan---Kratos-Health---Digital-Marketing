@@ -104,7 +104,9 @@ Do not use it for:
 10. Use `nano-banana-instagram` to execute Nano Banana MCP using those prompt files when AI generation is still needed.
 11. Review the outputs, approve winners, and promote only the best assets into the visual reference pack when appropriate.
 12. When delivery to Google Drive is needed, use `drive-delivery` to upload only the approved assets and create a delivery receipt.
-13. When meaningful Jay retainer work is completed, use `retainer-reporting` to add it to the current monthly action log before closing the task, even if the user did not explicitly ask for logging in that turn.
+13. When Instagram insights, screenshots, or exports are available, normalize them into the current monthly metrics snapshot under `brand/references/business-context/reporting/instagram-metrics/` and use that snapshot as the performance reference for future planning and creative decisions.
+14. When meaningful Jay retainer work is completed, use `retainer-reporting` to add it to the current monthly action log before closing the task, even if the user did not explicitly ask for logging in that turn.
+15. When a user prompt, request, review ask, or direction change materially shapes project work, capture that request context inside the same monthly log entry so month-end reporting reflects not only what was done, but what triggered it.
 
 If a campaign expands into a real webpage or interface, or if an Instagram asset needs the frontend-skill lens, insert one extra step between creative direction and implementation:
 

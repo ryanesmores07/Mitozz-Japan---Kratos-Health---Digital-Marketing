@@ -283,3 +283,60 @@
 - `Outcome / impact`: The workspace now has a clearer operating rule that significant Jay work should be logged automatically, and the March action log is more complete ahead of month-end summary preparation.
 - `Status`: `completed`
 - `Notes for monthly summary`: Strong internal process improvement that should make monthly reporting more reliable and easier to defend to Jay.
+
+### Entry 25
+
+- `Date`: `2026-03-30`
+- `Workstream`: `Reporting and finance workflow`
+- `Action`: Finalized the March invoice data for Jay with the actual Nano Banana usage total, added the OpenArt subscription line item, preserved the freelancer and CapCut charges, and pushed the updated invoice data into the live Google Sheet helper tab.
+- `Why it matters`: This turns the month-end invoice from a local draft into a client-ready live sheet while reducing the risk of billing from outdated numbers or incomplete software-cost coverage.
+- `Artifacts updated`: `brand/references/business-context/reporting/current-jay-invoice.json`, `Google Sheet: Jay Revels - Monthly Retainer Invoice 5`, `brand/references/business-context/reporting/monthly-action-logs/2026-03-retainer-action-log.md`
+- `Outcome / impact`: Jay's March invoice sheet now reflects the finalized mixed-currency expense set, including `JPY 5,655` for Nano Banana usage, `USD 29` for OpenArt Advanced, the existing freelancer reel-edit fee, and `JPY 2,180` for CapCut Pro.
+- `Status`: `completed`
+- `Notes for monthly summary`: Useful month-end finance and reporting closeout that keeps the retainer invoice aligned with actual software usage and production-support costs.
+
+### Entry 26
+
+- `Date`: `2026-03-31`
+- `Workstream`: `Shopify lifecycle marketing execution`
+- `Action`: Moved the Mitozz Shopify lifecycle-marketing setup from planning into live implementation by creating the native Shopify discount codes, welcome-offer customer segments, and Japanese email-capture popup/forms copy for the first stage of the email system.
+- `Why it matters`: This turns the earlier retention strategy into a real storefront capture layer so Mitozz can start collecting subscribers and using the first-order offer inside Shopify while the deeper email automations are still being built.
+- `Artifacts updated`: `Shopify admin: Discounts`, `Shopify admin: Customer segments`, `Shopify admin: Forms`, `Shopify admin: Checkout marketing opt-in`, `brand/references/business-context/reporting/monthly-action-logs/2026-03-retainer-action-log.md`, `brand/references/business-context/reporting/monthly-summary-reports/2026-03-monthly-summary-for-jay.md`
+- `Outcome / impact`: The welcome, reorder, and winback discount logic now exists in Shopify and the popup/email-capture layer is configured in Japanese, while the rest of the lifecycle email build remains in progress.
+- `Status`: `completed`
+- `Notes for monthly summary`: Good execution milestone showing that Shopify retention work moved from strategy into partial live setup, with discount codes and popups completed but deeper automations still in progress.
+
+### Entry 27
+
+- `Date`: `2026-03-31`
+- `Workstream`: `Reporting and performance communication`
+- `Action`: Converted the latest Instagram Insights screenshot into a clean March metrics snapshot document and integrated the key numbers and interpretation into the monthly report for Jay.
+- `Why it matters`: This gives Jay a clearer view of actual early Instagram performance instead of relying on a raw screenshot, while grounding the monthly summary in concrete reach, profile-visit, and follower data.
+- `Artifacts updated`: `brand/references/business-context/reporting/instagram-metrics/2026-03-instagram-metrics-snapshot.md`, `brand/references/business-context/reporting/monthly-summary-reports/Mitozz-Japan-March-2026-Monthly-Report.md`, `brand/references/business-context/reporting/monthly-action-logs/2026-03-retainer-action-log.md`
+- `Outcome / impact`: The March report now includes a direct Instagram metrics section, and the underlying screenshot figures are preserved in a separate client-readable snapshot document for easier review and future reference.
+- `Status`: `completed`
+- `Notes for monthly summary`: Good example of converting platform data into clearer client-facing reporting and interpretation.
+
+### Entry 28
+
+- `Date`: `2026-03-31`
+- `Workstream`: `Instagram performance feedback system`
+- `Request / prompt context`: User asked to include Instagram data in the workflow going forward, use it as reference for future work, and optimize the relevant workflows and agent skills around real collected metrics.
+- `Action`: Created a dedicated Instagram metrics reference layer, moved the March metrics snapshot into a stable reporting location, added a reusable metrics snapshot template, and updated the strategist, calendar, creative, reporting, and post-calendar workflow docs so future work can use metrics as a default decision input.
+- `Why it matters`: This closes the loop between execution and learning. Instead of treating Instagram data as a one-off reporting add-on, the workspace can now use real performance feedback to shape future strategy, planning, and creative decisions more consistently.
+- `Artifacts updated`: `README.md`, `brand/references/business-context/reporting/README.md`, `brand/references/business-context/reporting/instagram-metrics/README.md`, `brand/references/business-context/reporting/instagram-metrics/2026-03-instagram-metrics-snapshot.md`, `brand/references/business-context/reporting/templates/instagram-metrics-snapshot-template.md`, `.agents/skills/retainer-reporting/SKILL.md`, `.agents/skills/mitozz-instagram-strategist/SKILL.md`, `.agents/skills/mitozz-content-calendar/SKILL.md`, `.agents/skills/mitozz-creatives-director/SKILL.md`, `workflows/03-post-calendar-production-flow.md`, `brand/references/business-context/reporting/monthly-action-logs/2026-03-retainer-action-log.md`
+- `Outcome / impact`: Future Mitozz Japan strategy, calendar planning, and creative briefs can now use the latest normalized metrics snapshot by default, making it easier to improve the account based on real discovery, profile-visit, and format-performance signals over time.
+- `Status`: `completed`
+- `Notes for monthly summary`: Strong workflow improvement that turns early Instagram data into a reusable operating input instead of leaving it as isolated reporting.
+
+### Entry 29
+
+- `Date`: `2026-03-31`
+- `Workstream`: `Instagram paid-media strategy`
+- `Request / prompt context`: User asked whether Mitozz should start Meta ads now for website traffic and sales or wait until Instagram has more followers and more posts.
+- `Action`: Set the launch-phase paid-media direction: do not wait for follower count, but delay spend until the account clears a minimum trust-and-tracking threshold, then start with small website-focused Meta ads tests rather than follower-buying campaigns.
+- `Why it matters`: This prevents wasted spend on an underprepared profile while also avoiding the opposite mistake of waiting for organic followers that Meta ads do not actually require. It aligns paid media with sales readiness instead of vanity growth.
+- `Artifacts updated`: `brand/references/business-context/reporting/monthly-action-logs/2026-03-retainer-action-log.md`
+- `Outcome / impact`: April can now be approached with a clearer paid-media gate: finish profile packaging and website tracking first, then run controlled sales or traffic tests once the brand has a basic credibility stack and proper measurement in place.
+- `Status`: `completed`
+- `Notes for monthly summary`: Useful strategic clarification on when paid ads should start and what conditions should be met before spending against website sales.

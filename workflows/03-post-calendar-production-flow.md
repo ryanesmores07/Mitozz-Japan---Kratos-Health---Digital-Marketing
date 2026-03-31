@@ -56,6 +56,7 @@ These belong downstream.
 8. Regenerate only the failing outputs or revise only the unclear handoff sections.
 9. Promote only approved outputs into the working set.
 10. Register approved feed posts and Story sets in `brand/references/business-context/visual/Mitozz Approved Post Library.csv`.
+11. When Instagram insights or screenshots become available, normalize the useful numbers and interpretation into `brand/references/business-context/reporting/instagram-metrics/` so the next planning cycle can use real performance data.
 
 ## Minimal Post-Calendar Data Model
 
@@ -124,6 +125,15 @@ After approval:
 - note what was reused successfully
 - note what should change next time
 - record the `source_strategy` so we know whether the asset used full AI, a compositor path, a real-photo workflow, or a Nano Banana source image
+
+## Performance Feedback Rule
+
+When metrics become available after posting:
+
+- do not leave them only in screenshot form
+- convert them into the current monthly metrics snapshot under `brand/references/business-context/reporting/instagram-metrics/`
+- preserve the strongest useful signals such as reach, non-follower share, profile visits, interactions, and top-performing format
+- use that snapshot before revising the next calendar rows or briefing the next batch
 
 This is the lightweight way to behave more like a brand system without overbuilding tooling.
 

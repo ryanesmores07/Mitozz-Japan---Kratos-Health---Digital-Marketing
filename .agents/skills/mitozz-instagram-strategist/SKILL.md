@@ -87,6 +87,7 @@ Start lean. Read only what is needed for the decision.
    - the relevant files in `brand/references/business-context/audience/`
 4. Performance and operating context
    - the latest monthly retainer action log
+   - the latest metrics snapshot in `brand/references/business-context/reporting/instagram-metrics/`
    - `brand/references/business-context/visual/Mitozz Approved Post Library.csv`
    - any insights, metrics, screenshots, or account observations supplied by the user
 
@@ -99,6 +100,7 @@ When the request is about immediate execution, prioritize the current calendar a
 Determine:
 
 - what is scheduled next
+- what the latest metrics say about discovery, trust, and conversion
 - whether feed and story cadence are intact
 - which persona and pillar are currently being served
 - whether the system is too promotional, too repetitive, or too abstract
@@ -159,6 +161,7 @@ If the answer is mostly no, reject it even if it is currently popular.
 
 If the user provides performance data, prioritize these signals:
 
+- reach by format, especially reels versus posts versus stories
 - follows relative to reach
 - shares and saves on educational posts
 - profile visits from discovery posts
@@ -166,6 +169,7 @@ If the user provides performance data, prioritize these signals:
 - repeat weakness by pillar, persona, hook style, or format
 
 Do not overreact to one post unless the pattern is obvious.
+Prefer the latest monthly metrics snapshot over memory or isolated screenshots when both exist.
 If metrics are missing, make decisions from the content system rather than pretending performance is known.
 
 ## Required Output Shape
@@ -203,6 +207,7 @@ Until real performance data says otherwise:
 
 - keep feed and story paired whenever a feed post would benefit from reinforcement or signal gathering
 - prefer simple, repeatable educational hooks over cleverness
+- let the latest metrics snapshot override default format assumptions when a real pattern is clear
 - use stories as an active system, not an afterthought
 - let premium clarity win over trend speed
 - build familiarity before pushing product desire too hard
