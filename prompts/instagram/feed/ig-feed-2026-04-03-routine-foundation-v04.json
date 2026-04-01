@@ -1,0 +1,47 @@
+{
+  "asset_type": "feed",
+  "campaign_name": "Mitozz April 2026",
+  "topic": "Sleep food movement daily foundation alternate draft",
+  "objective": "Educate",
+  "template_set": "Set 1 + Set 2",
+  "slide_blueprint": "5-slide",
+  "asset_archetype": "education-card",
+  "platform": "Instagram",
+  "aspect_ratio": "4:5",
+  "audience": "Sleep-Deprived High Performer",
+  "visual_engine": "diagram-led",
+  "anchor_set": "Set H pacing + Set D framework clarity + restrained Set A selector behavior",
+  "source_lane": "design-first-no-image",
+  "source_strategy": "design-first compositor + science-framework support graphics",
+  "fallback_source": "fallback to the calmer v04 white-ground system if the support graphics overpower the copy",
+  "icon_strategy": "none",
+  "generated_visual_role": "infographic-support",
+  "visual_intent": [
+    "premium Japanese wellness education",
+    "diagram-led but visually richer than the v04 draft",
+    "science-framework support graphics with restrained mist-blue atmosphere",
+    "more engaging cover and body rhythm without breaking the Set system"
+  ],
+  "brand_guardrails": [
+    "Keep the layout disciplined and premium.",
+    "Do not use decorative random shapes.",
+    "Use diagrams only when they clarify the message.",
+    "Keep text hierarchy stronger than the support visuals."
+  ],
+  "composition": [
+    "4:5 portrait at 928x1152",
+    "soft white ground with very restrained mist-blue structure",
+    "cover, reframe, framework, selector, save close",
+    "thin connector lines, labeled nodes, and support modules where useful"
+  ],
+  "variation_guardrails": [
+    "Do not copy the v04 module proportions exactly.",
+    "Make the cover and framework slide more visual than the calmer draft.",
+    "Do not let the diagram read as a medical chart.",
+    "Keep the batch visibly related to the April 3 message."
+  ],
+  "notes": [
+    "Alternative draft intended for side-by-side review against v04.",
+    "This direction is more visually engaging while staying inside Set-based logic."
+  ]
+}

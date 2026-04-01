@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=11" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Mitozz Education Carousel</title>
+    <style>
+__INLINE_CSS__
+    </style>
+  </head>
+  <body>
+    <main class="artboard">
+      <section class="card">
+        <div class="variant" id="variantRoot"></div>
+      </section>
+    </main>
+
+    <script>
+      var data = __DATA_JSON__;
+      var variantRoot = document.getElementById("variantRoot");
+      variantRoot.className = "variant " + data.variant;
+
+      if (data.canvas && data.canvas.width) {
+        document.documentElement.style.width = data.canvas.width + "px";
+        document.documentElement.style.height = data.canvas.height + "px";
+        document.body.style.width = data.canvas.width + "px";
+        document.body.style.height = data.canvas.height + "px";
+        document.getElementsByClassName("artboard")[0].style.width = data.canvas.width + "px";
+        document.getElementsByClassName("artboard")[0].style.height = data.canvas.height + "px";
+      }
+
+      function appendLines(target, lines, className) {
+        var i;
+        if (!lines) {
+          return;
+        }
+        for (i = 0; i < lines.length; i += 1) {
+          var line = document.createElement("p");
+          line.className = className;
+          line.textContent = lines[i];
+          target.appendChild(line);
+        }
+      }
+
+      function appendMotif(root, motif) {
+        if (!motif || !motif.type) {
+          return;
+        }
+
+        var motifRoot = document.createElement("div");
+        motifRoot.className = "education-motif " + motif.type;
+        root.appendChild(motifRoot);
+
+        if (motif.type === "connected-habits" || motif.type === "soft-system") {
+          var orbA = document.createElement("div");
+          orbA.className = "motif-orb orb-a";
+          motifRoot.appendChild(orbA);
+
+          var orbB = document.createElement("div");
+          orbB.className = "motif-orb orb-b";
+          motifRoot.appendChild(orbB);
+
+          var orbC = document.createElement("div");
+          orbC.className = "motif-orb orb-c";
+          motifRoot.appendChild(orbC);
+
+          var lineA = document.createElement("div");
+          lineA.className = "motif-line line-a";
+          motifRoot.appendChild(lineA);
+
+          var lineB = document.createElement("div");
+          lineB.className = "motif-line line-b";
+          motifRoot.appendChild(lineB);
+        }
+
+        if (motif.type === "balance-arc" || motif.type === "soft-system") {
+          var arc = document.createElement("div");
+          arc.className = "motif-arc";
+          motifRoot.appendChild(arc);
+        }
+
+        if (motif.type === "save-band") {
+          var band = document.createElement("div");
+          band.className = "motif-band";
+          motifRoot.appendChild(band);
+
+          var glow = document.createElement("div");
+          glow.className = "motif-glow";
+          motifRoot.appendChild(glow);
+        }
+      }
+
+      appendMotif(variantRoot, data.motif);
+
+      if (data.panel) {
+        var panel = document.createElement("div");
+        panel.className = "education-panel";
+
+        if (data.panel.index) {
+          var index = document.createElement("div");
+          index.className = "education-panel-index";
+          index.textContent = data.panel.index;
+          panel.appendChild(index);
+        }
+
+        if (data.panel.kicker || data.panel.eyebrow) {
+          var panelCopy = document.createElement("div");
+          panelCopy.className = "education-panel-copy";
+
+          if (data.panel.kicker) {
+            var kicker = document.createElement("p");
+            kicker.className = "education-panel-kicker";
+            kicker.textContent = data.panel.kicker;
+            panelCopy.appendChild(kicker);
+          }
+
+          if (data.panel.eyebrow) {
+            var eyebrow = document.createElement("p");
+            eyebrow.className = "education-panel-eyebrow";
+            eyebrow.textContent = data.panel.eyebrow;
+            panelCopy.appendChild(eyebrow);
+          }
+
+          panel.appendChild(panelCopy);
+        }
+
+        variantRoot.appendChild(panel);
+      }
+
+      var copy = document.createElement("div");
+      copy.className = "education-copy-block";
+
+      if (data.copy && data.copy.kicker) {
+        var copyKicker = document.createElement("p");
+        copyKicker.className = "education-kicker";
+        copyKicker.textContent = data.copy.kicker;
+        copy.appendChild(copyKicker);
+      }
+
+      if (data.copy && data.copy.headline_lines) {
+        var headlineBlock = document.createElement("div");
+        headlineBlock.className = "education-headlines";
+        appendLines(headlineBlock, data.copy.headline_lines, "education-headline");
+        copy.appendChild(headlineBlock);
+      }
+
+      if (data.copy && data.copy.body_lines) {
+        var bodyBlock = document.createElement("div");
+        bodyBlock.className = "education-body-block";
+        appendLines(bodyBlock, data.copy.body_lines, "education-body-line");
+        copy.appendChild(bodyBlock);
+      }
+
+      if (data.copy && data.copy.footer_lines) {
+        var footerBlock = document.createElement("div");
+        footerBlock.className = "education-footer-block";
+        appendLines(footerBlock, data.copy.footer_lines, "education-footer-line");
+        copy.appendChild(footerBlock);
+      }
+
+      variantRoot.appendChild(copy);
+
+      if (data.note && data.note.label) {
+        var note = document.createElement("div");
+        note.className = "education-note";
+        note.textContent = data.note.label;
+        variantRoot.appendChild(note);
+      }
+
+      if (data.rule !== false) {
+        var rule = document.createElement("div");
+        rule.className = "education-rule";
+        variantRoot.appendChild(rule);
+      }
+    </script>
+  </body>
+</html>

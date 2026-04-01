@@ -42,8 +42,14 @@ When Japanese copy quality matters, use explicit `headline_lines` and `subline_l
   - reusable HTML shells
 - `styles/`
   - shared CSS tokens and component rules
+- `tokens/`
+  - shared Steel Light palette tokens and approved palette variants
 - `data/`
   - per-asset JSON content
+
+Current palette source of truth:
+
+- [mitozz-steel-light.tokens.psd1](C:\Users\esmoresernieryanocam\Desktop\Workspace\Mitozz%20Japan\design-system\instagram\tokens\mitozz-steel-light.tokens.psd1)
 
 ## Rendering
 

@@ -51,3 +51,6 @@ output/instagram/stories/**/archive/
 output/instagram/stories/**/rejected/
 output/instagram/profile/**/gen_*.png
 output/instagram/profile/**/*_thumb.jpeg
+output/_tmp/browser-render-profile/
+output/instagram/feed/_render-test/
+tools/unsplash-smart-mcp-server/

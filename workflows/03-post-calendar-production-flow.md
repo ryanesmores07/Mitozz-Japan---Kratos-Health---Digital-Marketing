@@ -48,15 +48,18 @@ These belong downstream.
 
 1. Approve the calendar row.
 2. Resolve the asset through the mapping rules.
-3. Build the creative package from the mapped result.
-4. Create or update the prompt JSON when source images are needed.
-5. Generate or collect the source assets.
-6. If the asset is a reel, assemble the freelancer handoff packet.
-7. Review against the batch consistency rules and the lessons log.
-8. Regenerate only the failing outputs or revise only the unclear handoff sections.
-9. Promote only approved outputs into the working set.
-10. Register approved feed posts and Story sets in `brand/references/business-context/visual/Mitozz Approved Post Library.csv`.
-11. When Instagram insights or screenshots become available, normalize the useful numbers and interpretation into `brand/references/business-context/reporting/instagram-metrics/` so the next planning cycle can use real performance data.
+3. Run [03B. Visual-Engine Preflight](03B-visual-engine-preflight.md) and lock the primary visual engine before layout work starts.
+4. Build the creative package from the mapped result.
+5. Create or update the prompt JSON when source images are needed.
+6. Generate or collect the source assets.
+7. Assemble the final asset through the compositor or chosen execution path.
+8. If the asset is a reel, assemble the freelancer handoff packet.
+9. Review against the batch consistency rules and the lessons log.
+10. Regenerate only the failing outputs or revise only the unclear handoff sections.
+11. If the same production issue appears more than once, update the standard, review gate, or skill docs before moving on to the next asset.
+12. Promote only approved outputs into the working set.
+13. Register approved feed posts and Story sets in `brand/references/business-context/visual/Mitozz Approved Post Library.csv`.
+14. When Instagram insights or screenshots become available, normalize the useful numbers and interpretation into `brand/references/business-context/reporting/instagram-metrics/` so the next planning cycle can use real performance data.
 
 ## Minimal Post-Calendar Data Model
 
@@ -69,6 +72,25 @@ After the calendar, every asset should resolve into this smaller production laye
 - `approved_references`
 
 This is enough to automate the rest without turning the calendar into a production spreadsheet.
+
+## Visual-Engine Preflight
+
+Before the creative package is finalized, run:
+
+- [03B. Visual-Engine Preflight](03B-visual-engine-preflight.md)
+
+This step must lock:
+
+- `visual_engine`
+- `anchor_set`
+- `source_lane`
+- `source_strategy`
+- `fallback_source`
+- `icon_strategy`
+- `generated_visual_role`
+
+These are not monthly planning fields.
+They are execution-control fields that stop routine, trust, or lifestyle topics from accidentally becoming abstract text systems.
 
 ## Reel-Specific Production Layer
 
@@ -126,6 +148,15 @@ After approval:
 - note what should change next time
 - record the `source_strategy` so we know whether the asset used full AI, a compositor path, a real-photo workflow, or a Nano Banana source image
 
+If a live asset exposed a recurring execution issue such as:
+
+- internal scaffolding leaking into production
+- meaningless badge or side-strip labels
+- forced Japanese line breaks
+- visibly off-center module text
+
+write that lesson back into the workflow or standards before starting the next asset.
+
 ## Performance Feedback Rule
 
 When metrics become available after posting:
@@ -142,7 +173,10 @@ This is the lightweight way to behave more like a brand system without overbuild
 If a feed or Story needs stock-style human, object, lifestyle, or environment imagery:
 
 - do not default to outside stock libraries
-- have the prompt engineer create a dedicated Nano Banana prompt for the source image
+- do not skip the image decision and hope the layout can solve it later
+- use Unsplash first when a premium real-photo stock plate is enough
+- use Nano Banana when the image needs to be more custom than stock
+- have the prompt engineer create a dedicated Nano Banana prompt only when the chosen `source_lane` is `Nano-Banana-source-image`
 - keep text-led assets design-first when possible so Nano Banana only has to generate the image plate
 
 ## Best-Practice Rule
@@ -161,5 +195,6 @@ For this project, the best default workflow is:
 4. build creative packages from that resolved structure
 5. enforce consistency at the batch-review stage
 6. record reusable mistakes so future batches improve automatically
+7. when a correction becomes a pattern, codify it immediately instead of relying on memory
 
 This is the cleanest path for speed, consistency, and future automation.

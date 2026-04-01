@@ -28,10 +28,11 @@ Use this order for day-to-day production:
 1. read the approved calendar row
 2. resolve the post-calendar production layer:
    `Template Set`, `Slide Blueprint`, `asset_archetype`, `story_type`, and `story_delivery_mode` when needed
-3. choose the correct approved references from the reference pack
-4. build the creative package
-5. generate the asset or source plate
-6. review against the approval rules and [Mitozz Asset Review Gate.md](Mitozz%20Asset%20Review%20Gate.md) before promotion
+3. lock `visual_engine`, `anchor_set`, `source_lane`, `source_strategy`, `fallback_source`, `icon_strategy`, and `generated_visual_role`
+4. choose the correct approved references from the reference pack
+5. build the creative package
+6. generate the asset or source plate
+7. review against the approval rules and [Mitozz Asset Review Gate.md](Mitozz%20Asset%20Review%20Gate.md) before promotion
 
 ## Approved Production System
 
@@ -39,6 +40,44 @@ The Mitozz grid should operate like a premium brand system, not a one-off design
 
 Use the same core template families repeatedly.
 Vary execution inside those families.
+
+## Visual Engine Lock
+
+Every feed post and Story set must choose one primary visual engine before production:
+
+- `image-led`
+- `type-led`
+- `diagram-led`
+
+This choice happens in:
+
+- [workflows/03B-visual-engine-preflight.md](../../../../workflows/03B-visual-engine-preflight.md)
+
+Default rules:
+
+- routine, lifestyle, body-state, trust, and product-in-context topics should default to `image-led`
+- comparisons, frameworks, myth-versus-fact, and decision logic should default to `diagram-led`
+- editorial reframes, short FAQs, and sharp educational statements can default to `type-led`
+
+Do not let a routine-led or lifestyle-led topic become type-led only because layout production was faster.
+
+If `type-led` is chosen for a lived-experience topic, the reason should be explicit before generation.
+
+## Default Enhancement Rule
+
+Every asset must also make two explicit enhancement decisions before execution:
+
+- `icon_strategy`
+- `generated_visual_role`
+
+This means we do not default to plain text layouts just because they are faster to assemble.
+
+Ask two questions every time:
+
+1. would Better Icons improve clarity here
+2. would a generated support visual improve engagement here
+
+If the answer is no, record `none` intentionally.
 
 ## Template Hierarchy
 
@@ -115,6 +154,26 @@ These should repeat consistently:
 - minimal composition
 - restrained warmth
 
+## Token Lock
+
+Use the shared palette token source as the production default:
+
+- [mitozz-steel-light.tokens.psd1](../../../../design-system/instagram/tokens/mitozz-steel-light.tokens.psd1)
+
+Do not hardcode one-off palette values in new renderers when the shared tokens can provide them.
+
+Approved palette variants:
+
+- `default`
+- `cool_focus`
+- `warm_editorial`
+
+Rule:
+
+- creative exploration is allowed inside these approved variants
+- do not introduce a new hue family just because one asset wants more novelty
+- keep batch consistency inside the chosen variant
+
 ## Typography Lock
 
 Typography is locked as a system, not an asset-by-asset interpretation.
@@ -148,6 +207,20 @@ Japanese line-break lock:
 - define sublines explicitly when auto-wrap produces awkward rhythm
 - do not let cover hooks or CTA lines depend on accidental browser wraps
 - if punctuation, particles, or compound phrases land awkwardly, refine the layout before approval
+
+Micro-alignment lock:
+
+- text inside narrow side bands, selector tiles, row labels, chips, and note cards must be optically centered when the module reads as a centered label
+- do not rely on default text origins when a module needs horizontal or vertical centering
+- if a centered label looks even slightly off, fix the coordinates before approval
+- closing-note cards should behave like closing-note cards, not like reused left-aligned body cards
+
+Template-scaffolding lock:
+
+- internal process labels must never appear in production-facing artwork
+- do not leak `Set` names, reference codes, English workflow scaffolding, or QA markers into final assets
+- if a colored strip, badge, or side band visually behaves like a label area, give it meaningful viewer-facing content or redesign it as a true accent area
+- do not leave empty-looking label bands that read like unfinished template residue
 
 Emphasis should not come from:
 
@@ -204,6 +277,7 @@ Automatic QA rule:
 - do not accept a generated batch on first pass by default
 - compare it against the locked master references
 - if border thickness, card size, spacing, typography presence, or edge treatment drift, regenerate the incorrect slide
+- if module alignment, label semantics, or closing-card balance drift, regenerate the incorrect slide
 - only promote slides that pass the locked system checks
 - do not present first-pass assets as final delivery before they pass the review gate
 
@@ -244,6 +318,49 @@ These should rotate to avoid repetition:
 - surface treatment
 - realistic scene type
 - portrait framing
+
+## Icon Rule
+
+Icons are allowed when they add semantic clarity.
+
+Use icons for:
+
+- selector tiles
+- answer-card labels
+- framework cues
+- small CTA support
+- comparison markers
+
+Do not use icons as decorative filler.
+
+Production rules:
+
+- use one icon family per asset or batch
+- keep icon treatment consistent
+- prefer simple editorial icons over playful or app-like sets
+- if an icon is needed, source it intentionally instead of drawing random symbolic shapes
+- route icon sourcing through the Better Icons MCP lane when icons are chosen
+
+## Generated Support Visual Rule
+
+Generated visuals are encouraged when they materially improve the asset.
+
+Good uses:
+
+- subtle backgrounds
+- infographic-support elements
+- hero visuals
+- support plates
+- restrained scientific or editorial support forms
+
+Do not use generated visuals as filler.
+
+Production rules:
+
+- the generated layer must support the chosen visual engine, not fight it
+- keep it restrained enough that copy and hierarchy still lead
+- prefer Nano Banana when the support visual should be custom rather than stock
+- if a generated layer is chosen, document its role clearly in the creative package
 
 ## Feed Rotation Rule
 
@@ -339,6 +456,30 @@ If no override is needed:
 - lifestyle posts use `Set 4`
 - authority posts use `Set 5`
 - stories simplify `Set 1`, `Set 4`, or `Set 5`
+
+Visual defaults:
+
+- `Set 1 + Set 2` education posts can be `type-led` or `diagram-led`, but should still become `image-led` when the topic is lived-in or routine-based
+- `Set 4` should usually be `image-led`
+- `Set 5` should usually be `image-led`
+- `Set 3` should use real-photo truth when the product is visible
+- Story whitespace should be used intentionally; the middle of the frame should carry structure, context, or a support module rather than feeling accidentally empty
+- If a Story card is teaching named categories like `睡眠 / 食事 / 運動`, prefer those labels inside the module over abstract numbers unless sequence itself is the point
+
+Stock-image defaults:
+
+- use Unsplash when a premium real-photo support image is enough
+- use Nano Banana when the image needs stronger custom composition, more exact contextual fit, or more brand-specific staging than stock can reliably provide
+
+Story composition defaults:
+
+- use the top, center, and bottom of the frame strategically when the message benefits from clearer vertical rhythm
+- do not force fillers just to occupy space; each zone should have a compositional job or stay intentionally quiet
+- if a Story feels top-heavy, solve it with guidance, support structure, or a meaningful module before adding decoration
+- large Japanese headlines should be checked for optical tracking and rhythm so they do not feel cramped even when line breaks are correct
+- avoid repeating the same core terms multiple times inside one frame unless the repetition is doing clear hierarchy or navigation work
+- when a horizontal strip is divided into columns, center the text inside each actual column, not by rough visual guesses
+- fix cramped titles with a combination of line height, tracking, and size adjustment rather than only shrinking the type
 
 ## Posting Logic
 

@@ -35,6 +35,13 @@ Then resolve the downstream production layer:
 - `asset_archetype`
 - `story_type` when needed
 - `approved_references`
+- `visual_engine`
+- `anchor_set`
+- `source_lane`
+- `source_strategy`
+- `fallback_source`
+- `icon_strategy`
+- `generated_visual_role`
 
 ## Checklist
 
@@ -42,7 +49,13 @@ Then resolve the downstream production layer:
 - Resolve `Template Set` and `Slide Blueprint` from the mapping rules before deciding layout details.
   - canonical resolver: `tools/resolve-template-mapping.py`
   - windows wrapper: `tools/resolve-template-mapping.ps1`
+- Run `workflows/03B-visual-engine-preflight.md` before locking the brief.
+- Record `visual_engine`, `anchor_set`, `source_lane`, `source_strategy`, `fallback_source`, `icon_strategy`, and `generated_visual_role` inside the creative package.
 - Check `brand/references/business-context/visual/Mitozz Approved Post Library.csv` before locking the concept so reuse stays intentional and recent assets are not repeated too literally.
+- Decide explicitly whether the asset should use Better Icons for semantic support.
+- Decide explicitly whether the asset should use a generated visual layer such as a subtle background, infographic-support element, hero visual, or support plate.
+- If icons would improve clarity, route them through `mitozz-icon-sourcing` instead of improvised geometry.
+- If a support visual should be generated, prefer Nano Banana over hand-building fake motifs when the generated layer would materially improve the finish.
 - Decide whether the asset needs the optional frontend-skill lens before prompt writing.
   - use it when the asset is campaign-critical, visually high-stakes, landing-page-connected, or weak in first-pass composition
   - use it to sharpen visual thesis, hierarchy, image dominance, spacing, and motion logic
@@ -63,7 +76,9 @@ Then resolve the downstream production layer:
 - Write `reference_strategy` in one short sentence.
 - Write `variation_guardrails` as explicit change rules.
 - Specify what must vary from the references so the result feels on-theme but not repetitive.
-- If stock-style human, object, lifestyle, or environment imagery is needed and no owned or product-truth source is required, route it to a Nano Banana source-image prompt instead of outside stock.
+- If stock-style human, object, lifestyle, or environment imagery is needed and no owned or product-truth source is required, decide whether `Unsplash-stock-image` is sufficient before choosing `Nano-Banana-source-image`.
+- Use `Unsplash-stock-image` when a premium real-photo support plate is enough.
+- Use `Nano-Banana-source-image` when the image needs tighter custom staging, composition, or brand-specific context than stock can reliably provide.
 
 If the frontend-skill lens is used, add these internal planning notes before finalizing the package:
 
@@ -112,6 +127,13 @@ Each reel shot should be documented with:
 
 ## Required Handoff Fields
 
+- `visual_engine`
+- `anchor_set`
+- `source_lane`
+- `source_strategy`
+- `fallback_source`
+- `icon_strategy`
+- `generated_visual_role`
 - `asset_archetype`
 - `visual_intent`
 - `brand_guardrails`

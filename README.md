@@ -1,5 +1,5 @@
-Nano Banana Instagram Workspace
-================================
+Mitozz Japan
+============
 
 This workspace is organized for creating and maintaining reusable JSON prompts for Nano Banana, focused on Instagram organic marketing for Mitozz Japan.
 

@@ -1,0 +1,30 @@
+{
+  "template": "education-carousel",
+  "variant": "education-close",
+  "canvas": {
+    "width": 928,
+    "height": 1152
+  },
+  "panel": {
+    "index": "SAVE",
+    "kicker": "ROUTINE NOTE",
+    "eyebrow": "\u5f8c\u304b\u3089\u898b\u76f4\u305b\u308b\u5f62\u3067"
+  },
+  "copy": {
+    "headline_lines": [
+      "\u4fdd\u5b58\u3057\u3066\u3001",
+      "\u65e5\u3005\u306e\u898b\u76f4\u3057\u306b",
+      "\u4f7f\u3063\u3066\u304f\u3060\u3055\u3044\u3002"
+    ],
+    "body_lines": [
+      "\u30eb\u30fc\u30c6\u30a3\u30f3\u3092\u8cbc\u308a\u66ff\u3048\u308b\u524d\u306b\u3001",
+      "\u307e\u305a\u306f\u3064\u306a\u304c\u308a\u3067\u898b\u3066\u307f\u308b\u3002"
+    ]
+  },
+  "motif": {
+    "type": "save-band"
+  },
+  "note": {
+    "label": "FOR YOUR NEXT CHECK-IN"
+  }
+}

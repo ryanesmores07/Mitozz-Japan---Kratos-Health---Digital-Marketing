@@ -1,0 +1,24 @@
+﻿{
+  "template": "story-reinforcement",
+  "variant": "story-question",
+  "canvas": {
+    "width": 1080,
+    "height": 1920
+  },
+  "accent": {
+    "type": "portrait",
+    "path": "output/instagram/reels/2026-04-01-daily-foundation-reel/current/shot-01-opening-hook.png"
+  },
+  "copy": {
+    "kicker": "日々の調子",
+    "headline_lines": [
+      "毎日のルーティンで",
+      "気になることは",
+      "ありますか。"
+    ],
+    "body_lines": [
+      "小さな違和感でも大丈夫です。",
+      "気軽に聞ける場をつくりました。"
+    ]
+  }
+}

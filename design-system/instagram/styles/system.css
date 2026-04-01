@@ -500,3 +500,345 @@ body {
   background: linear-gradient(180deg, rgba(220, 232, 238, 0.16), rgba(220, 232, 238, 0.3));
   border: 2px dashed rgba(111, 135, 148, 0.22);
 }
+
+.education-cover,
+.education-body,
+.education-close {
+  position: absolute;
+  inset: 0;
+}
+
+.education-panel {
+  position: absolute;
+  top: 84px;
+  left: 74px;
+  right: 74px;
+  z-index: 3;
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.education-panel-index {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 78px;
+  height: 78px;
+  border-radius: 999px;
+  background: rgba(220, 232, 238, 0.72);
+  color: rgba(111, 135, 148, 0.96);
+  font-family: var(--font-serif-accent);
+  font-size: 34px;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.education-panel-copy {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-top: 10px;
+}
+
+.education-panel-kicker {
+  margin: 0;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  color: rgba(111, 135, 148, 0.84);
+}
+
+.education-panel-eyebrow {
+  margin: 0;
+  font-size: 26px;
+  line-height: 1.36;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+  color: rgba(52, 57, 63, 0.64);
+}
+
+.education-copy-block {
+  position: absolute;
+  left: 84px;
+  right: 84px;
+  top: 176px;
+  z-index: 3;
+}
+
+.education-kicker {
+  margin: 0 0 22px;
+  font-size: 24px;
+  line-height: 1.2;
+  letter-spacing: 0.14em;
+  font-weight: 600;
+  color: rgba(111, 135, 148, 0.84);
+}
+
+.education-headlines {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.education-headline {
+  margin: 0;
+  font-size: 64px;
+  line-height: 1.18;
+  letter-spacing: -0.03em;
+  font-weight: 700;
+  color: rgba(52, 57, 63, 0.98);
+}
+
+.education-body-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 24px;
+  max-width: 650px;
+}
+
+.education-body-line {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.48;
+  letter-spacing: 0.01em;
+  font-weight: 500;
+  color: rgba(52, 57, 63, 0.74);
+}
+
+.education-footer-block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 32px;
+}
+
+.education-footer-line {
+  margin: 0;
+  font-size: 28px;
+  line-height: 1.44;
+  letter-spacing: 0.01em;
+  font-weight: 500;
+  color: rgba(52, 57, 63, 0.76);
+}
+
+.education-kicker,
+.education-headline,
+.education-body-line,
+.education-footer-line,
+.education-panel-kicker,
+.education-panel-eyebrow {
+  word-break: normal;
+  overflow-wrap: normal;
+  line-break: strict;
+  hanging-punctuation: allow-end;
+}
+
+.education-headline,
+.education-body-line,
+.education-footer-line {
+  text-wrap: balance;
+}
+
+.education-rule {
+  position: absolute;
+  left: 92px;
+  right: 92px;
+  top: 690px;
+  z-index: 3;
+  height: 2px;
+  background: linear-gradient(90deg, rgba(111, 135, 148, 0), rgba(111, 135, 148, 0.38) 12%, rgba(111, 135, 148, 0.38) 88%, rgba(111, 135, 148, 0));
+}
+
+.education-note {
+  position: absolute;
+  left: 92px;
+  right: 92px;
+  bottom: 118px;
+  z-index: 3;
+  font-size: 24px;
+  line-height: 1.35;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  color: rgba(111, 135, 148, 0.82);
+}
+
+.education-motif {
+  position: absolute;
+  inset: auto 0 0 0;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.education-motif .motif-orb {
+  position: absolute;
+  border-radius: 999px;
+  background: radial-gradient(circle at 35% 30%, rgba(255, 255, 255, 0.95), rgba(220, 232, 238, 0.8) 58%, rgba(220, 232, 238, 0.16) 100%);
+  box-shadow:
+    0 18px 40px rgba(186, 202, 211, 0.16),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.55);
+}
+
+.education-motif .motif-line {
+  position: absolute;
+  height: 2px;
+  transform-origin: left center;
+  background: linear-gradient(90deg, rgba(183, 200, 210, 0.2), rgba(183, 200, 210, 0.54), rgba(183, 200, 210, 0.18));
+}
+
+.education-motif .motif-arc {
+  position: absolute;
+  left: 176px;
+  bottom: 104px;
+  width: 620px;
+  height: 276px;
+  border-top-left-radius: 400px;
+  border-top-right-radius: 400px;
+  border: 2px solid rgba(183, 200, 210, 0.24);
+  border-bottom: none;
+}
+
+.education-motif.connected-habits,
+.education-motif.soft-system {
+  height: 470px;
+}
+
+.education-motif.connected-habits .orb-a,
+.education-motif.soft-system .orb-a {
+  left: 108px;
+  bottom: 110px;
+  width: 168px;
+  height: 168px;
+}
+
+.education-motif.connected-habits .orb-b,
+.education-motif.soft-system .orb-b {
+  left: 356px;
+  bottom: 172px;
+  width: 190px;
+  height: 190px;
+}
+
+.education-motif.connected-habits .orb-c,
+.education-motif.soft-system .orb-c {
+  right: 118px;
+  bottom: 102px;
+  width: 176px;
+  height: 176px;
+}
+
+.education-motif.connected-habits .line-a,
+.education-motif.soft-system .line-a {
+  left: 240px;
+  bottom: 212px;
+  width: 168px;
+  transform: rotate(18deg);
+}
+
+.education-motif.connected-habits .line-b,
+.education-motif.soft-system .line-b {
+  left: 520px;
+  bottom: 214px;
+  width: 150px;
+  transform: rotate(-22deg);
+}
+
+.education-motif.balance-arc {
+  height: 420px;
+}
+
+.education-motif.balance-arc::before {
+  content: "";
+  position: absolute;
+  left: 158px;
+  right: 158px;
+  bottom: 120px;
+  height: 180px;
+  border-top-left-radius: 320px;
+  border-top-right-radius: 320px;
+  border: 2px solid rgba(183, 200, 210, 0.18);
+  border-bottom: none;
+}
+
+.education-motif.save-band {
+  height: 410px;
+}
+
+.education-motif.save-band .motif-band {
+  position: absolute;
+  left: 94px;
+  right: 94px;
+  bottom: 94px;
+  height: 176px;
+  border-radius: 42px;
+  background:
+    linear-gradient(135deg, rgba(220, 232, 238, 0.28), rgba(255, 255, 255, 0.92) 44%, rgba(244, 138, 90, 0.08) 100%);
+  box-shadow:
+    inset 0 0 0 1px rgba(255, 255, 255, 0.5),
+    0 20px 40px rgba(202, 214, 221, 0.12);
+}
+
+.education-motif.save-band .motif-glow {
+  position: absolute;
+  left: 126px;
+  right: 126px;
+  bottom: 146px;
+  height: 92px;
+  border-radius: 999px;
+  background: radial-gradient(circle at center, rgba(244, 138, 90, 0.14), rgba(244, 138, 90, 0) 68%);
+}
+
+.education-cover .education-copy-block {
+  top: 154px;
+  left: 76px;
+  right: 88px;
+}
+
+.education-cover .education-headline {
+  font-size: 72px;
+  line-height: 1.14;
+  letter-spacing: -0.034em;
+}
+
+.education-cover .education-body-block {
+  max-width: 610px;
+  margin-top: 18px;
+}
+
+.education-cover .education-rule {
+  top: 684px;
+}
+
+.education-body .education-copy-block {
+  top: 314px;
+  left: 84px;
+  right: 108px;
+}
+
+.education-body .education-headline {
+  font-size: 60px;
+  line-height: 1.2;
+}
+
+.education-body .education-body-block {
+  margin-top: 18px;
+  max-width: 640px;
+}
+
+.education-close .education-copy-block {
+  top: 308px;
+  left: 92px;
+  right: 98px;
+}
+
+.education-close .education-headline {
+  font-size: 60px;
+  line-height: 1.2;
+}
+
+.education-close .education-body-block {
+  margin-top: 18px;
+  max-width: 620px;
+}

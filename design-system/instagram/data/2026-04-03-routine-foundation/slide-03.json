@@ -1,0 +1,30 @@
+{
+  "template": "education-carousel",
+  "variant": "education-body",
+  "canvas": {
+    "width": 928,
+    "height": 1152
+  },
+  "panel": {
+    "index": "02",
+    "kicker": "FOUNDATION",
+    "eyebrow": "\u8996\u70b9\u3092\u3072\u3068\u3064\u306b\u307e\u3068\u3081\u308b"
+  },
+  "copy": {
+    "headline_lines": [
+      "\u7761\u7720 \u98df\u4e8b \u904b\u52d5\u306f",
+      "\u6bce\u65e5\u306e\u571f\u53f0\u3068\u3057\u3066",
+      "\u3064\u306a\u304c\u3063\u3066\u3044\u307e\u3059\u3002"
+    ],
+    "body_lines": [
+      "\u30df\u30c8\u30b3\u30f3\u30c9\u30ea\u30a2\u8996\u70b9\u3067\u898b\u308b\u3068\u3001",
+      "\u305d\u308c\u305e\u308c\u304c\u5206\u65ad\u3057\u305f\u30bf\u30b9\u30af\u3067\u306f\u306a\u304f\u306a\u308a\u307e\u3059\u3002"
+    ]
+  },
+  "motif": {
+    "type": "soft-system"
+  },
+  "note": {
+    "label": "MITOCHONDRIA-FIRST VIEW"
+  }
+}

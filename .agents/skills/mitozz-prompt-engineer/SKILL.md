@@ -31,6 +31,8 @@ If the prompt work materially improves production readiness, consistency, or exe
 7. `workflows/03-generate-and-approve.md`
 8. `tools/resolve-template-mapping.py`
 9. `tools/resolve-template-mapping.ps1` for Windows / PowerShell environments
+10. `.agents/skills/mitozz-icon-sourcing/SKILL.md` when the creative package calls for icons
+11. `.agents/skills/mitozz-stock-image-sourcing/SKILL.md` when the creative package calls for stock-photo sourcing
 
 ## Calendar Compatibility
 
@@ -42,6 +44,24 @@ The content calendar is now Japanese-first for planning, but prompt JSON should 
 - keep prompt structure and control fields in English
 - preserve exact customer-facing Japanese only inside `text_overlay` or other explicit copy fields
 - do not copy raw calendar cells into the prompt without refining them through the creative package
+
+## Decision Boundary
+
+This skill does not own:
+
+- strategic positioning
+- final messaging angle
+- primary Japanese copy decisions
+- visual engine choice
+- source-lane choice
+
+Those decisions belong to:
+
+- `mitozz-instagram-strategist` for account-level direction
+- `mitozz-creatives-director` for asset-level direction
+
+This skill's job is to encode the approved creative package cleanly for execution.
+Do not silently change the chosen source lane or creative message just because another execution path seems easier.
 
 ## Prompt Shape
 
@@ -123,9 +143,29 @@ Product-source rules:
 
 Stock-style source-image rule:
 
-- when a feed or Story needs human, object, lifestyle, or environment imagery and no owned photo or product-truth source is required, create a dedicated Nano Banana source-image prompt instead of assuming outside stock
+- when the creative package chooses `Nano-Banana-source-image`, create a dedicated Nano Banana source-image prompt
+- when the creative package chooses `Unsplash-stock-image`, do not force a Nano Banana prompt just because the asset uses stock photography
 - keep that prompt focused on the image plate or background, not the full text-led asset, when a compositor path is available
 - use the approved post library to check whether a similar source-image strategy already exists and whether it should be reused or switched up
+
+Source-lane execution rule:
+
+- if the chosen `source_lane` is `Nano-Banana-source-image`, build the prompt JSON normally
+- if the chosen `source_lane` is `Unsplash-stock-image`, create only the supporting selection notes or compositor-ready asset notes that the downstream step needs
+
+Icon rule:
+
+- if the creative package calls for icons, do not invent random abstract shapes as a substitute
+- route icon choice through `mitozz-icon-sourcing`
+- keep one icon family per asset or batch
+- record the selected icon ids or collection in prompt notes when they materially affect the final layout
+
+Generated support visual rule:
+
+- if the creative package calls for `generated_visual_role`, treat that as a real production layer, not as a vague mood note
+- if the chosen source lane is `Nano-Banana-source-image`, use Nano Banana to generate the subtle background, infographic support visual, hero visual, or support plate that the package specifies
+- if the chosen source lane is `design-first-no-image`, but `generated_visual_role` is not `none`, create the supporting design notes or source prompt needed for that generated layer instead of hand-inventing filler shapes
+- record clearly whether the generated layer is a background, support plate, hero visual, or infographic support element
 
 When a reel shot includes the Mitozz bottle as a visible focal element:
 

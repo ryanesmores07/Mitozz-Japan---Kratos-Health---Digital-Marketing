@@ -1,0 +1,26 @@
+{
+  "template": "education-carousel",
+  "variant": "education-cover",
+  "canvas": {
+    "width": 928,
+    "height": 1152
+  },
+  "copy": {
+    "kicker": "DAILY FOUNDATION",
+    "headline_lines": [
+      "\u7761\u7720 \u98df\u4e8b \u904b\u52d5\u3092",
+      "\u30df\u30c8\u30b3\u30f3\u30c9\u30ea\u30a2\u8996\u70b9\u3067",
+      "\u898b\u76f4\u3059"
+    ],
+    "body_lines": [
+      "\u3070\u3089\u3070\u3089\u306b\u6574\u3048\u308b\u3088\u308a\u3001",
+      "\u3072\u3068\u3064\u306e\u6d41\u308c\u3068\u3057\u3066\u898b\u3066\u307f\u308b\u3002"
+    ]
+  },
+  "motif": {
+    "type": "connected-habits"
+  },
+  "note": {
+    "label": "SAVE-WORTHY EDUCATION"
+  }
+}

@@ -1,0 +1,118 @@
+{
+  "asset_type": "instagram-story",
+  "campaign_name": "April 2026 Organic Education",
+  "topic": "Routine question box story",
+  "objective": "Gather engagement by inviting routine-related questions after the April 1 daily-foundation content",
+  "template_set": "Set 4",
+  "slide_blueprint": "story-3-frame",
+  "asset_archetype": "story-question-box",
+  "platform": "instagram",
+  "aspect_ratio": "9:16",
+  "audience": "Sleep-Deprived High Performer",
+  "visual_intent": [
+    "interactive lifestyle-led story",
+    "quiet premium daily-routine atmosphere",
+    "question-ready final frame with clean sticker space",
+    "fast mobile readability"
+  ],
+  "brand_guardrails": [
+    "keep continuity with the April 1 routine-first world without repeating the same framing",
+    "protect top and bottom safe zones",
+    "keep typography stable across all 3 frames",
+    "do not generate fake question-box UI or placeholder fields",
+    "avoid hard-sell or self-help energy",
+    "keep text color density, opacity, and typographic presence visually consistent across all 3 frames"
+  ],
+  "composition": [
+    "9:16 vertical framing",
+    "one short message block per frame",
+    "subtle lifestyle image support with clean reading zones",
+    "frame 3 must leave lower-third space for the native Question Box sticker",
+    "strong negative space",
+    "mist-blue and cloud-white atmosphere with restrained steel-blue structure"
+  ],
+  "image_references": [
+    {
+      "path": "brand/references/business-context/visual/reference-pack/working-examples/template-set-4-lifestyle-v02-no-bottle.png",
+      "role": "working-example",
+      "influence": [
+        "daily-life realism",
+        "quiet lifestyle atmosphere",
+        "premium restraint"
+      ],
+      "match_strength": "high"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/working-examples/story-busy-day-context-hook-01.png",
+      "role": "working-example",
+      "influence": [
+        "story pacing",
+        "question-led support tone",
+        "upper text rhythm"
+      ],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-editorial-whitespace-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "spacing",
+        "restraint",
+        "vertical breathing room"
+      ],
+      "match_strength": "high"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "palette",
+        "mist-blue softness",
+        "restraint"
+      ],
+      "match_strength": "medium"
+    }
+  ],
+  "reference_strategy": "Use the approved Set 4 lifestyle reference and the earlier question-led Story behavior as continuity anchors, then keep the April 2 story calmer, more spacious, and more open to replies than a standard reinforcement Story.",
+  "variation_guardrails": [
+    "do not duplicate the March 26 desk atmosphere or exact framing",
+    "keep the sequence softer and more invitational than the April 1 reinforcement Story",
+    "use more intentional lower-third space on frame 3",
+    "avoid exact crop, hand placement, or copy rhythm matching from reference stories"
+  ],
+  "text_overlay": {
+    "allowed": true,
+    "max_words": 12,
+    "tone": "soft, clear, conversational",
+    "font_reference": "Hiragino Sans",
+    "font_lock": {
+      "all_frames": "Hiragino Sans Medium"
+    },
+    "batch_lock": {
+      "text_color": "dark charcoal, visually consistent across all frames",
+      "text_opacity": "stable across all frames",
+      "weight_presence": "same medium-weight feel across all frames"
+    },
+    "headline_ja": "\u6bce\u65e5\u306e\u30eb\u30fc\u30c6\u30a3\u30f3\u3067\\n\u6c17\u306b\u306a\u308b\u3053\u3068\u306f\u3042\u308a\u307e\u3059\u304b\u3002",
+    "slides_ja": [
+      "\u6bce\u65e5\u306e\u30eb\u30fc\u30c6\u30a3\u30f3\u3067\\n\u6c17\u306b\u306a\u308b\u3053\u3068\u306f\u3042\u308a\u307e\u3059\u304b\u3002",
+      "\u7761\u7720\u3084\u98df\u4e8b\u3001\\n\u671d\u306e\u6574\u3048\u65b9\u3067\u3082\u5927\u4e08\u592b\u3067\u3059\u3002",
+      "\u5c0f\u3055\u306a\u3053\u3068\u3067\u3082\\n\u6c17\u8efd\u306b\u9001\u3063\u3066\u304f\u3060\u3055\u3044\u3002"
+    ]
+  },
+  "negative_prompts": [
+    "fake question-box UI",
+    "button-like box",
+    "busy Story layout",
+    "messy workspace",
+    "hard-sell ad mood",
+    "tiny unreadable text"
+  ],
+  "reference_files": [
+    "brand/references/business-context/creative-packages/creative-package-2026-04-02.md",
+    "brand/references/business-context/creative-packages/creative-package-2026-04-01.md",
+    "brand/references/business-context/visual/Brand Visual Direction.md",
+    "brand/references/business-context/visual/Mitozz Instagram Story Strategy.md"
+  ],
+  "notes": "April 2 native-interaction-led question box Story. Keep this compositor-led. Frame 3 must stay clean for the native Question Box sticker with the prompt `\u6c17\u306b\u306a\u3063\u3066\u3044\u308b\u3053\u3068\u306f\uff1f`."
+}

@@ -1,0 +1,23 @@
+﻿{
+  "template": "story-reinforcement",
+  "variant": "story-context",
+  "canvas": {
+    "width": 1080,
+    "height": 1920
+  },
+  "accent": {
+    "type": "rings"
+  },
+  "copy": {
+    "kicker": "聞ける内容",
+    "headline_lines": [
+      "睡眠や食事、",
+      "朝の整え方でも",
+      "大丈夫です。"
+    ],
+    "body_lines": [
+      "続けるものだからこそ、",
+      "理由で選べることが安心につながる。"
+    ]
+  }
+}

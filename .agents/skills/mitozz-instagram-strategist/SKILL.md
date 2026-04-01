@@ -199,6 +199,12 @@ Use the existing Mitozz skills as the execution chain:
 - JSON prompt building/refinement -> `mitozz-prompt-engineer`
 - Nano Banana asset generation -> `nano-banana-instagram`
 
+Support lanes chosen by the creative brief can also route through:
+
+- stock-photo sourcing -> `mitozz-stock-image-sourcing`
+- icon sourcing -> `mitozz-icon-sourcing`
+- final design-first assembly -> `mitozz-compositor-executor`
+
 When the user asks what to do next, you should usually make the strategic decision first, then route only the required next production step.
 
 ## Operating Heuristics For This Account

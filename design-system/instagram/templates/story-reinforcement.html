@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ja">
   <head>
     <meta charset="utf-8" />
@@ -42,11 +42,8 @@ __INLINE_CSS__
 
       if (data.accent && data.accent.type === "portrait") {
         var portrait = document.createElement("div");
-        var imageSource = data.accent.path;
+        var imageSource = data.accent.uri || data.accent.path;
         portrait.className = "story-portrait-wash";
-        if (data.accent.path && data.accent.path.charAt(0) === "/") {
-          imageSource = "file://" + data.accent.path;
-        }
         portrait.style.backgroundImage = "url('" + imageSource + "')";
         variantRoot.appendChild(portrait);
 
@@ -108,3 +105,4 @@ __INLINE_CSS__
     </script>
   </body>
 </html>
+

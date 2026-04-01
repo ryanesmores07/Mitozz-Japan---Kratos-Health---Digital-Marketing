@@ -1,0 +1,25 @@
+﻿{
+  "template": "story-reinforcement",
+  "variant": "story-poll",
+  "canvas": {
+    "width": 1080,
+    "height": 1920
+  },
+  "accent": {
+    "type": "waves"
+  },
+  "copy": {
+    "kicker": "質問をどうぞ",
+    "headline_lines": [
+      "小さなことでも",
+      "気軽に送って",
+      "ください。"
+    ],
+    "body_lines": [
+      "気になっていることは？"
+    ]
+  },
+  "prompt": {
+    "label": "下の質問ボックスから送れます。"
+  }
+}

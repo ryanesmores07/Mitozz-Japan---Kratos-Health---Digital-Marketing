@@ -57,6 +57,7 @@ Use one of these descriptions:
 - `design-first compositor + existing image plate`
 - `design-first compositor + abstract system graphics`
 - `design-first compositor + Nano Banana source image`
+- `Unsplash stock image`
 - `real-photo composition workflow`
 - `Nano Banana stock-style source image`
 - `Nano Banana reel source-frame set`
@@ -107,14 +108,16 @@ Use this split:
 If a feed or Story needs stock-style human, lifestyle, object, or environment imagery and no real shoot or owned source is required:
 
 - do not default to outside stock
-- have the prompt engineer create a dedicated Nano Banana source-image prompt
-- generate the source image through Nano Banana MCP
+- use Unsplash when a premium real-photo stock image is enough
+- use Nano Banana when the image needs to be more custom than stock
+- have the prompt engineer create a dedicated Nano Banana source-image prompt only when Nano Banana is the chosen source lane
 - keep text-led layouts design-first whenever possible
 - record the final source strategy in the post library after approval
 
 In practice:
 
-- Nano Banana should create the image plate or background
+- Unsplash can provide the support plate when stock realism is enough
+- Nano Banana should create the image plate or background when stock would be too generic
 - HTML/CSS or the locked production layout should still own text, spacing, and line breaks for text-led assets
 
 ## Update Timing
