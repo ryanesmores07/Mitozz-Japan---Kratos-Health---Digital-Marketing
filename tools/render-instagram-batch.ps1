@@ -9,7 +9,10 @@ param(
     [string]$OutputDirectory,
 
     [ValidateSet("winforms", "edge", "chrome", "auto")]
-    [string]$Browser = "auto"
+    [string]$Browser = "auto",
+
+    [ValidateSet("default", "cool_focus", "warm_editorial")]
+    [string]$PaletteVariant = "default"
 )
 
 Set-StrictMode -Version Latest
@@ -34,7 +37,8 @@ foreach ($item in $dataItems) {
         -DataPath $item.FullName `
         -HtmlOutputPath $htmlPath `
         -ImageOutputPath $pngPath `
-        -Browser $Browser
+        -Browser $Browser `
+        -PaletteVariant $PaletteVariant
 
     if ($LASTEXITCODE -ne 0) {
         throw "Failed to render $($item.FullName)"

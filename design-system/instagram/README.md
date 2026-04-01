@@ -61,11 +61,18 @@ Use:
 The renderer:
 
 - injects JSON data into the HTML
+- injects the shared Steel Light palette tokens into the CSS
 - converts local image paths into browser-safe file URIs
 - inlines the shared CSS
 - prefers the headless browser renderer in `auto` mode
 - falls back to WinForms only if browser rendering is unavailable
 - exports a final image from the renderer
+
+Palette control:
+
+- `render-instagram-template.ps1` supports `-PaletteVariant default|cool_focus|warm_editorial`
+- `render-instagram-batch.ps1` supports `-PaletteVariant default|cool_focus|warm_editorial`
+- use these variants instead of ad hoc recoloring when a template asset needs a cooler or warmer mood
 
 ## Current MVP
 

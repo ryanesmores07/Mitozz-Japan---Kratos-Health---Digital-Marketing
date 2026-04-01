@@ -11,11 +11,17 @@ param(
     [string]$ImageOutputPath,
 
     [ValidateSet("winforms", "edge", "chrome", "auto")]
-    [string]$Browser = "auto"
+    [string]$Browser = "auto",
+
+    [ValidateSet("default", "cool_focus", "warm_editorial")]
+    [string]$PaletteVariant = "default"
 )
 
 Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
+
+Add-Type -AssemblyName System.Drawing
+. (Join-Path $PSScriptRoot "shared/load-mitozz-design-tokens.ps1")
 
 function Resolve-BrowserPath {
     param([string]$RequestedBrowser)
@@ -170,7 +176,8 @@ $dataFullPath = (Resolve-Path -LiteralPath $DataPath).Path
 $cssFullPath = (Resolve-Path -LiteralPath "design-system/instagram/styles/system.css").Path
 
 $templateHtml = Get-Content -LiteralPath $templateFullPath -Raw -Encoding UTF8
-$inlineCss = Get-Content -LiteralPath $cssFullPath -Raw -Encoding UTF8
+$tokenCss = Get-MitozzCssTokenBlock -Variant $PaletteVariant
+$inlineCss = $tokenCss + [Environment]::NewLine + (Get-Content -LiteralPath $cssFullPath -Raw -Encoding UTF8)
 $dataObject = Get-Content -LiteralPath $dataFullPath -Raw -Encoding UTF8 | ConvertFrom-Json
 
 if ([string]::IsNullOrWhiteSpace($dataObject.template)) {

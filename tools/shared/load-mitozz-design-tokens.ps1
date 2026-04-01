@@ -40,6 +40,38 @@ function Convert-TokenSpecToDrawingColor {
     throw "Unsupported token color spec."
 }
 
+function Convert-DrawingColorToCssHex {
+    param(
+        [Parameter(Mandatory = $true)]
+        [System.Drawing.Color]$Color
+    )
+
+    return ('#{0:X2}{1:X2}{2:X2}' -f $Color.R, $Color.G, $Color.B)
+}
+
+function Convert-DrawingColorToCssRgb {
+    param(
+        [Parameter(Mandatory = $true)]
+        [System.Drawing.Color]$Color
+    )
+
+    return ('{0}, {1}, {2}' -f $Color.R, $Color.G, $Color.B)
+}
+
+function Convert-DrawingColorToCssValue {
+    param(
+        [Parameter(Mandatory = $true)]
+        [System.Drawing.Color]$Color
+    )
+
+    if ($Color.A -lt 255) {
+        $alpha = [Math]::Round(($Color.A / 255), 3)
+        return ('rgba({0}, {1}, {2}, {3})' -f $Color.R, $Color.G, $Color.B, $alpha)
+    }
+
+    return Convert-DrawingColorToCssHex -Color $Color
+}
+
 function Get-MitozzDesignTokens {
     param(
         [string]$Variant = 'default'
@@ -83,4 +115,24 @@ function Get-MitozzDesignTokens {
         Colors = [pscustomobject]$colors
         RawData = $data
     }
+}
+
+function Get-MitozzCssTokenBlock {
+    param(
+        [string]$Variant = 'default'
+    )
+
+    $tokens = Get-MitozzDesignTokens -Variant $Variant
+    $lines = New-Object System.Collections.Generic.List[string]
+    [void]$lines.Add(':root {')
+
+    foreach ($property in $tokens.Colors.PSObject.Properties) {
+        $name = $property.Name.Replace('_', '-')
+        $color = [System.Drawing.Color]$property.Value
+        [void]$lines.Add(("  --mitozz-{0}: {1};" -f $name, (Convert-DrawingColorToCssValue -Color $color)))
+        [void]$lines.Add(("  --mitozz-{0}-rgb: {1};" -f $name, (Convert-DrawingColorToCssRgb -Color $color)))
+    }
+
+    [void]$lines.Add('}')
+    return ($lines -join [Environment]::NewLine)
 }
