@@ -1,9 +1,0 @@
-2026/03/27-18:25:45.851 2728 Reusing MANIFEST C:\Users\esmoresernieryanocam\Desktop\Workspace\Nano banana\output\_tmp\browser-render-profile\Default\EdgeCoupons/coupons_data.db/MANIFEST-000001
-2026/03/27-18:25:45.967 2728 Recovering log #22
-2026/03/27-18:25:45.970 2728 Level-0 table #25: started
-2026/03/27-18:25:46.119 2728 Level-0 table #25: 682064 bytes OK
-2026/03/27-18:25:46.139 2728 Recovering log #24
-2026/03/27-18:25:46.223 2728 Reusing old log C:\Users\esmoresernieryanocam\Desktop\Workspace\Nano banana\output\_tmp\browser-render-profile\Default\EdgeCoupons/coupons_data.db/000024.log 
-2026/03/27-18:25:46.450 2728 Delete type=0 #22
-2026/03/27-18:25:46.524 dc0 Level-0 table #27: started
-2026/03/27-18:25:46.586 dc0 Level-0 table #27: 682064 bytes OK
