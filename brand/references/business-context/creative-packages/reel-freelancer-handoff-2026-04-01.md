@@ -1,4 +1,4 @@
-# Reel Freelancer Handoff - 2026-04-01
+﻿# Reel Freelancer Handoff - 2026-04-01
 
 ## Project
 
@@ -51,10 +51,10 @@
 
 | id | file | type | use |
 | --- | --- | --- | --- |
-| `A01` | `output/instagram/reels/2026-04-01-daily-foundation-reel/current/shot-01-opening-hook.png` | `image` | opening beat |
-| `A02` | `output/instagram/reels/2026-04-01-daily-foundation-reel/current/shot-02-reframe.png` | `image` | reframe beat |
-| `A03` | `output/instagram/reels/2026-04-01-daily-foundation-reel/current/shot-03-product-reveal.png` | `image` | product-entry beat |
-| `A04` | `output/instagram/reels/2026-04-01-daily-foundation-reel/current/shot-04-end-frame.png` | `image` | CTA ending |
+| `A01` | `output/instagram/reels/2026-04-01-reel-daily-foundation-v01/current/shot-01-opening-hook.png` | `image` | opening beat |
+| `A02` | `output/instagram/reels/2026-04-01-reel-daily-foundation-v01/current/shot-02-reframe.png` | `image` | reframe beat |
+| `A03` | `output/instagram/reels/2026-04-01-reel-daily-foundation-v01/current/shot-03-product-reveal.png` | `image` | product-entry beat |
+| `A04` | `output/instagram/reels/2026-04-01-reel-daily-foundation-v01/current/shot-04-end-frame.png` | `image` | CTA ending |
 
 ## Edit Plan
 
@@ -93,3 +93,4 @@
 - `format`: `mp4`
 - `resolution`: `1080x1350`
 - `delivery_location`: `output/instagram/reels/`
+

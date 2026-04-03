@@ -1,4 +1,4 @@
-{
+﻿{
   "template": "story-reinforcement",
   "variant": "story-question",
   "canvas": {
@@ -7,7 +7,7 @@
   },
   "accent": {
     "type": "portrait",
-    "path": "/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/output/instagram/reels/2026-04-01-daily-foundation-reel/current/shot-01-opening-hook.png"
+    "path": "/Users/ernieryanesmores/Desktop/Workspace/Mitozz-Japan---Kratos-Health---Digital-Marketing/output/instagram/reels/2026-04-01-reel-daily-foundation-v01/current/shot-01-opening-hook.png"
   },
   "copy": {
     "kicker": "今日の見方",
@@ -22,3 +22,4 @@
     ]
   }
 }
+

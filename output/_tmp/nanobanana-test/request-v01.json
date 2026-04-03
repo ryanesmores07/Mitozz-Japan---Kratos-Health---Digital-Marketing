@@ -1,0 +1,14 @@
+﻿{
+  "prompt": "Create one calm 4:5 portrait editorial image plate with a bright empty left text-safe zone and a soft still life on the right near a window. No text.",
+  "n": 1,
+  "negative_prompt": "readable text, logos, labels, clutter, subject on the left",
+  "system_instruction": "Generate a calm premium editorial source image plate with protected overlay space.",
+  "mode": "generate",
+  "model_tier": "nb2",
+  "resolution": "1k",
+  "thinking_level": "low",
+  "enable_grounding": false,
+  "aspect_ratio": "4:5",
+  "output_path": "C:\\Users\\esmoresernieryanocam\\Desktop\\Workspace\\Mitozz Japan\\output\\_tmp\\nanobanana-test\\cover-test-v01.jpg",
+  "return_full_image": false
+}

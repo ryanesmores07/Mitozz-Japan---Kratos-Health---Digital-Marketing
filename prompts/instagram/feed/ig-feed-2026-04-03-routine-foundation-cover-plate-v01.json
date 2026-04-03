@@ -1,0 +1,72 @@
+{
+  "asset_type": "instagram-feed-cover-source-image",
+  "campaign_name": "Mitozz April 2026",
+  "topic": "Sleep, food, and movement as one daily foundation",
+  "objective": "Create a text-free Nano Banana cover plate for the approved April 3 feed cover",
+  "template_set": "Set 1 + Set 2",
+  "slide_blueprint": "cover-source-image",
+  "asset_archetype": "hero-image-plate",
+  "platform": "instagram",
+  "aspect_ratio": "4:5",
+  "audience": "Sleep-Deprived High Performer",
+  "visual_engine": "image-led",
+  "anchor_set": "April 3 Set-based cover pacing with a fresh editorial image plate",
+  "source_lane": "Nano-Banana-source-image",
+  "source_strategy": "custom Nano Banana cover plate for design-first compositor assembly",
+  "fallback_source": "fallback to the approved white-ground cover only if the image plate fails the text-safe-zone or calm-routine test",
+  "icon_strategy": "none",
+  "generated_visual_role": "hero-visual",
+  "visual_intent": [
+    "premium Japanese editorial morning-routine atmosphere",
+    "calm, believable daily-life image support rather than a wellness ad",
+    "soft diffusion and gentle routine energy",
+    "fresh cover image that makes the April 3 feed more compelling without clutter"
+  ],
+  "brand_guardrails": [
+    "Generate a text-free source plate only.",
+    "Keep the image calm, premium, and realistic.",
+    "Do not turn the scene into a supplement ad, productivity ad, or a stock wellness cliche.",
+    "Protect the left-side text zone and keep the bottom overlay band area quiet."
+  ],
+  "composition": [
+    "4:5 portrait cover plate only",
+    "main subject and visual weight anchored in the right half or right-center",
+    "clean negative space across the left 38 to 42 percent of the frame for headline overlay",
+    "keep the lower 18 to 20 percent calm enough for a white selector band overlay",
+    "soft morning interior, diffused daylight, uncluttered depth"
+  ],
+  "image_references": [],
+  "reference_strategy": "Use the written brief as the primary source of truth and create a fresh, believable editorial image plate without copying an existing stock-photo composition.",
+  "variation_guardrails": [
+    "No readable text, letters, logos, labels, packaging, UI, or watermarks anywhere in frame.",
+    "Do not place the subject in the left text-safe zone.",
+    "Do not let the bottom overlay area become busy or high contrast.",
+    "Keep the image soft and premium rather than glossy or commercial."
+  ],
+  "text_overlay": {
+    "allowed": false,
+    "max_words": 0,
+    "tone": "text-free source image only",
+    "font_reference": "",
+    "headline_ja": "睡眠 食事 運動を\nミトコンドリア\n視点で\n見直す",
+    "slides_ja": []
+  },
+  "negative_prompts": [
+    "readable text",
+    "letters",
+    "logos",
+    "labels",
+    "watermark",
+    "product packaging",
+    "generic stock wellness poster",
+    "busy tabletop clutter",
+    "centered subject blocking the left text area",
+    "strong foreground object covering the bottom band zone"
+  ],
+  "reference_files": [
+    "brand/references/business-context/creative-packages/creative-package-2026-04-03.md",
+    "brand/references/business-context/visual/Mitozz Instagram Production Standard.md",
+    "brand/references/business-context/visual/Mitozz Asset Review Gate.md"
+  ],
+  "notes": "Generate only the source image plate for the cover. Final Japanese text and the bottom selector band will be composited later. The image should suggest routine flow through atmosphere and subtle lived-in cues, with the focal subject living on the right half and the left side intentionally protected for copy."
+}

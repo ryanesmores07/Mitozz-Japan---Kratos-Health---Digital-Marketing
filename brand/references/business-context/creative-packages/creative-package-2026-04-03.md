@@ -1,4 +1,4 @@
-# Creative Package - 2026-04-03
+﻿# Creative Package - 2026-04-03
 
 Two assets for April 3:
 
@@ -12,6 +12,26 @@ Calendar basis:
 - Pillar: `Better Function, Not Hype`
 - Objective: `Educate`
 - Persona: `Sleep-Deprived High Performer`
+
+## Cover Revision - Image-Led Update
+
+This production revision replaces the no-image cover with a Nano Banana source plate while keeping the approved Set-based body slides intact.
+
+Locked cover decisions:
+
+- `visual_engine`: `image-led cover + design-first body`
+- `source_lane`: `Nano-Banana-source-image`
+- `source_strategy`: `fresh Nano Banana cover plate with a protected left text zone, then design-first compositor for the final cover assembly`
+- `fallback_source`: `fallback to the approved white-ground cover only if the generated cover plate fails the text-safe composition test`
+- `generated_visual_role`: `hero-visual`
+- `icon_strategy`: `none`
+
+Cover art direction:
+
+- Generate a text-free 4:5 lifestyle/editorial source plate only.
+- Keep the main subject and visual weight on the right half so the left side can hold the Japanese headline cleanly.
+- Keep the lower band area calm enough for the existing white selector strip to sit over it without covering the focal subject.
+- The image should feel like a believable premium morning-routine atmosphere, not a stock wellness poster.
 
 ---
 
@@ -44,11 +64,11 @@ Resolved production system:
 
 ## Visual Engine / Source Decision
 
-- `visual_engine`: `diagram-led`
+- `visual_engine`: `image-led cover + diagram-led body`
 - `anchor_set`: `Set H pacing + Set C answer-card logic + restrained Set A selector behavior`
-- `source_lane`: `design-first-no-image`
-- `source_strategy`: `design-first compositor + structured education modules`
-- `fallback_source`: `fallback to Unsplash stock image only if a human lifestyle plate becomes strategically necessary`
+- `source_lane`: `Nano-Banana-source-image for the cover plate + design-first-no-image for the body slides`
+- `source_strategy`: `fresh Nano Banana cover plate with a protected text-safe zone, then design-first compositor for the full carousel`
+- `fallback_source`: `fallback to the approved white-ground cover only if the fresh cover plate fails the text-safe-zone or calm-routine test`
 
 Decision logic:
 
@@ -75,27 +95,28 @@ Decision logic:
 5-slide carousel:
 
 1. Cover
-   - Set H cover pacing
-   - strong hook with a bottom three-part selector strip
-   - no photography, only structured modules
+   - Set H cover pacing using the approved April 6 image-led base
+   - strong hook with a bottom three-part band
+   - fresh Nano Banana lifestyle/editorial source plate with the subject weighted right and the left text zone protected
 
 2. Reframe
-   - Set C answer-card behavior
-   - one numbered explanation card
+   - April 6 base definition-card behavior
+   - left semantic rail plus one compact explanation card
    - explain that condition is not decided by one isolated habit
 
 3. Foundation logic
-   - Set H explanation pacing
-   - structured three-block framework showing how the three habits support the same base
+   - April 6 base model-card behavior
+   - one center label plus a three-column support block
+   - show how the three habits support the same base
 
 4. Practical self-check
-   - restrained Set A selector logic
+   - April 6 base reading-lens row system
    - ask where rhythm breaks first
-   - three clean selector tiles with short practical cues
+   - three clean reading rows with short practical cues
 
 5. Save close
-   - calm editorial CTA
-   - one soft note card and simple save direction
+   - April 6 base centered close-note card
+   - calm editorial CTA and simple save direction
    - no social-media clutter
 
 ## Copy Direction
@@ -140,15 +161,16 @@ Decision logic:
 ## Source Asset Handoff
 
 - `visual_engine`: `diagram-led`
+- `visual_engine`: `image-led cover + diagram-led body`
 - `anchor_set`: `Set H pacing + Set C answer-card logic + restrained Set A selector behavior`
-- `source_lane`: `design-first-no-image`
-- `source_strategy`: `design-first compositor + structured education modules`
-- `fallback_source`: `fallback to Unsplash stock image only if a human lifestyle plate becomes strategically necessary`
+- `source_lane`: `Nano-Banana-source-image for the cover plate + design-first-no-image for the body slides`
+- `source_strategy`: `fresh Nano Banana cover plate with protected left copy space, then design-first compositor for the structured body slides`
+- `fallback_source`: `fallback to the approved white-ground cover only if the fresh cover plate fails review`
 - `asset_archetype`: `education-card`
 - `visual_intent`:
   - `premium Japanese wellness education`
   - `save-worthy framework carousel`
-  - `no-image modular structure`
+  - `image-backed editorial cover + modular white-ground body`
 - `brand_guardrails`:
   - `follow Set A-H structural logic, not invented motifs`
   - `keep the layout calmer and more premium than the references`
@@ -218,11 +240,11 @@ Story system:
 
 ## Visual Engine / Source Decision
 
-- `visual_engine`: `type-led`
+- `visual_engine`: `image-led opener + design-first body`
 - `anchor_set`: `Set 1 reinforcement story + April 3 feed continuity`
-- `source_lane`: `design-first compositor + existing feed plate`
-- `source_strategy`: `reuse the approved feed cover as a subtle opener wash, then keep frames 2 and 3 fully design-first`
-- `fallback_source`: `full design-first without image wash if the feed plate feels too heavy`
+- `source_lane`: `Nano-Banana-source-image for frame 1 + design-first compositor for frames 2 and 3`
+- `source_strategy`: `generate a fresh Nano Banana opener plate with protected upper-left copy space, then keep frames 2 and 3 fully design-first`
+- `fallback_source`: `fallback to the approved design-first opener only if the generated plate fails the text-safe or calm-routine test`
 - `icon_strategy`: `none`
 - `generated_visual_role`: `none`
 
@@ -321,11 +343,11 @@ Decision logic:
 
 ## Source Asset Handoff
 
-- `visual_engine`: `type-led`
+- `visual_engine`: `image-led opener + design-first body`
 - `anchor_set`: `Set 1 reinforcement story + April 3 feed continuity`
-- `source_lane`: `design-first compositor + existing feed plate`
-- `source_strategy`: `subtle feed-cover reuse on frame 1 only; frames 2 and 3 stay design-first`
-- `fallback_source`: `remove the opener wash and keep the set fully design-first`
+- `source_lane`: `Nano-Banana-source-image for frame 1 + design-first compositor for frames 2 and 3`
+- `source_strategy`: `fresh Nano Banana opener plate on frame 1 only; frames 2 and 3 stay design-first`
+- `fallback_source`: `remove the opener image and keep the set fully design-first if the generated plate fails review`
 - `asset_archetype`: `story-reinforcement`
 - `visual_intent`:
   - `saveable mini-guide story`
@@ -343,7 +365,7 @@ Decision logic:
   - `rings on frame 2`
   - `waves on frame 3`
 - `selected_image_references`:
-  - `output/instagram/feed/ig-feed-2026-04-03-routine-foundation-v04/current/slide-01.png`
+  - `output/instagram/feed/2026-04-03-feed-routine-foundation-v04/current/slide-01.png`
   - `brand/references/business-context/visual/reference-pack/style-anchors/anchor-editorial-whitespace-01.png`
   - `brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.png`
 - `reference_strategy`: `Borrow the feed's approved visual world for the opener only, then simplify into the existing Mitozz Story card system with more breathing room and lighter pacing.`
@@ -365,3 +387,4 @@ Decision logic:
 - Frame 1 should create recognition, not repeat the feed headline.
 - Frame 2 should help the viewer identify their own routine breakdown pattern.
 - Frame 3 should send the viewer back to the April 3 feed for the fuller explanation.
+

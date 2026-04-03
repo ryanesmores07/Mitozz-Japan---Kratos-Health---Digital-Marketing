@@ -20,6 +20,12 @@ Use the installed Better Icons skill at:
 Treat that skill as the icon search and retrieval engine.
 This repo-local skill defines how Mitozz should use it.
 
+Workspace execution path:
+
+- prefer `tools/shared/invoke-better-icons.ps1` over relying on a machine-global `better-icons` PATH install
+- example:
+  - `powershell -NoProfile -ExecutionPolicy Bypass -File "tools/shared/invoke-better-icons.ps1" search sleep --limit 5`
+
 ## When To Use Icons
 
 Use icons when they improve clarity for:

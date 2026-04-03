@@ -76,9 +76,9 @@ Then resolve the downstream production layer:
 - Write `reference_strategy` in one short sentence.
 - Write `variation_guardrails` as explicit change rules.
 - Specify what must vary from the references so the result feels on-theme but not repetitive.
-- If stock-style human, object, lifestyle, or environment imagery is needed and no owned or product-truth source is required, decide whether `Unsplash-stock-image` is sufficient before choosing `Nano-Banana-source-image`.
-- Use `Unsplash-stock-image` when a premium real-photo support plate is enough.
-- Use `Nano-Banana-source-image` when the image needs tighter custom staging, composition, or brand-specific context than stock can reliably provide.
+- If stock-style human, object, lifestyle, or environment imagery is needed and no owned or product-truth source is required, default to `Nano-Banana-source-image` for the fresh plate.
+- Use `Unsplash-stock-image` only when the user explicitly wants a real-photo stock lane or when reference scouting is more useful than custom generation.
+- Use `Nano-Banana-source-image` when the image needs a protected text-safe zone, tighter staging, better overlay planning, or a more brand-fit composition than stock can reliably provide.
 
 If the frontend-skill lens is used, add these internal planning notes before finalizing the package:
 

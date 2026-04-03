@@ -1,4 +1,4 @@
-# Creative Package - 2026-03-26
+﻿# Creative Package - 2026-03-26
 
 One asset for March 26:
 
@@ -112,8 +112,8 @@ CTA:
 - `reference_strategy`: `Use the approved Set 4 lifestyle reference and the March 25 story set for continuity, then keep the March 26 story slightly more question-led and interaction-ready.`
 - `selected_image_references`:
   - `output/instagram/templates/2026-03-21-approved-pass/set-4-lifestyle-v02-no-bottle.png`
-  - `output/instagram/stories/ig-story-2026-03-25-busy-day-context-v01/frame-01-hook.png`
-  - `output/instagram/stories/ig-story-2026-03-25-busy-day-context-v01/frame-02-context.png`
+  - `output/instagram/stories/2026-03-25-story-busy-day-context-v01/frame-01-hook.png`
+  - `output/instagram/stories/2026-03-25-story-busy-day-context-v01/frame-02-context.png`
   - `brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.png`
 - `variation_from_references`:
   - `make the sequence more question-led than March 25`
@@ -136,3 +136,4 @@ CTA:
   - `messy workspace`
   - `hard-sell ad mood`
   - `tiny unreadable text`
+

@@ -1,0 +1,59 @@
+{
+  "asset_type": "instagram-story",
+  "campaign_name": "April 2026 Organic Education",
+  "topic": "April 6 feed support story",
+  "objective": "Support the April 6 carousel with a calmer definition-first hook, a daily-life translation frame, and a clear route back to the feed post",
+  "template_set": "Set 1",
+  "slide_blueprint": "story-3-frame",
+  "asset_archetype": "story-reinforcement",
+  "platform": "instagram",
+  "aspect_ratio": "9:16",
+  "audience": "Research-First Wellness Optimizer",
+  "visual_engine": "image-led opener + structured editorial support frames",
+  "source_lane": "Nano-Banana-source-image for frame 1 opener plate + design-first-no-image for frames 2 and 3",
+  "source_strategy": "generate one calm editorial Nano Banana opener plate with protected upper-left copy space, then assemble the set in the compositor with the locked story card system",
+  "fallback_source": "fallback to a clean text-led opener only if the Nano Banana image plate fails the calm-editorial or text-safe-zone review",
+  "icon_strategy": "none",
+  "generated_visual_role": "hero-visual opener",
+  "visual_intent": [
+    "premium story-first vertical layout",
+    "lighter than the feed",
+    "definition-first hook before explanation",
+    "same-day feed reinforcement",
+    "fast mobile readability with calm atmosphere"
+  ],
+  "brand_guardrails": [
+    "preserve top and bottom safe zones",
+    "keep the full set lighter than the feed carousel",
+    "avoid internal labels, Set names, or template residue",
+    "do not add fake buttons, poll boxes, or sticker UI",
+    "frame 3 should feel like a route back to the feed, not another lesson",
+    "any image used must protect the text zone and avoid visual conflict with the typography"
+  ],
+  "composition": [
+    "9:16 vertical framing",
+    "frame 1 uses a calm image-backed opening with protected upper-left copy space",
+    "frame 2 translates the idea into daily-life reading",
+    "frame 3 routes back to the feed with one clear support card",
+    "authored Japanese line breaks only",
+    "cool-focus mist-blue and cloud-white structure with restrained apricot signal"
+  ],
+  "text_overlay": {
+    "allowed": true,
+    "max_words": 10,
+    "tone": "soft, clear, trustworthy",
+    "font_reference": "Humanist Sans / Hiragino Sans",
+    "headline_ja": "支えるって、\n足すことだけじゃない。",
+    "slides_ja": [
+      "支えるって、\n足すことだけじゃない。",
+      "見るのは\n休み方、満たし方、\n動き方。",
+      "今日の投稿で\n見方をやさしく\n整理しています。"
+    ]
+  },
+  "reference_files": [
+    "brand/references/business-context/creative-packages/creative-package-2026-04-06.md",
+    "brand/references/business-context/visual/Mitozz Instagram Story Strategy.md",
+    "brand/references/business-context/visual/Mitozz Instagram Production Standard.md"
+  ],
+  "notes": "This is a support Story, not a smaller carousel. Use one image-led opener only if it materially improves the set, then let the rest stay structured, calm, and route back to the feed."
+}

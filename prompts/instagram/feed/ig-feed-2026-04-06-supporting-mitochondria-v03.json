@@ -1,0 +1,136 @@
+﻿{
+  "asset_type": "instagram-feed-carousel",
+  "campaign_name": "Mitozz April 2026",
+  "topic": "What does it mean to support mitochondria?",
+  "objective": "Educate",
+  "template_set": "Set 1 + Set 2",
+  "slide_blueprint": "5-slide",
+  "asset_archetype": "education-card",
+  "platform": "instagram",
+  "aspect_ratio": "4:5",
+  "audience": "Research-First Wellness Optimizer",
+  "visual_engine": "image-led",
+  "anchor_set": "Set C answer-card clarity + Set D logic framing + Set H pacing",
+  "palette_variant": "cool_focus",
+  "source_lane": "Nano-Banana-source-image",
+  "source_strategy": "fresh Nano Banana cover plate + design-first compositor for the body slides",
+  "fallback_source": "fallback to a previously approved Nano Banana source image, then fallback to a calmer type-led white-card cover only if the image lane fails",
+  "icon_strategy": "Better-Icons-semantic-support",
+  "generated_visual_role": "subtle-background",
+  "visual_intent": [
+    "premium Japanese science translation",
+    "definition-first educational carousel",
+    "fresh image-backed cover with protected text zone",
+    "cool-focus white-ground system",
+    "semantic icon support only where it improves clarity",
+    "save-worthy but not visually noisy"
+  ],
+  "brand_guardrails": [
+    "Keep the carousel calm, premium, and medically responsible.",
+    "Do not use decorative random shapes.",
+    "Do not let the infographic layer overpower the copy.",
+    "No English workflow labels, badge residue, or internal scaffolding.",
+    "Center labels and module text by actual geometry, not approximation.",
+    "Use editorial Japanese line breaks, not forced box wrapping."
+  ],
+  "composition": [
+    "4:5 portrait carousel framing",
+    "image-backed cover with cool white wash and protected text zone",
+    "white or near-white inner slides with cool mist-blue structure",
+    "cover, clarification card, support model, daily reading lens, save close",
+    "compact answer cards and clean rule-based dividers",
+    "subtle semantic icons for sleep, nutrition, and movement"
+  ],
+  "image_references": [
+    {
+      "path": "output/instagram/feed/2026-04-06-feed-supporting-mitochondria-v03/source/cover-plate-nanobanana-v01.jpg",
+      "role": "source-plate",
+      "influence": [
+        "fresh image-backed cover",
+        "calm editorial stillness",
+        "protected text zone"
+      ],
+      "match_strength": "high"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/Set C/Screenshot 2026-03-29 at 16.50.37.png",
+      "role": "style-anchor",
+      "influence": [
+        "answer-card clarity",
+        "module rhythm",
+        "reading hierarchy"
+      ],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/Set D/Screenshot 2026-03-29 at 16.51.38.png",
+      "role": "style-anchor",
+      "influence": [
+        "logic framing",
+        "relationship explanation",
+        "diagram restraint"
+      ],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/Set H/Screenshot 2026-03-29 at 16.57.54.png",
+      "role": "style-anchor",
+      "influence": [
+        "cover pacing",
+        "educational sequencing",
+        "modular calm"
+      ],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "cool tonality",
+        "atmosphere",
+        "light restraint"
+      ],
+      "match_strength": "medium"
+    }
+  ],
+  "reference_strategy": "Use Set C for the explanatory card behavior, Set D for relationship logic, Set H for cover pacing, and the cool-palette anchor for atmosphere, then compress the whole set into a cleaner Mitozz definition carousel.",
+  "variation_guardrails": [
+    "Do not repeat the April 3 selector-strip behavior literally.",
+    "Do not copy the March 23 or March 27 education-card layout.",
+    "Keep the cover definition-led rather than dramatic.",
+    "Use the infographic support only when it clarifies the copy.",
+    "Keep the close slide distinct from the body-card rhythm."
+  ],
+  "text_overlay": {
+    "allowed": true,
+    "max_words": 14,
+    "tone": "clear, premium, educational, quietly reassuring",
+    "font_reference": "Hiragino Sans / Noto Sans JP",
+    "headline_ja": "ミトコンドリアを支えるって\nどういうこと？",
+    "slides_ja": [
+      "「支える」は、何かひとつで変えるという意味ではありません。",
+      "睡眠、食事、運動。日々の条件を落ち着いて見直す視点です。",
+      "睡眠、食事、運動は同じ土台を支える日常の条件です。",
+      "難しい仕組みを覚えるより、毎日の状態をどう読むかが先です。",
+      "まずは土台の見方から。"
+    ],
+    "cta_ja": "保存して、あとでやさしく見返す。"
+  },
+  "negative_prompts": [
+    "cheap stock photo look",
+    "busy infographic clutter",
+    "neon biotech aesthetic",
+    "decorative abstract shapes",
+    "heavy molecule diagram treatment",
+    "flashy supplement advertising"
+  ],
+  "reference_files": [
+    "brand/references/business-context/creative-packages/creative-package-2026-04-06.md",
+    "brand/references/business-context/content-planning/Mitozz Instagram Content Calendar - 2026 - April.csv",
+    "brand/references/business-context/visual/Brand Visual Direction.md",
+    "brand/references/business-context/visual/reference-pack/reference-pack-index.md",
+    "brand/references/business-context/visual/Mitozz Instagram Production Standard.md"
+  ],
+  "notes": "April 6 educational carousel. The job is to translate a vague science phrase into daily understanding without sounding simplistic or technical. Use a fresh image-backed cover plate for atmosphere, keep the text zone protected, and keep the body slides disciplined, semantic, and quietly save-worthy."
+}
+

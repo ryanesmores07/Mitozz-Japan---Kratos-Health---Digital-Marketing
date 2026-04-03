@@ -421,6 +421,13 @@ Avoid:
 - random color drift
 - visual tone that feels cheaper than the feed
 
+When a Story is reinforcing an approved feed family:
+
+- inherit the same type profile and headline-density standards as the feed family
+- inherit the same centered-container and close-card behavior instead of improvising a lighter but sloppier version
+- treat story modules and bands with the same optical-centering standard as feed modules
+- if the Story uses an image opener, the image still serves the typography, not the other way around
+
 ## Story Interaction Rules
 
 Use native story tools intentionally.

@@ -81,7 +81,9 @@ In that path:
 
 - HTML/CSS owns layout, spacing, line breaks, and type hierarchy
 - Nano Banana generates image plates only
+- when a fresh image plate is needed, default that source-image lane to Nano Banana unless the user explicitly prefers stock
 - image-slot assets must be text-free and free of template labels or baked-in UI
+- define `text_safe_zone`, `subject_placement`, and any protected bottom or side overlay area before generation
 - use explicit `headline_lines` and `subline_lines` data when Japanese line-break quality matters
 - final export comes from:
   - `tools/render-instagram-template.ps1`

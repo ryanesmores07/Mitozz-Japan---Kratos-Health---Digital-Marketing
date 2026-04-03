@@ -34,6 +34,34 @@ This makes code the source of truth for:
 - border / perimeter wash
 - CTA micro-cues
 
+## Lane Selection
+
+Use the `HTML/CSS template lane` when:
+
+- the layout behavior is likely to repeat across more than one post
+- the same skeleton should support multiple copy swaps or image-slot swaps
+- batch consistency matters more than one-off art direction
+- we want the lowest-maintenance path for future reuse
+
+Use the `PowerShell compositor lane` when:
+
+- the asset is a custom one-off family that is not yet stable enough to promote
+- the approved composition depends on hand-tuned drawing, measured centering, or custom panel logic
+- we need a quick controlled build without prematurely abstracting it into a reusable template
+
+Promotion rule:
+
+- if a PowerShell compositor layout family proves useful across at least 2 approved assets, decide whether it should graduate into the reusable HTML/CSS template lane
+- do not keep cloning one-off renderer scripts indefinitely when the behavior is clearly becoming a reusable template family
+- do not force every new idea into the template lane before the layout grammar is actually stable
+
+Layout rule for this lane:
+
+- use `CSS Grid` for macro structure
+- use `Flexbox` for internal stacking, chips, tag rows, and centered micro-alignment
+- reserve absolute positioning for media plates, masks, glow layers, and decorative motifs only
+- if a box, band, comparison row, or table-like module can be aligned by shared grid tracks, do not eyeball it with manual offsets
+
 When Japanese copy quality matters, use explicit `headline_lines` and `subline_lines` in the data JSON instead of relying on browser wraps.
 
 ## Structure
@@ -43,30 +71,64 @@ When Japanese copy quality matters, use explicit `headline_lines` and `subline_l
 - `styles/`
   - shared CSS tokens and component rules
 - `tokens/`
-  - shared Steel Light palette tokens and approved palette variants
+  - shared Steel Light palette tokens, typography tokens, and approved variants
 - `data/`
   - per-asset JSON content
 
 Current palette source of truth:
 
 - [mitozz-steel-light.tokens.psd1](C:\Users\esmoresernieryanocam\Desktop\Workspace\Mitozz%20Japan\design-system\instagram\tokens\mitozz-steel-light.tokens.psd1)
+- [mitozz-typography.tokens.psd1](C:\Users\esmoresernieryanocam\Desktop\Workspace\Mitozz%20Japan\design-system\instagram\tokens\mitozz-typography.tokens.psd1)
+
+Current typography helper:
+
+- [load-mitozz-typography-tokens.ps1](C:\Users\esmoresernieryanocam\Desktop\Workspace\Mitozz%20Japan\tools\shared\load-mitozz-typography-tokens.ps1)
+
+Cross-lane typography rule:
+
+- the HTML/CSS template lane and the PowerShell compositor lane must read from the same shared typography token file
+- font-profile family stacks, accent stacks, and reusable role scales should live in `mitozz-typography.tokens.psd1`, not in per-asset renderers
+- if an HTML/CSS template needs a different approved type profile, use `-FontProfile` at render time or set `font_profile` in the asset JSON
+- if a compositor script keeps getting reused, move any typography roles it depends on into the shared token file before cloning the script again
+- do not let the template lane and compositor lane drift into separate headline sizes, tracking defaults, or line-height logic for the same family without an explicit system decision
+
+Use the typography helper when compositor assets need:
+
+- deliberate Japanese headline tracking
+- near-solid Japanese body copy and short-label spacing
+- shared line-height values by role
+- measured centering for labels and chips
+- typographic measurement instead of default loose glyph bounds for tracked centering
+- more consistent margin and padding behavior across slides
+
+HTML/CSS template rule:
+
+- macro layout should follow shared grid tracks
+- local content blocks should use flex or grid, not nested absolute nudges
+- equal-width modules should use explicit grid columns such as `repeat(2|3|4, minmax(0, 1fr))`
 
 ## Rendering
 
 Use:
 
-- [render-instagram-template.ps1](C:\Users\esmoresernieryanocam\Desktop\Workspace\Nano banana\tools\render-instagram-template.ps1)
-- [render-instagram-batch.ps1](C:\Users\esmoresernieryanocam\Desktop\Workspace\Nano banana\tools\render-instagram-batch.ps1)
+- [render-instagram-template.ps1](C:\Users\esmoresernieryanocam\Desktop\Workspace\Mitozz%20Japan\tools\render-instagram-template.ps1)
+- [render-instagram-batch.ps1](C:\Users\esmoresernieryanocam\Desktop\Workspace\Mitozz%20Japan\tools\render-instagram-batch.ps1)
 
 The renderer:
 
 - injects JSON data into the HTML
 - injects the shared Steel Light palette tokens into the CSS
+- injects the shared typography token block into the CSS
 - converts local image paths into browser-safe file URIs
 - inlines the shared CSS
 - prefers the headless browser renderer in `auto` mode
 - falls back to WinForms only if browser rendering is unavailable
 - exports a final image from the renderer
+
+Modern frontend note:
+
+- the preferred renderer for this lane is headless Edge or Chrome
+- the WinForms fallback is legacy-safe, but modern layout work should assume the browser path
 
 Palette control:
 

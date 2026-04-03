@@ -1,0 +1,36 @@
+{
+  "template": "trust-carousel",
+  "variant": "editorial-close",
+  "font_profile": "humanist_sans",
+  "canvas": {
+    "width": 928,
+    "height": 1152
+  },
+  "panel": {
+    "index": "03",
+    "eyebrow": "Typography Check"
+  },
+  "copy": {
+    "headline_lines": [
+      "見え方より、",
+      "読みやすさで",
+      "整える。"
+    ],
+    "subline_lines": [
+      "テンプレート側でも同じ書体ルールを使う。",
+      "それが今回の確認ポイントです。"
+    ]
+  },
+  "meta": {
+    "label": "Shared Typography",
+    "body_lines": [
+      "HTML/CSS テンプレートと PowerShell compositor が、",
+      "同じ typography token source を読む状態を確認。"
+    ],
+    "tags": [
+      "humanist_sans",
+      "token-driven"
+    ]
+  },
+  "rule": true
+}

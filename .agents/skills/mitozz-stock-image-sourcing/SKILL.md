@@ -1,13 +1,13 @@
 ---
 name: mitozz-stock-image-sourcing
-description: Source stock-style images for Mitozz Japan creatives using the local Unsplash Smart MCP Server when owned assets or generated plates are not the best fit.
+description: Source stock-style images for Mitozz Japan creatives using the local Unsplash Smart MCP Server only when the user explicitly wants a real stock-photo lane or reference scouting.
 ---
 
 # Mitozz Stock Image Sourcing
 
-Use this skill when a Mitozz creative needs a real-photo-feeling image and no owned asset or generated source plate is the best option.
+Use this skill only when a Mitozz creative explicitly needs a real-photo stock lane or when the task is reference scouting rather than custom image generation.
 
-This skill defines when Unsplash should be used inside the Mitozz workflow.
+This skill defines the narrow cases where Unsplash should still be used inside the Mitozz workflow.
 
 ## Primary Tool
 
@@ -19,16 +19,13 @@ Treat it as the stock-photo source lane.
 
 ## When To Use Unsplash
 
-Use Unsplash when the post needs:
+Use Unsplash when the user explicitly wants:
 
-- calm lifestyle atmosphere
-- environment plates
-- desk or routine context
-- wellness-adjacent object photography
-- editorial backgrounds with real photographic texture
-- human support imagery where custom generation is unnecessary
+- a real-photo stock look instead of a generated image
+- reference scouting before a creative direction is locked
+- an external realism check against what Nano Banana is producing
 
-Good fits:
+Good fits after that explicit choice:
 
 - workday desk atmosphere
 - morning light on a table
@@ -93,11 +90,11 @@ Avoid images with:
 When a creative needs imagery, decide source order like this:
 
 1. `owned-real-photo` if product truth or owned brand imagery matters
-2. `Unsplash stock image` if a real-photo support image is enough
-3. `Nano-Banana-source-image` if the image must be more custom than stock can provide
+2. `Nano-Banana-source-image` for fresh cover plates, support plates, and overlay-aware source images
+3. `Unsplash stock image` only when the user explicitly wants real stock or reference scouting
 
-Do not default to Unsplash just because it is easy.
-Use it when stock realism is actually the right answer.
+Do not default to Unsplash just because it is available.
+Use it only when real stock is intentionally the right answer.
 
 ## Output Guidance
 

@@ -9,9 +9,10 @@ Use this skill for Instagram organic image generation with Nano Banana by execut
 
 Model preference for this workspace:
 
-- use `gemini-3.1-flash-lite-preview` by default
-- use Nano Banana `model_tier = flash`
-- do not switch to `pro`, `nb2`, or `auto` unless the user explicitly asks to override this preference
+- use `gemini-3.1-flash-image-preview` by default
+- use Nano Banana `model_tier = nb2` for fresh Mitozz source-image generation unless the creative package explicitly requires another tier
+- use the local source MCP server path in this workspace when available instead of ad hoc direct API fallbacks
+- switch to `pro` only when the user explicitly wants the tradeoff or when the creative package clearly requires maximum reasoning depth
 
 For reels, this skill generates the coordinated source images that will later be edited by the freelancer. It does not replace editing or final assembly.
 
@@ -67,6 +68,7 @@ Mandatory rejection behavior:
 - reject any bottle-led image where the pack is accurate but the bottle does not inherit the shot's lighting, reflections, shadows, or perspective convincingly
 - if a reel frame fails its beat function or continuity role, reject it
 - if a Story frame looks individually fine but breaks set uniformity, reject the set
+- if a cover-image overlay, headline, or band crosses a face or the primary focal object, reject it and fix either the image placement or the editorial line breaks
 
 Mandatory internal review behavior:
 

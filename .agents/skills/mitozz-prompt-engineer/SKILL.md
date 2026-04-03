@@ -32,7 +32,7 @@ If the prompt work materially improves production readiness, consistency, or exe
 8. `tools/resolve-template-mapping.py`
 9. `tools/resolve-template-mapping.ps1` for Windows / PowerShell environments
 10. `.agents/skills/mitozz-icon-sourcing/SKILL.md` when the creative package calls for icons
-11. `.agents/skills/mitozz-stock-image-sourcing/SKILL.md` when the creative package calls for stock-photo sourcing
+11. `.agents/skills/mitozz-stock-image-sourcing/SKILL.md` only when the creative package explicitly calls for stock-photo sourcing
 
 ## Calendar Compatibility
 
@@ -62,6 +62,12 @@ Those decisions belong to:
 
 This skill's job is to encode the approved creative package cleanly for execution.
 Do not silently change the chosen source lane or creative message just because another execution path seems easier.
+
+Variant rule:
+
+- if the creative package marks the version as `design-only`, preserve the approved frontend copy exactly
+- do not rewrite `text_overlay`, CTA wording, or message framing for a design-only variant
+- only create alternative frontend copy when the creative package explicitly approves `design-plus-copy`
 
 ## Prompt Shape
 
@@ -144,7 +150,7 @@ Product-source rules:
 Stock-style source-image rule:
 
 - when the creative package chooses `Nano-Banana-source-image`, create a dedicated Nano Banana source-image prompt
-- when the creative package chooses `Unsplash-stock-image`, do not force a Nano Banana prompt just because the asset uses stock photography
+- when the creative package chooses `Unsplash-stock-image`, treat it as an explicit override rather than the normal default
 - keep that prompt focused on the image plate or background, not the full text-led asset, when a compositor path is available
 - use the approved post library to check whether a similar source-image strategy already exists and whether it should be reused or switched up
 
@@ -166,6 +172,12 @@ Generated support visual rule:
 - if the chosen source lane is `Nano-Banana-source-image`, use Nano Banana to generate the subtle background, infographic support visual, hero visual, or support plate that the package specifies
 - if the chosen source lane is `design-first-no-image`, but `generated_visual_role` is not `none`, create the supporting design notes or source prompt needed for that generated layer instead of hand-inventing filler shapes
 - record clearly whether the generated layer is a background, support plate, hero visual, or infographic support element
+
+Overlay-safe image rule:
+
+- when a prompt is for a cover plate or image slot that will carry compositor text later, explicitly encode the `text_safe_zone`, `subject_placement`, and any protected bottom or side overlay area in the prompt
+- explicitly reject any composition where the focal subject drifts under the future text block, label band, or CTA card
+- default fresh cover plates, support plates, and image washes to `Nano-Banana-source-image` unless the creative package explicitly chooses owned photography or the user explicitly asks for stock
 
 When a reel shot includes the Mitozz bottle as a visible focal element:
 

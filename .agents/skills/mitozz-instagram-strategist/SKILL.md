@@ -196,12 +196,13 @@ Use the existing Mitozz skills as the execution chain:
 
 - monthly or weekly calendar creation/revision -> `mitozz-content-calendar`
 - creative brief for a selected row -> `mitozz-creatives-director`
+- posting caption + hashtag preparation for an approved feed or reel -> `mitozz-posting-copy-optimizer`
 - JSON prompt building/refinement -> `mitozz-prompt-engineer`
 - Nano Banana asset generation -> `nano-banana-instagram`
 
 Support lanes chosen by the creative brief can also route through:
 
-- stock-photo sourcing -> `mitozz-stock-image-sourcing`
+- stock-photo sourcing by explicit user request -> `mitozz-stock-image-sourcing`
 - icon sourcing -> `mitozz-icon-sourcing`
 - final design-first assembly -> `mitozz-compositor-executor`
 

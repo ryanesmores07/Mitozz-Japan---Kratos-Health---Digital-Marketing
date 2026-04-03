@@ -103,6 +103,67 @@ The other sets exist to support `Set 1`, not replace it:
 
 If the grid ever starts drifting, bring it back by increasing `Set 1` usage.
 
+## Base Grammar And Rotation
+
+The April 6 grammar is an approved base grammar for one image-led `Set 1 + Set 2` educational carousel family.
+
+It is not the universal default for every future educational post.
+
+That approved grammar is:
+
+- image-backed cover with a protected bottom band
+- left-rail definition card
+- center-label model card with a three-column support block
+- reading-lens row stack
+- centered close-note card
+
+Use it when the topic truly benefits from:
+
+- definition-led teaching
+- calm sequential clarification
+- one-to-three-part logic translation
+
+Do not reuse it automatically just because it is already working.
+
+For each new feed asset, the creative direction must actively choose:
+
+- `anchor_set`
+- `dominant_set_behavior`
+- `variation_strategy`
+
+Meaning:
+
+- `anchor_set` = the set family or references being borrowed from
+- `dominant_set_behavior` = the main structural behavior actually adapted into the asset
+- `variation_strategy` = what is intentionally changing from the most recent adjacent approved post
+
+Examples of dominant behavior:
+
+- Set C answer-card logic
+- Set D branching / decision logic
+- Set E premium simplicity
+- Set H pacing-led education
+- portrait-trust opener
+- editorial-whitespace cover
+
+Use the broader `style-anchors/Set A-H` library actively.
+Adapt those behaviors into the Mitozz brand system instead of repeating one internal grammar or copying a reference literally.
+
+Keep these consistent:
+
+- palette tokens
+- typography discipline
+- spacing quality
+- calm premium atmosphere
+
+Rotate these when appropriate:
+
+- dominant panel behavior
+- card logic
+- cover structure
+- image role
+- comparison vs explanation vs trust-proof rhythm
+
 ## Approved Template Status
 
 ### Approved
@@ -159,6 +220,7 @@ These should repeat consistently:
 Use the shared palette token source as the production default:
 
 - [mitozz-steel-light.tokens.psd1](../../../../design-system/instagram/tokens/mitozz-steel-light.tokens.psd1)
+- [mitozz-typography.tokens.psd1](../../../../design-system/instagram/tokens/mitozz-typography.tokens.psd1)
 
 Do not hardcode one-off palette values in new renderers when the shared tokens can provide them.
 
@@ -174,6 +236,40 @@ Rule:
 - do not introduce a new hue family just because one asset wants more novelty
 - keep batch consistency inside the chosen variant
 
+## Output Naming Lock
+
+Local production folders and Drive project folders should use one date-first convention:
+
+- `YYYY-MM-DD-feed-slug-vNN`
+- `YYYY-MM-DD-story-slug-vNN`
+- `YYYY-MM-DD-reel-slug-vNN`
+
+Rules:
+
+- put the publish date first
+- put the asset surface second: `feed`, `story`, or `reel`
+- keep the descriptive slug short and stable
+- keep the version suffix at the end
+- do not prepend `ig-`
+- use the same folder basename locally and in Drive whenever practical
+
+## Output Naming Lock
+
+Local production folders and Drive project folders should use one date-first convention:
+
+- `YYYY-MM-DD-feed-slug-vNN`
+- `YYYY-MM-DD-story-slug-vNN`
+- `YYYY-MM-DD-reel-slug-vNN`
+
+Rules:
+
+- put the publish date first
+- put the asset surface second: `feed`, `story`, or `reel`
+- keep the descriptive slug short and stable
+- keep the version suffix at the end
+- do not prepend `ig-`
+- use the same folder basename locally and in Drive whenever practical
+
 ## Typography Lock
 
 Typography is locked as a system, not an asset-by-asset interpretation.
@@ -183,6 +279,7 @@ For `Set 1` and `Set 2`:
 - use one Japanese sans-serif family consistently
 - keep the typographic personality stable across the whole carousel or story set
 - do not let inner slides drift into heavier, lighter, or more decorative text styles
+- choose the type profile deliberately before rendering dense educational copy; do not default blindly when readability is materially affected
 
 Production lock:
 
@@ -192,6 +289,65 @@ Production lock:
 - carousel CTA slide: `Hiragino Sans W4`
 - story frames: `Hiragino Sans W4`
 - optional editorial accent: `Hiragino Mincho ProN W3` or `W6` for very short labels, numerals, or micro-accents only when the full batch was intentionally designed that way
+
+Approved type profiles:
+
+- `mitozz_sans`: default brand system profile for most Mitozz assets
+- `humanist_sans`: preferred alternative for denser Japanese educational copy when a softer, more readable rhythm is needed
+- `editorial_serif`: headline-only exploration mode; use carefully and only when the concept benefits from a more editorial voice without sacrificing readability
+
+Shared token rule:
+
+- both the HTML/CSS template lane and the PowerShell compositor lane must source type profiles from the shared typography token file
+- font-family stacks, accent-family stacks, and reusable role scales belong in `mitozz-typography.tokens.psd1`, not in copied per-asset defaults
+- if a renderer needs a different approved type profile, switch it with `font_profile` or the renderer `FontProfile` parameter rather than copying a new local stack
+- if a typography adjustment should repeat across more than one asset family, promote it into the shared token file instead of fixing it slide by slide
+- do not approve a renderer clone that quietly reintroduces hardcoded typography behavior the token system already covers
+
+Shared compositor typography defaults:
+
+- large Japanese covers should use tracked drawing, not default untracked rendering, when the headline feels cramped
+- Japanese copy should default to near solid setting; roomy Latin-style letter spacing is not the baseline for this system
+- cover headlines may use slight optical tracking, but body copy, micro labels, and most short Japanese UI copy should stay at or near zero added tracking
+- cover headlines should use only slightly more tracking than inner-slide headlines, not a visibly airy gap between characters
+- sublines should feel looser than headlines through line height first, not through obviously widened character spacing
+- use role-based line-height bands:
+  display headlines approximately `1.08-1.18`
+  supporting lines approximately `1.25-1.40`
+  body copy approximately `1.45-1.60`
+- use consistent safe left/right margins across a batch unless a slide role clearly justifies a change
+- top meta labels, section labels, and corner microcopy must anchor from the same left and right margin system; do not place right-side labels with guessed x positions
+- when a story or carousel uses left/right corner meta, the right-side meta must be measured from the same outer margin as the left side, not manually eyeballed per frame
+- when a story or carousel uses left/right corner meta, the right-side meta must be measured from the same outer margin as the left side, not manually eyeballed per frame
+- card padding should be governed, not nudged ad hoc per slide
+- keep a clear breathing interval between the headline/subline block and the first body module
+- center-aligned module text should be centered from measured text width, not default text origin
+- when text sits inside a box, band, bubble, or container, center the full content block optically within the container, not just each line in isolation
+- container content should feel vertically balanced; avoid top-heavy text stacks floating inside generous empty boxes
+- in split cards, left rails, and stacked proof rows, balance the left label block and right content block independently so one side does not feel centered while the other side floats
+- in selector pills or center label bands, give the text enough vertical height and internal padding that it reads centered as a component, not pressed against one edge
+- in stacked proof rows and numbered reading rows, center the left marker area and the right text stack as separate groups before judging the card as balanced
+- close cards should be composed and centered as closing components, not treated like recycled body cards
+- when a cover uses photography or a generated plate, preserve a clean text-safe zone so the image supports hierarchy instead of competing with it
+- for fresh image-backed covers, default to Nano Banana as the source-image lane unless the user explicitly prefers stock or owned photography
+- for image-backed text overlays, lock subject placement and any protected band or card overlay area before generation so the final copy does not cover the focal subject
+- for image-backed covers, verify the final compositor headline and bands do not cross a face or the primary focal object even if the source prompt already specified a text-safe zone
+- any frontend-visible image choice, crop, band label, chip term, icon cue, and CTA line must trace back to an explicit creative-director decision rather than an execution-time guess
+- when a core term appears in more than one slide role, make sure the repetition is doing a distinct job; if the cover can frame the idea in translated language, do not let it mechanically repeat the body-slide category nouns
+- if a headline still feels crowded after line breaks are correct, fix tracking and line height before shrinking the text
+- line height, tracking, and font size should be tuned together so the typographic rhythm matches the copy length and message intention
+- check headline block density, not just headline tracking in isolation; the headline and subline must read as two layers, not one dark compressed block
+- if two layouts are otherwise equivalent, prefer the type profile that makes Japanese headlines feel calmer and less cramped at first glance
+- for dense educational covers and definition slides, test `humanist_sans` before forcing more tracking into `mitozz_sans`
+- if the renderer draws characters one by one, use typographic measurement/drawing so centering and tracked widths stay optically honest
+- do not reuse the same support photo by default when a fresh plate would materially improve the asset's atmosphere or distinctiveness
+
+HTML/CSS layout lock:
+
+- use CSS Grid for macro layout in the template lane
+- use Flexbox for internal stacking, clusters, chips, tag rows, and centering inside modules
+- reserve absolute positioning for media plates, masks, glow layers, and decorative motifs
+- comparison bands, tables, selector rows, and equal-width boxes should sit on explicit shared grid tracks, not hand-tuned widths
 
 Emphasis should come from:
 
@@ -220,6 +376,7 @@ Template-scaffolding lock:
 - internal process labels must never appear in production-facing artwork
 - do not leak `Set` names, reference codes, English workflow scaffolding, or QA markers into final assets
 - if a colored strip, badge, or side band visually behaves like a label area, give it meaningful viewer-facing content or redesign it as a true accent area
+- if a cover, body slide, and close are all repeating the same visible noun trio or label set, confirm that repetition is strategically useful; otherwise translate or rotate the phrasing by slide role
 - do not leave empty-looking label bands that read like unfinished template residue
 
 Emphasis should not come from:
@@ -262,6 +419,14 @@ Allowed variation inside a batch:
 - image subject
 - focal placement
 
+For same-post variants, do not treat copy as automatically variable.
+
+Default rule:
+
+- same-post variants are `design-only`
+- keep frontend copy, CTA, and message angle locked
+- only vary copy when the creative direction explicitly approves a `design-plus-copy` test
+
 Not allowed unless intentionally approved as a variant:
 
 - different font weights for the same role
@@ -271,6 +436,16 @@ Not allowed unless intentionally approved as a variant:
 - inconsistent glow strength or color temperature
 
 If a batch does not feel like it was designed together, regenerate before approval.
+
+## Variant Scope Lock
+
+When multiple versions are created for the same post:
+
+- default to `design-only`
+- preserve the approved frontend copy unless copy testing is explicitly approved
+- if copy is intentionally varied, mark that variant as `design-plus-copy` in the brief and prompt records
+
+Do not let design exploration drift into unplanned messaging exploration.
 
 Automatic QA rule:
 
@@ -361,6 +536,7 @@ Production rules:
 - keep it restrained enough that copy and hierarchy still lead
 - prefer Nano Banana when the support visual should be custom rather than stock
 - if a generated layer is chosen, document its role clearly in the creative package
+- for feed and reel assets, pair the approved visual asset with prepared posting copy and a short deliberate hashtag set before considering the post fully locked
 
 ## Feed Rotation Rule
 
@@ -468,14 +644,19 @@ Visual defaults:
 
 Stock-image defaults:
 
-- use Unsplash when a premium real-photo support image is enough
-- use Nano Banana when the image needs stronger custom composition, more exact contextual fit, or more brand-specific staging than stock can reliably provide
+- use Nano Banana by default for fresh cover plates, support plates, subtle image washes, and overlay-aware source images
+- use Unsplash only when the user explicitly wants a real-photo stock lane or when reference scouting is the main job
+- if the image will carry text later, define the text-safe zone, subject placement, and overlay protection before generation
 
 Story composition defaults:
 
 - use the top, center, and bottom of the frame strategically when the message benefits from clearer vertical rhythm
 - do not force fillers just to occupy space; each zone should have a compositional job or stay intentionally quiet
 - if a Story feels top-heavy, solve it with guidance, support structure, or a meaningful module before adding decoration
+- when a Story supports an approved feed family, inherit that family's type profile, safe margins, centered-container behavior, and close-card logic by default rather than treating Story layout as a looser side system
+- for Story close frames, center the full headline/body/strip/close-card stack within the working canvas instead of relying on fixed Y guesses that drift between posts
+- for Story close frames, center the full headline/body/strip/close-card stack within the working canvas instead of relying on fixed Y guesses that drift between posts
+- do not default every Story box to the same flat pale fill; use role-based tonal panels inside the Steel Light range so support cards, route cards, and over-image bands feel intentionally differentiated
 - large Japanese headlines should be checked for optical tracking and rhythm so they do not feel cramped even when line breaks are correct
 - avoid repeating the same core terms multiple times inside one frame unless the repetition is doing clear hierarchy or navigation work
 - when a horizontal strip is divided into columns, center the text inside each actual column, not by rough visual guesses

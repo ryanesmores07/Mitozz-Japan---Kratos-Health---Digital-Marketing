@@ -1,4 +1,4 @@
-# Mitozz Post-Calendar Layer
+﻿# Mitozz Post-Calendar Layer
 
 ## Window
 
@@ -14,7 +14,7 @@ This is the lean production handoff layer for the active March batch. It resolve
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
 | 2026-03-23 | Feed | Mitochondria basics education carousel | `Set 1 + Set 2` | `5-slide` | `education-card` | `-` | `-` | `education-white-card.png`, `feed-education-white-card-01.png`, `anchor-education-layout-01.png`, `anchor-cool-palette-01.png` | `approved production set exists` |
 | 2026-03-23 | Story | Mitochondria basics reinforcement story | `Set 1` | `story-3-frame` | `story-reinforcement` | `feed-reinforcement` | `feed-route` | `education-white-card.png`, `feed-education-white-card-01.png`, `anchor-cool-palette-01.png` | `approved production set exists` |
-| 2026-03-25 | Feed | Daily condition reel source set | `Set 4 + Set 3` | `reel-4-shot` | `reel-source-frame` | `-` | `-` | `anchor-editorial-whitespace-01.png`, `anchor-cool-palette-01.png`, `anchor-product-glow-01.png`, `mitozz-bottle.jpg`, `Mitozz Bottle Size Spec.md` | `approved 9:16 source set exists in output/instagram/reels/2026-03-25-daily-condition/current/` |
+| 2026-03-25 | Feed | Daily condition reel source set | `Set 4 + Set 3` | `reel-4-shot` | `reel-source-frame` | `-` | `-` | `anchor-editorial-whitespace-01.png`, `anchor-cool-palette-01.png`, `anchor-product-glow-01.png`, `mitozz-bottle.jpg`, `Mitozz Bottle Size Spec.md` | `approved 9:16 source set exists in output/instagram/reels/2026-03-25-reel-daily-condition-v01/current/` |
 | 2026-03-25 | Story | Busy day context story | `Set 4` | `story-3-frame` | `story-reinforcement` | `daily-context` | `poll` | `set-4-lifestyle-v02-no-bottle.png`, `anchor-editorial-whitespace-01.png`, `anchor-cool-palette-01.png` | `prompt and production set exist` |
 | 2026-03-26 | Story | Stimulus vs balance poll story | `Set 4` | `story-3-frame` | `story-reinforcement` | `interactive` | `poll` | `set-4-lifestyle-v02-no-bottle.png`, `anchor-editorial-whitespace-01.png`, `anchor-cool-palette-01.png` | `prompt and production set exist` |
 | 2026-03-27 | Feed | Epicatechin basics education carousel | `Set 1 + Set 2` | `6-slide` | `education-card` | `-` | `-` | `education-white-card.png`, `feed-education-white-card-01.png`, `anchor-education-layout-01.png`, `anchor-cool-palette-01.png` | `approved production set exists` |
@@ -38,3 +38,4 @@ This is the lean production handoff layer for the active March batch. It resolve
 - `Set 1 + Set 2` remains the default education mode unless product presence is genuinely needed.
 - `Set 5 + Set 1` stories should stay lighter and more conversational than the matching feed asset.
 - generated assets that are no longer on the active calendar should be treated as backup or highlight material, not live production obligations.
+

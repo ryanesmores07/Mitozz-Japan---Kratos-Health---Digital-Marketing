@@ -1,0 +1,58 @@
+{
+  "asset_type": "instagram-story",
+  "campaign_name": "Mitozz April 2026",
+  "topic": "April 8 feed support story",
+  "objective": "Support the April 8 trust carousel with a short premium-trust hook, a simple reading lens, and a clear route back to the feed",
+  "template_set": "Set 1",
+  "slide_blueprint": "story-3-frame",
+  "asset_archetype": "story-reinforcement",
+  "platform": "instagram",
+  "aspect_ratio": "9:16",
+  "audience": "Healthy Aging Planner",
+  "visual_engine": "image-led opener + structured editorial support frames",
+  "source_lane": "Nano-Banana-source-image for frame 1 opener plate + design-first-no-image for frames 2 and 3",
+  "source_strategy": "reuse the approved April 8 Nano Banana trust plate for the opener so the story stays visually tied to the feed, then assemble frames 2 and 3 in the compositor",
+  "fallback_source": "fallback to a text-led opener only if the image-backed opener fails readability or text-safe-zone review",
+  "icon_strategy": "none",
+  "generated_visual_role": "hero-visual opener",
+  "visual_intent": [
+    "premium trust-led support story",
+    "warmer opener tied to the feed cover",
+    "lighter than the carousel",
+    "fast mobile readability",
+    "clear route back to the feed"
+  ],
+  "brand_guardrails": [
+    "preserve top and bottom safe zones",
+    "keep the story lighter than the feed carousel",
+    "avoid internal labels, Set names, or template residue",
+    "do not add fake sticker UI",
+    "frame 3 should route back to the feed, not become another lesson",
+    "protect the opener text zone against the image focal area"
+  ],
+  "composition": [
+    "9:16 vertical framing",
+    "frame 1 uses the approved April 8 trust plate with protected upper-left copy space",
+    "frame 2 translates trust into three simple daily reading cues",
+    "frame 3 routes back to the feed with one clear support card",
+    "authored Japanese line breaks only"
+  ],
+  "text_overlay": {
+    "allowed": true,
+    "tone": "soft, clear, trustworthy",
+    "font_reference": "humanist_sans",
+    "headline_ja": "上質さって、\n見た目だけでは\n決まりません。",
+    "slides_ja": [
+      "上質さって、\n見た目だけでは\n決まりません。",
+      "本当に上質と\n感じるのは、\nどんなとき？",
+      "今日の投稿で\n信頼の見方を\n整理しています。"
+    ],
+    "cta_ja": "今日の投稿を見る"
+  },
+  "reference_files": [
+    "brand/references/business-context/creative-packages/creative-package-2026-04-08-v03.md",
+    "brand/references/business-context/visual/Mitozz Instagram Story Strategy.md",
+    "brand/references/business-context/visual/Mitozz Instagram Production Standard.md"
+  ],
+  "notes": "This is a support Story for the April 8 trust carousel. Keep it lighter than the feed and use the approved cover plate only as a family opener, not as a duplicate cover."
+}

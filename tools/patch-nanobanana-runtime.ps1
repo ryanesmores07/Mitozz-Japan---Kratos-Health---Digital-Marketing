@@ -45,13 +45,15 @@ $settingsFiles = Get-ChildItem -Path $archiveRoot -Recurse -File -Filter setting
 
 foreach ($file in $settingsFiles) {
     $changed = $false
-    $changed = (Replace-Text -Path $file.FullName -OldValue 'FLASH = "flash"  # Speed-optimized (Gemini 2.5 Flash)' -NewValue 'FLASH = "flash"  # Speed-optimized (Gemini 3.1 Flash-Lite Image Preview)') -or $changed
-    $changed = (Replace-Text -Path $file.FullName -OldValue 'FLASH = "flash"  # Speed-optimized (Gemini 3.1 Flash Image / Nano Banana Pro 2)' -NewValue 'FLASH = "flash"  # Speed-optimized (Gemini 3.1 Flash-Lite Image Preview)') -or $changed
-    $changed = (Replace-Text -Path $file.FullName -OldValue '"""Gemini 2.5 Flash Image configuration (speed-optimized)."""' -NewValue '"""Gemini 3.1 Flash-Lite Image configuration (speed-optimized)."""') -or $changed
-    $changed = (Replace-Text -Path $file.FullName -OldValue '"""Gemini 3.1 Flash Image configuration (speed-optimized)."""' -NewValue '"""Gemini 3.1 Flash-Lite Image configuration (speed-optimized)."""') -or $changed
-    $changed = (Replace-Text -Path $file.FullName -OldValue 'model_name: str = "gemini-2.5-flash-image"' -NewValue 'model_name: str = "gemini-3.1-flash-lite-preview"') -or $changed
-    $changed = (Replace-Text -Path $file.FullName -OldValue 'model_name: str = "gemini-3.1-flash-image-preview"' -NewValue 'model_name: str = "gemini-3.1-flash-lite-preview"') -or $changed
-    $changed = (Replace-Text -Path $file.FullName -OldValue 'model_name: str = "gemini-3.1-flash-preview"' -NewValue 'model_name: str = "gemini-3.1-flash-lite-preview"') -or $changed
+    $changed = (Replace-Text -Path $file.FullName -OldValue 'FLASH = "flash"  # Speed-optimized (Gemini 2.5 Flash)' -NewValue 'FLASH = "flash"  # Speed-optimized (Gemini 3.1 Flash Image Preview)') -or $changed
+    $changed = (Replace-Text -Path $file.FullName -OldValue 'FLASH = "flash"  # Speed-optimized (Gemini 3.1 Flash Image / Nano Banana Pro 2)' -NewValue 'FLASH = "flash"  # Speed-optimized (Gemini 3.1 Flash Image Preview)') -or $changed
+    $changed = (Replace-Text -Path $file.FullName -OldValue 'FLASH = "flash"  # Speed-optimized (Gemini 3.1 Flash-Lite Image Preview)' -NewValue 'FLASH = "flash"  # Speed-optimized (Gemini 3.1 Flash Image Preview)') -or $changed
+    $changed = (Replace-Text -Path $file.FullName -OldValue '"""Gemini 2.5 Flash Image configuration (speed-optimized)."""' -NewValue '"""Gemini 3.1 Flash Image Preview configuration (speed-optimized)."""') -or $changed
+    $changed = (Replace-Text -Path $file.FullName -OldValue '"""Gemini 3.1 Flash Image configuration (speed-optimized)."""' -NewValue '"""Gemini 3.1 Flash Image Preview configuration (speed-optimized)."""') -or $changed
+    $changed = (Replace-Text -Path $file.FullName -OldValue '"""Gemini 3.1 Flash-Lite Image configuration (speed-optimized)."""' -NewValue '"""Gemini 3.1 Flash Image Preview configuration (speed-optimized)."""') -or $changed
+    $changed = (Replace-Text -Path $file.FullName -OldValue 'model_name: str = "gemini-2.5-flash-image"' -NewValue 'model_name: str = "gemini-3.1-flash-image-preview"') -or $changed
+    $changed = (Replace-Text -Path $file.FullName -OldValue 'model_name: str = "gemini-3.1-flash-lite-preview"' -NewValue 'model_name: str = "gemini-3.1-flash-image-preview"') -or $changed
+    $changed = (Replace-Text -Path $file.FullName -OldValue 'model_name: str = "gemini-3.1-flash-preview"' -NewValue 'model_name: str = "gemini-3.1-flash-image-preview"') -or $changed
 
     if ($changed) {
         $patchedFiles++
@@ -63,13 +65,15 @@ $selectorFiles = Get-ChildItem -Path $archiveRoot -Recurse -File -Filter model_s
 
 foreach ($file in $selectorFiles) {
     $changed = $false
-    $changed = (Replace-Text -Path $file.FullName -OldValue 'flash_service: Gemini 2.5 Flash Image service (speed-optimized)' -NewValue 'flash_service: Gemini 3.1 Flash-Lite Image service (speed-optimized)' ) -or $changed
-    $changed = (Replace-Text -Path $file.FullName -OldValue 'flash_service: Gemini 3.1 Flash Image service (speed-optimized)' -NewValue 'flash_service: Gemini 3.1 Flash-Lite Image service (speed-optimized)' ) -or $changed
-    $changed = (Replace-Text -Path $file.FullName -OldValue '"name": "Gemini 2.5 Flash Image"' -NewValue '"name": "Gemini 3.1 Flash-Lite Image"' ) -or $changed
-    $changed = (Replace-Text -Path $file.FullName -OldValue '"name": "Gemini 3.1 Flash Image"' -NewValue '"name": "Gemini 3.1 Flash-Lite Image"' ) -or $changed
-    $changed = (Replace-Text -Path $file.FullName -OldValue '"model_id": "gemini-2.5-flash-image"' -NewValue '"model_id": "gemini-3.1-flash-lite-preview"' ) -or $changed
-    $changed = (Replace-Text -Path $file.FullName -OldValue '"model_id": "gemini-3.1-flash-image-preview"' -NewValue '"model_id": "gemini-3.1-flash-lite-preview"' ) -or $changed
-    $changed = (Replace-Text -Path $file.FullName -OldValue '"model_id": "gemini-3.1-flash-preview"' -NewValue '"model_id": "gemini-3.1-flash-lite-preview"' ) -or $changed
+    $changed = (Replace-Text -Path $file.FullName -OldValue 'flash_service: Gemini 2.5 Flash Image service (speed-optimized)' -NewValue 'flash_service: Gemini 3.1 Flash Image Preview service (speed-optimized)' ) -or $changed
+    $changed = (Replace-Text -Path $file.FullName -OldValue 'flash_service: Gemini 3.1 Flash Image service (speed-optimized)' -NewValue 'flash_service: Gemini 3.1 Flash Image Preview service (speed-optimized)' ) -or $changed
+    $changed = (Replace-Text -Path $file.FullName -OldValue 'flash_service: Gemini 3.1 Flash-Lite Image service (speed-optimized)' -NewValue 'flash_service: Gemini 3.1 Flash Image Preview service (speed-optimized)' ) -or $changed
+    $changed = (Replace-Text -Path $file.FullName -OldValue '"name": "Gemini 2.5 Flash Image"' -NewValue '"name": "Gemini 3.1 Flash Image Preview"' ) -or $changed
+    $changed = (Replace-Text -Path $file.FullName -OldValue '"name": "Gemini 3.1 Flash Image"' -NewValue '"name": "Gemini 3.1 Flash Image Preview"' ) -or $changed
+    $changed = (Replace-Text -Path $file.FullName -OldValue '"name": "Gemini 3.1 Flash-Lite Image"' -NewValue '"name": "Gemini 3.1 Flash Image Preview"' ) -or $changed
+    $changed = (Replace-Text -Path $file.FullName -OldValue '"model_id": "gemini-2.5-flash-image"' -NewValue '"model_id": "gemini-3.1-flash-image-preview"' ) -or $changed
+    $changed = (Replace-Text -Path $file.FullName -OldValue '"model_id": "gemini-3.1-flash-lite-preview"' -NewValue '"model_id": "gemini-3.1-flash-image-preview"' ) -or $changed
+    $changed = (Replace-Text -Path $file.FullName -OldValue '"model_id": "gemini-3.1-flash-preview"' -NewValue '"model_id": "gemini-3.1-flash-image-preview"' ) -or $changed
 
     if ($changed) {
         $patchedFiles++

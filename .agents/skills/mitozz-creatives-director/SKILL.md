@@ -18,6 +18,8 @@ If the completed brief materially advances retainer delivery, creative direction
 5. Write all customer-facing copy in natural Japanese unless the user asks otherwise.
 6. For on-canvas Japanese copy, define intentional headline and subline break units whenever line-break quality affects the finish.
 7. If a layout uses a side band, badge, chip, or top label, decide whether it carries meaningful viewer-facing content or should remain a pure accent. Do not leave that choice implicit.
+8. Every frontend-visible image choice, crop, label, band term, support cue, and CTA phrase must be explicitly decided in the brief. Do not leave viewer-facing decisions to the prompt, renderer, or improvisation during production.
+9. When a related asset family already has an approved base layout, inherit that layout grammar by default and only diverge if the brief deliberately calls for a different structure.
 
 ## Creative Authority
 
@@ -42,9 +44,11 @@ Your role covers:
 - positioning and branding consistency
 - support-asset decisions across feed and stories when useful
 
+Anything the viewer will actually see on-canvas belongs to this skill's decision scope unless the user explicitly overrides it.
+
 You may optionally apply the external frontend-skill lens when an asset needs stronger composition, hierarchy, imagery, or motion direction than the standard flow would usually require.
 You may also use the repo-local `mitozz-icon-sourcing` skill when an asset would benefit from intentional semantic icon cues instead of improvised shapes.
-You may also use the repo-local `mitozz-stock-image-sourcing` skill when a post needs premium stock photography rather than owned imagery or custom generation.
+You may also use the repo-local `mitozz-stock-image-sourcing` skill only when the user explicitly wants a real stock-photo lane or when reference scouting is the actual need.
 
 ## Fixed Brand Rules
 
@@ -251,6 +255,10 @@ Always lock:
 
 - `visual_engine`
 - `anchor_set`
+- `dominant_set_behavior`
+- `variation_strategy`
+- `selected_set_images`
+- `variant_scope`
 - `palette_variant`
 - `source_lane`
 - `source_strategy`
@@ -258,7 +266,48 @@ Always lock:
 - `icon_strategy`
 - `generated_visual_role`
 
+When the asset uses a fresh image-backed cover or source plate, also lock:
+
+- `text_safe_zone`
+- `subject_placement`
+- `overlay_protection_zone`
+
+Default to `Nano-Banana-source-image` for fresh cover plates or overlay-aware source images unless the user explicitly prefers stock or owned photography.
+
 The creative director owns these decisions.
+
+Treat `style-anchors/Set A-H` as a live source of layout behavior, not a one-time reference library.
+Do not keep reusing the last successful internal grammar by habit.
+
+For every new feed asset, decide:
+
+- which set or anchor family is dominant here
+- what behavior from that family is being adapted
+- what must deliberately change from the most recent adjacent approved asset
+- which specific screenshot files inside the chosen Set folder are actually being borrowed from
+
+For same-post variants, also decide:
+
+- is this `design-only`
+- or is this `design-plus-copy`
+
+Default to `design-only`.
+If copy is not explicitly under test, keep the approved frontend copy, CTA, and message angle locked across variants.
+
+When `Set A-H` is used, do not cite only the folder name.
+Name the exact screenshot files and what each one is controlling:
+
+- cover pacing
+- answer-card logic
+- selector behavior
+- comparison rhythm
+- proof-card structure
+- CTA behavior
+
+If the adjacent asset already used the same dominant structural behavior, either:
+
+- justify the repetition as an intentional sequence
+- or choose a different dominant set behavior while staying inside the same Mitozz brand system
 
 Do not leave source-lane choice to the prompt engineer or generation step.
 Do not let execution decide whether the asset becomes image-led, type-led, or diagram-led after the brief is written.
@@ -266,10 +315,28 @@ Do not let execution decide whether the asset becomes image-led, type-led, or di
 Do not leave icon use or generated-support-visual use as an afterthought.
 Every asset must intentionally choose whether Better Icons or a generated support layer is part of the final system.
 
+Fresh-image rule:
+
+- if imagery materially improves the asset, prefer a fresh source plate over repeating the last successful background image by habit
+- if an older source plate is reused, make that a conscious decision and note why the repetition is justified
+- when an image-backed cover is stronger than a pure white cover, say so directly and choose it
+
+Typography-fit rule:
+
+- match line height and tracking to the actual font size, copy length, and emotional intention of the slide
+- keep Japanese body copy and short UI labels near solid setting by default; do not add roomy Latin-style spacing unless the display role truly needs optical correction
+- check headline block density after line breaks are chosen; if the title still feels heavy, separate the headline and support rhythm before reaching for more tracking
+- treat line-height by role:
+  display headlines approximately `1.08-1.18`
+  supporting lines approximately `1.25-1.40`
+  body copy approximately `1.45-1.60`
+- do not leave letter spacing or line height on inherited defaults once the copy block changes shape
+- if the type feels cramped, airy, or tonally off, fix tracking and line height before shrinking the font
+
 When useful, also state:
 
-- whether Unsplash is sufficient
-- whether Nano Banana is required because stock would be too generic
+- whether Nano Banana is the correct fresh-image lane
+- whether owned photography would be stronger than generation
 - whether Better Icons should provide semantic structure
 - whether Nano Banana should generate a subtle background, infographic support visual, hero visual, or support plate
 
@@ -363,8 +430,15 @@ Provide:
 - headline or hook
 - supporting copy
 - cover text when relevant
-- caption direction or caption draft when useful
+- caption direction is required for every feed or reel
+- a locked `caption_ja` draft or a posting-copy-pack entry is required before a feed or reel can be treated as production-ready
+- prepare a matching `hashtag_set` for every feed or reel caption
+- default hashtag behavior: `3-5` highly relevant tags only, weighted toward brand + topic + intent rather than giant generic tags
+- story sets may use lighter posting notes, but the related feed or reel should not ship without prepared posting copy
 - CTA
+
+The creative director sets the caption angle and CTA direction.
+The final publication-ready caption and hashtag set should be produced by `mitozz-posting-copy-optimizer` from the approved brief and asset.
 
 All customer-facing copy must be:
 
@@ -456,13 +530,16 @@ The source handoff should follow the chosen `source_lane`.
 If the asset uses:
 
 - `Nano-Banana-source-image`: provide generation-ready prompt guidance
-- `Unsplash-stock-image`: provide stock-photo selection guidance and constraints
+- `Unsplash-stock-image`: provide stock-photo selection guidance and constraints only when the brief explicitly chooses stock
 - `owned-real-photo`: specify the required owned source and what it must prove
 
 Always include:
 
 - `visual_engine`
 - `anchor_set`
+- `dominant_set_behavior`
+- `variation_strategy`
+- `selected_set_images`
 - `palette_variant`
 - `source_lane`
 - `source_strategy`
@@ -536,6 +613,9 @@ Always include:
 - Do not soften decisions by listing many alternatives.
 - Do not let internal `Set` names, English workflow labels, `Q` badges, or other template scaffolding survive into on-canvas production copy.
 - Do not specify a narrow side-band label unless it can read cleanly and meaningfully at Instagram size.
+- Do not let one approved set behavior turn into the answer for every new post.
+- Do not ignore the broader `style-anchors/Set A-H` library when a different structural behavior would better fit the topic.
+- Adapt reference behavior into the Mitozz system; do not copy the original layout literally.
 - Prioritize clarity, trust, save/share value, and premium brand building over novelty.
 - Make every asset feel like it belongs to one coherent Mitozz system.
 - Keep the calendar simple by resolving ambiguity yourself instead of inventing new planning layers.

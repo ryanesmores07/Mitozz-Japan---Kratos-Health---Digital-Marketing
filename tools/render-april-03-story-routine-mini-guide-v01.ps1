@@ -1,6 +1,8 @@
-param(
+﻿param(
     [ValidateSet('default', 'cool_focus', 'warm_editorial')]
-    [string]$PaletteVariant = 'default'
+    [string]$PaletteVariant = 'default',
+    [ValidateSet('mitozz_sans', 'humanist_sans', 'editorial_serif')]
+    [string]$FontProfile = 'humanist_sans'
 )
 
 Add-Type -AssemblyName System.Drawing
@@ -9,6 +11,7 @@ Set-StrictMode -Version Latest
 $ErrorActionPreference = "Stop"
 
 . (Join-Path $PSScriptRoot 'shared/load-mitozz-design-tokens.ps1')
+. (Join-Path $PSScriptRoot 'shared/load-mitozz-typography-tokens.ps1')
 
 function New-Font {
     param(
@@ -69,6 +72,63 @@ function Draw-RoundedBox {
     $fill.Dispose()
     $stroke.Dispose()
     $path.Dispose()
+}
+
+function Draw-RoundedGradientBox {
+    param(
+        [System.Drawing.Graphics]$Graphics,
+        [float]$X,
+        [float]$Y,
+        [float]$Width,
+        [float]$Height,
+        [float]$Radius,
+        [System.Drawing.Color]$TopColor,
+        [System.Drawing.Color]$BottomColor,
+        [System.Drawing.Color]$StrokeColor,
+        [float]$StrokeWidth = 1
+    )
+
+    $path = New-RoundedPath -X $X -Y $Y -Width $Width -Height $Height -Radius $Radius
+    $gradient = New-Object System.Drawing.Drawing2D.LinearGradientBrush(
+        ([System.Drawing.PointF]::new($X, $Y)),
+        ([System.Drawing.PointF]::new($X, ($Y + $Height))),
+        $TopColor,
+        $BottomColor
+    )
+    $stroke = New-Object System.Drawing.Pen($StrokeColor, $StrokeWidth)
+    $Graphics.FillPath($gradient, $path)
+    $Graphics.DrawPath($stroke, $path)
+    $gradient.Dispose()
+    $stroke.Dispose()
+    $path.Dispose()
+}
+
+function Draw-ImageCover {
+    param(
+        [System.Drawing.Graphics]$Graphics,
+        [string]$ImagePath,
+        [float]$X,
+        [float]$Y,
+        [float]$Width,
+        [float]$Height,
+        [float]$Radius
+    )
+
+    $image = [System.Drawing.Image]::FromFile($ImagePath)
+    $scale = [Math]::Max($Width / $image.Width, $Height / $image.Height)
+    $drawWidth = $image.Width * $scale
+    $drawHeight = $image.Height * $scale
+    $drawX = $X + (($Width - $drawWidth) / 2)
+    $drawY = $Y + (($Height - $drawHeight) / 2)
+
+    $state = $Graphics.Save()
+    $path = New-RoundedPath -X $X -Y $Y -Width $Width -Height $Height -Radius $Radius
+    $Graphics.SetClip($path)
+    $Graphics.DrawImage($image, $drawX, $drawY, $drawWidth, $drawHeight)
+    $Graphics.Restore($state)
+
+    $path.Dispose()
+    $image.Dispose()
 }
 
 function Draw-Lines {
@@ -177,6 +237,34 @@ function Draw-Paragraph {
     $format.Dispose()
 }
 
+function Draw-RightAlignedText {
+    param(
+        [System.Drawing.Graphics]$Graphics,
+        [string]$Text,
+        [System.Drawing.Font]$Font,
+        [System.Drawing.Brush]$Brush,
+        [float]$RightX,
+        [float]$Y
+    )
+
+    $format = New-Object System.Drawing.StringFormat
+    $format.Alignment = [System.Drawing.StringAlignment]::Near
+    $format.LineAlignment = [System.Drawing.StringAlignment]::Near
+    $size = $Graphics.MeasureString($Text, $Font, 1000, $format)
+    $Graphics.DrawString($Text, $Font, $Brush, ($RightX - $size.Width), $Y, $format)
+    $format.Dispose()
+}
+
+function Get-CenteredStackTop {
+    param(
+        [float]$ContainerY,
+        [float]$ContainerHeight,
+        [float]$ContentHeight
+    )
+
+    return [float]($ContainerY + (($ContainerHeight - $ContentHeight) / 2))
+}
+
 function Decode-UnicodeEscapes {
     param([string]$Value)
     return [regex]::Unescape($Value)
@@ -210,20 +298,21 @@ function Draw-StoryBase {
     $headerBrush.Dispose()
 }
 
-$jpFamilies = @("Hiragino Sans", "Yu Gothic UI", "Yu Gothic", "Meiryo", "Segoe UI")
-$serifFamilies = @("Times New Roman", "Georgia", "Yu Mincho", "MS Mincho")
 $designTokens = Get-MitozzDesignTokens -Variant $PaletteVariant
+$fontProfileConfig = Get-MitozzFontProfileConfig -Profile $FontProfile
+$jpFamilies = [string[]]$fontProfileConfig.body_families
+$accentFamilies = if ($fontProfileConfig.ContainsKey('accent_families')) { [string[]]$fontProfileConfig.accent_families } else { @("Hiragino Mincho ProN", "Yu Mincho", "MS PMincho", "Times New Roman") }
 $tokenColors = $designTokens.Colors
 
 $smallFont = New-Font -Families $jpFamilies -Size 24 -Style ([System.Drawing.FontStyle]::Bold)
-$headlineFont = New-Font -Families $jpFamilies -Size 82 -Style ([System.Drawing.FontStyle]::Bold)
-$headlineTightFont = New-Font -Families $jpFamilies -Size 70 -Style ([System.Drawing.FontStyle]::Bold)
+$headlineFont = New-Font -Families $jpFamilies -Size 74 -Style ([System.Drawing.FontStyle]::Bold)
+$headlineTightFont = New-Font -Families $jpFamilies -Size 64 -Style ([System.Drawing.FontStyle]::Bold)
 $bodyFont = New-Font -Families $jpFamilies -Size 34 -Style ([System.Drawing.FontStyle]::Regular)
 $bodySmallFont = New-Font -Families $jpFamilies -Size 28 -Style ([System.Drawing.FontStyle]::Regular)
 $labelFont = New-Font -Families $jpFamilies -Size 24 -Style ([System.Drawing.FontStyle]::Bold)
 $cardTitleFont = New-Font -Families $jpFamilies -Size 32 -Style ([System.Drawing.FontStyle]::Bold)
 $cardBodyFont = New-Font -Families $jpFamilies -Size 26 -Style ([System.Drawing.FontStyle]::Regular)
-$indexFont = New-Font -Families $serifFamilies -Size 38 -Style ([System.Drawing.FontStyle]::Bold)
+$indexFont = New-Font -Families $accentFamilies -Size 38 -Style ([System.Drawing.FontStyle]::Bold)
 
 $canvasTop = $tokenColors.canvas_top
 $canvasBottom = $tokenColors.canvas_bottom
@@ -235,6 +324,9 @@ $mistBlue = $tokenColors.structure
 $mistBlueSoft = $tokenColors.atmosphere
 $mistBlueLine = $tokenColors.structure_line
 $apricot = $tokenColors.accent_soft
+$glassPanelTop = [System.Drawing.Color]::FromArgb(244, 250, 252, 253)
+$glassPanelBottom = [System.Drawing.Color]::FromArgb(236, 235, 243, 248)
+$glassPanelStroke = [System.Drawing.Color]::FromArgb(214, 207, 218, 226)
 $white = $tokenColors.card
 $mistGuide = [System.Drawing.Color]::FromArgb(84, $mistBlueLine.R, $mistBlueLine.G, $mistBlueLine.B)
 
@@ -248,11 +340,14 @@ $accentPen = New-Object System.Drawing.Pen($apricot, 4)
 
 $width = 1080
 $height = 1920
+$metaRightX = [float]($width - 58)
 $workspaceRoot = [System.IO.Path]::GetFullPath((Join-Path $PSScriptRoot ".."))
-$storyRoot = Join-Path $workspaceRoot "output/instagram/stories/ig-story-2026-04-03-routine-mini-guide-v01"
+$storyRoot = Join-Path $workspaceRoot "output/instagram/stories/2026-04-03-story-routine-mini-guide-v01"
+$sourceDir = Join-Path $storyRoot "source"
 $productionDir = Join-Path $storyRoot "production"
 $currentDir = Join-Path $storyRoot "current"
-foreach ($path in @($productionDir, $currentDir)) {
+$sourceImage = Join-Path $sourceDir "frame-01-plate-nanobanana-v01.jpg"
+foreach ($path in @($sourceDir, $productionDir, $currentDir)) {
     if (-not (Test-Path -LiteralPath $path)) {
         New-Item -ItemType Directory -Path $path -Force | Out-Null
     }
@@ -316,51 +411,84 @@ for ($i = 0; $i -lt $frames.Count; $i += 1) {
     $graphics.PixelOffsetMode = [System.Drawing.Drawing2D.PixelOffsetMode]::HighQuality
     $graphics.TextRenderingHint = [System.Drawing.Text.TextRenderingHint]::AntiAliasGridFit
 
-    Draw-StoryBase -Graphics $graphics -Width $width -Height $height
-
-    $graphics.DrawString([string]$frame.LeftMeta, $smallFont, $blueBrush, 58, 50)
-    $graphics.DrawString([string]$frame.RightMeta, $smallFont, $blueBrush, 818, 50)
-
     if ($frame.Type -eq "cover") {
-        $headlineBottom = Draw-TrackedLines -Graphics $graphics -Lines $frame.Headline -Font $headlineFont -Brush $textBrush -X 78 -Y 230 -LineHeight 102 -Tracking 2.0
-        [void](Draw-Lines -Graphics $graphics -Lines $frame.Body -Font $bodyFont -Brush $softBrush -X 84 -Y ($headlineBottom + 10) -LineHeight 50)
+        if (Test-Path -LiteralPath $sourceImage) {
+            $graphics.Clear($canvasTop)
+            Draw-ImageCover -Graphics $graphics -ImagePath $sourceImage -X 18 -Y 18 -Width ($width - 36) -Height ($height - 36) -Radius 48
+            $path = New-RoundedPath -X 18 -Y 18 -Width ($width - 36) -Height ($height - 36) -Radius 48
+            $stroke = New-Object System.Drawing.Pen($mistBlueLine, 1)
+            $graphics.DrawPath($stroke, $path)
+            $stroke.Dispose()
+            $path.Dispose()
 
-        $guidePen = New-Object System.Drawing.Pen($mistGuide, 2)
-        foreach ($guideX in @(312, 540, 768)) {
-            $graphics.DrawLine($guidePen, $guideX, 700, $guideX, 1080)
+            $overlayBrush = New-Object System.Drawing.Drawing2D.LinearGradientBrush(
+                ([System.Drawing.Point]::new(0, 0)),
+                ([System.Drawing.Point]::new(760, 0)),
+                ([System.Drawing.Color]::FromArgb(222, 247, 250, 252)),
+                ([System.Drawing.Color]::FromArgb(74, 247, 250, 252))
+            )
+            $graphics.FillRectangle($overlayBrush, 18, 18, 760, $height - 36)
+            $overlayBrush.Dispose()
+
+            $topWash = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(72, 255, 255, 255))
+            $graphics.FillRectangle($topWash, 18, 18, $width - 36, 120)
+            $topWash.Dispose()
         }
-        $guidePen.Dispose()
+        else {
+            Draw-StoryBase -Graphics $graphics -Width $width -Height $height
+        }
 
+        $graphics.DrawString([string]$frame.LeftMeta, $smallFont, $blueBrush, 58, 50)
+        Draw-RightAlignedText -Graphics $graphics -Text ([string]$frame.RightMeta) -Font $smallFont -Brush $blueBrush -RightX $metaRightX -Y 50
+
+        $headlineBottom = Draw-TrackedLines -Graphics $graphics -Lines $frame.Headline -Font $headlineFont -Brush $textBrush -X 78 -Y 224 -LineHeight 92 -Tracking 0.8
+        [void](Draw-Lines -Graphics $graphics -Lines $frame.Body -Font $bodyFont -Brush $softBrush -X 84 -Y ($headlineBottom + 18) -LineHeight 50)
+
+        $supportStripY = 762
+        Draw-RoundedGradientBox -Graphics $graphics -X 126 -Y $supportStripY -Width 828 -Height 88 -Radius 24 `
+            -TopColor $glassPanelTop -BottomColor $glassPanelBottom -StrokeColor $glassPanelStroke -StrokeWidth 1
         $supportCopy = Decode-UnicodeEscapes "\u3072\u3068\u3064\u305a\u3064\u3088\u308a\u3001\u6d41\u308c\u3067\u898b\u308b\u3068\u6574\u3048\u3084\u3059\u3044\u3002"
-        Draw-CenteredParagraph -Graphics $graphics -Text $supportCopy -Font $bodySmallFont -Brush $softBrush -X 246 -Y 892 -Width 588 -Height 36
-        $graphics.DrawLine($rulePen, 96, 910, 228, 910)
-        $graphics.DrawLine($rulePen, 852, 910, 984, 910)
+        Draw-CenteredParagraph -Graphics $graphics -Text $supportCopy -Font $bodySmallFont -Brush $softBrush -X 174 -Y ($supportStripY + 22) -Width 732 -Height 42
 
-        Draw-RoundedBox -Graphics $graphics -X 54 -Y 1238 -Width 972 -Height 224 -Radius 30 `
-            -FillColor $mistBlueSoft -StrokeColor $mistBlueLine -StrokeWidth 1
+        $coverBandY = 948
+        $coverBandHeight = 248
+        Draw-RoundedGradientBox -Graphics $graphics -X 54 -Y $coverBandY -Width 972 -Height $coverBandHeight -Radius 32 `
+            -TopColor $glassPanelTop -BottomColor $glassPanelBottom -StrokeColor $glassPanelStroke -StrokeWidth 1
 
-        $tileXs = @(96, 414, 732)
-        $sleepLabel = ([string][char]0x7761) + [char]0x7720
-        $foodLabel = ([string][char]0x98df) + [char]0x4e8b
-        $moveLabel = ([string][char]0x904b) + [char]0x52d5
-        $sleepValue = ([string][char]0x6574) + [char]0x3048 + [char]0x308b
-        $foodValue = ([string][char]0x6e80) + [char]0x305f + [char]0x3059
-        $moveValue = ([string][char]0x52d5) + [char]0x304b + [char]0x3059
-        $tileLabels = @($sleepLabel, $foodLabel, $moveLabel)
-        $tileValues = @($sleepValue, $foodValue, $moveValue)
-
-        for ($t = 0; $t -lt 3; $t += 1) {
-            if ($t -gt 0) {
-                $graphics.DrawLine($rulePen, $tileXs[$t] - 30, 1268, $tileXs[$t] - 30, 1434)
+        $labels = @(
+            (Decode-UnicodeEscapes "\u7761\u7720"),
+            (Decode-UnicodeEscapes "\u98df\u4e8b"),
+            (Decode-UnicodeEscapes "\u904b\u52d5")
+        )
+        $values = @(
+            (Decode-UnicodeEscapes "\u6574\u3048\u308b"),
+            (Decode-UnicodeEscapes "\u6e80\u305f\u3059"),
+            (Decode-UnicodeEscapes "\u52d5\u304b\u3059")
+        )
+        $columnWidth = 972 / 3
+        for ($columnIndex = 0; $columnIndex -lt 3; $columnIndex += 1) {
+            $columnLeft = 54 + ($columnWidth * $columnIndex)
+            if ($columnIndex -gt 0) {
+                $graphics.DrawLine($rulePen, $columnLeft, ($coverBandY + 32), $columnLeft, ($coverBandY + $coverBandHeight - 32))
             }
-            $graphics.DrawString($tileLabels[$t], $labelFont, $blueBrush, $tileXs[$t], 1298)
-            $graphics.DrawString($tileValues[$t], $cardTitleFont, $textBrush, $tileXs[$t], 1350)
+            Draw-CenteredParagraph -Graphics $graphics -Text $labels[$columnIndex] -Font $labelFont -Brush $blueBrush -X $columnLeft -Y 1006 -Width $columnWidth -Height 38
+            Draw-CenteredParagraph -Graphics $graphics -Text $values[$columnIndex] -Font $cardTitleFont -Brush $textBrush -X $columnLeft -Y 1058 -Width $columnWidth -Height 48
         }
+
+        Draw-RoundedBox -Graphics $graphics -X 120 -Y 1314 -Width 840 -Height 120 -Radius 28 `
+            -FillColor $cardWhite -StrokeColor $mistBlueLine -StrokeWidth 1
+        $coverFooter = Decode-UnicodeEscapes "\u307e\u305a\u306f\u300c\u3069\u3053\u304c\u4e71\u308c\u3066\u3044\u308b\u304b\u300d\u304b\u3089\u898b\u3066\u307f\u308b\u3002"
+        Draw-CenteredParagraph -Graphics $graphics -Text $coverFooter -Font $cardBodyFont -Brush $softBrush -X 176 -Y 1350 -Width 728 -Height 44
+    }
+    else {
+        Draw-StoryBase -Graphics $graphics -Width $width -Height $height
+        $graphics.DrawString([string]$frame.LeftMeta, $smallFont, $blueBrush, 58, 50)
+        Draw-RightAlignedText -Graphics $graphics -Text ([string]$frame.RightMeta) -Font $smallFont -Brush $blueBrush -RightX $metaRightX -Y 50
     }
 
     if ($frame.Type -eq "body") {
-        $headlineBottom = Draw-TrackedLines -Graphics $graphics -Lines $frame.Headline -Font $headlineTightFont -Brush $textBrush -X 78 -Y 228 -LineHeight 90 -Tracking 1.8
-        [void](Draw-Lines -Graphics $graphics -Lines $frame.Body -Font $bodyFont -Brush $softBrush -X 84 -Y ($headlineBottom + 14) -LineHeight 50)
+        $headlineBottom = Draw-TrackedLines -Graphics $graphics -Lines $frame.Headline -Font $headlineTightFont -Brush $textBrush -X 78 -Y 220 -LineHeight 84 -Tracking 0.6
+        [void](Draw-Lines -Graphics $graphics -Lines $frame.Body -Font $bodyFont -Brush $softBrush -X 84 -Y ($headlineBottom + 18) -LineHeight 50)
 
         $rows = @'
 [
@@ -386,33 +514,44 @@ for ($i = 0; $i -lt $frames.Count; $i += 1) {
 '@ | ConvertFrom-Json
 
         $checkCopy = Decode-UnicodeEscapes "\u5f53\u3066\u306f\u307e\u308b\u5165\u53e3\u3092\u3072\u3068\u3064\u898b\u3064\u3051\u308b"
-        Draw-CenteredParagraph -Graphics $graphics -Text $checkCopy -Font $bodySmallFont -Brush $softBrush -X 264 -Y 692 -Width 552 -Height 34
-        $graphics.DrawLine($rulePen, 96, 708, 252, 708)
-        $graphics.DrawLine($rulePen, 828, 708, 984, 708)
+        Draw-RoundedBox -Graphics $graphics -X 146 -Y 648 -Width 788 -Height 86 -Radius 24 `
+            -FillColor $cardWhite -StrokeColor $mistBlueLine -StrokeWidth 1
+        Draw-CenteredParagraph -Graphics $graphics -Text $checkCopy -Font $bodySmallFont -Brush $softBrush -X 186 -Y 670 -Width 708 -Height 40
 
-        $rowY = 760
+        $rowY = 786
         foreach ($row in $rows) {
-            Draw-RoundedBox -Graphics $graphics -X 54 -Y $rowY -Width 972 -Height 176 -Radius 26 `
+            Draw-RoundedBox -Graphics $graphics -X 54 -Y $rowY -Width 972 -Height 188 -Radius 26 `
                 -FillColor $white -StrokeColor $mistBlueLine -StrokeWidth 1
-            Draw-RoundedBox -Graphics $graphics -X 54 -Y $rowY -Width 170 -Height 176 -Radius 26 `
+            Draw-RoundedBox -Graphics $graphics -X 54 -Y $rowY -Width 188 -Height 188 -Radius 26 `
                 -FillColor $mistBlueSoft -StrokeColor $mistBlueLine -StrokeWidth 1
-            Draw-CenteredParagraph -Graphics $graphics -Text ([string]$row.Label) -Font $cardTitleFont -Brush $blueBrush -X 54 -Y $rowY -Width 170 -Height 176
-            $graphics.DrawString([string]$row.Title, $cardTitleFont, $textBrush, 256, $rowY + 42)
-            Draw-Paragraph -Graphics $graphics -Text ([string]$row.Body) -Font $cardBodyFont -Brush $softBrush -X 256 -Y ($rowY + 96) -Width 678 -Height 54
-            $rowY += 196
+            Draw-CenteredParagraph -Graphics $graphics -Text ([string]$row.Label) -Font $cardTitleFont -Brush $blueBrush -X 54 -Y $rowY -Width 188 -Height 188
+            $graphics.DrawString([string]$row.Title, $cardTitleFont, $textBrush, 280, $rowY + 42)
+            Draw-Paragraph -Graphics $graphics -Text ([string]$row.Body) -Font $cardBodyFont -Brush $softBrush -X 280 -Y ($rowY + 92) -Width 640 -Height 62
+            $rowY += 208
         }
 
-        Draw-RoundedBox -Graphics $graphics -X 120 -Y 1426 -Width 840 -Height 112 -Radius 28 `
+        Draw-RoundedBox -Graphics $graphics -X 120 -Y 1446 -Width 840 -Height 112 -Radius 28 `
             -FillColor $mistBlueSoft -StrokeColor $mistBlueLine -StrokeWidth 1
         $bodyFooter = Decode-UnicodeEscapes "\u3072\u3068\u3064\u306e\u5165\u53e3\u304b\u3089\u898b\u76f4\u305b\u3070\u4e00\u6b69\u9032\u3081\u3084\u3059\u3044\u3002"
-        Draw-CenteredParagraph -Graphics $graphics -Text $bodyFooter -Font $cardBodyFont -Brush $softBrush -X 168 -Y 1456 -Width 744 -Height 44
+        Draw-CenteredParagraph -Graphics $graphics -Text $bodyFooter -Font $cardBodyFont -Brush $softBrush -X 168 -Y 1478 -Width 744 -Height 44
     }
 
     if ($frame.Type -eq "close") {
-        $headlineBottom = Draw-TrackedLines -Graphics $graphics -Lines $frame.Headline -Font $headlineTightFont -Brush $textBrush -X 78 -Y 266 -LineHeight 90 -Tracking 1.8
-        [void](Draw-Lines -Graphics $graphics -Lines $frame.Body -Font $bodyFont -Brush $softBrush -X 84 -Y ($headlineBottom + 16) -LineHeight 50)
+        $headlineHeight = [float]($frame.Headline.Count * 84)
+        $bodyHeight = [float]($frame.Body.Count * 50)
+        $closeStripHeight = 100.0
+        $closeCardHeight = 248.0
+        $headlineBodyGap = 18.0
+        $bodyStripGap = 92.0
+        $stripCardGap = 86.0
+        $closeContentHeight = $headlineHeight + $headlineBodyGap + $bodyHeight + $bodyStripGap + $closeStripHeight + $stripCardGap + $closeCardHeight
+        $closeBlockTop = Get-CenteredStackTop -ContainerY 220 -ContainerHeight 1280 -ContentHeight $closeContentHeight
+        $headlineY = [float]$closeBlockTop
+        $headlineBottom = Draw-TrackedLines -Graphics $graphics -Lines $frame.Headline -Font $headlineTightFont -Brush $textBrush -X 78 -Y $headlineY -LineHeight 84 -Tracking 0.6
+        $bodyY = [float]($headlineY + $headlineHeight + $headlineBodyGap)
+        [void](Draw-Lines -Graphics $graphics -Lines $frame.Body -Font $bodyFont -Brush $softBrush -X 84 -Y $bodyY -LineHeight 50)
 
-        $closeStripY = 830
+        $closeStripY = [float]($bodyY + $bodyHeight + $bodyStripGap)
         Draw-RoundedBox -Graphics $graphics -X 138 -Y $closeStripY -Width 804 -Height 100 -Radius 24 `
             -FillColor $mistBlueSoft -StrokeColor $mistBlueLine -StrokeWidth 1
 
@@ -432,16 +571,27 @@ for ($i = 0; $i -lt $frames.Count; $i += 1) {
             Draw-CenteredParagraph -Graphics $graphics -Text $stripLabels[$t] -Font $labelFont -Brush $blueBrush -X $columnLeft -Y ($closeStripY + 4) -Width $stripColumnWidth -Height 92
         }
 
-        $graphics.DrawLine($rulePen, 96, 984, 984, 984)
+        $dividerY = [float]($closeStripY + 154)
+        $graphics.DrawLine($rulePen, 96, $dividerY, 984, $dividerY)
 
-        Draw-RoundedBox -Graphics $graphics -X 84 -Y 1034 -Width 912 -Height 286 -Radius 34 `
+        $closeCardY = [float]($closeStripY + $closeStripHeight + $stripCardGap)
+        Draw-RoundedBox -Graphics $graphics -X 84 -Y $closeCardY -Width 912 -Height 248 -Radius 34 `
             -FillColor $mistBlueSoft -StrokeColor $mistBlueLine -StrokeWidth 1
 
         $closeTitle = [string]([char]0x30d5)+[char]0x30a3+[char]0x30fc+[char]0x30c9+[char]0x3067+[char]0x5168+[char]0x4f53+[char]0x3092+[char]0x898b+[char]0x76f4+[char]0x3059
-        $closeBody = [string]([char]0x7761)+[char]0x7720+[char]0x3001+[char]0x98df+[char]0x4e8b+[char]0x3001+[char]0x904b+[char]0x52d5+[char]0x306e+[char]0x3064+[char]0x306a+[char]0x304c+[char]0x308a+[char]0x3092+[char]0x4eca+[char]0x65e5+[char]0x306e+[char]0x6295+[char]0x7a3f+[char]0x3067+[char]0x6574+[char]0x7406+[char]0x3002
-        Draw-CenteredParagraph -Graphics $graphics -Text $closeTitle -Font $cardTitleFont -Brush $textBrush -X 124 -Y 1114 -Width 832 -Height 44
-        $graphics.DrawLine($accentPen, 416, 1198, 664, 1198)
-        Draw-CenteredParagraph -Graphics $graphics -Text $closeBody -Font $cardBodyFont -Brush $softBrush -X 134 -Y 1238 -Width 812 -Height 40
+        $closeBody = [string]([char]0x7761)+[char]0x7720+[char]0x3001+[char]0x98df+[char]0x4e8b+[char]0x3001+[char]0x904b+[char]0x52d5+[char]0x306e+[char]0x3064+[char]0x306a+[char]0x304c+[char]0x308a+[char]0x3092+[char]0x3001+[char]0x4eca+[char]0x65e5+[char]0x306e+[char]0x6295+[char]0x7a3f+[char]0x3067+[char]0x6574+[char]0x7406+[char]0x3002
+        $closeTitleHeight = 44.0
+        $closeRuleGapTop = 28.0
+        $closeRuleGapBottom = 28.0
+        $closeBodyHeightInner = 64.0
+        $closeInnerHeight = $closeTitleHeight + $closeRuleGapTop + $closeRuleGapBottom + $closeBodyHeightInner
+        $closeInnerTop = Get-CenteredStackTop -ContainerY $closeCardY -ContainerHeight $closeCardHeight -ContentHeight $closeInnerHeight
+        $closeTitleY = [float]$closeInnerTop
+        $closeRuleY = [float]($closeTitleY + $closeTitleHeight + $closeRuleGapTop)
+        $closeBodyY = [float]($closeRuleY + $closeRuleGapBottom)
+        Draw-CenteredParagraph -Graphics $graphics -Text $closeTitle -Font $cardTitleFont -Brush $textBrush -X 124 -Y $closeTitleY -Width 832 -Height $closeTitleHeight
+        $graphics.DrawLine($accentPen, 416, $closeRuleY, 664, $closeRuleY)
+        Draw-CenteredParagraph -Graphics $graphics -Text $closeBody -Font $cardBodyFont -Brush $softBrush -X 134 -Y $closeBodyY -Width 812 -Height $closeBodyHeightInner
     }
 
     $prodPath = Join-Path $productionDir $frame.File
@@ -472,3 +622,4 @@ $cardBodyFont.Dispose()
 $indexFont.Dispose()
 
 Write-Output "Rendered April 3 routine mini guide story to $storyRoot"
+

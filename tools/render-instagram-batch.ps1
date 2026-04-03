@@ -12,7 +12,10 @@ param(
     [string]$Browser = "auto",
 
     [ValidateSet("default", "cool_focus", "warm_editorial")]
-    [string]$PaletteVariant = "default"
+    [string]$PaletteVariant = "default",
+
+    [ValidateSet('mitozz_sans', 'humanist_sans', 'editorial_serif')]
+    [string]$FontProfile = 'mitozz_sans'
 )
 
 Set-StrictMode -Version Latest
@@ -38,7 +41,8 @@ foreach ($item in $dataItems) {
         -HtmlOutputPath $htmlPath `
         -ImageOutputPath $pngPath `
         -Browser $Browser `
-        -PaletteVariant $PaletteVariant
+        -PaletteVariant $PaletteVariant `
+        -FontProfile $FontProfile
 
     if ($LASTEXITCODE -ne 0) {
         throw "Failed to render $($item.FullName)"

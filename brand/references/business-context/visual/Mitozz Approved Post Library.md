@@ -108,16 +108,16 @@ Use this split:
 If a feed or Story needs stock-style human, lifestyle, object, or environment imagery and no real shoot or owned source is required:
 
 - do not default to outside stock
-- use Unsplash when a premium real-photo stock image is enough
-- use Nano Banana when the image needs to be more custom than stock
-- have the prompt engineer create a dedicated Nano Banana source-image prompt only when Nano Banana is the chosen source lane
+- use Nano Banana as the default fresh-image lane for source plates, cover images, and subtle support imagery
+- use Unsplash only when the user explicitly wants a real-photo stock plate or when reference scouting is the actual job
+- have the prompt engineer create a dedicated Nano Banana source-image prompt whenever Nano Banana is the chosen source lane
 - keep text-led layouts design-first whenever possible
 - record the final source strategy in the post library after approval
 
 In practice:
 
-- Unsplash can provide the support plate when stock realism is enough
-- Nano Banana should create the image plate or background when stock would be too generic
+- Nano Banana should create the image plate or background when the post needs a fresh custom atmosphere or an overlay-safe composition
+- Unsplash can still provide the support plate when real stock is intentionally requested
 - HTML/CSS or the locked production layout should still own text, spacing, and line breaks for text-led assets
 
 ## Update Timing

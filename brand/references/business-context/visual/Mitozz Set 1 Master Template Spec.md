@@ -1,4 +1,4 @@
-# Mitozz Set 1 Master Template Spec
+﻿# Mitozz Set 1 Master Template Spec
 
 ## Purpose
 
@@ -19,12 +19,12 @@ It locks only the decisions that should not drift:
 
 Approved master set:
 
-- cover: [slide-01-cover.png](../../../../output/instagram/feed/ig-feed-2026-03-23-mitochondria-basics-v01/slide-01-cover.png)
-- slide 2: [slide-02-core-message.png](../../../../output/instagram/feed/ig-feed-2026-03-23-mitochondria-basics-v01/slide-02-core-message.png)
-- slide 3: [slide-03-relevance.png](../../../../output/instagram/feed/ig-feed-2026-03-23-mitochondria-basics-v01/slide-03-relevance.png)
-- slide 4: [slide-04-first-step.png](../../../../output/instagram/feed/ig-feed-2026-03-23-mitochondria-basics-v01/slide-04-first-step.png)
-- slide 5: [slide-05-daily-care.png](../../../../output/instagram/feed/ig-feed-2026-03-23-mitochondria-basics-v01/slide-05-daily-care.png)
-- CTA: [slide-06-cta-save.png](../../../../output/instagram/feed/ig-feed-2026-03-23-mitochondria-basics-v01/slide-06-cta-save.png)
+- cover: [slide-01-cover.png](../../../../output/instagram/feed/2026-03-23-feed-mitochondria-basics-v01/slide-01-cover.png)
+- slide 2: [slide-02-core-message.png](../../../../output/instagram/feed/2026-03-23-feed-mitochondria-basics-v01/slide-02-core-message.png)
+- slide 3: [slide-03-relevance.png](../../../../output/instagram/feed/2026-03-23-feed-mitochondria-basics-v01/slide-03-relevance.png)
+- slide 4: [slide-04-first-step.png](../../../../output/instagram/feed/2026-03-23-feed-mitochondria-basics-v01/slide-04-first-step.png)
+- slide 5: [slide-05-daily-care.png](../../../../output/instagram/feed/2026-03-23-feed-mitochondria-basics-v01/slide-05-daily-care.png)
+- CTA: [slide-06-cta-save.png](../../../../output/instagram/feed/2026-03-23-feed-mitochondria-basics-v01/slide-06-cta-save.png)
 
 Supporting references:
 
@@ -282,3 +282,4 @@ CTA slide:
 - main centered CTA text only
 - one subtle lower micro-cue allowed
 - never mimic app UI or button UI
+

@@ -53,13 +53,20 @@ These belong downstream.
 5. Create or update the prompt JSON when source images are needed.
 6. Generate or collect the source assets.
 7. Assemble the final asset through the compositor or chosen execution path.
-8. If the asset is a reel, assemble the freelancer handoff packet.
-9. Review against the batch consistency rules and the lessons log.
-10. Regenerate only the failing outputs or revise only the unclear handoff sections.
-11. If the same production issue appears more than once, update the standard, review gate, or skill docs before moving on to the next asset.
-12. Promote only approved outputs into the working set.
-13. Register approved feed posts and Story sets in `brand/references/business-context/visual/Mitozz Approved Post Library.csv`.
-14. When Instagram insights or screenshots become available, normalize the useful numbers and interpretation into `brand/references/business-context/reporting/instagram-metrics/` so the next planning cycle can use real performance data.
+   - for compositor assets, use the shared palette and typography tokens instead of ad hoc spacing or tracking fixes when possible
+   - choose the `HTML/CSS template lane` when the layout behavior is reusable across more than one post or batch
+   - choose the `PowerShell compositor lane` when the approved layout is still custom, experimental, or too specific to abstract cleanly yet
+   - if a PowerShell layout family succeeds across 2 approved assets, decide whether it should be promoted into the reusable template lane instead of cloning more one-off renderers
+   - create or preserve the output folder using the canonical date-first basename: `YYYY-MM-DD-feed-slug-vNN`, `YYYY-MM-DD-story-slug-vNN`, or `YYYY-MM-DD-reel-slug-vNN`
+   - create or preserve the output folder using the canonical date-first basename: `YYYY-MM-DD-feed-slug-vNN`, `YYYY-MM-DD-story-slug-vNN`, or `YYYY-MM-DD-reel-slug-vNN`
+8. Generate the posting copy for approved feed or reel assets through `mitozz-posting-copy-optimizer`.
+9. If the asset is a reel, assemble the freelancer handoff packet.
+10. Review against the batch consistency rules and the lessons log.
+11. Regenerate only the failing outputs or revise only the unclear handoff sections.
+12. If the same production issue appears more than once, update the standard, review gate, or skill docs before moving on to the next asset.
+13. Promote only approved outputs into the working set.
+14. Register approved feed posts and Story sets in `brand/references/business-context/visual/Mitozz Approved Post Library.csv`.
+15. When Instagram insights or screenshots become available, normalize the useful numbers and interpretation into `brand/references/business-context/reporting/instagram-metrics/` so the next planning cycle can use real performance data.
 
 ## Minimal Post-Calendar Data Model
 
@@ -83,6 +90,11 @@ This step must lock:
 
 - `visual_engine`
 - `anchor_set`
+- `dominant_set_behavior`
+- `variation_strategy`
+- `selected_set_images`
+- `variant_scope`
+- `type_profile`
 - `source_lane`
 - `source_strategy`
 - `fallback_source`
@@ -91,6 +103,17 @@ This step must lock:
 
 These are not monthly planning fields.
 They are execution-control fields that stop routine, trust, or lifestyle topics from accidentally becoming abstract text systems.
+
+Variant rule:
+
+- if a second or third version is created for the same post, default it to a `design-only` variant
+- keep the approved frontend copy, CTA, and messaging angle locked unless the creative direction explicitly approves a copy test
+- do not let a renderer, prompt pass, or improvisation step silently turn a design variant into a copy variant
+- for every approved feed or reel, prepare posting copy before lock:
+  - either a locked `caption_ja` block in the creative package
+  - or a maintained posting-copy file that includes that asset's final caption, hashtag set, and posting notes
+- hashtag sets should default to `3-5` highly relevant tags, not a long stack of generic discovery tags
+- do not mark a feed or reel as fully production-ready, delivered, or calendar-locked if the visual asset exists but the posting caption and hashtag set have not been prepared
 
 ## Reel-Specific Production Layer
 
@@ -141,6 +164,18 @@ This keeps the story strategy operational without cluttering the planning sheet.
 
 Approved feed posts and Story sets should not live only in output folders.
 
+Folder naming rule:
+
+- local output folders and Drive project folders should share the same date-first basename whenever possible
+- do not create new output folders with `ig-feed-*` or `ig-story-*` prefixes
+- keep date first so local browsing, delivery, and calendar cross-checking stay fast
+
+Folder naming rule:
+
+- local output folders and Drive project folders should share the same date-first basename whenever possible
+- do not create new output folders with `ig-feed-*` or `ig-story-*` prefixes
+- keep date first so local browsing, delivery, and calendar cross-checking stay fast
+
 After approval:
 
 - log the asset in `brand/references/business-context/visual/Mitozz Approved Post Library.csv`
@@ -154,6 +189,7 @@ If a live asset exposed a recurring execution issue such as:
 - meaningless badge or side-strip labels
 - forced Japanese line breaks
 - visibly off-center module text
+- visually off-balance content blocks inside boxes, bubbles, bands, or cards
 
 write that lesson back into the workflow or standards before starting the next asset.
 
@@ -168,15 +204,15 @@ When metrics become available after posting:
 
 This is the lightweight way to behave more like a brand system without overbuilding tooling.
 
-## Stock-Image Rule
+## Fresh-Image Rule
 
-If a feed or Story needs stock-style human, object, lifestyle, or environment imagery:
+If a feed or Story needs human, object, lifestyle, or environment imagery:
 
 - do not default to outside stock libraries
 - do not skip the image decision and hope the layout can solve it later
-- use Unsplash first when a premium real-photo stock plate is enough
-- use Nano Banana when the image needs to be more custom than stock
-- have the prompt engineer create a dedicated Nano Banana prompt only when the chosen `source_lane` is `Nano-Banana-source-image`
+- use Nano Banana first for fresh image plates, cover images, subtle background plates, and overlay-aware source images
+- use Unsplash only when the user explicitly wants real stock realism or when reference scouting is the actual job
+- have the prompt engineer create a dedicated Nano Banana prompt whenever the chosen `source_lane` is `Nano-Banana-source-image`
 - keep text-led assets design-first when possible so Nano Banana only has to generate the image plate
 
 ## Best-Practice Rule

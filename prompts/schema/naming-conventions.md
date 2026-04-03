@@ -1,4 +1,4 @@
-# Prompt Naming Conventions
+﻿# Prompt Naming Conventions
 
 Use prompt filenames that are easy to scan, sort, and match against calendar dates.
 
@@ -9,8 +9,8 @@ Use prompt filenames that are easy to scan, sort, and match against calendar dat
 
 Examples:
 
-- `ig-feed-2026-03-23-mitochondria-basics-v01.json`
-- `ig-story-2026-03-23-mitochondria-basics-reinforcement-v01.json`
+- `2026-03-23-feed-mitochondria-basics-v01.json`
+- `2026-03-23-story-mitochondria-basics-reinforcement-v01.json`
 
 ## Why This Pattern
 
@@ -45,9 +45,9 @@ For a date range request, create one file per asset/date combination using the s
 
 Example:
 
-- `ig-feed-2026-03-23-mitochondria-basics-v01.json`
+- `2026-03-23-feed-mitochondria-basics-v01.json`
 - `ig-feed-2026-03-27-epicatechin-qa-v01.json`
-- `ig-story-2026-03-23-mitochondria-basics-reinforcement-v01.json`
+- `2026-03-23-story-mitochondria-basics-reinforcement-v01.json`
 
 ## Execution Lookup Rule
 
@@ -59,3 +59,4 @@ The execution skill should search by:
 - version last.
 
 That makes requests like `Generate the March 23 feed creatives` predictable.
+
