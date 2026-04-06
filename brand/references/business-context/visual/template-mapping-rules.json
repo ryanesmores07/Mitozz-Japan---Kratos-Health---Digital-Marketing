@@ -1,5 +1,5 @@
 {
-  "version": "2026-03-21",
+  "version": "2026-04-06",
   "system_name": "Steel Light System",
   "description": "Deterministic mapping rules that assign Mitozz template sets and slide blueprints from calendar strategy fields without changing the calendar schema.",
   "defaults": {
@@ -17,7 +17,7 @@
     },
     "story": {
       "template_set": "Set 1",
-      "slide_blueprint": "story-3-frame"
+      "slide_blueprint": "story-adaptive"
     }
   },
   "format_mapping": {
@@ -35,27 +35,27 @@
     },
     "Feed reinforcement": {
       "template_set": "Set 1",
-      "slide_blueprint": "story-3-frame"
+      "slide_blueprint": "story-adaptive"
     },
     "Education mini-slide": {
       "template_set": "Set 1",
-      "slide_blueprint": "story-3-frame"
+      "slide_blueprint": "story-adaptive"
     },
     "FAQ": {
       "template_set": "Set 1",
-      "slide_blueprint": "story-3-frame"
+      "slide_blueprint": "story-adaptive"
     },
     "Poll": {
       "template_set": "Set 4",
-      "slide_blueprint": "story-3-frame"
+      "slide_blueprint": "story-2-frame"
     },
     "Question box": {
       "template_set": "Set 4",
-      "slide_blueprint": "story-3-frame"
+      "slide_blueprint": "story-2-frame"
     },
     "Trust proof": {
       "template_set": "Set 5 + Set 1",
-      "slide_blueprint": "3-slide"
+      "slide_blueprint": "story-adaptive"
     }
   },
   "content_pillar_mapping": {
@@ -79,11 +79,11 @@
   "objective_overrides": {
     "Reinforce": {
       "template_set": "Set 1",
-      "slide_blueprint": "story-3-frame"
+      "slide_blueprint": "story-adaptive"
     },
     "Gather engagement": {
       "template_set": "Set 4",
-      "slide_blueprint": "story-3-frame"
+      "slide_blueprint": "story-2-frame"
     }
   },
   "persona_overrides": {
@@ -105,6 +105,7 @@
   "notes": [
     "Use calendar strategy fields as input and resolve template decisions here.",
     "Do not change the calendar schema unless the user explicitly requests it.",
-    "Creative packaging and prompt generation should inherit the mapped template set and slide blueprint by default."
+    "Creative packaging and prompt generation should inherit the mapped template set and slide blueprint by default.",
+    "For stories, `story-adaptive` means the creative package must still choose the shortest effective final sequence length instead of defaulting to three frames."
   ]
 }

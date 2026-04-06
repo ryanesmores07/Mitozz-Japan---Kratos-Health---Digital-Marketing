@@ -56,6 +56,13 @@ Use Reels for reach when the topic benefits from motion, immediacy, or simple my
 Use carousels for explanation depth, save value, and premium education.
 Use stories to reinforce feed posts, gather lightweight signals, answer objections, and maintain day-to-day account presence.
 
+Story-sequence rule:
+
+- do not default support Stories to 3 frames
+- choose the shortest sequence that completes the Story's job cleanly
+- bias native polls, sliders, route Stories, and quick prompts toward `1-2` frames
+- use `3` frames only when the middle frame adds real context or a better action handoff
+
 Do not force trends into the plan unless they strengthen clarity, trust, or discoverability without harming brand fit.
 
 ## Time-Sensitive Platform Guidance

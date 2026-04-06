@@ -1,0 +1,56 @@
+{
+  "asset_type": "instagram-story",
+  "campaign_name": "Mitozz April 2026",
+  "topic": "April 9 purchase-axis poll story",
+  "objective": "Gather engagement by asking whether viewers pay attention to ingredients or brand stance first before purchase, while staying visually tied to the April 8 trust feed",
+  "template_set": "Set 4",
+  "slide_blueprint": "story-2-frame",
+  "asset_archetype": "story-poll",
+  "platform": "instagram",
+  "aspect_ratio": "9:16",
+  "audience": "Healthy Aging Planner",
+  "visual_engine": "image-led opener + native-interaction poll-close frame",
+  "source_lane": "Nano-Banana-source-image for frame 1 opener plate + design-first-no-image for frame 2",
+  "source_strategy": "generate a fresh Nano Banana opener plate with a protected upper-left headline zone and calm lower space, then assemble one poll-safe action frame with a compact route-back note in the compositor",
+  "fallback_source": "fallback to a text-led opener only if the generated image blocks readability or breaks the safe zone for the story poll structure",
+  "icon_strategy": "none",
+  "generated_visual_role": "hero-visual opener",
+  "visual_intent": [
+    "premium trust-led poll story",
+    "lighter than the April 8 feed",
+    "native interaction support",
+    "fast mobile readability",
+    "clear route back to the feed without a separate third frame"
+  ],
+  "brand_guardrails": [
+    "preserve top and bottom safe zones",
+    "do not generate fake poll UI",
+    "keep frame 2 clean enough for the native poll sticker",
+    "avoid internal labels, Set names, or template residue",
+    "protect the opener text zone against the image focal area",
+    "keep typography weight and spacing locked across both frames"
+  ],
+  "composition": [
+    "9:16 vertical framing",
+    "frame 1 uses a calm Nano Banana trust-oriented editorial plate with protected upper-left copy space",
+    "frame 2 uses one centered question block, a generous lower-middle zone for the native poll sticker, and one compact warm route-back note card near the bottom",
+    "authored Japanese line breaks only"
+  ],
+  "text_overlay": {
+    "allowed": true,
+    "tone": "soft, clear, trustworthy",
+    "font_reference": "humanist_sans",
+    "headline_ja": "\u8cfc\u5165\u524d\u306b\u6c17\u306b\u306a\u308b\u306e\u306f\u3001\n\u6210\u5206\u3067\u3059\u304b\u3002\n\u30d6\u30e9\u30f3\u30c9\u3067\u3059\u304b\u3002",
+    "slides_ja": [
+      "\u8cfc\u5165\u524d\u306b\u6c17\u306b\u306a\u308b\u306e\u306f\u3001\n\u6210\u5206\u3067\u3059\u304b\u3002\n\u30d6\u30e9\u30f3\u30c9\u3067\u3059\u304b\u3002",
+      "\u6700\u521d\u306b\u5b89\u5fc3\u611f\u3092\u6301\u3064\u306e\u306f\n\u3069\u3061\u3089\u306b\u8fd1\u3044\u3067\u3059\u304b\u3002\n\u4eca\u65e5\u306e\u6295\u7a3f\u3067\u306f\u3001\u4fe1\u983c\u306e\u898b\u65b9\u3092\u3084\u3055\u3057\u304f\u6574\u7406\u3057\u3066\u3044\u307e\u3059\u3002"
+    ],
+    "cta_ja": "\u4eca\u65e5\u306e\u6295\u7a3f\u3092\u898b\u308b"
+  },
+  "reference_files": [
+    "brand/references/business-context/creative-packages/creative-package-2026-04-09.md",
+    "brand/references/business-context/visual/Mitozz Instagram Story Strategy.md",
+    "brand/references/business-context/visual/Mitozz Instagram Production Standard.md"
+  ],
+  "notes": "April 9 native poll Story. Keep frame 2 open for the native Instagram poll sticker with the choices `\u6210\u5206\u3092\u898b\u308b` and `\u30d6\u30e9\u30f3\u30c9\u59ff\u52e2\u3092\u898b\u308b`, and fold the route-back into the same frame instead of adding a separate close frame."
+}

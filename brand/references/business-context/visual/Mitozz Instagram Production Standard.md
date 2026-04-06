@@ -21,13 +21,21 @@ Story operating rules:
 
 - [Mitozz Instagram Story Strategy.md](Mitozz%20Instagram%20Story%20Strategy.md)
 
+Story length rule:
+
+- do not default Stories to 3 frames by habit
+- choose the shortest sequence that completes the job
+- `1-2` frames should be the default bias for polls, sliders, question boxes, and route Stories
+- `3` frames are for reinforcement or explanation only when the middle frame earns its place
+- `4+` frames require a real narrative, proof, launch, or motion reason
+
 ## Default Production Order
 
 Use this order for day-to-day production:
 
 1. read the approved calendar row
 2. resolve the post-calendar production layer:
-   `Template Set`, `Slide Blueprint`, `asset_archetype`, `story_type`, and `story_delivery_mode` when needed
+   `Template Set`, `Slide Blueprint`, `asset_archetype`, `story_type`, `story_sequence_length`, and `story_delivery_mode` when needed
 3. lock `visual_engine`, `anchor_set`, `source_lane`, `source_strategy`, `fallback_source`, `icon_strategy`, and `generated_visual_role`
 4. choose the correct approved references from the reference pack
 5. build the creative package

@@ -29,6 +29,7 @@ Before generation or rendering, confirm:
 - the asset is using the design-first compositor when typography or layout precision matters
 - all frontend-visible copy and image-placement decisions are explicitly owned by the approved creative direction rather than being improvised in execution
 - if the Story is reinforcing an approved feed family, the renderer is inheriting that family's type profile, spacing rhythm, and centered-container behavior rather than using a looser custom variant
+- if the asset is a Story, the chosen frame count is explicitly justified and not just inherited from the last Story set
 
 ### 2. First-Pass Review
 
@@ -59,6 +60,7 @@ Review the first render or generated batch against:
 - batch uniformity
 - whether the dominant structural behavior feels intentionally chosen for this topic rather than recycled from the last approved asset
 - whether the asset is borrowing appropriately from the wider Set / anchor library instead of overfitting to one recent grammar
+- whether a Story sequence is as short as it can be while still doing its job
 - ending behavior or CTA quality
 
 ### 3. Repair Pass
@@ -117,6 +119,8 @@ Reject or refine the asset if:
 - a centered label is visibly off-center inside its module
 - the frame has a large dead zone that is not doing compositional work
 - the frame is heavily top-loaded when a middle or bottom zone should clearly be helping
+- a Story is using 3 frames by habit even though the interaction, route, or message would be stronger as `1-2` frames
+- a 3-frame Story has a middle frame that does not add clarity, context, or a better action handoff
 - a Story close frame relies on hardcoded vertical positions and the overall stack is visibly biased too high or too low inside the canvas
 - a Story close frame relies on hardcoded vertical positions and the overall stack is visibly biased too high or too low inside the canvas
 - the headline line breaks are correct but the letter spacing still makes the title feel cramped

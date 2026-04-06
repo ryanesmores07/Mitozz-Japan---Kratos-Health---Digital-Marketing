@@ -39,11 +39,12 @@ Successful brands usually treat Stories as a mix of:
 
 They do not rely on one mode only.
 
-The winning pattern is usually:
+The winning pattern is usually a mix of:
 
-- polished brand frame
-- human or contextual frame
-- native interaction or CTA
+- single-frame prompts
+- 2-frame hook-and-action sequences
+- 3-frame reinforcement sequences when context really helps
+- occasional longer arcs only when narrative, proof, or motion earns them
 
 ## Mitozz Story Role
 
@@ -88,8 +89,9 @@ Use when:
 
 Structure:
 
+- usually `2-3` frames
 - hook
-- one takeaway
+- one takeaway only if it genuinely adds clarity
 - CTA back to feed
 
 Best template:
@@ -129,6 +131,12 @@ Best template:
 
 - `Set 1` or `Set 4`, simplified heavily
 
+Structure:
+
+- usually `1-2` frames
+- the native sticker should do the interaction work
+- do not add a third frame unless it creates a better response or route-back outcome
+
 ### 4. Proof / Trust Story
 
 Use when:
@@ -163,6 +171,59 @@ Rule:
 
 - keep the visual elegant
 - let the native Instagram sticker do the click work
+
+Structure:
+
+- usually `1-2` frames
+- do not pad the route with an unnecessary middle frame
+
+## Story Length Decision
+
+Do not default Stories to 3 frames by habit.
+
+Choose the shortest sequence that completes the Story's actual job.
+
+This is closer to how strong brands use Stories:
+
+- fast
+- intentional
+- interaction-friendly
+- not a mini carousel unless the message truly needs it
+
+Use this frame-count logic:
+
+### `1 frame`
+
+Use when:
+
+- the Story is a clean poll, slider, question box, or quick route
+- the message is instantly understandable
+- extra context would only slow the response down
+
+### `2 frames`
+
+Use when:
+
+- we need a hook plus one action
+- we need one short context frame plus one sticker or CTA frame
+- the Story should feel slightly richer without becoming a sequence
+
+### `3 frames`
+
+Use when:
+
+- a clear hook -> context -> action structure genuinely improves understanding
+- the middle frame earns its place
+- the Story is reinforcing a feed post that benefits from one extra layer before the CTA
+
+### `4+ frames`
+
+Use when:
+
+- there is a real narrative, proof sequence, launch moment, or motion-led arc
+- each additional frame has a distinct job
+
+Do not use `4+` frames for routine reinforcement by default.
 
 ## Story Delivery Mode Decision
 
@@ -201,7 +262,9 @@ Use when:
 
 Best for:
 
-- hook -> context -> CTA
+- 1-frame reminders
+- 2-frame route-backs
+- hook -> context -> CTA only when the third frame adds value
 - feed reinforcement
 - clean myth-to-clarity follow-up
 - quiet premium reminders
@@ -354,6 +417,12 @@ Use these as operating defaults:
 - poll, slider, or question Story where the sticker is the main mechanic -> `native-interaction-led`
 - proof or trust Story without a strong clip and without a native commentary workflow -> `static-sequence`
 
+Default sequence-length bias:
+
+- native poll, slider, question box, or route Story -> `1-2` frames
+- feed reinforcement or daily-context Story -> `2-3` frames
+- proof or narrative Story -> `2-4` frames depending on whether each frame has a distinct job
+
 ## Final Delivery Mode Principle
 
 For the current Mitozz system:
@@ -477,9 +546,9 @@ Execution rule:
 - let the artwork guide and the native sticker perform the action
 - do not design fake buttons into the artwork
 
-## Recommended Story Sequence Formula
+## Common 3-Frame Formula
 
-For most 3-frame story sets:
+For Stories that truly need 3 frames:
 
 1. Hook
 2. Context or interaction
@@ -490,6 +559,8 @@ Best Mitozz version:
 1. brand-clean opening frame
 2. human, contextual, or interactive middle frame
 3. elegant CTA frame with space for sticker or directional cue
+
+This is a useful pattern, not the default answer to every Story.
 
 ## Highlight Structure
 

@@ -448,3 +448,37 @@
 - `Outcome / impact`: Local feed, story, and reel assets now sort cleanly by date first, the linked Drive folders follow the same convention without changing calendar URLs, and future production should inherit the cleaner naming pattern instead of drifting back into mixed prefixes.
 - `Status`: `completed`
 - `Notes for monthly summary`: Systems cleanup that improved production clarity, delivery hygiene, and future naming consistency without breaking existing calendar links.
+
+### Entry 41
+
+- `Date`: `2026-04-06`
+- `Workstream`: `Shopify lifecycle marketing execution and documentation`
+- `Request / prompt context`: `The user wanted the next Shopify lifecycle stage implemented step by step, specifically email capture, consent, welcome delivery, abandoned checkout recovery, reorder, and winback, and then asked for durable internal and client-facing documentation plus an updated monthly action sheet.`
+- `Action`: Completed the native Shopify lifecycle setup by finalizing the Japanese-first popup and inline email capture forms, enabling checkout consent, confirming the branded sender configuration, building the welcome automation tied to `WELCOME10`, configuring abandoned checkout recovery, and creating segment-triggered reorder and winback emails for `REORDER10` and `WINBACK10`; then documented the live setup in an internal reference file and a Jay-ready client update.
+- `Why it matters`: This moves the Shopify retention system from partial setup into a usable lifecycle layer with first-party email capture, automated first-order code delivery, high-intent checkout recovery, and basic repeat-customer retention paths, while also leaving behind clear documentation that makes future maintenance and client reporting faster and more defensible.
+- `Artifacts updated`: `Shopify admin: Forms`, `Shopify admin: Checkout`, `Shopify admin: Notifications`, `Shopify admin: Shopify Messaging automations`, `Shopify admin: Shopify Flow workflows`, `brand/references/business-context/strategy/Mitozz Shopify Email Lifecycle - Internal Reference.md`, `brand/references/business-context/reporting/monthly-summary-reports/2026-04-Mitozz-Shopify-Email-Lifecycle-Update-For-Jay.md`, `brand/references/business-context/reporting/monthly-action-logs/2026-04-retainer-action-log.md`
+- `Outcome / impact`: Mitozz now has a documented native Shopify lifecycle foundation spanning subscriber capture, welcome delivery, abandoned checkout recovery, reorder, and winback, plus a clean internal reference and a client-facing progress note that can be shared with Jay.
+- `Status`: `completed`
+- `Notes for monthly summary`: High-signal Shopify retention milestone showing that the lifecycle system moved from strategy and partial setup into real implementation with reusable documentation and clearer client handoff.
+
+### Entry 42
+
+- `Date`: `2026-04-06`
+- `Workstream`: `Instagram Story workflow simplification and big-brand alignment`
+- `Action`: Audited the current Mitozz Story system, identified that story length had drifted into a hardcoded `story-3-frame` default across strategy and mapping files, and rewrote the operating rules so story frame count now follows the Story's actual job. Updated the Story strategy, template mapping rules, template library, production flow, production standard, creative-director skill, strategist skill, compositor skill, and review gate so Stories now default to the shortest effective sequence instead of a fixed 3-part structure.
+- `Why it matters`: This moves the Story workflow closer to how strong brands actually operate on Instagram: faster, lighter, more interaction-friendly, and less padded. It also removes a subtle source of repetition without adding heavy process or unnecessary tooling.
+- `Artifacts updated`: `brand/references/business-context/visual/Mitozz Instagram Story Strategy.md`, `brand/references/business-context/visual/template-mapping-rules.json`, `brand/references/business-context/visual/Mitozz Template Library Index.md`, `workflows/03-post-calendar-production-flow.md`, `brand/references/business-context/visual/Mitozz Instagram Production Standard.md`, `brand/references/business-context/visual/Mitozz Asset Review Gate.md`, `.agents/skills/mitozz-creatives-director/SKILL.md`, `.agents/skills/mitozz-instagram-strategist/SKILL.md`, `.agents/skills/mitozz-compositor-executor/SKILL.md`
+- `Outcome / impact`: Future Mitozz Stories should stop defaulting to 3 frames by habit, native-interaction and route Stories should naturally bias toward `1-2` frames, and story reinforcement sequences should now justify any extra frame instead of inheriting it from the last approved set.
+- `Status`: `completed`
+- `Notes for monthly summary`: Strategic workflow cleanup that improves Story efficiency, reduces repetitive sequencing, and aligns the Mitozz Story system more closely with modern brand-social best practice.
+
+### Entry 43
+
+- `Date`: `2026-04-06`
+- `Workstream`: `April 9 Story poll sequence compression`
+- `Action`: Reworked the April 9 purchase-axis poll Story from a 3-frame sequence into a faster 2-frame structure, updated the creative package and prompt JSON to match the new `story-2-frame` logic, rebuilt the renderer so the route-back message now lives inside the poll frame instead of a separate close frame, rerendered the set, and removed the superseded third-frame files from the production path.
+- `Why it matters`: This applies the new Story-length rule immediately to the next live interactive Story, so the workflow change is reflected in real production output rather than only in documentation.
+- `Artifacts updated`: `brand/references/business-context/creative-packages/creative-package-2026-04-09.md`, `prompts/instagram/stories/ig-story-2026-04-09-purchase-axis-poll-v01.json`, `tools/render-april-09-story-purchase-axis-poll-v01.ps1`, `output/instagram/stories/2026-04-09-story-purchase-axis-poll-v01/current/`, `output/instagram/stories/2026-04-09-story-purchase-axis-poll-v01/production/`
+- `Outcome / impact`: The April 9 poll Story now behaves more like a stronger brand Story unit: faster to consume, cleaner for native interaction, and less padded.
+- `Status`: `completed`
+- `Notes for monthly summary`: Direct production application of the new Story workflow standard on the next scheduled interactive asset.

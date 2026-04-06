@@ -55,6 +55,7 @@ Read:
 - keep spacing, typography, and CTA behavior locked
 - preserve the approved frontend copy exactly for design-only variants
 - when a Story reinforces an approved feed family, inherit that feed family's type profile, container-centering behavior, and closing-card logic by default instead of improvising a lighter variant
+- preserve the approved Story frame count; do not add an opener, middle frame, or close frame just because past Mitozz stories often used 3 frames
 - treat `type_profile` as a real production decision, not a cosmetic afterthought
 - remove internal scaffolding from viewer-facing output
 - make sure label bands, chips, row tags, and note cards carry meaningful content or act as clearly intentional accents

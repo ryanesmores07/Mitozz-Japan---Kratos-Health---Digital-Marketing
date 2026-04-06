@@ -76,6 +76,7 @@ After the calendar, every asset should resolve into this smaller production laye
 - `Slide Blueprint`
 - `asset_archetype`
 - `story_type` when the asset is a story
+- `story_sequence_length` when the asset is a story
 - `approved_references`
 
 This is enough to automate the rest without turning the calendar into a production spreadsheet.
@@ -159,6 +160,18 @@ Approved story types:
 - `route-cta`
 
 This keeps the story strategy operational without cluttering the planning sheet.
+
+For stories, also resolve one more field before creative packaging:
+
+- `story_sequence_length`
+
+Rule:
+
+- do not default to `3` by habit
+- choose the shortest sequence that completes the Story's real job
+- `1-2` frames should be the default bias for native interaction, quick routing, and simple response Stories
+- `3` frames should be used when the middle frame truly adds clarity, context, or a stronger CTA handoff
+- `4+` frames need an explicit reason such as narrative proof, launch sequencing, or motion-led storytelling
 
 ## Asset Memory Rule
 

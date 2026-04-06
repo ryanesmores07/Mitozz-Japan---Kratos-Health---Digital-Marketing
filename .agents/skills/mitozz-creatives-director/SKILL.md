@@ -162,12 +162,20 @@ Interpretation rules:
   - `video-clip`
   - `reel-recut`
   - `native-interaction-led`
+- if `Section` is `Story`, also resolve the actual `story_sequence_length`:
+  - `story-1-frame`
+  - `story-2-frame`
+  - `story-3-frame`
+  - `story-4-frame`
 - for Stories, never default to static just because it is easier
+- for Stories, never default to 3 frames just because many past Mitozz stories used 3
 - for Stories, never default to reel reuse just because a reel exists
 - make the delivery mode serve the Story's actual job, timing, and parent asset relationship
+- make the frame count serve the Story's actual job, timing, and friction level
 - stay inside the currently enabled Story modes for the system
 - do not choose `repost-with-commentary`, UGC-led Stories, or native-commentary-led Stories unless the user explicitly says those workflows are now available
 - if no motion or reuse path creates a real strategic advantage, choose `static-sequence`
+- if no extra frame creates a real strategic advantage, choose the shorter sequence
 
 ## Required Output Shape
 
@@ -219,6 +227,15 @@ If the asset is a Story, also choose the best `story_delivery_mode`:
 
 State the reason in one line.
 
+If the asset is a Story, also lock one `story_sequence_length`:
+
+- `story-1-frame`
+- `story-2-frame`
+- `story-3-frame`
+- `story-4-frame`
+
+State the reason in one line.
+
 Also lock one `story_aspect_ratio` for the whole Story set:
 
 - `9:16`
@@ -236,6 +253,16 @@ For Stories, use this decision logic:
 - otherwise choose `reel-recut` only when a reel is the hero asset for the same date or batch and the Story can amplify it with a new job
 - otherwise choose `video-clip` only when realism, routine context, proof, or human texture matters most and a good approved clip exists
 - otherwise choose `static-sequence` for education, bridge, CTA reinforcement, trust reinforcement, or any case where controlled copy and clarity matter most
+
+For Stories, use this frame-count logic:
+
+- choose `story-1-frame` when one decisive prompt, sticker, or route is enough
+- choose `story-2-frame` when the Story needs a hook plus one action frame or one context frame plus one action frame
+- choose `story-3-frame` only when a middle frame materially improves clarity, relevance, or CTA performance
+- choose `story-4-frame` only when launch, proof, or narrative sequencing clearly earns the extra frame
+
+For native poll, slider, question-box, and quick route Stories, bias toward `story-1-frame` or `story-2-frame`.
+Do not build a 3-frame sequence if the native sticker is already doing the real work.
 
 For Stories, apply this production gate before locking the mode:
 
@@ -369,6 +396,9 @@ For Stories, adapt the structure to the chosen `story_delivery_mode`:
 - `native-interaction-led`: define the sticker type, sticker role, and the supporting frame design
 
 For Stories, also state the chosen `story_aspect_ratio` and keep every frame or source image in that set uniform.
+
+For Stories, the layout section must match the approved `story_sequence_length`.
+Do not write a 3-frame structure when the strategic decision was `story-1-frame` or `story-2-frame`.
 
 For reels, define each scene with:
 

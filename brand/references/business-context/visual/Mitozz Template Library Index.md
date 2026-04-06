@@ -171,7 +171,11 @@ Allowed default values:
 - `5-slide`
 - `7-slide`
 - `10-slide`
+- `story-1-frame`
+- `story-2-frame`
 - `story-3-frame`
+- `story-4-frame`
+- `story-adaptive`
 - `reel-4-shot`
 - `reel-5-shot`
 
@@ -195,7 +199,7 @@ Allowed default values:
 `Story`
 
 - default `Template Set`: simplified `Set 1`, `Set 4`, or `Set 5`
-- default `Slide Blueprint`: `story-3-frame`
+- default `Slide Blueprint`: `story-adaptive`
 
 ## Default Mapping By Post Type
 
@@ -228,12 +232,28 @@ Authority post:
 Story reinforcement:
 
 - template: `Set 1`
-- blueprint: `story-3-frame`
+- blueprint: `story-adaptive`
 
 Poll or question story:
 
 - template: `Set 4` or `Set 5`
-- blueprint: `story-3-frame`
+- blueprint: `story-2-frame` or `story-adaptive`
+
+## Story Blueprint Rule
+
+Story blueprints should behave more like big-brand Story systems:
+
+- short when the action is obvious
+- slightly longer only when extra context earns attention
+- never padded to feel like a mini carousel
+
+Use this decision rule:
+
+- `story-1-frame`: one decisive prompt, route, or interaction
+- `story-2-frame`: hook + action, or context + action
+- `story-3-frame`: hook + context + action only when the middle frame adds real value
+- `story-4-frame`: proof, launch, or narrative arc where every frame has a distinct job
+- `story-adaptive`: mapping-layer placeholder that tells the creative package to decide the final frame count intentionally
 
 Reel about daily condition or routine:
 
