@@ -1,8 +1,10 @@
 const { spawn } = require("node:child_process");
 const { resolve } = require("node:path");
 
-const launcherPath = resolve(
-  "C:/Users/esmoresernieryanocam/Desktop/Workspace/Mitozz Japan/tools/run-nanobanana-mcp.ps1",
+const launcherPath = resolve("tools/run-nanobanana-mcp.ps1");
+const timeoutMs = Number.parseInt(
+  process.env.NANOBANANA_MCP_TIMEOUT_MS ?? "45000",
+  10,
 );
 
 const child = spawn(
@@ -50,7 +52,7 @@ const timer = setTimeout(() => {
     }
     process.exit(1);
   }
-}, 15000);
+}, timeoutMs);
 
 child.stdout.on("data", (chunk) => {
   stdout += chunk.toString();

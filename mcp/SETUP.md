@@ -22,9 +22,9 @@ These are intentionally excluded by `.gitignore`.
 1. Create or keep your local secret file:
    - `mcp/nanobanana.cursor.local.json`
 2. Put your real `GEMINI_API_KEY` in that local file.
-3. Keep `NANOBANANA_MODEL` set to `flash`.
-   In this workspace, the `flash` tier is patched to `gemini-3.1-flash-lite-preview`.
-   If omitted, the repo launcher now defaults it to `flash` automatically.
+3. Keep `NANOBANANA_MODEL` set to `nb2`, or leave it unset.
+   In this workspace, `nb2` resolves to `gemini-3.1-flash-image-preview`.
+   If omitted, the repo launcher now defaults it to `nb2` automatically.
 4. Open the repo in Codex. This workspace now includes a project-local MCP config at:
    - `.codex/config.toml`
 5. Ensure `pwsh` is installed and available on PATH.
@@ -57,7 +57,7 @@ After pulling the repo on Mac:
     "nanobanana": {
       "env": {
         "GEMINI_API_KEY": "YOUR_REAL_KEY",
-        "NANOBANANA_MODEL": "flash"
+        "NANOBANANA_MODEL": "nb2"
       }
     }
   }
@@ -65,7 +65,7 @@ After pulling the repo on Mac:
 ```
 
 3. Add a Codex MCP entry to `~/.codex/config.toml` on the Mac.
-   If `NANOBANANA_MODEL` is omitted from the local JSON, the repo launcher will still default to `flash`.
+   If `NANOBANANA_MODEL` is omitted from the local JSON, the repo launcher will still default to `nb2`.
 
 If you keep the same repo structure, it should look like:
 
@@ -86,8 +86,8 @@ tool_timeout_sec = 120
 This project standard is:
 
 - Nano Banana
-- `gemini-3.1-flash-lite-preview`
-- default tier: `flash`
+- `gemini-3.1-flash-image-preview`
+- default tier: `nb2`
 
 The launcher enforces the runtime alignment automatically.
 
@@ -98,7 +98,7 @@ After restart, Codex should be able to see the `nanobanana` MCP server.
 Expected signs:
 
 - MCP resources are available from `nanobanana`
-- server startup resolves to `gemini-3.1-flash-lite-preview`
+- server startup resolves to `gemini-3.1-flash-image-preview`
 
 ## Notes
 

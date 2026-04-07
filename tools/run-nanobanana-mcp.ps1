@@ -10,6 +10,8 @@ $workspaceRoot = [System.IO.Path]::GetFullPath((Join-Path -Path $PSScriptRoot -C
 $localMcpConfig = Join-Path -Path $workspaceRoot -ChildPath "mcp/nanobanana.cursor.local.json"
 $archiveRoot = Join-Path -Path $workspaceRoot -ChildPath "mcp/uv-cache/archive-v0"
 $workspacePython = Join-Path -Path $workspaceRoot -ChildPath "mcp/uv-python/cpython-3.14.3-windows-x86_64-none/python.exe"
+$repoServerRoot = Join-Path -Path $workspaceRoot -ChildPath "tools/nanobanana-mcp-server"
+$repoServerEntrypoint = Join-Path -Path $repoServerRoot -ChildPath "nanobanana_mcp_server/server.py"
 
 if (([string]::IsNullOrWhiteSpace($env:GEMINI_API_KEY) -or [string]::IsNullOrWhiteSpace($env:NANOBANANA_MODEL)) -and (Test-Path -LiteralPath $localMcpConfig)) {
     try {
@@ -112,6 +114,43 @@ function Get-LocalNanoBananaEntrypoint {
 
     if (-not (Test-Path -LiteralPath $ArchiveRoot)) {
         return $null
+    }
+
+    function Get-LatestFastMcpSitePackagesRoot {
+        $candidate = Get-ChildItem -Path $ArchiveRoot -Directory -ErrorAction SilentlyContinue |
+            ForEach-Object {
+                $sitePackagesRoot = Join-Path -Path $_.FullName -ChildPath "Lib/site-packages"
+                $fastMcpInit = Join-Path -Path $sitePackagesRoot -ChildPath "fastmcp/__init__.py"
+                if (Test-Path -LiteralPath $fastMcpInit) {
+                    Get-Item -LiteralPath $fastMcpInit
+                }
+            } |
+            Sort-Object LastWriteTime -Descending |
+            Select-Object -First 1
+
+        if ($null -eq $candidate) {
+            return $null
+        }
+
+        Split-Path -Path (Split-Path -Path $candidate.FullName -Parent) -Parent
+    }
+
+    if ((Test-Path -LiteralPath $repoServerEntrypoint) -and (Test-Path -LiteralPath $workspacePython)) {
+        $sitePackagesRoot = Get-LatestFastMcpSitePackagesRoot
+        if (-not [string]::IsNullOrWhiteSpace($sitePackagesRoot)) {
+            return @{
+                FilePath = $workspacePython
+                Arguments = @("-m", "nanobanana_mcp_server.server")
+                Mode = "python"
+                PythonPaths = @(
+                    $repoServerRoot,
+                    $sitePackagesRoot,
+                    (Join-Path -Path $sitePackagesRoot -ChildPath "win32"),
+                    (Join-Path -Path $sitePackagesRoot -ChildPath "win32/lib"),
+                    (Join-Path -Path $sitePackagesRoot -ChildPath "pywin32_system32")
+                )
+            }
+        }
     }
 
     function Find-CachedExe {

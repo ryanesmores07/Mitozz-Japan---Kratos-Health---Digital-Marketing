@@ -482,3 +482,61 @@
 - `Outcome / impact`: The April 9 poll Story now behaves more like a stronger brand Story unit: faster to consume, cleaner for native interaction, and less padded.
 - `Status`: `completed`
 - `Notes for monthly summary`: Direct production application of the new Story workflow standard on the next scheduled interactive asset.
+
+### Entry 44
+
+- `Date`: `2026-04-07`
+- `Workstream`: `Workspace audit and MCP/Drive reliability hardening`
+- `Request / prompt context`: `The user asked for an audit of the current project and workflow, including efficiency opportunities, skill overlap, Nano Banana MCP usage, and whether the workspace is connected to Google Drive with practical file-management capability.`
+- `Action`: Audited the current workspace structure, skills, workflow docs, Nano Banana tooling, and Drive integration; fixed the stale project-local Nano Banana MCP `cwd`; updated the README and MCP setup docs to match the real `nb2` runtime standard and current skill inventory; corrected a contradictory bottle-description rule in the prompt-engineer skill; hardened the Nano Banana smoke test to use a relative launcher path plus a longer timeout; and updated the MCP launcher to prefer the repo-local Nano Banana server before falling back to cached archive runtimes.
+- `Why it matters`: This removes a real configuration drift that prevented project-local MCP registration from pointing at the current repo, makes the docs match the actual runtime behavior on this machine, reduces Nano Banana startup fragility, and improves the reliability of future workflow audits and generation runs. It also leaves a clearer picture of what the workspace can already do in Drive and what still needs a better tool path.
+- `Artifacts updated`: `.codex/config.toml`, `README.md`, `mcp/SETUP.md`, `.agents/skills/mitozz-prompt-engineer/SKILL.md`, `tools/shared/test-nanobanana-mcp.js`, `tools/run-nanobanana-mcp.ps1`, `brand/references/business-context/reporting/monthly-action-logs/2026-04-retainer-action-log.md`
+- `Outcome / impact`: The repo-local Nano Banana smoke test now succeeds against the current workspace and lists the live MCP tools, the project config once again points at `Mitozz Japan` instead of a non-existent sibling path, the docs now reflect the real `nb2` default, and the audit confirmed live Google Drive read access to the mapped Mitozz feed, calendar, and Jay invoice roots. A remaining follow-up item is that the PowerShell Nano Banana wrapper helper still times out in this sandbox even though the raw MCP handshake succeeds.
+- `Status`: `completed`
+- `Notes for monthly summary`: High-signal systems audit that corrected MCP drift, tightened skill/runtime documentation, and verified the current Drive connection baseline while surfacing one remaining helper-wrapper reliability issue.
+
+### Entry 45
+
+- `Date`: `2026-04-07`
+- `Workstream`: `Nano Banana wrapper reliability fix`
+- `Request / prompt context`: `After the workspace audit and Codex restart, the user asked to go ahead and fix the important remaining issue.`
+- `Action`: Reworked `tools/shared/invoke-nanobanana-mcp.ps1` so it now sends the full MCP handshake sequence up front, waits for the target response with a controlled async line-read loop, and stops the child process cleanly after the requested tool response is received instead of hanging on stream cleanup. Verified the fix by calling `show_output_stats` both directly and with `-OutputJsonPath`.
+- `Why it matters`: This restores the repo-local PowerShell helper path for Nano Banana MCP calls, which is the practical bridge many workspace scripts rely on when they need to invoke MCP tools from PowerShell instead of through Codex directly.
+- `Artifacts updated`: `tools/shared/invoke-nanobanana-mcp.ps1`, `output/_tmp/nanobanana-show-output-stats.json`, `brand/references/business-context/reporting/monthly-action-logs/2026-04-retainer-action-log.md`
+- `Outcome / impact`: The wrapper no longer times out on a trivial read-only MCP call and can again return structured JSON responses and write them to a workspace output file when requested.
+- `Status`: `completed`
+- `Notes for monthly summary`: Important MCP execution fix that re-opened the scripted PowerShell path into Nano Banana after the broader workspace audit surfaced the regression.
+
+### Entry 46
+
+- `Date`: `2026-04-07`
+- `Workstream`: `Codex global Nano Banana config cleanup`
+- `Action`: Audited the user-level Codex config after the project-local Nano Banana fixes and found a second stale `nanobanana` MCP entry still pointing at the old `Desktop\\Workspace\\Nano banana` path. Replaced that block with the current Mitozz Japan launcher path, matched the same startup/tool timeout settings as the working local config, and rewrote the global TOML file as UTF-8 without BOM so it parses cleanly.
+- `Why it matters`: Even with the repo fixed, a stale global MCP entry could keep Codex trying to launch the wrong Nano Banana server or fail to parse the config at all, which would make the workspace look unreliable even though the local launcher and wrapper were already healthy.
+- `Artifacts updated`: `C:\\Users\\esmoresernieryanocam\\.codex\\config.toml`, `.codex/config.toml`, `brand/references/business-context/reporting/monthly-action-logs/2026-04-retainer-action-log.md`
+- `Outcome / impact`: The project-local and global Codex configs now both point at the same known-good Nano Banana launcher and both validate as TOML, removing the stale-path and BOM parsing risks from future Codex restarts.
+- `Status`: `completed`
+- `Notes for monthly summary`: Important environment-level cleanup that aligned Codex’s global MCP registration with the repo-local Nano Banana runtime and removed a hidden config-format failure mode.
+
+### Entry 47
+
+- `Date`: `2026-04-07`
+- `Workstream`: `Codex Nano Banana registration verification`
+- `Action`: After the Codex restart, verified that the app can now discover the `nanobanana` MCP server directly, list its resources and resource templates, and execute the registered `show_output_stats` tool successfully through the live MCP tool path.
+- `Why it matters`: This confirms the full fix chain worked at the Codex-app level, not just in isolated launcher or wrapper tests, so the workspace can rely on Nano Banana through normal Codex MCP registration again.
+- `Artifacts updated`: `brand/references/business-context/reporting/monthly-action-logs/2026-04-retainer-action-log.md`
+- `Outcome / impact`: Codex now sees the Nano Banana resource catalog and the direct MCP tool call returns successfully, which closes the original registration and handshake problem end to end.
+- `Status`: `completed`
+- `Notes for monthly summary`: Final verification step confirming the Nano Banana MCP registration is healthy again inside Codex after the config and wrapper fixes.
+
+### Entry 46
+
+- `Date`: `2026-04-07`
+- `Workstream`: `Instagram Canva carousel system setup`
+- `Request / prompt context`: `The user wanted Canva to become a clean-slate production lane for Mitozz Japan Instagram carousels without inheriting assumptions from the existing Canva account, then asked to define the first 45 Canva master templates.`
+- `Action`: Inspected the connected Canva workspace, confirmed the existing carousel folder was empty enough to treat as a fresh lane, created a clean production folder structure plus family-based master-template folders, and wrote a governed setup doc, a 45-template master library, and a practical build queue aligned to the Steel Light brand system and the current Set-based mapping rules.
+- `Why it matters`: This gives Mitozz a usable Canva production system for Instagram carousels without relying on a potentially messy old brand kit, and it keeps Canva aligned with the repo’s visual logic instead of becoming a parallel design language.
+- `Artifacts updated`: `brand/references/business-context/visual/Canva Carousel Setup.md`, `brand/references/business-context/visual/Canva Carousel Master Library.md`, `brand/references/business-context/visual/Canva Carousel Build Queue.md`, `brand/references/business-context/reporting/monthly-action-logs/2026-04-retainer-action-log.md`
+- `Outcome / impact`: The team now has a clean Canva information architecture, a defined first batch of high-priority masters, and a full 45-template roadmap that can be built systematically inside Canva.
+- `Status`: `completed`
+- `Notes for monthly summary`: High-value production-system setup that reopens Canva as a controlled carousel workflow while preserving brand consistency and reducing future design drift.

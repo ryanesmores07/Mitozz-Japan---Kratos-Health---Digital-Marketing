@@ -189,7 +189,7 @@ When a reel shot includes the Mitozz bottle as a visible focal element:
 - explicitly spell out the visible front-label copy when readable in frame: `MITOZZ`, `60 Capsules`, and `Net Weight: 30 g`
 - do not invent extra subtitle copy unless a separate approved reference clearly shows it
 - treat this written pack description as mandatory for bottle-led reel shots, especially product reveals and CTA end frames
-- prefer concise factual wording such as "Mitozz supplement bottle with the real label facing forward, clean white bottle body, white cap, and clear centered front label blocks" unless a newer approved source photo requires a more exact description
+- prefer concise factual wording such as "Mitozz supplement bottle with the real label facing forward, deep matte black body, black ribbed cap, visible pale white neck band, and clear centered front-label blocks" unless a newer approved source photo requires a more exact description
 
 ## Anti-Copy Guardrail
 

@@ -58,16 +58,21 @@ This workspace should be treated as UTF-8 by default.
 
 ## Skills And Workflow
 
-This project is wired into Codex using eight project-local skills under `.agents/skills/`:
+This project is wired into Codex using thirteen project-local skills under `.agents/skills/`:
 
+- `mitozz-instagram-strategist`: account-level direction, prioritization, and workflow routing
 - `mitozz-content-calendar`: plans the monthly Mitozz Japan Instagram calendar
 - `mitozz-creatives-director`: turns calendar rows into decisive creative packages and reel edit direction
 - `mitozz-prompt-engineer`: converts creative packages into Nano Banana JSON prompts for source assets
 - `nano-banana-instagram`: executes prompt files and generates the internal source assets
-- `imagen`: generates or edits general-purpose project images when you want image creation without using Nano Banana
+- `mitozz-compositor-executor`: assembles final design-first feed and Story assets from the approved brief
+- `mitozz-posting-copy-optimizer`: prepares final captions, hashtag sets, and posting-copy packs
+- `mitozz-icon-sourcing`: sources Better Icons support when semantic icon cues are needed
+- `mitozz-stock-image-sourcing`: handles the explicit Unsplash stock-photo lane and reference scouting
 - `jay-invoice-sheets`: inspects, clones, and publishes Jay monthly salary and expense Google Sheets from the existing Drive references
 - `retainer-reporting`: logs meaningful retainer work and turns monthly action logs into Jay-ready summaries
 - `drive-delivery`: uploads approved production assets to the mapped Google Drive folders and writes delivery receipts
+- `shopify-blog-seo`: prepares Shopify-ready SEO packaging for blog drafts when the workspace expands beyond Instagram
 
 The repository treats `.agents/skills/` as the single source of truth for skill discovery and maintenance.
 
@@ -101,12 +106,14 @@ Do not use it for:
 7. Resolve the asset's `template_set` and `slide_blueprint` from the central mapping rules.
 8. Use `mitozz-prompt-engineer` to create or update prompt JSON in `prompts/instagram/feed/` or `prompts/instagram/stories/`.
 9. For text-led carousels or Stories, use `design-system/instagram/` so HTML/CSS controls typography, spacing, and final layout while Nano Banana generates image plates only.
-10. Use `nano-banana-instagram` to execute Nano Banana MCP using those prompt files when AI generation is still needed.
-11. Review the outputs, approve winners, and promote only the best assets into the visual reference pack when appropriate.
-12. When delivery to Google Drive is needed, use `drive-delivery` to upload only the approved assets and create a delivery receipt.
-13. When Instagram insights, screenshots, or exports are available, normalize them into the current monthly metrics snapshot under `brand/references/business-context/reporting/instagram-metrics/` and use that snapshot as the performance reference for future planning and creative decisions.
-14. When meaningful Jay retainer work is completed, use `retainer-reporting` to add it to the current monthly action log before closing the task, even if the user did not explicitly ask for logging in that turn.
-15. When a user prompt, request, review ask, or direction change materially shapes project work, capture that request context inside the same monthly log entry so month-end reporting reflects not only what was done, but what triggered it.
+10. Use `nano-banana-instagram` to execute Nano Banana MCP when AI generation is still needed.
+11. Use `mitozz-compositor-executor` to assemble the approved final asset when the chosen lane is design-first or mixed-source.
+12. Review the outputs, approve winners, and promote only the best assets into the visual reference pack when appropriate.
+13. Use `mitozz-posting-copy-optimizer` before treating any feed or reel asset as fully production-ready, delivered, or scheduled.
+14. When delivery to Google Drive is needed, use `drive-delivery` to upload only the approved assets and create a delivery receipt.
+15. When Instagram insights, screenshots, or exports are available, normalize them into the current monthly metrics snapshot under `brand/references/business-context/reporting/instagram-metrics/` and use that snapshot as the performance reference for future planning and creative decisions.
+16. When meaningful Jay retainer work is completed, use `retainer-reporting` to add it to the current monthly action log before closing the task, even if the user did not explicitly ask for logging in that turn.
+17. When a user prompt, request, review ask, or direction change materially shapes project work, capture that request context inside the same monthly log entry so month-end reporting reflects not only what was done, but what triggered it.
 
 If a campaign expands into a real webpage or interface, or if an Instagram asset needs the frontend-skill lens, insert one extra step between creative direction and implementation:
 
@@ -123,7 +130,7 @@ For text-led Instagram assets, the same design-first logic now applies in a ligh
 4. generate only the required image slot assets
 5. render the final export from the compositor instead of asking AI to redraw the whole card
 
-When you want image generation in this workspace without going through the Nano Banana pipeline, use `imagen` instead. It saves selected finals into `output/imagegen/` by default.
+When you want image generation in this workspace without going through the Nano Banana pipeline, use the external `imagegen` skill instead. It saves selected finals into `output/imagegen/` by default.
 
 For Jay's monthly salary and expense sheet workflow, use `jay-invoice-sheets` to inspect the existing invoice Google Sheets in Drive, copy the reference layout into a new month, and optionally write normalized invoice data into a helper tab.
 
@@ -175,17 +182,16 @@ Recommended setup:
 3. Open the repo in Codex so the project-local `.codex/config.toml` can register the MCP server with the correct `cwd` and longer startup timeout.
 4. Do not commit real API keys into repo config files.
 
-The launcher defaults `NANOBANANA_MODEL` to `flash`, which the runtime patch aligns to:
+The launcher defaults `NANOBANANA_MODEL` to `nb2`:
 
-- `gemini-3.1-flash-image-preview`
+- `nb2` -> `gemini-3.1-flash-image-preview`
+- `flash` remains the legacy `gemini-2.5-flash-image` lane when you explicitly ask for it
 
 The launcher wraps:
 
 - `uvx nanobanana-mcp-server`
 
-The workspace launcher also patches the MCP runtime to keep the Flash tier aligned to:
-
-- `gemini-3.1-flash-image-preview`
+The workspace launcher prefers the repo-local Nano Banana server when it is available and only falls back to the cached archive runtime when needed.
 
 This gives the workspace a stable local entrypoint even if the MCP client configuration differs between tools.
 

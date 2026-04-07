@@ -58,6 +58,7 @@ $null = $process.Start()
 
 $deadline = (Get-Date).AddSeconds($TimeoutSeconds)
 $responseLine = $null
+$initializeError = $null
 
 function Wait-ForMcpResponse {
     param(
@@ -65,93 +66,111 @@ function Wait-ForMcpResponse {
         [int]$ResponseId
     )
 
+    $pendingReadTask = $null
+
     while ((Get-Date) -lt $deadline) {
-        if (-not $process.StandardOutput.EndOfStream) {
-            $line = $process.StandardOutput.ReadLine()
-            if ([string]::IsNullOrWhiteSpace($line)) {
-                continue
-            }
-
-            try {
-                $message = $line | ConvertFrom-Json
-                if ($message.id -eq $ResponseId) {
-                    return $line
-                }
-            }
-            catch {
-            }
-        }
-        else {
-            Start-Sleep -Milliseconds 200
+        if ($null -eq $pendingReadTask) {
+            $pendingReadTask = $process.StandardOutput.ReadLineAsync()
         }
 
-        if ($process.HasExited) {
-            break
+        if (-not $pendingReadTask.Wait(200)) {
+            if ($process.HasExited) {
+                break
+            }
+
+            continue
+        }
+
+        $line = $pendingReadTask.Result
+        $pendingReadTask = $null
+        if ($null -eq $line) {
+            if ($process.HasExited) {
+                break
+            }
+
+            continue
+        }
+
+        if ([string]::IsNullOrWhiteSpace($line)) {
+            continue
+        }
+
+        try {
+            $message = $line | ConvertFrom-Json
+
+            if ($message.id -eq 1 -and $null -ne $message.error) {
+                $initializeError = $line
+            }
+
+            if ($message.id -eq $ResponseId) {
+                return $line
+            }
+        }
+        catch {
         }
     }
 
     return $null
 }
 
-$initializeRequest = @{
-    jsonrpc = "2.0"
-    id = 1
-    method = "initialize"
-    params = @{
-        protocolVersion = "2024-11-05"
-        capabilities = @{}
-        clientInfo = @{
-            name = "mitozz-nanobanana-invoke"
-            version = "1.0.0"
+$requests = @(
+    @{
+        jsonrpc = "2.0"
+        id = 1
+        method = "initialize"
+        params = @{
+            protocolVersion = "2024-11-05"
+            capabilities = @{}
+            clientInfo = @{
+                name = "mitozz-nanobanana-invoke"
+                version = "1.0.0"
+            }
+        }
+    },
+    @{
+        jsonrpc = "2.0"
+        method = "notifications/initialized"
+        params = @{}
+    },
+    @{
+        jsonrpc = "2.0"
+        id = 2
+        method = "tools/call"
+        params = @{
+            name = $ToolName
+            arguments = $argumentsObject
         }
     }
+)
+
+foreach ($request in $requests) {
+    $process.StandardInput.WriteLine(($request | ConvertTo-Json -Compress -Depth 20))
 }
-
-$process.StandardInput.WriteLine(($initializeRequest | ConvertTo-Json -Compress -Depth 20))
-$process.StandardInput.Flush()
-
-$initializeResponse = Wait-ForMcpResponse -ResponseId 1
-if ([string]::IsNullOrWhiteSpace($initializeResponse)) {
-    $stderr = $process.StandardError.ReadToEnd()
-    if (-not $process.HasExited) {
-        $process.Kill()
-    }
-    if (-not [string]::IsNullOrWhiteSpace($stderr)) {
-        throw "Nano Banana MCP initialize failed. $stderr"
-    }
-    throw "Nano Banana MCP initialize timed out after $TimeoutSeconds seconds."
-}
-
-$process.StandardInput.WriteLine((@{
-    jsonrpc = "2.0"
-    method = "notifications/initialized"
-    params = @{}
-} | ConvertTo-Json -Compress -Depth 20))
-
-$process.StandardInput.WriteLine((@{
-    jsonrpc = "2.0"
-    id = 2
-    method = "tools/call"
-    params = @{
-        name = $ToolName
-        arguments = $argumentsObject
-    }
-} | ConvertTo-Json -Compress -Depth 20))
 $process.StandardInput.Flush()
 
 $responseLine = Wait-ForMcpResponse -ResponseId 2
 
-$stderr = $process.StandardError.ReadToEnd()
-if (-not $process.HasExited) {
-    $process.Kill()
-}
-
 if ([string]::IsNullOrWhiteSpace($responseLine)) {
+    if (-not $process.HasExited) {
+        $process.Kill()
+        $process.WaitForExit(5000) | Out-Null
+    }
+
+    $stderr = $process.StandardError.ReadToEnd().Trim()
+
+    if (-not [string]::IsNullOrWhiteSpace($initializeError)) {
+        throw "Nano Banana MCP initialize failed. $initializeError"
+    }
+
     if (-not [string]::IsNullOrWhiteSpace($stderr)) {
         throw "Nano Banana MCP call failed. $stderr"
     }
 
     throw "Nano Banana MCP call timed out after $TimeoutSeconds seconds."
+}
+
+if (-not $process.HasExited) {
+    $process.Kill()
 }
 
 if (-not [string]::IsNullOrWhiteSpace($OutputJsonPath)) {
