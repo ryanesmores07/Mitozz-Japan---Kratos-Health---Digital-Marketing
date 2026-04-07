@@ -135,6 +135,7 @@ Structure:
 
 - usually `1-2` frames
 - the native sticker should do the interaction work
+- keep a clean sticker-safe zone, but do not explain placement mechanics on-canvas
 - do not add a third frame unless it creates a better response or route-back outcome
 
 ### 4. Proof / Trust Story

@@ -58,6 +58,7 @@ Read:
 - preserve the approved Story frame count; do not add an opener, middle frame, or close frame just because past Mitozz stories often used 3 frames
 - treat `type_profile` as a real production decision, not a cosmetic afterthought
 - remove internal scaffolding from viewer-facing output
+- for native poll, slider, and question-box Stories, reserve sticker-safe space without rendering placement instructions, `here` labels, or other posting scaffolding on-canvas
 - make sure label bands, chips, row tags, and note cards carry meaningful content or act as clearly intentional accents
 - center text optically inside modules when the component reads as a centered label
 - center the full content block optically inside boxes, bubbles, bands, and cards instead of centering each line independently

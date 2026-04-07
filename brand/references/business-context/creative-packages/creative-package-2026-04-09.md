@@ -71,5 +71,6 @@ Story rules:
 - do not generate fake poll UI
 - frame 2 must leave a clean centered zone for the native Instagram poll sticker
 - frame 2 can name the two options on-canvas only as supportive labels, not as a fake voting component
+- do not render internal execution notes, placement instructions, or sticker-placeholder labels on-canvas
 - keep top and bottom safe zones intact
 - make the opener image calm and trust-led, not product-ad-like

@@ -26,6 +26,7 @@
     "preserve top and bottom safe zones",
     "do not generate fake poll UI",
     "keep frame 2 clean enough for the native poll sticker",
+    "do not render sticker placement notes, placeholder labels, or internal posting instructions on-canvas",
     "avoid internal labels, Set names, or template residue",
     "protect the opener text zone against the image focal area",
     "keep typography weight and spacing locked across both frames"

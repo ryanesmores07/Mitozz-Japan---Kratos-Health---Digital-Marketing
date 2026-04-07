@@ -20,6 +20,7 @@ If the completed brief materially advances retainer delivery, creative direction
 7. If a layout uses a side band, badge, chip, or top label, decide whether it carries meaningful viewer-facing content or should remain a pure accent. Do not leave that choice implicit.
 8. Every frontend-visible image choice, crop, label, band term, support cue, and CTA phrase must be explicitly decided in the brief. Do not leave viewer-facing decisions to the prompt, renderer, or improvisation during production.
 9. When a related asset family already has an approved base layout, inherit that layout grammar by default and only diverge if the brief deliberately calls for a different structure.
+10. For native-interaction Stories, decide the viewer-facing support line and the sticker-safe-zone behavior explicitly, but never let internal placement notes become on-canvas copy.
 
 ## Creative Authority
 

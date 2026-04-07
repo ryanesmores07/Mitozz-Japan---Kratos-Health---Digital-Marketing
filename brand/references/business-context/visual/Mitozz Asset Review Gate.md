@@ -57,6 +57,7 @@ Review the first render or generated batch against:
 - image-backed cover text safety and subject placement
 - image-backed cover subject placement and protected overlay zones
 - absence of internal workflow scaffolding in on-canvas copy
+- absence of internal posting instructions or sticker-placement notes in on-canvas copy
 - batch uniformity
 - whether the dominant structural behavior feels intentionally chosen for this topic rather than recycled from the last approved asset
 - whether the asset is borrowing appropriately from the wider Set / anchor library instead of overfitting to one recent grammar
@@ -115,6 +116,7 @@ Reject or refine the asset if:
 - one slide feels heavier, darker, glossier, or tighter than the rest of the batch
 - a Japanese line break looks browser-made instead of designed
 - internal scaffolding such as `Set` names, English workflow labels, or placeholder badge text appears on-canvas
+- copy references sticker placement mechanics, posting instructions, or `here`-style placeholder language instead of speaking to the viewer
 - a side band, chip, or badge is empty, meaningless, or visually leftover
 - a centered label is visibly off-center inside its module
 - the frame has a large dead zone that is not doing compositional work
