@@ -1,0 +1,274 @@
+---
+name: mitozz-prompt-engineer
+description: Create and update Nano Banana JSON prompts for Mitozz Japan from creatives director output and project context. Use when the user asks to build, refine, or standardize feed or story prompt files before executing Nano Banana MCP.
+---
+
+# Mitozz Prompt Engineer
+
+Use this skill after `mitozz-creatives-director` and before `nano-banana-instagram`.
+
+For reel workflows, this skill produces source-asset prompts only. It does not create the freelancer edit brief itself.
+
+If the prompt work materially improves production readiness, consistency, or execution quality, add a concise entry to the current monthly retainer action log under `brand/references/business-context/reporting/monthly-action-logs/`.
+
+## Inputs To Read
+
+**Primary input — read this first and foremost:**
+
+The `## Source Asset Handoff` section of the approved creative package. All production decisions are already locked there. Do not re-derive `template_set`, `slide_blueprint`, `source_lane`, `visual_engine`, `image_references`, or `text_overlay` from scratch — encode what the creative director already decided.
+
+**Supporting inputs — read only what is needed:**
+
+1. The full creative package from `brand/references/business-context/creative-packages/` when the Handoff section alone is insufficient
+2. `prompts/instagram/shared/prompt-template.json`
+3. Existing prompt examples in `prompts/instagram/feed/` and `prompts/instagram/stories/`
+4. `.claude/skills/nano-banana-instagram/SKILL.md`
+5. Visual reference sources (only when image path or reference detail is missing from the package):
+   - `brand/references/business-context/visual/reference-pack/reference-pack-index.md`
+   - `brand/references/business-context/visual/reference-pack/style-anchors/`
+   - `brand/references/business-context/visual/reference-pack/source-intake/`
+   - `brand/references/business-context/visual/reference-pack/working-examples/`
+   - `brand/references/business-context/visual/Mitozz Approved Post Library.csv`
+6. `workflows/03-generate-and-approve.md`
+7. `.claude/skills/mitozz-icon-sourcing/SKILL.md` when the creative package calls for icons
+8. `.claude/skills/mitozz-stock-image-sourcing/SKILL.md` only when the creative package explicitly calls for stock-photo sourcing
+
+## Calendar Compatibility
+
+The content calendar is now Japanese-first for planning, but prompt JSON should stay operationally clear.
+
+- use the calendar row only as planning context
+- resolve `template_set` and `slide_blueprint` from the central mapping rules when the creative package does not already state them
+- use the creative package as the source of truth for wording and production decisions
+- keep prompt structure and control fields in English
+- preserve exact customer-facing Japanese only inside `text_overlay` or other explicit copy fields
+- do not copy raw calendar cells into the prompt without refining them through the creative package
+
+## Decision Boundary
+
+This skill does not own:
+
+- strategic positioning
+- final messaging angle
+- primary Japanese copy decisions
+- visual engine choice
+- source-lane choice
+
+Those decisions belong to:
+
+- `mitozz-instagram-strategist` for account-level direction
+- `mitozz-creatives-director` for asset-level direction
+
+This skill's job is to encode the approved creative package cleanly for execution.
+Do not silently change the chosen source lane or creative message just because another execution path seems easier.
+
+Variant rule:
+
+- if the creative package marks the version as `design-only`, preserve the approved frontend copy exactly
+- do not rewrite `text_overlay`, CTA wording, or message framing for a design-only variant
+- only create alternative frontend copy when the creative package explicitly approves `design-plus-copy`
+
+## Prompt Shape
+
+Use this JSON structure:
+
+- `asset_type`
+- `campaign_name`
+- `topic`
+- `objective`
+- `template_set`
+- `slide_blueprint`
+- `asset_archetype`
+- `platform`
+- `aspect_ratio`
+- `audience`
+- `motion_role`
+- `shot_id`
+- `shot_position`
+- `continuity_tokens`
+- `visual_intent`
+- `brand_guardrails`
+- `composition`
+- `image_references`
+- `reference_strategy`
+- `variation_guardrails`
+- `text_overlay`
+- `negative_prompts`
+- `reference_files`
+- `notes`
+
+### Reel Prompt Packaging
+
+When the source asset is a reel:
+
+- create one prompt JSON per planned source shot or keyframe
+- keep all reel shot prompts in the normal feed folder unless the user asks for a separate reel folder
+- name them `ig-feed-reel-YYYY-MM-DD-theme-shot-01-v01.json`
+- use `motion_role`, `shot_id`, and `shot_position` to keep the set coordinated
+- encode the same continuity tokens across the full reel set unless a shot intentionally changes environment or subject
+
+The prompt engineer is responsible for making the source asset set easy to edit later.
+
+## `image_references` Rules
+
+Each prompt must carry structured image references with:
+
+- `path`
+- `role`
+- `influence`
+- `match_strength`
+
+Default rules:
+
+- feed educational assets prioritize whitespace, typography, and editorial layout references
+- product hero assets prioritize lighting, palette, and product-framing references
+- stories prioritize vertical breathing room and simplified composition references
+- reel shot prompts prioritize continuity, subject legibility, clean edit potential, and text-safe negative space
+- use 2 to 4 image references per generation
+- include at least 1 `style-anchor` when available
+- add up to 1 mode-specific `style-anchor` when the asset clearly matches a specialized anchor such as ingredient-led or bottle-shot-led creative
+- add 1 `product-source` reference when the bottle, cap, label, or tablets must stay accurate
+- use at most 1 close composition match
+- default `match_strength` to `medium`
+- if no approved `working-example` exists, use `style-anchor` references only
+
+Keep `reference_files` for business-context documents only. Use `image_references` for image inputs.
+
+Product-source rules:
+
+- use `brand/references/business-context/visual/reference-pack/source-intake/mitozz-bottle.jpg` for clean bottle hero fidelity
+- use `brand/references/business-context/visual/reference-pack/source-intake/mitozz-bottle-with-tablets.jpg` when tablets should appear naturally in frame
+- set `role` to `product-source`
+- keep `influence` focused on pack fidelity, label placement, cap finish, bottle silhouette, or tablet relationship
+- do not use product-source references to control palette, typography, or overall composition
+- treat the bottle design as locked, but still describe how it should inherit the target shot's light direction, reflection behavior, shadow softness, and camera angle so it belongs naturally inside the scene
+- when the bottle label is visible, explicitly write the visible front-label copy and structure into the prompt, not just "accurate label" language
+- use `brand/references/business-context/visual/Mitozz Bottle Label Spec.md` whenever visible label truth matters
+- use `brand/references/business-context/visual/Mitozz Bottle Appearance Spec.md` whenever the bottle appears
+
+Stock-style source-image rule:
+
+- when the creative package chooses `Nano-Banana-source-image`, create a dedicated Nano Banana source-image prompt
+- when the creative package chooses `Unsplash-stock-image`, treat it as an explicit override rather than the normal default
+- keep that prompt focused on the image plate or background, not the full text-led asset, when a compositor path is available
+- use the approved post library to check whether a similar source-image strategy already exists and whether it should be reused or switched up
+
+Source-lane execution rule:
+
+- if the chosen `source_lane` is `Nano-Banana-source-image`, build the prompt JSON normally
+- if the chosen `source_lane` is `Unsplash-stock-image`, create only the supporting selection notes or compositor-ready asset notes that the downstream step needs
+
+Icon rule:
+
+- if the creative package calls for icons, do not invent random abstract shapes as a substitute
+- route icon choice through `mitozz-icon-sourcing`
+- keep one icon family per asset or batch
+- record the selected icon ids or collection in prompt notes when they materially affect the final layout
+
+Generated support visual rule:
+
+- if the creative package calls for `generated_visual_role`, treat that as a real production layer, not as a vague mood note
+- if the chosen source lane is `Nano-Banana-source-image`, use Nano Banana to generate the subtle background, infographic support visual, hero visual, or support plate that the package specifies
+- if the chosen source lane is `design-first-no-image`, but `generated_visual_role` is not `none`, create the supporting design notes or source prompt needed for that generated layer instead of hand-inventing filler shapes
+- record clearly whether the generated layer is a background, support plate, hero visual, or infographic support element
+
+Overlay-safe image rule:
+
+- when a prompt is for a cover plate or image slot that will carry compositor text later, explicitly encode the `text_safe_zone`, `subject_placement`, and any protected bottom or side overlay area in the prompt
+- explicitly reject any composition where the focal subject drifts under the future text block, label band, or CTA card
+- default fresh cover plates, support plates, and image washes to `Nano-Banana-source-image` unless the creative package explicitly chooses owned photography or the user explicitly asks for stock
+
+When a reel shot includes the Mitozz bottle as a visible focal element:
+
+- do not rely on the `product-source` image alone
+- explicitly write the bottle description into the prompt fields
+- explicitly write the bottle appearance into the prompt fields: deep matte black body, black ribbed cap, visible pale white neck band, and predominantly black front face
+- explicitly describe the front label orientation and readability
+- include the bottle's visible form details such as silhouette, cap finish, bottle material/color, and label block structure
+- explicitly spell out the visible front-label copy when readable in frame: `MITOZZ`, `60 Capsules`, and `Net Weight: 30 g`
+- do not invent extra subtitle copy unless a separate approved reference clearly shows it
+- treat this written pack description as mandatory for bottle-led reel shots, especially product reveals and CTA end frames
+- prefer concise factual wording such as "Mitozz supplement bottle with the real label facing forward, clean white bottle body, white cap, and clear centered front label blocks" unless a newer approved source photo requires a more exact description
+
+## Anti-Copy Guardrail
+
+Always encode this rule in the prompt:
+
+- match mood, palette, light quality, whitespace, and restraint
+- do not duplicate exact crop, pose, object placement, or gradient pattern
+
+## Reel-Specific Rules
+
+When building prompts for a reel:
+
+- each prompt should represent one clear source asset for one shot or beat
+- default `text_overlay.allowed` to `false` unless the creative package explicitly wants baked-in text
+- preserve generous negative space when captions, kinetic text, or CTA overlays will be added later
+- use consistent subject description across the shot set so the asset family does not drift
+- use consistent product orientation when the bottle appears
+- for bottle shots, repeat a concise Mitozz bottle-and-label description inside `continuity_tokens`, `composition`, or other prompt text so the model receives explicit pack instructions in plain language
+- prefer simple, direct compositions that cut cleanly in an edit
+- avoid overcomplicated background detail that makes the reel visually noisy
+- keep the first shot visually strong enough to serve as the opening frame
+- make the last shot stable enough to hold the CTA beat
+
+Add explicit hard-fail wording whenever relevant:
+
+- for text-free source images, explicitly state `no readable text, letters, logos, labels, UI, or wordmarks anywhere in frame`
+- for bottle-led shots, explicitly state the approved bottle color, cap color, label orientation, and label readability requirements
+- for routine shots, explicitly state what object or gesture must be the real focal action so the model does not drift into generic still life
+- for reframe beats, explicitly state what the shot must not become, such as `not a stock tabletop photo` or `not a generic supplement ad`
+
+For bottle-led shots, encode a rejection rule in plain language:
+
+- `reject and regenerate if bottle color changes`
+- `reject and regenerate if the bottle body is no longer deep matte black`
+- `reject and regenerate if the black ribbed cap or pale white neck band disappear`
+- `reject and regenerate if label becomes unreadable, simplified, or invented`
+- `reject and regenerate if the visible front-label copy no longer matches the approved Mitozz bottle reference`
+- `reject and regenerate if the bottle looks pasted on and does not match the scene's lighting, reflections, shadows, or angle`
+- `do not mark done until the generated bottle frame has been visually checked against the approved bottle reference image`
+
+## Story Batch Rules
+
+When building prompts for a Story set:
+
+- treat the full Story set as one locked batch, not as unrelated individual frames
+- keep one exact card architecture across all frames
+- keep one exact border rule or no border rule across all frames
+- keep text color density, type weight family, and margin system identical across all frames
+- let frame 03 add CTA emphasis only if the base layout system remains unchanged
+- explicitly write these batch-lock rules into the prompt notes or variation guardrails
+
+## Quality Checks
+
+Before finalizing a prompt, verify:
+
+- the JSON is valid
+- `template_set` and `slide_blueprint` are present and match the mapped design system
+- `image_references` and `reference_files` are separate
+- the prompt reflects the creatives director concept
+- the prompt encodes the Steel Light system
+- the prompt includes `asset_archetype` and `reference_strategy`
+- the prompt includes variation guardrails so outputs stay cohesive without becoming repetitive
+- reel prompt sets carry consistent continuity tokens and clear shot roles per asset
+- text-led assets route key Japanese line breaks into controlled design data or otherwise avoid relying on accidental auto-wrap
+- the approved post library has been checked so the prompt is not reusing the last successful asset too literally
+
+Do not finalize a prompt if:
+
+- the prompt leaves text contamination ambiguous on a text-free source asset
+- the prompt leaves bottle color or label fidelity ambiguous on a bottle-led asset
+- the prompt leaves bottle realism ambiguous on a bottle-led asset, including whether the locked pack design should still adapt to the shot's light and perspective
+- the prompt leaves Story batch architecture ambiguous across frames
+- the prompt or paired design data leaves key Japanese headline or subline breaks ambiguous on a text-led asset
+
+## Output
+
+- Feed: `prompts/instagram/feed/ig-feed-YYYY-MM-DD-theme-v01.json`
+- Story: `prompts/instagram/stories/ig-story-YYYY-MM-DD-theme-v01.json`
+- Reel shot source image: `prompts/instagram/feed/ig-feed-reel-YYYY-MM-DD-theme-shot-01-v01.json`
+
+## Examples
+
+See [references/examples.md](references/examples.md).
