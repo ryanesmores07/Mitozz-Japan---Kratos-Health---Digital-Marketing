@@ -164,6 +164,7 @@ This keeps the story strategy operational without cluttering the planning sheet.
 For stories, also resolve one more field before creative packaging:
 
 - `story_sequence_length`
+- `native_sticker_spec` when the Story uses a native Instagram sticker
 
 Rule:
 
@@ -172,6 +173,8 @@ Rule:
 - `1-2` frames should be the default bias for native interaction, quick routing, and simple response Stories
 - `3` frames should be used when the middle frame truly adds clarity, context, or a stronger CTA handoff
 - `4+` frames need an explicit reason such as narrative proof, launch sequencing, or motion-led storytelling
+- for native-interaction Stories, lock the exact sticker wording, option labels, and placement zone in the creative package before prompt or compositor work starts
+- do not let the renderer decide viewer-facing support copy or sticker phrasing on its own
 
 ## Asset Memory Rule
 

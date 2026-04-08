@@ -1,0 +1,30 @@
+{
+  "template": "education-carousel",
+  "variant": "education-body",
+  "canvas": {
+    "width": 928,
+    "height": 1152
+  },
+  "panel": {
+    "index": "01",
+    "kicker": "SET 2 BODY",
+    "eyebrow": "視点をひとつにまとめる"
+  },
+  "copy": {
+    "headline_lines": [
+      "睡眠 食事 運動は",
+      "別々の課題ではなく",
+      "つながった土台です。"
+    ],
+    "body_lines": [
+      "ひとつずつ整える前に、",
+      "関係ごと見ていくための基準スライド。"
+    ]
+  },
+  "motif": {
+    "type": "soft-system"
+  },
+  "note": {
+    "label": "EDITORIAL SCIENCE LAYER"
+  }
+}

@@ -307,14 +307,14 @@ $roles = $typography.roles
 $headlineFamilies = [string[]]$fontProfileConfig.headline_families
 $bodyFamilies = [string[]]$fontProfileConfig.body_families
 
-$metaFont = New-Font -Families $bodyFamilies -Size ([float]$roles.meta.font_size) -Style ([System.Drawing.FontStyle]::Bold)
-$headlineLarge = New-Font -Families $headlineFamilies -Size 74 -Style ([System.Drawing.FontStyle]::Bold)
-$headlineMedium = New-Font -Families $headlineFamilies -Size 66 -Style ([System.Drawing.FontStyle]::Bold)
-$bodyFont = New-Font -Families $bodyFamilies -Size ([float]$roles.cover_subline.font_size) -Style ([System.Drawing.FontStyle]::Regular)
-$bodySmall = New-Font -Families $bodyFamilies -Size 28 -Style ([System.Drawing.FontStyle]::Regular)
+$metaFont = New-Font -Families $bodyFamilies -Size 22 -Style ([System.Drawing.FontStyle]::Bold)
+$headlineLarge = New-Font -Families $headlineFamilies -Size 82 -Style ([System.Drawing.FontStyle]::Bold)
+$headlineMedium = New-Font -Families $headlineFamilies -Size 74 -Style ([System.Drawing.FontStyle]::Bold)
+$bodyFont = New-Font -Families $bodyFamilies -Size 34 -Style ([System.Drawing.FontStyle]::Regular)
+$bodySmall = New-Font -Families $bodyFamilies -Size 30 -Style ([System.Drawing.FontStyle]::Regular)
 $labelFont = New-Font -Families $bodyFamilies -Size 26 -Style ([System.Drawing.FontStyle]::Bold)
-$cardTitleFont = New-Font -Families $bodyFamilies -Size 30 -Style ([System.Drawing.FontStyle]::Bold)
-$cardBodyFont = New-Font -Families $bodyFamilies -Size 25 -Style ([System.Drawing.FontStyle]::Regular)
+$cardTitleFont = New-Font -Families $bodyFamilies -Size 34 -Style ([System.Drawing.FontStyle]::Bold)
+$cardBodyFont = New-Font -Families $bodyFamilies -Size 28 -Style ([System.Drawing.FontStyle]::Regular)
 
 $canvasTop = $tokenColors.canvas_top
 $canvasBottom = $tokenColors.canvas_bottom
@@ -350,7 +350,8 @@ $workspaceRoot = [System.IO.Path]::GetFullPath((Join-Path $PSScriptRoot ".."))
 $storyRoot = Join-Path $workspaceRoot "output/instagram/stories/2026-04-09-story-purchase-axis-poll-v01"
 $productionDir = Join-Path $storyRoot "production"
 $currentDir = Join-Path $storyRoot "current"
-$sourceImage = Join-Path $storyRoot "source/frame-01-plate-nanobanana-v01.jpg"
+$sourceImageFrame01 = Join-Path $storyRoot "source/frame-01-plate-nanobanana-v03.jpg"
+$sourceImageFrame02 = Join-Path $storyRoot "source/frame-02-plate-nanobanana-v01.jpg"
 $metaRightX = [float]($width - 58)
 foreach ($path in @($productionDir, $currentDir)) {
     if (-not (Test-Path -LiteralPath $path)) {
@@ -361,15 +362,15 @@ foreach ($path in @($productionDir, $currentDir)) {
 $frames = @(
     @{
         File = "frame-01.png"
-        LeftMeta = Decode-UnicodeEscapes "\u8cfc\u5165\u524d\u306e\u8996\u70b9"
-        RightMeta = Decode-UnicodeEscapes "\u8efd\u3044\u30a2\u30f3\u30b1\u30fc\u30c8"
+        LeftMeta = Decode-UnicodeEscapes "\u4fe1\u983c\u306e\u5165\u53e3"
+        RightMeta = Decode-UnicodeEscapes "1\u554f\u3060\u3051"
         Headline = @(
             (Decode-UnicodeEscapes "\u8cfc\u5165\u524d\u306b\u6c17\u306b\u306a\u308b\u306e\u306f\u3001"),
             (Decode-UnicodeEscapes "\u6210\u5206\u3067\u3059\u304b\u3002"),
             (Decode-UnicodeEscapes "\u30d6\u30e9\u30f3\u30c9\u3067\u3059\u304b\u3002")
         )
         Body = @(
-            (Decode-UnicodeEscapes "\u307e\u305a\u76ee\u304c\u5411\u304f\u307b\u3046\u3092\u3001"),
+            (Decode-UnicodeEscapes "\u307e\u305a\u8fd1\u3044\u307b\u3046\u3092\u3001"),
             (Decode-UnicodeEscapes "\u6c17\u8efd\u306b\u9078\u3093\u3067\u307f\u3066\u304f\u3060\u3055\u3044\u3002")
         )
         Type = "cover"
@@ -377,14 +378,14 @@ $frames = @(
     @{
         File = "frame-02.png"
         LeftMeta = Decode-UnicodeEscapes "\u4eca\u65e5\u306e\u8cea\u554f"
-        RightMeta = Decode-UnicodeEscapes "\u6295\u7968\u3057\u3066\u304f\u3060\u3055\u3044"
+        RightMeta = Decode-UnicodeEscapes "\u6295\u7968"
         Headline = @(
-            (Decode-UnicodeEscapes "\u6700\u521d\u306b\u5b89\u5fc3\u611f\u3092\u6301\u3064\u306e\u306f"),
-            (Decode-UnicodeEscapes "\u3069\u3061\u3089\u306b\u8fd1\u3044\u3067\u3059\u304b\u3002")
+            (Decode-UnicodeEscapes "\u8cfc\u5165\u524d\u306b\u307e\u305a\u898b\u308b\u306e\u306f"),
+            (Decode-UnicodeEscapes "\u3069\u3061\u3089\u3067\u3059\u304b\u3002")
         )
         Body = @(
-            (Decode-UnicodeEscapes "\u307e\u305a\u306f\u8fd1\u3044\u307b\u3046\u3092"),
-            (Decode-UnicodeEscapes "\u6c17\u8efd\u306b\u9078\u3093\u3067\u307f\u3066\u304f\u3060\u3055\u3044\u3002")
+            (Decode-UnicodeEscapes "\u8fd1\u3044\u307b\u3046\u3092\u3001"),
+            (Decode-UnicodeEscapes "\u3072\u3068\u3064\u9078\u3093\u3067\u304f\u3060\u3055\u3044\u3002")
         )
         Type = "body"
     }
@@ -401,7 +402,7 @@ foreach ($frame in $frames) {
     if ($frame.Type -eq "cover") {
         $graphics.Clear($canvasTop)
 
-        Draw-ImageCover -Graphics $graphics -ImagePath $sourceImage -X 18 -Y 18 -Width ($width - 36) -Height ($height - 36) -Radius 48
+        Draw-ImageCover -Graphics $graphics -ImagePath $sourceImageFrame01 -X 18 -Y 18 -Width ($width - 36) -Height ($height - 36) -Radius 48
         $path = New-RoundedPath -X 18 -Y 18 -Width ($width - 36) -Height ($height - 36) -Radius 48
         $stroke = New-Object System.Drawing.Pen($mistBlueLine, 1)
         $graphics.DrawPath($stroke, $path)
@@ -424,85 +425,51 @@ foreach ($frame in $frames) {
         $graphics.DrawString([string]$frame.LeftMeta, $metaFont, $blueBrush, 58, 48)
         Draw-RightAlignedText -Graphics $graphics -Text ([string]$frame.RightMeta) -Font $metaFont -Brush $blueBrush -RightX $metaRightX -Y 48
 
-        $headlineBottom = Draw-TrackedLines -Graphics $graphics -Lines $frame.Headline -Font $headlineLarge -Brush $textBrush -X 72 -Y 216 -LineHeight 112 -Tracking 0.15
-        [void](Draw-Lines -Graphics $graphics -Lines $frame.Body -Font $bodyFont -Brush $softBrush -X 82 -Y ($headlineBottom + 30) -LineHeight 52)
-
-        $coverBandY = 1296
-        $coverBandHeight = 162
-        Draw-RoundedGradientBox -Graphics $graphics -X 54 -Y $coverBandY -Width 972 -Height $coverBandHeight -Radius 30 `
-            -TopColor $glassPanelTop -BottomColor $glassPanelBottom -StrokeColor $glassPanelStroke -StrokeWidth 1
-
-        $labels = @(
-            (Decode-UnicodeEscapes "\u6210\u5206"),
-            (Decode-UnicodeEscapes "\u8996\u70b9"),
-            (Decode-UnicodeEscapes "\u59ff\u52e2")
-        )
-        $values = @(
-            (Decode-UnicodeEscapes "\u4f55\u304c\u5165\u3063\u3066\u3044\u308b\u304b"),
-            (Decode-UnicodeEscapes "\u3069\u3053\u3092\u898b\u3066\u9078\u3076\u304b"),
-            (Decode-UnicodeEscapes "\u3069\u3046\u5c4a\u3051\u7d9a\u3051\u308b\u304b")
-        )
-        $columnWidth = 972 / 3
-        $labelHeight = 34
-        $labelValueGap = 16
-        $valueHeight = 40
-        $columnContentTop = Get-CenteredStackTop -ContainerY $coverBandY -ContainerHeight $coverBandHeight -ContentHeight ($labelHeight + $labelValueGap + $valueHeight)
-        for ($i = 0; $i -lt 3; $i += 1) {
-            $columnLeft = 54 + ($columnWidth * $i)
-            if ($i -gt 0) {
-                $separatorX = $columnLeft
-                $graphics.DrawLine($rulePen, $separatorX, ($coverBandY + 24), $separatorX, ($coverBandY + $coverBandHeight - 24))
-            }
-            Draw-CenteredParagraph -Graphics $graphics -Text $labels[$i] -Font $labelFont -Brush $blueBrush -X $columnLeft -Y $columnContentTop -Width $columnWidth -Height $labelHeight
-            Draw-CenteredParagraph -Graphics $graphics -Text $values[$i] -Font $cardBodyFont -Brush $textBrush -X $columnLeft -Y ($columnContentTop + $labelHeight + $labelValueGap) -Width $columnWidth -Height $valueHeight
-        }
+        $headlineBottom = Draw-TrackedLines -Graphics $graphics -Lines $frame.Headline -Font $headlineLarge -Brush $textBrush -X 68 -Y 208 -LineHeight 122 -Tracking 0.12
+        [void](Draw-Lines -Graphics $graphics -Lines $frame.Body -Font $bodyFont -Brush $softBrush -X 82 -Y ($headlineBottom + 42) -LineHeight 58)
     }
     elseif ($frame.Type -eq "body") {
-        Draw-StoryCardBase -Graphics $graphics -Width $width -Height $height
+        $graphics.Clear($canvasTop)
+        Draw-ImageCover -Graphics $graphics -ImagePath $sourceImageFrame02 -X 18 -Y 18 -Width ($width - 36) -Height ($height - 36) -Radius 48
+        $path = New-RoundedPath -X 18 -Y 18 -Width ($width - 36) -Height ($height - 36) -Radius 48
+        $stroke = New-Object System.Drawing.Pen($mistBlueLine, 1)
+        $graphics.DrawPath($stroke, $path)
+        $stroke.Dispose()
+        $path.Dispose()
+
+        $bodyOverlay = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(178, 250, 252, 253))
+        $graphics.FillRectangle($bodyOverlay, 18, 18, $width - 36, $height - 36)
+        $bodyOverlay.Dispose()
+
+        $topWash = New-Object System.Drawing.SolidBrush([System.Drawing.Color]::FromArgb(76, 255, 255, 255))
+        $graphics.FillRectangle($topWash, 18, 18, $width - 36, 120)
+        $topWash.Dispose()
+
         $graphics.DrawString([string]$frame.LeftMeta, $metaFont, $blueBrush, 58, 48)
         Draw-RightAlignedText -Graphics $graphics -Text ([string]$frame.RightMeta) -Font $metaFont -Brush $blueBrush -RightX $metaRightX -Y 48
 
-        $headlineBottom = Draw-TrackedLines -Graphics $graphics -Lines $frame.Headline -Font $headlineMedium -Brush $textBrush -X 78 -Y 220 -LineHeight 98 -Tracking 0.15
-        [void](Draw-Lines -Graphics $graphics -Lines $frame.Body -Font $bodyFont -Brush $softBrush -X 84 -Y ($headlineBottom + 28) -LineHeight 50)
+        $headlineBottom = Draw-TrackedLines -Graphics $graphics -Lines $frame.Headline -Font $headlineMedium -Brush $textBrush -X 72 -Y 214 -LineHeight 108 -Tracking 0.12
+        $bodyBottom = Draw-Lines -Graphics $graphics -Lines $frame.Body -Font $bodyFont -Brush $softBrush -X 84 -Y ($headlineBottom + 34) -LineHeight 58
 
-        $pollZoneY = 930
-        $pollZoneHeight = 470
-        Draw-RoundedGradientBox -Graphics $graphics -X 104 -Y $pollZoneY -Width 872 -Height $pollZoneHeight -Radius 36 `
-            -TopColor ([System.Drawing.Color]::FromArgb(140, 236, 243, 247)) -BottomColor ([System.Drawing.Color]::FromArgb(92, 228, 238, 244)) -StrokeColor $coolPanelStroke -StrokeWidth 1
+        $pollZoneY = $bodyBottom + 92
+        $pollZoneHeight = 510
+        Draw-RoundedGradientBox -Graphics $graphics -X 118 -Y $pollZoneY -Width 844 -Height $pollZoneHeight -Radius 38 `
+            -TopColor ([System.Drawing.Color]::FromArgb(214, 250, 252, 253)) -BottomColor ([System.Drawing.Color]::FromArgb(192, 240, 246, 250)) -StrokeColor $glassPanelStroke -StrokeWidth 1
 
-        $pollHintY = 858
-        Draw-CenteredParagraph -Graphics $graphics -Text (Decode-UnicodeEscapes "\u6295\u7968\u30b9\u30c6\u30a3\u30c3\u30ab\u30fc\u3067\u9078\u3093\u3067\u307f\u3066\u304f\u3060\u3055\u3044\u3002") -Font $bodySmall -Brush $softBrush -X 164 -Y $pollHintY -Width 752 -Height 42
-
-        $optionStripY = 1428
-        Draw-RoundedGradientBox -Graphics $graphics -X 138 -Y $optionStripY -Width 804 -Height 92 -Radius 24 `
-            -TopColor ([System.Drawing.Color]::FromArgb(255, 244, 248, 250)) -BottomColor ([System.Drawing.Color]::FromArgb(255, 236, 243, 247)) -StrokeColor $mistBlueLine -StrokeWidth 1
-        $stripLabels = @(
-            (Decode-UnicodeEscapes "\u6210\u5206\u3092\u898b\u308b"),
-            (Decode-UnicodeEscapes "\u30d6\u30e9\u30f3\u30c9\u59ff\u52e2\u3092\u898b\u308b")
-        )
-        $stripWidth = 804 / 2
-        for ($i = 0; $i -lt 2; $i += 1) {
-            $columnLeft = 138 + ($stripWidth * $i)
-            if ($i -gt 0) {
-                $graphics.DrawLine($rulePen, $columnLeft, ($optionStripY + 18), $columnLeft, ($optionStripY + 74))
-            }
-            Draw-CenteredParagraph -Graphics $graphics -Text $stripLabels[$i] -Font $labelFont -Brush $blueBrush -X $columnLeft -Y ($optionStripY + 1) -Width $stripWidth -Height 90
-        }
-
-        $routeCardY = 1570
-        Draw-RoundedGradientBox -Graphics $graphics -X 84 -Y $routeCardY -Width 912 -Height 182 -Radius 32 `
+        $routeCardY = 1468
+        Draw-RoundedGradientBox -Graphics $graphics -X 104 -Y $routeCardY -Width 872 -Height 188 -Radius 32 `
             -TopColor $warmPanelTop -BottomColor $warmPanelBottom -StrokeColor $warmPanelStroke -StrokeWidth 1
-        $routeTitleHeight = 40
-        $routeRuleGapTop = 24
+        $routeTitleHeight = 44
+        $routeRuleGapTop = 22
         $routeRuleGapBottom = 22
-        $routeBodyHeight = 58
-        $routeContentTop = Get-CenteredStackTop -ContainerY $routeCardY -ContainerHeight 182 -ContentHeight ($routeTitleHeight + $routeRuleGapTop + $routeRuleGapBottom + $routeBodyHeight)
+        $routeBodyHeight = 70
+        $routeContentTop = Get-CenteredStackTop -ContainerY $routeCardY -ContainerHeight 188 -ContentHeight ($routeTitleHeight + $routeRuleGapTop + $routeRuleGapBottom + $routeBodyHeight)
         $routeTitleY = $routeContentTop
         $routeRuleY = $routeTitleY + $routeTitleHeight + $routeRuleGapTop
         $routeBodyY = $routeRuleY + $routeRuleGapBottom
-        Draw-CenteredParagraph -Graphics $graphics -Text (Decode-UnicodeEscapes "\u4eca\u65e5\u306e\u6295\u7a3f\u3092\u898b\u308b") -Font $cardTitleFont -Brush $textBrush -X 126 -Y $routeTitleY -Width 828 -Height $routeTitleHeight
-        $graphics.DrawLine($accentPen, 404, $routeRuleY, 676, $routeRuleY)
-        Draw-CenteredParagraph -Graphics $graphics -Text (Decode-UnicodeEscapes "\u4fe1\u983c\u306e\u898b\u65b9\u3092\u3001`n\u3084\u3055\u3057\u304f\u6574\u7406\u3057\u3066\u3044\u307e\u3059\u3002") -Font $cardBodyFont -Brush $softBrush -X 136 -Y $routeBodyY -Width 808 -Height $routeBodyHeight
+        Draw-CenteredParagraph -Graphics $graphics -Text (Decode-UnicodeEscapes "\u4eca\u65e5\u306e\u6295\u7a3f\u3092\u898b\u308b") -Font $cardTitleFont -Brush $textBrush -X 136 -Y $routeTitleY -Width 808 -Height $routeTitleHeight
+        $graphics.DrawLine($accentPen, 410, $routeRuleY, 670, $routeRuleY)
+        Draw-CenteredParagraph -Graphics $graphics -Text (Decode-UnicodeEscapes "\u898b\u305f\u76ee\u3060\u3051\u3067\u306f\u306a\u3044`n\u4fe1\u983c\u306e\u898b\u65b9\u3092\u6574\u7406\u3057\u3066\u3044\u307e\u3059\u3002") -Font $cardBodyFont -Brush $softBrush -X 146 -Y $routeBodyY -Width 788 -Height $routeBodyHeight
     }
 
     $prodPath = Join-Path $productionDir $frame.File

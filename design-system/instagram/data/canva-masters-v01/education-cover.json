@@ -1,0 +1,26 @@
+{
+  "template": "education-carousel",
+  "variant": "education-cover",
+  "canvas": {
+    "width": 928,
+    "height": 1152
+  },
+  "copy": {
+    "kicker": "SET 1 COVER",
+    "headline_lines": [
+      "毎日の土台を",
+      "ミトコンドリア視点で",
+      "整える"
+    ],
+    "body_lines": [
+      "睡眠 食事 運動を別々ではなく、",
+      "ひとつの流れとして見直すための入口。"
+    ]
+  },
+  "motif": {
+    "type": "connected-habits"
+  },
+  "note": {
+    "label": "SAVE-WORTHY EDUCATION"
+  }
+}

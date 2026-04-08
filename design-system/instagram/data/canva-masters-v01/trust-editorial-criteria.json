@@ -1,0 +1,35 @@
+{
+  "template": "trust-carousel",
+  "variant": "editorial-criteria",
+  "canvas": {
+    "width": 928,
+    "height": 1152
+  },
+  "panel": {
+    "index": "02",
+    "eyebrow": "SET 5 BODY"
+  },
+  "copy": {
+    "headline_lines": [
+      "選ぶ前に見たい",
+      "3つの確認軸"
+    ],
+    "subline_lines": [
+      "品質 安全性 世界観を",
+      "過不足なく整理するための比較型テンプレート。"
+    ]
+  },
+  "meta": {
+    "label": "CREDIBILITY FRAME",
+    "body_lines": [
+      "根拠らしさではなく、落ち着いた信頼感をつくる。",
+      "比較や基準の説明に向いた中盤スライド。"
+    ],
+    "tags": [
+      "品質",
+      "信頼",
+      "比較"
+    ]
+  },
+  "rule": true
+}

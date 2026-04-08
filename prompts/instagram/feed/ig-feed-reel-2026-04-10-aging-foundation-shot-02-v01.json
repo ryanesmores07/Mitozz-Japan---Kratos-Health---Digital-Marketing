@@ -1,0 +1,106 @@
+{
+  "asset_type": "instagram-feed",
+  "campaign_name": "April 2026 Organic Education",
+  "topic": "Revisit the daily foundation as the years advance",
+  "objective": "Educate",
+  "template_set": "Set 4 + Set 3",
+  "slide_blueprint": "reel-4-shot",
+  "asset_archetype": "reel-source-frame",
+  "platform": "instagram",
+  "aspect_ratio": "4:5",
+  "audience": "Healthy Aging Planner",
+  "motion_role": "reframe",
+  "shot_id": "shot-02",
+  "shot_position": 2,
+  "continuity_tokens": [
+    "same Japanese woman in late 40s to early 50s across shots 01 to 03",
+    "same premium home-morning environment",
+    "same pale oak, cloud white, mist blue, muted stone palette",
+    "same soft daylight",
+    "no baked-in text"
+  ],
+  "visual_intent": [
+    "mature routine detail shot",
+    "read the flow before adding anything",
+    "tactile daily-foundation reframe",
+    "clean close framing for later editorial overlay"
+  ],
+  "brand_guardrails": [
+    "avoid turning the shot into a generic tabletop stock image",
+    "avoid making supplements the hero yet",
+    "avoid overly styled flat-lay behavior",
+    "the scene must fill the entire 4:5 canvas with no blank bars or inset composition"
+  ],
+  "composition": [
+    "true full-bleed vertical 4:5 framing",
+    "close detail shot",
+    "same woman's hands only",
+    "reading glasses, notebook, ceramic water glass, and one calm touchpoint object",
+    "one clear action such as lightly setting down glasses or opening a notebook",
+    "clean negative space in the upper third or side area for future overlay",
+    "real environment reaches all canvas edges"
+  ],
+  "image_references": [
+    {
+      "path": "brand/references/business-context/visual/reference-pack/working-examples/template-set-4-lifestyle-v02-no-bottle.png",
+      "role": "working-example",
+      "influence": [
+        "routine realism",
+        "material tone",
+        "lifestyle plausibility"
+      ],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-editorial-whitespace-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "restraint",
+        "negative space",
+        "editorial quiet"
+      ],
+      "match_strength": "high"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-body-copy-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "readable calm composition",
+        "measured detail density",
+        "clean content zone"
+      ],
+      "match_strength": "medium"
+    }
+  ],
+  "reference_strategy": "Keep the shot believable through the Set 4 lifestyle example, then use the whitespace and body-copy anchors to preserve an uncluttered editorial detail frame.",
+  "variation_guardrails": [
+    "do not become a flat lay",
+    "do not add pills, coffee, or overt supplement-ad cues",
+    "keep the action reflective rather than busy",
+    "reject and regenerate if the frame feels cramped or generic",
+    "reject and regenerate if the image is not true full-bleed 4:5"
+  ],
+  "text_overlay": {
+    "allowed": false,
+    "max_words": 0,
+    "tone": "premium, calm, restrained",
+    "font_reference": "Hiragino Sans",
+    "headline_ja": "",
+    "slides_ja": []
+  },
+  "negative_prompts": [
+    "generic tabletop stock photo",
+    "flat lay",
+    "coffee commercial",
+    "supplement hero shot",
+    "messy breakfast spread",
+    "white bars",
+    "floating card layout",
+    "baked-in text"
+  ],
+  "reference_files": [
+    "brand/references/business-context/creative-packages/creative-package-2026-04-10.md",
+    "brand/references/business-context/visual/Brand Visual Direction.md"
+  ],
+  "notes": "April 10 reel shot 02. This is the tactile reframe beat. Keep it mature, quiet, and object-led with real breathing room for later copy."
+}

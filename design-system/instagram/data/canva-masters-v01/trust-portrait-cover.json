@@ -1,0 +1,20 @@
+{
+  "template": "trust-carousel",
+  "variant": "portrait-cover",
+  "canvas": {
+    "width": 928,
+    "height": 1152
+  },
+  "copy": {
+    "eyebrow": "SET 5 COVER",
+    "headline_lines": [
+      "信頼できる基準を",
+      "静かに伝える",
+      "ポートレートカバー"
+    ]
+  },
+  "image": {
+    "path": "C:/Users/esmoresernieryanocam/Desktop/Workspace/Mitozz Japan/design-system/instagram/assets/2026-03-30-trust-carousel/slide-01-portrait-plate.png",
+    "position": "center center"
+  }
+}

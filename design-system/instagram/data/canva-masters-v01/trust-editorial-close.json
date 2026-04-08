@@ -1,0 +1,35 @@
+{
+  "template": "trust-carousel",
+  "variant": "editorial-close",
+  "canvas": {
+    "width": 928,
+    "height": 1152
+  },
+  "panel": {
+    "index": "03",
+    "eyebrow": "SET 5 CLOSE"
+  },
+  "copy": {
+    "headline_lines": [
+      "焦らせずに、",
+      "安心して選べる終わり方へ"
+    ],
+    "subline_lines": [
+      "強い押し出しではなく、",
+      "静かな納得感で締めるためのクローズテンプレート。"
+    ]
+  },
+  "meta": {
+    "label": "SOFT TRUST CLOSE",
+    "body_lines": [
+      "品質や考え方を伝えたあとに、余白を保ったまま次の行動へつなぐ。",
+      "保存やプロフィール遷移などの軽い行動導線に向いている。"
+    ],
+    "tags": [
+      "安心感",
+      "余白",
+      "軽いCTA"
+    ]
+  },
+  "rule": true
+}

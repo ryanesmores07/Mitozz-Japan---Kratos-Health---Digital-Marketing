@@ -62,6 +62,7 @@ Those decisions belong to:
 
 This skill's job is to encode the approved creative package cleanly for execution.
 Do not silently change the chosen source lane or creative message just because another execution path seems easier.
+Do not add helper copy, CTA copy, or support labels that were not explicitly locked in the creative package.
 
 Variant rule:
 
@@ -97,6 +98,7 @@ Use this JSON structure:
 - `negative_prompts`
 - `reference_files`
 - `notes`
+- `native_sticker` when the Story uses a native Instagram interaction sticker
 
 ### Reel Prompt Packaging
 
@@ -178,6 +180,7 @@ Overlay-safe image rule:
 - when a prompt is for a cover plate or image slot that will carry compositor text later, explicitly encode the `text_safe_zone`, `subject_placement`, and any protected bottom or side overlay area in the prompt
 - explicitly reject any composition where the focal subject drifts under the future text block, label band, or CTA card
 - default fresh cover plates, support plates, and image washes to `Nano-Banana-source-image` unless the creative package explicitly chooses owned photography or the user explicitly asks for stock
+- when the asset uses a native Instagram sticker, encode the sticker-safe zone, exact sticker wording, and placement note in prompt metadata, but keep `render_sticker_ui_in_asset` false
 
 When a reel shot includes the Mitozz bottle as a visible focal element:
 

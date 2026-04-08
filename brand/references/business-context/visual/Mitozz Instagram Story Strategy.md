@@ -497,6 +497,7 @@ When a Story is reinforcing an approved feed family:
 - inherit the same centered-container and close-card behavior instead of improvising a lighter but sloppier version
 - treat story modules and bands with the same optical-centering standard as feed modules
 - if the Story uses an image opener, the image still serves the typography, not the other way around
+- by default, Story cards and panels should be borderless; use tone, opacity, spacing, and radius to separate modules instead of visible strokes unless a bordered treatment is explicitly directed
 
 ## Story Interaction Rules
 

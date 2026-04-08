@@ -1,0 +1,106 @@
+{
+  "asset_type": "instagram-feed",
+  "campaign_name": "April 2026 Organic Education",
+  "topic": "Revisit the daily foundation as the years advance",
+  "objective": "Educate",
+  "template_set": "Set 4 + Set 3",
+  "slide_blueprint": "reel-4-shot",
+  "asset_archetype": "reel-source-frame",
+  "platform": "instagram",
+  "aspect_ratio": "4:5",
+  "audience": "Healthy Aging Planner",
+  "motion_role": "end-frame",
+  "shot_id": "shot-04",
+  "shot_position": 4,
+  "continuity_tokens": [
+    "same premium home-world as the earlier shots",
+    "cloud white, mist blue, pale oak, muted stone palette",
+    "soft daylight and premium restraint",
+    "Mitozz supplement bottle with deep matte black body, black ribbed cap, visible pale white neck band, and centered front label"
+  ],
+  "visual_intent": [
+    "stable save-worthy end frame",
+    "clean product truth",
+    "quiet premium hold with clear CTA space",
+    "editorial rather than commercial"
+  ],
+  "brand_guardrails": [
+    "avoid over-stylized glossy ad energy",
+    "avoid clutter or multiple competing props",
+    "preserve generous negative space for the final CTA",
+    "the scene must fill the entire 4:5 canvas with no white bars or inset framing"
+  ],
+  "composition": [
+    "true full-bleed vertical 4:5 framing",
+    "stable product-led shot",
+    "Mitozz bottle placed slightly low-right or low-center",
+    "large calm negative space in the upper half for CTA overlay",
+    "minimal premium surface cues only",
+    "no person required in frame"
+  ],
+  "image_references": [
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-product-glow-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "product finish",
+        "premium end-frame glow",
+        "clean reflection control"
+      ],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cta-layout-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "final-frame calm",
+        "overlay-safe breathing room",
+        "stable close"
+      ],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/source-intake/mitozz-bottle.jpg",
+      "role": "product-source",
+      "influence": [
+        "exact bottle truth",
+        "label structure",
+        "cap truth"
+      ],
+      "match_strength": "high"
+    }
+  ],
+  "reference_strategy": "Use the product and CTA anchors to create a premium stable close, then hold exact pack truth through the approved Mitozz bottle source reference.",
+  "variation_guardrails": [
+    "do not make the bottle too large or salesy",
+    "keep the end frame quieter than a typical product ad",
+    "reject and regenerate if CTA-safe space is blocked",
+    "reject and regenerate if bottle truth drifts from the approved source",
+    "reject and regenerate if the image is not true full-bleed 4:5"
+  ],
+  "text_overlay": {
+    "allowed": false,
+    "max_words": 0,
+    "tone": "premium, calm, restrained",
+    "font_reference": "Hiragino Sans",
+    "headline_ja": "",
+    "slides_ja": []
+  },
+  "negative_prompts": [
+    "hard-sell supplement ad",
+    "oversized product hero",
+    "fake label",
+    "wrong bottle color",
+    "messy prop styling",
+    "white bars",
+    "floating card layout",
+    "baked-in text"
+  ],
+  "reference_files": [
+    "brand/references/business-context/creative-packages/creative-package-2026-04-10.md",
+    "brand/references/business-context/visual/Brand Visual Direction.md",
+    "brand/references/business-context/visual/Mitozz Bottle Label Spec.md",
+    "brand/references/business-context/visual/Mitozz Bottle Appearance Spec.md"
+  ],
+  "notes": "April 10 reel shot 04. Stable product-truth close with generous CTA space. This frame should feel save-worthy, calm, and premium."
+}

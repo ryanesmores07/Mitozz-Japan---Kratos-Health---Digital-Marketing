@@ -194,6 +194,8 @@ Avoid by default:
 ## Music And Sound Direction
 
 - `music_direction`:
+- `bgm_source_lane`: `instagram-native-audio` / `licensed-local-track`
+- `bgm_file_path`:
 - `sound_design_level`:
 - `voiceover`: `yes/no`
 - `voiceover_script_ja`:

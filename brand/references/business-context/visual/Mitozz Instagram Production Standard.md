@@ -463,6 +463,7 @@ Automatic QA rule:
 - if module alignment, label semantics, or closing-card balance drift, regenerate the incorrect slide
 - only promote slides that pass the locked system checks
 - do not present first-pass assets as final delivery before they pass the review gate
+- for Stories, default to borderless cards and panels; do not add visible strokes unless the creative direction explicitly calls for a bordered treatment
 
 ## Aspect Ratio Lock
 
@@ -661,6 +662,7 @@ Story composition defaults:
 - use the top, center, and bottom of the frame strategically when the message benefits from clearer vertical rhythm
 - do not force fillers just to occupy space; each zone should have a compositional job or stay intentionally quiet
 - if a Story feels top-heavy, solve it with guidance, support structure, or a meaningful module before adding decoration
+- Story text should read comfortably at normal viewing distance on Instagram without zooming; if a title or support line feels small, increase the type and rebalance the frame instead of leaving it delicate
 - when a Story supports an approved feed family, inherit that family's type profile, safe margins, centered-container behavior, and close-card logic by default rather than treating Story layout as a looser side system
 - for Story close frames, center the full headline/body/strip/close-card stack within the working canvas instead of relying on fixed Y guesses that drift between posts
 - for Story close frames, center the full headline/body/strip/close-card stack within the working canvas instead of relying on fixed Y guesses that drift between posts
@@ -669,6 +671,8 @@ Story composition defaults:
 - avoid repeating the same core terms multiple times inside one frame unless the repetition is doing clear hierarchy or navigation work
 - when a horizontal strip is divided into columns, center the text inside each actual column, not by rough visual guesses
 - fix cramped titles with a combination of line height, tracking, and size adjustment rather than only shrinking the type
+- when using lifestyle or human-led imagery across adjacent posts, vary subject orientation, crop, pose, gesture focus, or figure visibility so the account does not keep repeating the same right-facing portrait setup
+- if one asset already used a calm right-third portrait, the next lifestyle-led asset should bias toward a different human treatment such as hands-only, wider environment, object-led ritual, profile reversal, or partial figure framing unless continuity explicitly requires repetition
 
 ## Posting Logic
 

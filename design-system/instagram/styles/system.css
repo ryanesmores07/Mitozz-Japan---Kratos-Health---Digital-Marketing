@@ -552,7 +552,10 @@ body {
 }
 
 .education-cover,
+.education-question-cover,
 .education-body,
+.education-checklist,
+.education-compare,
 .education-close {
   position: absolute;
   inset: 0;
@@ -630,6 +633,22 @@ body {
   color: rgba(var(--color-structure-rgb), 0.84);
 }
 
+.education-question-tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  margin: 0 0 18px;
+  padding: 0 18px;
+  border-radius: 999px;
+  background: rgba(var(--color-accent-rgb), 0.12);
+  color: rgba(var(--color-accent-rgb), 0.92);
+  font-family: var(--mitozz-type-global-meta-tag-font-family);
+  font-size: 20px;
+  line-height: 1;
+  letter-spacing: 0.08em;
+  font-weight: 600;
+}
+
 .education-headlines {
   display: flex;
   flex-direction: column;
@@ -697,6 +716,97 @@ body {
 .education-body-line,
 .education-footer-line {
   text-wrap: balance;
+}
+
+.education-checklist {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 26px;
+  max-width: 648px;
+}
+
+.education-checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  min-height: 74px;
+  padding: 0 22px;
+  border-radius: 26px;
+  background: rgba(var(--color-paper-rgb), 0.92);
+  box-shadow: inset 0 0 0 1px rgba(var(--color-atmosphere-rgb), 0.5);
+}
+
+.education-checklist-bullet {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  background: rgba(var(--color-atmosphere-rgb), 0.82);
+  color: rgba(var(--color-structure-rgb), 0.96);
+  font-family: var(--mitozz-type-global-meta-label-font-family);
+  font-size: 18px;
+  line-height: 1;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+  flex: 0 0 auto;
+}
+
+.education-checklist-line {
+  margin: 0;
+  font-family: var(--mitozz-type-education-body-font-family);
+  font-size: 25px;
+  line-height: 1.4;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+  color: rgba(var(--color-text-rgb), 0.78);
+}
+
+.education-compare {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 26px;
+  max-width: 680px;
+}
+
+.education-compare-card {
+  min-width: 0;
+  padding: 24px 22px 22px;
+  border-radius: 30px;
+  background:
+    linear-gradient(180deg, rgba(var(--color-paper-rgb), 0.98), rgba(var(--color-card-rgb), 0.94));
+  box-shadow:
+    inset 0 0 0 1px rgba(var(--color-atmosphere-rgb), 0.54),
+    0 16px 34px rgba(202, 214, 221, 0.09);
+}
+
+.education-compare-title {
+  margin: 0 0 12px;
+  font-family: var(--mitozz-type-global-meta-label-font-family);
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  color: rgba(var(--color-structure-rgb), 0.84);
+}
+
+.education-compare-lines {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.education-compare-line {
+  margin: 0;
+  font-family: var(--mitozz-type-education-body-font-family);
+  font-size: 23px;
+  line-height: 1.42;
+  letter-spacing: 0.01em;
+  font-weight: 400;
+  color: rgba(var(--color-text-rgb), 0.76);
 }
 
 .education-rule {
@@ -871,6 +981,29 @@ body {
   top: 684px;
 }
 
+.education-question-cover .education-copy-block {
+  top: 156px;
+  left: 76px;
+  right: 104px;
+}
+
+.education-question-cover .education-headline {
+  font-family: var(--mitozz-type-education-cover-headline-font-family);
+  font-size: 63px;
+  line-height: 1.16;
+  letter-spacing: -0.03em;
+  font-weight: 600;
+}
+
+.education-question-cover .education-body-block {
+  max-width: 598px;
+  margin-top: 20px;
+}
+
+.education-question-cover .education-rule {
+  top: 698px;
+}
+
 .education-body .education-copy-block {
   top: 314px;
   left: 84px;
@@ -883,6 +1016,26 @@ body {
   line-height: var(--mitozz-type-education-body-headline-line-height);
   letter-spacing: var(--mitozz-type-education-body-headline-letter-spacing);
   font-weight: var(--mitozz-type-education-body-headline-font-weight);
+}
+
+.education-checklist .education-copy-block {
+  top: 298px;
+  left: 84px;
+  right: 100px;
+}
+
+.education-checklist .education-body-block {
+  max-width: 618px;
+}
+
+.education-compare .education-copy-block {
+  top: 296px;
+  left: 84px;
+  right: 98px;
+}
+
+.education-compare .education-body-block {
+  max-width: 628px;
 }
 
 .education-body .education-body-block {
@@ -987,10 +1140,16 @@ body {
 }
 
 .variant.portrait-cover,
+.variant.portrait-quote,
 .variant.editorial-criteria,
 .variant.editorial-close,
+.variant.proof-grid,
+.variant.quote-highlight,
 .variant.education-cover,
+.variant.education-question-cover,
 .variant.education-body,
+.variant.education-checklist,
+.variant.education-compare,
 .variant.education-close {
   display: grid;
   grid-template-columns: repeat(var(--layout-grid-columns), minmax(0, 1fr));
@@ -1012,22 +1171,40 @@ body {
 }
 
 .variant.portrait-cover .copy-block,
+.variant.portrait-quote .copy-block,
 .variant.editorial-criteria .copy-block,
 .variant.editorial-close .copy-block,
+.variant.proof-grid .copy-block,
+.variant.quote-highlight .copy-block,
 .variant.editorial-criteria .editorial-panel,
 .variant.editorial-close .editorial-panel,
+.variant.proof-grid .editorial-panel,
+.variant.quote-highlight .editorial-panel,
 .variant.editorial-criteria .editorial-meta,
 .variant.editorial-close .editorial-meta,
+.variant.proof-grid .editorial-meta,
+.variant.quote-highlight .editorial-meta,
 .variant.education-cover .education-copy-block,
+.variant.education-question-cover .education-copy-block,
 .variant.education-body .education-copy-block,
+.variant.education-checklist .education-copy-block,
+.variant.education-compare .education-copy-block,
 .variant.education-close .education-copy-block,
+.variant.education-checklist .education-panel,
+.variant.education-compare .education-panel,
 .variant.education-body .education-panel,
 .variant.education-close .education-panel,
 .variant.education-cover .education-rule,
+.variant.education-question-cover .education-rule,
 .variant.education-body .education-rule,
+.variant.education-checklist .education-rule,
+.variant.education-compare .education-rule,
 .variant.education-close .education-rule,
 .variant.education-cover .education-note,
+.variant.education-question-cover .education-note,
 .variant.education-body .education-note,
+.variant.education-checklist .education-note,
+.variant.education-compare .education-note,
 .variant.education-close .education-note,
 .variant.story-question .story-copy-block,
 .variant.story-context .story-copy-block,
@@ -1040,7 +1217,8 @@ body {
   min-width: 0;
 }
 
-.variant.portrait-cover .copy-block {
+.variant.portrait-cover .copy-block,
+.variant.portrait-quote .copy-block {
   grid-column: 1 / span 6;
   grid-row: 2;
   width: auto;
@@ -1048,13 +1226,25 @@ body {
   align-self: start;
 }
 
-.variant.portrait-cover .media {
+.variant.portrait-cover .media,
+.variant.portrait-quote .media {
   left: 40%;
   background-position: 88% center;
 }
 
+.variant.portrait-quote .copy-block {
+  margin-top: 24px;
+}
+
+.variant.portrait-quote .subline-block {
+  margin-top: 22px;
+  max-width: 360px;
+}
+
 .variant.editorial-criteria .editorial-panel,
-.variant.editorial-close .editorial-panel {
+.variant.editorial-close .editorial-panel,
+.variant.proof-grid .editorial-panel,
+.variant.quote-highlight .editorial-panel {
   grid-column: 1 / span 8;
   grid-row: 1;
   top: auto;
@@ -1076,8 +1266,24 @@ body {
   margin-top: 64px;
 }
 
+.variant.proof-grid .copy-block {
+  grid-column: 1 / span 9;
+  grid-row: 2;
+  width: auto;
+  margin-top: 68px;
+}
+
+.variant.quote-highlight .copy-block {
+  grid-column: 1 / span 8;
+  grid-row: 2;
+  width: auto;
+  margin-top: 94px;
+}
+
 .variant.editorial-criteria .rule,
-.variant.editorial-close .rule {
+.variant.editorial-close .rule,
+.variant.proof-grid .rule,
+.variant.quote-highlight .rule {
   position: relative;
   left: auto;
   right: auto;
@@ -1090,7 +1296,9 @@ body {
 }
 
 .variant.editorial-criteria .editorial-meta,
-.variant.editorial-close .editorial-meta {
+.variant.editorial-close .editorial-meta,
+.variant.proof-grid .editorial-meta,
+.variant.quote-highlight .editorial-meta {
   grid-column: 1 / span 10;
   grid-row: 5;
   margin-top: 28px;
@@ -1098,6 +1306,8 @@ body {
 }
 
 .variant.education-body .education-panel,
+.variant.education-checklist .education-panel,
+.variant.education-compare .education-panel,
 .variant.education-close .education-panel {
   grid-column: 1 / span 8;
   grid-row: 1;
@@ -1115,6 +1325,15 @@ body {
   margin-top: 12px;
 }
 
+.variant.education-question-cover .education-copy-block {
+  grid-column: 1 / span 9;
+  grid-row: 2;
+  left: auto;
+  right: auto;
+  top: auto;
+  margin-top: 16px;
+}
+
 .variant.education-body .education-copy-block {
   grid-column: 1 / span 10;
   grid-row: 2;
@@ -1122,6 +1341,16 @@ body {
   right: auto;
   top: auto;
   margin-top: 76px;
+}
+
+.variant.education-checklist .education-copy-block,
+.variant.education-compare .education-copy-block {
+  grid-column: 1 / span 10;
+  grid-row: 2;
+  left: auto;
+  right: auto;
+  top: auto;
+  margin-top: 64px;
 }
 
 .variant.education-close .education-copy-block {
@@ -1134,7 +1363,10 @@ body {
 }
 
 .variant.education-cover .education-rule,
+.variant.education-question-cover .education-rule,
 .variant.education-body .education-rule,
+.variant.education-checklist .education-rule,
+.variant.education-compare .education-rule,
 .variant.education-close .education-rule {
   left: auto;
   right: auto;
@@ -1147,7 +1379,10 @@ body {
 }
 
 .variant.education-cover .education-note,
+.variant.education-question-cover .education-note,
 .variant.education-body .education-note,
+.variant.education-checklist .education-note,
+.variant.education-compare .education-note,
 .variant.education-close .education-note {
   left: auto;
   right: auto;

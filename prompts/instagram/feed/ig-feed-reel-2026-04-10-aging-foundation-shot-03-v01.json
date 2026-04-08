@@ -1,0 +1,119 @@
+{
+  "asset_type": "instagram-feed",
+  "campaign_name": "April 2026 Organic Education",
+  "topic": "Revisit the daily foundation as the years advance",
+  "objective": "Educate",
+  "template_set": "Set 4 + Set 3",
+  "slide_blueprint": "reel-4-shot",
+  "asset_archetype": "reel-source-frame",
+  "platform": "instagram",
+  "aspect_ratio": "4:5",
+  "audience": "Healthy Aging Planner",
+  "motion_role": "product-reveal",
+  "shot_id": "shot-03",
+  "shot_position": 3,
+  "continuity_tokens": [
+    "same Japanese woman in late 40s to early 50s across shots 01 to 03",
+    "same premium home-morning environment",
+    "same pale oak, cloud white, mist blue, muted stone palette",
+    "same soft daylight direction",
+    "Mitozz supplement bottle with deep matte black body, black ribbed cap, visible pale white neck band, and centered front label"
+  ],
+  "visual_intent": [
+    "product enters as part of a mature daily-foundation ritual",
+    "quiet trust rather than hype",
+    "premium wellness editorial with real pack fidelity",
+    "clear text-safe negative space for later overlay"
+  ],
+  "brand_guardrails": [
+    "avoid pasted-on product behavior",
+    "avoid turning this into a hard-sell supplement ad",
+    "keep the bottle naturally lit inside the scene",
+    "the scene must fill the entire 4:5 canvas with no white bands, blank bars, or inset framing"
+  ],
+  "composition": [
+    "true full-bleed vertical 4:5 framing",
+    "close-medium product-in-context shot",
+    "same mature woman's hand setting down or lightly lifting the Mitozz bottle",
+    "bottle visible but not oversized",
+    "protected upper-left or upper-center negative space for overlay text",
+    "calm home surface and soft environment cues at the frame edges"
+  ],
+  "image_references": [
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-product-glow-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "premium product integration",
+        "soft controlled glow",
+        "clean reflections"
+      ],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-bottle-shot-mode-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "bottle framing",
+        "hero restraint",
+        "premium product presence"
+      ],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/source-intake/mitozz-bottle.jpg",
+      "role": "product-source",
+      "influence": [
+        "pack fidelity",
+        "label structure",
+        "cap and neck-band truth"
+      ],
+      "match_strength": "high"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/source-intake/mitozz-bottle-with-tablets.jpg",
+      "role": "product-source",
+      "influence": [
+        "tablet relationship",
+        "scale truth",
+        "bottle realism"
+      ],
+      "match_strength": "medium"
+    }
+  ],
+  "reference_strategy": "Use the product anchors for restrained bottle presence and the approved bottle source files for exact pack fidelity so the product feels naturally embedded in the mature routine scene.",
+  "variation_guardrails": [
+    "do not isolate the bottle on a fake studio background",
+    "keep the bottle integrated with the same lifestyle world as shots 01 and 02",
+    "reject and regenerate if the bottle body is not deep matte black",
+    "reject and regenerate if the black ribbed cap or pale white neck band disappear",
+    "reject and regenerate if the front label becomes invented, unreadable, or simplified",
+    "reject and regenerate if the scene feels like a generic supplement ad"
+  ],
+  "text_overlay": {
+    "allowed": false,
+    "max_words": 0,
+    "tone": "premium, calm, restrained",
+    "font_reference": "Hiragino Sans",
+    "headline_ja": "",
+    "slides_ja": []
+  },
+  "negative_prompts": [
+    "pasted-on bottle",
+    "generic supplement ad",
+    "fake label",
+    "wrong bottle color",
+    "white bottle",
+    "chrome cap",
+    "white bars",
+    "floating card layout",
+    "baked-in text"
+  ],
+  "reference_files": [
+    "brand/references/business-context/creative-packages/creative-package-2026-04-10.md",
+    "brand/references/business-context/visual/Brand Visual Direction.md",
+    "brand/references/business-context/visual/Mitozz Bottle Label Spec.md",
+    "brand/references/business-context/visual/Mitozz Bottle Appearance Spec.md"
+  ],
+  "notes": "April 10 reel shot 03. The bottle should enter as part of the daily-support lens, not as an interruptive sales beat. Real label truth is mandatory."
+}

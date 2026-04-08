@@ -540,3 +540,51 @@
 - `Outcome / impact`: The team now has a clean Canva information architecture, a defined first batch of high-priority masters, and a full 45-template roadmap that can be built systematically inside Canva.
 - `Status`: `completed`
 - `Notes for monthly summary`: High-value production-system setup that reopens Canva as a controlled carousel workflow while preserving brand consistency and reducing future design drift.
+
+### Entry 48
+
+- `Date`: `2026-04-07`
+- `Workstream`: `April 9 Story creative-direction reset`
+- `Request / prompt context`: `The user wanted the post-April-9 creative workflow tightened so the creative director explicitly owns all viewer-facing copy, image roles, template choices, and native sticker decisions. They asked to start by redoing the April 9 Story poll.`
+- `Action`: Rebuilt the April 9 Story from the creative-direction layer instead of patching the old render. Locked a new April 9 creative package with explicit on-canvas copy, selected anchor screenshots, a two-plate Nano Banana image plan, and a native poll sticker spec with exact wording and placement behavior. Updated the prompt, compositor skill, creative-director skill, prompt-engineer skill, production flow, and review gate so native-interaction Stories now require explicit sticker specs and a hard on-canvas copy lock. Generated two new Nano Banana plates, rerendered the Story, and replaced the old execution-scaffold-heavy frame structure with a cleaner 2-frame set.
+- `Why it matters`: This closes the gap where renderers could still improvise helper text or sticker-adjacent copy, and it makes the Story workflow behave more like a real creative-direction system instead of a template patch loop.
+- `Artifacts updated`: `brand/references/business-context/creative-packages/creative-package-2026-04-09.md`, `prompts/instagram/stories/ig-story-2026-04-09-purchase-axis-poll-v01.json`, `tools/render-april-09-story-purchase-axis-poll-v01.ps1`, `.agents/skills/mitozz-creatives-director/SKILL.md`, `.agents/skills/mitozz-prompt-engineer/SKILL.md`, `.agents/skills/mitozz-compositor-executor/SKILL.md`, `workflows/03-post-calendar-production-flow.md`, `brand/references/business-context/visual/Mitozz Asset Review Gate.md`, `output/instagram/stories/2026-04-09-story-purchase-axis-poll-v01/source/`, `output/instagram/stories/2026-04-09-story-purchase-axis-poll-v01/current/`
+- `Outcome / impact`: April 9 now has a cleaner, director-led 2-frame poll Story with no fake poll UI, no internal instruction copy, a stronger Nano Banana opener, and an explicitly reserved native sticker zone. The downstream workflow now blocks this category of improvisation from recurring on future Stories.
+- `Status`: `completed`
+- `Notes for monthly summary`: High-signal creative-process correction that tightened Story governance, improved native-interaction execution quality, and reduced renderer improvisation risk.
+
+### Entry 49
+
+- `Date`: `2026-04-07`
+- `Workstream`: `Story readability and lifestyle-image variation rule`
+- `Request / prompt context`: `The user flagged that recent lifestyle-led stories were starting to repeat the same woman-facing-the-same-direction setup and that Story text felt too small for normal Instagram viewing.`
+- `Action`: Tightened the creative-director, compositor, production-standard, and review-gate rules so adjacent lifestyle-led assets must vary subject treatment rather than reusing the same portrait grammar, and so Story typography must favor comfortable first-glance mobile readability instead of delicate small text. Applied that correction immediately to the live April 9 Story by replacing the opener with a hands-led Nano Banana plate and increasing the Story typography scale in the renderer.
+- `Why it matters`: This reduces visual repetition in the account feed and improves actual usability on Instagram, where Story viewers cannot zoom in and skim-reading speed matters.
+- `Artifacts updated`: `.agents/skills/mitozz-creatives-director/SKILL.md`, `.agents/skills/mitozz-compositor-executor/SKILL.md`, `brand/references/business-context/visual/Mitozz Asset Review Gate.md`, `brand/references/business-context/visual/Mitozz Instagram Production Standard.md`, `brand/references/business-context/creative-packages/creative-package-2026-04-09.md`, `prompts/instagram/stories/ig-story-2026-04-09-purchase-axis-poll-v01.json`, `tools/render-april-09-story-purchase-axis-poll-v01.ps1`, `output/instagram/stories/2026-04-09-story-purchase-axis-poll-v01/source/frame-01-plate-nanobanana-v03.jpg`, `output/instagram/stories/2026-04-09-story-purchase-axis-poll-v01/current/`
+- `Outcome / impact`: Future Story plans must now deliberately vary human/lifestyle image treatment, and Story renders should be less likely to ship with undersized text. April 9 now demonstrates both corrections in the live production path.
+- `Status`: `completed`
+- `Notes for monthly summary`: Important quality-of-execution rule that improves both brand variation and mobile readability across the Story workflow.
+
+### Entry 50
+
+- `Date`: `2026-04-07`
+- `Workstream`: `April 10 reel creative direction and source-frame execution`
+- `Request / prompt context`: `The user asked to proceed with the next planned asset, which is the April 10 main feed reel, and wanted the creative director to fully own copy, source-image logic, template behavior, and non-repetitive image treatment before execution.`
+- `Action`: Built a new April 10 creative package from the calendar row and current workflow rules, locking the reel as a mature healthy-aging reframe with exact selected anchor files, locked overlay copy, a four-shot motion plan, and a Nano Banana-only source lane. Authored four shot-level prompt JSON files, generated the full source-frame set into a new date-first reel folder, and tightened product-truth handling by regenerating the product shots with the approved Mitozz bottle reference injected.
+- `Why it matters`: This moves April 10 from calendar-only planning into a real production-ready reel lineage while applying the updated director-led workflow, avoiding recent portrait repetition, and giving the editor a cleaner mature-routine sequence rather than another young-performance-led reel.
+- `Artifacts updated`: `brand/references/business-context/creative-packages/creative-package-2026-04-10.md`, `prompts/instagram/feed/ig-feed-reel-2026-04-10-aging-foundation-shot-01-v01.json`, `prompts/instagram/feed/ig-feed-reel-2026-04-10-aging-foundation-shot-02-v01.json`, `prompts/instagram/feed/ig-feed-reel-2026-04-10-aging-foundation-shot-03-v01.json`, `prompts/instagram/feed/ig-feed-reel-2026-04-10-aging-foundation-shot-04-v01.json`, `brand/references/business-context/creative-packages/posting-copy-2026-04-09-to-2026-04-15.md`, `output/instagram/reels/2026-04-10-reel-aging-foundation-v01/source/`, `output/instagram/reels/2026-04-10-reel-aging-foundation-v01/current/`, `brand/references/business-context/reporting/monthly-action-logs/2026-04-retainer-action-log.md`
+- `Outcome / impact`: April 10 now has a locked reel brief, four generated source frames, and a caption/hashtag pack aligned to the new creative direction. The production path also demonstrates the updated rule that the creative director, not the renderer, owns the visible copy and image logic before execution.
+- `Status`: `completed`
+- `Notes for monthly summary`: Important asset-production milestone that applied the updated director-led workflow to a new reel while adding the next caption pack and a more mature lifestyle-image treatment to the April calendar.
+
+### Entry 51
+
+- `Date`: `2026-04-07`
+- `Workstream`: `April 10 reel assembly and reusable local video build path`
+- `Request / prompt context`: `After approving the April 10 source frames, the user asked to turn them into the actual reel version rather than leaving them as stills.`
+- `Action`: Built a reusable Windows-safe local reel path by adding a PowerShell overlay renderer and an April 10 reel build script, installed a workspace-local `ffmpeg-static` encoder dependency, rendered text-overlay 4:5 frames from the approved April 10 source images, and assembled the final MP4 plus delivery copy inside the date-first reel folder.
+- `Why it matters`: This closes the gap between source-frame generation and actual reel deliverables in the current environment, and it gives the project a cleaner in-repo assembly path for future short reels instead of depending on missing global tools.
+- `Artifacts updated`: `tools/render-reel-frame-overlays.ps1`, `tools/build-april-10-reel-v01.ps1`, `package.json`, `package-lock.json`, `node_modules/ffmpeg-static/`, `output/instagram/reels/2026-04-10-reel-aging-foundation-v01/edit/`, `output/instagram/reels/2026-04-10-reel-aging-foundation-v01/production/`, `output/instagram/reels/2026-04-10-reel-aging-foundation-v01/delivery/`, `brand/references/business-context/reporting/monthly-action-logs/2026-04-retainer-action-log.md`
+- `Outcome / impact`: April 10 now has a production MP4, composited reel frames, and a repeatable local build path for subsequent reel assets.
+- `Status`: `completed`
+- `Notes for monthly summary`: Useful systems-plus-production step that turned April 10 into a true reel deliverable and reduced future friction for local reel assembly.

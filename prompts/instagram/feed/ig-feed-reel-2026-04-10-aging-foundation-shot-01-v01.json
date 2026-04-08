@@ -1,0 +1,121 @@
+{
+  "asset_type": "instagram-feed",
+  "campaign_name": "April 2026 Organic Education",
+  "topic": "Revisit the daily foundation as the years advance",
+  "objective": "Educate",
+  "template_set": "Set 4 + Set 3",
+  "slide_blueprint": "reel-4-shot",
+  "asset_archetype": "reel-source-frame",
+  "platform": "instagram",
+  "aspect_ratio": "4:5",
+  "audience": "Healthy Aging Planner",
+  "motion_role": "opening-hook",
+  "shot_id": "shot-01",
+  "shot_position": 1,
+  "continuity_tokens": [
+    "same Japanese woman in late 40s to early 50s across shots 01 to 03",
+    "quiet premium home-morning environment",
+    "pale oak, cloud white, mist blue, muted stone, soft daylight",
+    "grown-up routine mood with no youthful hustle energy",
+    "no baked-in text"
+  ],
+  "visual_intent": [
+    "premium Japanese wellness editorial",
+    "healthy-aging daily foundation lens",
+    "calm recognition instead of dramatic pain point",
+    "strong text-safe negative space"
+  ],
+  "brand_guardrails": [
+    "avoid anti-aging beauty-ad cues",
+    "avoid young-professional desk productivity mood",
+    "avoid repeated right-facing portrait hero",
+    "avoid visible struggle acting or decline narrative",
+    "the scene must fill the entire 4:5 canvas with no white bands, blank bars, inset framing, or smaller image area inside the frame"
+  ],
+  "composition": [
+    "true full-bleed vertical 4:5 framing",
+    "medium-wide lifestyle shot",
+    "Japanese woman in late 40s to early 50s, partial figure only",
+    "three-quarter or slightly turned-away orientation, not frontal portrait",
+    "subject placed to the right or lower-right so the left and upper-left stay protected for overlay text",
+    "quiet morning pause near a window or pale oak counter",
+    "extend the environment naturally to all canvas edges"
+  ],
+  "image_references": [
+    {
+      "path": "brand/references/business-context/visual/reference-pack/working-examples/template-set-4-lifestyle-v02-no-bottle.png",
+      "role": "working-example",
+      "influence": [
+        "routine realism",
+        "vertical breathing room",
+        "premium lifestyle quiet"
+      ],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-editorial-whitespace-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "whitespace",
+        "editorial restraint",
+        "protected text zone"
+      ],
+      "match_strength": "high"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/anchor-cool-palette-01.png",
+      "role": "style-anchor",
+      "influence": [
+        "cool premium palette",
+        "soft daylight",
+        "mist-blue control"
+      ],
+      "match_strength": "medium"
+    },
+    {
+      "path": "brand/references/business-context/visual/reference-pack/style-anchors/Set F/Screenshot 2026-03-29 at 16.54.24.png",
+      "role": "style-anchor",
+      "influence": [
+        "mature editorial softness",
+        "calm lifestyle posture",
+        "less literal product-ad energy"
+      ],
+      "match_strength": "medium"
+    }
+  ],
+  "reference_strategy": "Use the Set 4 lifestyle example for believable routine framing, then let the editorial-whitespace, cool-palette, and Set F references make it calmer, more mature, and more protected for overlay text.",
+  "variation_guardrails": [
+    "do not repeat the April 1 young-professional morning rhythm",
+    "do not use a right-facing portrait similar to recent stories",
+    "keep the subject mature, composed, and credible",
+    "reject and regenerate if the image looks like skincare anti-aging advertising",
+    "reject and regenerate if the left overlay-safe zone is blocked",
+    "reject and regenerate if the image is not true full-bleed 4:5"
+  ],
+  "text_overlay": {
+    "allowed": false,
+    "max_words": 0,
+    "tone": "premium, calm, restrained",
+    "font_reference": "Hiragino Sans",
+    "headline_ja": "",
+    "slides_ja": []
+  },
+  "negative_prompts": [
+    "anti-aging beauty ad",
+    "young startup worker",
+    "dramatic stress acting",
+    "frontal smiling portrait",
+    "fitness ad styling",
+    "messy room clutter",
+    "white bars",
+    "letterboxing",
+    "floating card layout",
+    "baked-in text"
+  ],
+  "reference_files": [
+    "brand/references/business-context/creative-packages/creative-package-2026-04-10.md",
+    "brand/references/business-context/visual/Brand Visual Direction.md",
+    "brand/references/business-context/visual/Mitozz Approved Post Library.csv"
+  ],
+  "notes": "April 10 reel shot 01. Opening hook should feel like a mature, quiet self-check. Keep a large left and upper-left text-safe zone and avoid repeated portrait grammar."
+}

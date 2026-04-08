@@ -1,0 +1,27 @@
+{
+  "template": "education-carousel",
+  "variant": "education-question-cover",
+  "canvas": {
+    "width": 928,
+    "height": 1152
+  },
+  "copy": {
+    "kicker": "SET 1 QUESTION",
+    "question_tag": "QUESTION-LED COVER",
+    "headline_lines": [
+      "整える順番を",
+      "変えるだけで",
+      "見え方は変わる?"
+    ],
+    "body_lines": [
+      "不安を煽らず、見直しの入口をつくる",
+      "問いかけ型のカバーバリアント。"
+    ]
+  },
+  "motif": {
+    "type": "connected-habits"
+  },
+  "note": {
+    "label": "CALM QUESTION HOOK"
+  }
+}

@@ -28,6 +28,7 @@ Before generation or rendering, confirm:
 - the references match the intended asset type
 - the asset is using the design-first compositor when typography or layout precision matters
 - all frontend-visible copy and image-placement decisions are explicitly owned by the approved creative direction rather than being improvised in execution
+- if the Story uses a native Instagram sticker, the sticker type, exact wording, options, and placement zone are explicitly locked before rendering
 - if the Story is reinforcing an approved feed family, the renderer is inheriting that family's type profile, spacing rhythm, and centered-container behavior rather than using a looser custom variant
 - if the asset is a Story, the chosen frame count is explicitly justified and not just inherited from the last Story set
 
@@ -40,6 +41,7 @@ Review the first render or generated batch against:
 - spacing and whitespace discipline
 - strategic use of vertical space, especially in Stories
 - top / center / bottom balance when the format benefits from it
+- mobile first-glance readability on Story text without zooming
 - headline tracking and optical rhythm on large Japanese type
 - whether the chosen type profile helps or hurts readability for this copy density
 - line-height fit relative to font size and copy density
@@ -99,6 +101,7 @@ If a line break feels accidental, the asset is not ready yet.
 For strips, chips, numbered rails, row tags, selector labels, and closing-note cards:
 
 - centered labels must be optically centered both horizontally and vertically
+- route-back cards and CTA cards must center the whole title-plus-body stack vertically inside the card, not place title and body by fixed guessed Y values
 - top-left and top-right meta labels must sit on the same margin system; if one side feels further inset, the asset fails review
 - top-left and top-right meta labels must sit on the same margin system; if one side feels further inset, the asset fails review
 - if a narrow band cannot hold meaningful viewer-facing text cleanly, redesign or simplify it before approval
@@ -117,9 +120,11 @@ Reject or refine the asset if:
 - a Japanese line break looks browser-made instead of designed
 - internal scaffolding such as `Set` names, English workflow labels, or placeholder badge text appears on-canvas
 - copy references sticker placement mechanics, posting instructions, or `here`-style placeholder language instead of speaking to the viewer
+- any on-canvas text appears that cannot be traced back to the approved creative package
 - a side band, chip, or badge is empty, meaningless, or visually leftover
 - a centered label is visibly off-center inside its module
 - the frame has a large dead zone that is not doing compositional work
+- a Story needs zooming or close inspection to read comfortably on a phone-sized screen
 - the frame is heavily top-loaded when a middle or bottom zone should clearly be helping
 - a Story is using 3 frames by habit even though the interaction, route, or message would be stronger as `1-2` frames
 - a 3-frame Story has a middle frame that does not add clarity, context, or a better action handoff
@@ -155,6 +160,7 @@ Reject or refine the asset if:
 - the focal subject is trapped under the final overlay area, band, or text block
 - a headline, band, or overlay crosses a face or the primary focal object even if the overall text-safe zone looked acceptable on paper
 - the image-backed asset is reusing an older plate by habit when a fresh source would clearly improve distinctiveness
+- adjacent lifestyle-led assets repeat the same human subject direction, crop, or portrait grammar without a deliberate sequence reason
 - the CTA behavior feels added on rather than integrated into the system
 - bottle truth, pack scale, or lighting integration drift
 

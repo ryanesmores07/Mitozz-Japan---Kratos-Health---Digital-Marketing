@@ -1,0 +1,84 @@
+{
+  "asset_type": "instagram-story",
+  "campaign_name": "Mitozz April 2026",
+  "topic": "April 10 aging foundation support story",
+  "objective": "Support the April 10 reel with a calmer, highly readable 2-frame Story that reframes aging into a daily-foundation lens and routes viewers back to the reel.",
+  "template_set": "Set 4 + editorial support card adaptation",
+  "slide_blueprint": "story-2-frame",
+  "asset_archetype": "story-reinforcement",
+  "platform": "instagram",
+  "aspect_ratio": "9:16",
+  "audience": "Healthy Aging Planner",
+  "visual_engine": "dual-image story with structured support frame",
+  "source_lane": "Nano-Banana-source-image",
+  "source_strategy": "Generate two separate 9:16 Nano Banana plates: frame 1 as a mature, calm opener with a protected upper-left copy zone and no repeated right-facing portrait grammar; frame 2 as a quieter home-detail editorial plate with enough open mid-frame space for a centered support card.",
+  "fallback_source": "Regenerate individual plates if subject age, openness, or text-safe space drift; do not switch to stock or reused plates.",
+  "icon_strategy": "none",
+  "generated_visual_role": "hero opener + support atmosphere plate",
+  "visual_intent": [
+    "mature calm support story",
+    "premium editorial wellness mood",
+    "faster and lighter than the reel",
+    "high mobile readability",
+    "clear route back to the reel"
+  ],
+  "brand_guardrails": [
+    "preserve top and bottom safe zones",
+    "do not generate fake instagram UI",
+    "do not add any text beyond the copy lock below",
+    "avoid repeated right-facing portrait grammar from nearby stories",
+    "keep typography large enough for normal Instagram viewing distance",
+    "protect the copy zone from the image focal area"
+  ],
+  "composition": [
+    "9:16 vertical framing",
+    "frame 1 uses a calm mature lifestyle plate with generous upper-left copy space",
+    "frame 2 uses a quieter editorial home-detail plate with a centered frosted support card and one smaller route-back card below",
+    "authored Japanese line breaks only",
+    "cool-focus palette with restrained warm accent"
+  ],
+  "text_overlay": {
+    "allowed": true,
+    "tone": "calm, mature, reassuring",
+    "font_reference": "humanist_sans",
+    "frames_ja": [
+      {
+        "meta_left": "\u6bce\u65e5\u306e\u571f\u53f0",
+        "meta_right": "4\u670810\u65e5",
+        "headline_lines": [
+          "\u5e74\u9f62\u3092\u91cd\u306d\u305f\u4eca\u3053\u305d",
+          "\u6bce\u65e5\u306e\u571f\u53f0\u3092",
+          "\u898b\u76f4\u3057\u305f\u3044\u3002"
+        ],
+        "body_lines": [
+          "\u5909\u3048\u308b\u3053\u3068\u3088\u308a\u3001",
+          "\u4eca\u306e\u81ea\u5206\u306b\u5408\u3046\u6574\u3048\u65b9\u3092\u3002"
+        ]
+      },
+      {
+        "meta_left": "\u898b\u308b\u8996\u70b9",
+        "meta_right": "\u30ea\u30fc\u30eb\u9023\u52d5",
+        "headline_lines": [
+          "\u6226\u3046\u306e\u3067\u306f\u306a\u304f\u3001",
+          "\u652f\u3048\u308b\u8996\u70b9\u3067",
+          "\u898b\u3064\u3081\u76f4\u3059\u3002"
+        ],
+        "body_lines": [
+          "\u7121\u7406\u306b\u82e5\u3055\u3092\u8ffd\u3046\u3088\u308a\u3001",
+          "\u6bce\u65e5\u3092\u8aad\u3080\u571f\u53f0\u3078\u3002"
+        ],
+        "cta_title": "\u4eca\u65e5\u306e\u30ea\u30fc\u30eb\u3092\u898b\u308b",
+        "cta_body_lines": [
+          "\u4eca\u306e\u81ea\u5206\u306b\u5408\u3046\u6574\u3048\u65b9\u3092",
+          "\u3084\u3055\u3057\u304f\u898b\u76f4\u3057\u305f\u3044\u65e5\u306b\u3002"
+        ]
+      }
+    ]
+  },
+  "reference_files": [
+    "brand/references/business-context/creative-packages/creative-package-2026-04-10.md",
+    "brand/references/business-context/visual/Mitozz Instagram Story Strategy.md",
+    "brand/references/business-context/visual/Mitozz Instagram Production Standard.md"
+  ],
+  "notes": "This is a support Story, not a mini reel. Keep it to two frames, keep the typography large, and let the second frame route back to the reel cleanly."
+}

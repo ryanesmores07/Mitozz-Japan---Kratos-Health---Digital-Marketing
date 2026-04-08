@@ -21,6 +21,9 @@ If the completed brief materially advances retainer delivery, creative direction
 8. Every frontend-visible image choice, crop, label, band term, support cue, and CTA phrase must be explicitly decided in the brief. Do not leave viewer-facing decisions to the prompt, renderer, or improvisation during production.
 9. When a related asset family already has an approved base layout, inherit that layout grammar by default and only diverge if the brief deliberately calls for a different structure.
 10. For native-interaction Stories, decide the viewer-facing support line and the sticker-safe-zone behavior explicitly, but never let internal placement notes become on-canvas copy.
+11. For any native Instagram sticker Story, explicitly lock the sticker type, exact sticker wording, option labels when relevant, and intended placement zone in the brief so execution does not improvise them later.
+12. When using lifestyle or human-led imagery, deliberately vary subject treatment across adjacent assets: rotate subject orientation, crop type, distance, gesture focus, and whether a full person, partial figure, hands-only, or object-led lifestyle frame is used. Do not keep reusing the same right-facing portrait grammar by habit.
+13. For Stories, prioritize mobile readability over delicacy: if text feels even slightly small at normal viewing distance, increase size and rebalance the frame before approval.
 
 ## Creative Authority
 
@@ -234,6 +237,16 @@ If the asset is a Story, also lock one `story_sequence_length`:
 - `story-2-frame`
 - `story-3-frame`
 - `story-4-frame`
+
+State the reason in one line.
+
+If the asset is a native-interaction Story, also lock one `native_sticker_spec`:
+
+- `sticker_type`
+- `sticker_question_ja`
+- `sticker_options_ja` when relevant
+- `sticker_positioning`
+- `render_sticker_ui_in_asset = false`
 
 State the reason in one line.
 

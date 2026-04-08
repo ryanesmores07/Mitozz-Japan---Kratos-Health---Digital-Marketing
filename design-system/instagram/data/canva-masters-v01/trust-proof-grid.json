@@ -1,0 +1,36 @@
+{
+  "template": "trust-carousel",
+  "variant": "proof-grid",
+  "canvas": {
+    "width": 928,
+    "height": 1152
+  },
+  "panel": {
+    "index": "02",
+    "eyebrow": "SET 5 PROOF GRID"
+  },
+  "copy": {
+    "headline_lines": [
+      "信頼を支える",
+      "確認軸を整える"
+    ],
+    "subline_lines": [
+      "品質 世界観 継続しやすさを",
+      "整理して見せるための信頼スライド。"
+    ]
+  },
+  "meta": {
+    "label": "TRUST MODULES",
+    "body_lines": [
+      "ブランドの安心感を構造で伝える。",
+      "比較・証拠・基準整理に向いたレイアウト。"
+    ],
+    "tags": [
+      "品質",
+      "世界観",
+      "継続性",
+      "信頼"
+    ]
+  },
+  "rule": true
+}

@@ -1,0 +1,46 @@
+{
+  "template": "education-carousel",
+  "variant": "education-compare",
+  "canvas": {
+    "width": 928,
+    "height": 1152
+  },
+  "panel": {
+    "index": "04",
+    "kicker": "SET 2 COMPARE",
+    "eyebrow": "比較で整理する"
+  },
+  "copy": {
+    "headline_lines": [
+      "分けて考える視点と",
+      "つなげて見る視点"
+    ],
+    "body_lines": [
+      "Mitozzらしい穏やかな比較スライド。",
+      "対立を煽らず、違いを明確にする。"
+    ]
+  },
+  "compare": {
+    "columns": [
+      {
+        "title": "SEPARATE VIEW",
+        "lines": [
+          "その日の不調だけを見る",
+          "習慣ごとに個別最適化する",
+          "全体像が見えにくい"
+        ]
+      },
+      {
+        "title": "CONNECTED VIEW",
+        "lines": [
+          "流れとして土台を見る",
+          "習慣同士の関係を捉える",
+          "見直しの順番が明確になる"
+        ]
+      }
+    ]
+  },
+  "note": {
+    "label": "EDITORIAL COMPARISON"
+  }
+}

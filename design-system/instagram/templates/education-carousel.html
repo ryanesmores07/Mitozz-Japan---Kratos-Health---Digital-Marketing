@@ -137,6 +137,13 @@ __INLINE_CSS__
         copy.appendChild(copyKicker);
       }
 
+      if (data.copy && data.copy.question_tag) {
+        var questionTag = document.createElement("div");
+        questionTag.className = "education-question-tag";
+        questionTag.textContent = data.copy.question_tag;
+        copy.appendChild(questionTag);
+      }
+
       if (data.copy && data.copy.headline_lines) {
         var headlineBlock = document.createElement("div");
         headlineBlock.className = "education-headlines";
@@ -156,6 +163,57 @@ __INLINE_CSS__
         footerBlock.className = "education-footer-block";
         appendLines(footerBlock, data.copy.footer_lines, "education-footer-line");
         copy.appendChild(footerBlock);
+      }
+
+      if (data.checklist && data.checklist.items && data.checklist.items.length) {
+        var checklist = document.createElement("div");
+        checklist.className = "education-checklist";
+        var c;
+        for (c = 0; c < data.checklist.items.length; c += 1) {
+          var item = document.createElement("div");
+          item.className = "education-checklist-item";
+
+          var bullet = document.createElement("div");
+          bullet.className = "education-checklist-bullet";
+          bullet.textContent = c + 1;
+          item.appendChild(bullet);
+
+          var itemCopy = document.createElement("p");
+          itemCopy.className = "education-checklist-line";
+          itemCopy.textContent = data.checklist.items[c];
+          item.appendChild(itemCopy);
+
+          checklist.appendChild(item);
+        }
+        copy.appendChild(checklist);
+      }
+
+      if (data.compare && data.compare.columns && data.compare.columns.length) {
+        var compare = document.createElement("div");
+        compare.className = "education-compare";
+        var d;
+        for (d = 0; d < data.compare.columns.length; d += 1) {
+          var column = data.compare.columns[d];
+          var compareCard = document.createElement("div");
+          compareCard.className = "education-compare-card";
+
+          if (column.title) {
+            var compareTitle = document.createElement("p");
+            compareTitle.className = "education-compare-title";
+            compareTitle.textContent = column.title;
+            compareCard.appendChild(compareTitle);
+          }
+
+          if (column.lines && column.lines.length) {
+            var compareLines = document.createElement("div");
+            compareLines.className = "education-compare-lines";
+            appendLines(compareLines, column.lines, "education-compare-line");
+            compareCard.appendChild(compareLines);
+          }
+
+          compare.appendChild(compareCard);
+        }
+        copy.appendChild(compare);
       }
 
       variantRoot.appendChild(copy);

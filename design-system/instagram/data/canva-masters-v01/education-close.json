@@ -1,0 +1,30 @@
+{
+  "template": "education-carousel",
+  "variant": "education-close",
+  "canvas": {
+    "width": 928,
+    "height": 1152
+  },
+  "panel": {
+    "index": "SAVE",
+    "kicker": "SET 1 CLOSE",
+    "eyebrow": "あとから見返せる形で"
+  },
+  "copy": {
+    "headline_lines": [
+      "保存して、",
+      "日々の見直しに",
+      "使ってください。"
+    ],
+    "body_lines": [
+      "強い売り込みではなく、",
+      "静かな次の一歩を残すための終わり方。"
+    ]
+  },
+  "motif": {
+    "type": "save-band"
+  },
+  "note": {
+    "label": "SOFT CTA CLOSE"
+  }
+}

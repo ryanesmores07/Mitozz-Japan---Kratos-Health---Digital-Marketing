@@ -53,12 +53,15 @@ Read:
 - preserve intentional Japanese line breaks
 - preserve batch consistency
 - keep spacing, typography, and CTA behavior locked
+- for Stories, bias typography toward comfortable first-glance mobile readability instead of delicate small type
+- for Stories, default to borderless cards and panels; separate modules with tone, opacity, spacing, and radius before reaching for visible strokes
 - preserve the approved frontend copy exactly for design-only variants
 - when a Story reinforces an approved feed family, inherit that feed family's type profile, container-centering behavior, and closing-card logic by default instead of improvising a lighter variant
 - preserve the approved Story frame count; do not add an opener, middle frame, or close frame just because past Mitozz stories often used 3 frames
 - treat `type_profile` as a real production decision, not a cosmetic afterthought
 - remove internal scaffolding from viewer-facing output
 - for native poll, slider, and question-box Stories, reserve sticker-safe space without rendering placement instructions, `here` labels, or other posting scaffolding on-canvas
+- only render on-canvas text that is explicitly locked in the creative package; do not invent helper copy, option labels, route text, or support modules during execution
 - make sure label bands, chips, row tags, and note cards carry meaningful content or act as clearly intentional accents
 - center text optically inside modules when the component reads as a centered label
 - center the full content block optically inside boxes, bubbles, bands, and cards instead of centering each line independently
@@ -71,6 +74,7 @@ Read:
 - keep boxes, bands, and comparison rows on shared grid tracks instead of hand-placed widths
 - use the chosen image or source plate without drifting into a new concept
 - preserve a protected text-safe zone when the layout uses an image-backed cover
+- preserve the approved subject-variation strategy when lifestyle or human-led imagery is used; do not drift back to the same portrait direction or crop pattern out of convenience
 - integrate the chosen icon family when `icon_strategy` calls for Better Icons support
 - integrate the chosen generated visual layer when `generated_visual_role` is not `none`
 - keep production output folders in the canonical date-first format: `YYYY-MM-DD-feed-slug-vNN`, `YYYY-MM-DD-story-slug-vNN`, or `YYYY-MM-DD-reel-slug-vNN`

@@ -1,0 +1,24 @@
+{
+  "template": "trust-carousel",
+  "variant": "portrait-quote",
+  "canvas": {
+    "width": 928,
+    "height": 1152
+  },
+  "copy": {
+    "eyebrow": "SET 5 PORTRAIT QUOTE",
+    "headline_lines": [
+      "選ぶ基準は、",
+      "強い言葉より",
+      "静かな納得感。"
+    ],
+    "subline_lines": [
+      "信頼や安心のトーンを整える",
+      "ポートレート引用バリアント。"
+    ]
+  },
+  "image": {
+    "path": "C:/Users/esmoresernieryanocam/Desktop/Workspace/Mitozz Japan/design-system/instagram/assets/2026-03-30-trust-carousel/slide-01-portrait-plate.png",
+    "position": "center center"
+  }
+}
