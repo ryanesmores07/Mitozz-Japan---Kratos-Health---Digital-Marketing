@@ -588,3 +588,38 @@
 - `Outcome / impact`: April 10 now has a production MP4, composited reel frames, and a repeatable local build path for subsequent reel assets.
 - `Status`: `completed`
 - `Notes for monthly summary`: Useful systems-plus-production step that turned April 10 into a true reel deliverable and reduced future friction for local reel assembly.
+### Entry 52
+
+- `Date`: `2026-04-08`
+- `Workstream`: `Drive delivery and content calendar sync`
+- `Request / prompt context`: `The user asked to update the Drive folders and the content calendar asset links using the production-ready assets already in the workspace.`
+- `Action`: `Uploaded the approved April 9 Story poll, April 10 feed reel MP4, and April 10 Story support set to their mapped Google Drive destinations, then updated the April content calendar so those rows now point at the live Drive folders and reflect delivered status.`
+- `Why it matters`: `This closes the gap between local production completion and the client-facing delivery record, so the working calendar once again reflects the real shipped asset locations instead of stale blank links.`
+- `Artifacts updated`: `brand/references/business-context/reporting/delivery-receipts/2026-04-08-122530-reels-drive-delivery.md`, `brand/references/business-context/reporting/delivery-receipts/2026-04-08-122534-stories-drive-delivery.md`, `brand/references/business-context/reporting/delivery-receipts/2026-04-08-122537-stories-drive-delivery.md`, `brand/references/business-context/content-planning/Mitozz Instagram Content Calendar - 2026 - April.csv`, `brand/references/business-context/reporting/monthly-action-logs/2026-04-retainer-action-log.md`
+- `Outcome / impact`: `The April calendar now shows live Drive links for the newly delivered April 9 and April 10 assets, and the Drive receipt trail covers the exact production-ready files that were shipped.`
+- `Status`: `completed`
+- `Notes for monthly summary`: `Important delivery-ops step that synchronized approved assets, Drive folders, and the working calendar so the team can track shipped work cleanly.`
+
+### Entry 53
+
+- `Date`: `2026-04-08`
+- `Workstream`: `March invoice live-sheet update`
+- `Request / prompt context`: `The user asked to update the March invoice in Drive to include their bank details.`
+- `Action`: `Inspected the live March Jay invoice spreadsheet in Google Drive, located the editable invoice tabs, expanded the visible invoice tab to make room for a payment block, and inserted the supplied bank details into both the draft and visible invoice sections.`
+- `Why it matters`: `This updates the actual client-facing March invoice file in place so payment details are present where Jay will look, without creating a duplicate invoice version.`
+- `Artifacts updated`: `brand/references/business-context/reporting/monthly-action-logs/2026-04-retainer-action-log.md`
+- `Outcome / impact`: `The March invoice Google Sheet now includes the provided branch, branch number, and account number in both the working draft and the visible invoice tab.`
+- `Status`: `completed`
+- `Notes for monthly summary`: `Useful operations follow-through that tightened invoice readiness by updating the live March billing file directly in Drive.`
+
+### Entry 54
+
+- `Date`: `2026-04-08`
+- `Workstream`: `Invoice naming standard cleanup`
+- `Request / prompt context`: `After updating the March invoice, the user asked to make the file name more intuitive and lock that naming behavior in for future invoice generations.`
+- `Action`: `Updated the live March invoice metadata locally to use a clearer month-based title, changed the invoice-generation script so future default sheet names resolve to a readable 'Jay Revels - Month YYYY Monthly Retainer Invoice' format, and updated the invoice JSON template to match the new naming standard.`
+- `Why it matters`: `This removes the ambiguous numbered invoice naming pattern and makes future invoice files easier to identify by month without relying on memory or ad hoc renaming.`
+- `Artifacts updated`: `tools/publish-jay-invoice-sheet-to-drive.ps1`, `brand/references/business-context/reporting/current-jay-invoice.json`, `brand/references/business-context/reporting/templates/jay-monthly-invoice-data-template.json`, `brand/references/business-context/reporting/monthly-action-logs/2026-04-retainer-action-log.md`
+- `Outcome / impact`: `Future invoice creation now defaults to a clearer month-based file name, and the local March invoice metadata is aligned to that standard.`
+- `Status`: `completed`
+- `Notes for monthly summary`: `Useful billing-system cleanup that made invoice naming clearer and more durable for future months.`

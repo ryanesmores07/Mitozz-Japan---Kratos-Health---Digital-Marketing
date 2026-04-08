@@ -60,6 +60,8 @@ These belong downstream.
    - create or preserve the output folder using the canonical date-first basename: `YYYY-MM-DD-feed-slug-vNN`, `YYYY-MM-DD-story-slug-vNN`, or `YYYY-MM-DD-reel-slug-vNN`
    - create or preserve the output folder using the canonical date-first basename: `YYYY-MM-DD-feed-slug-vNN`, `YYYY-MM-DD-story-slug-vNN`, or `YYYY-MM-DD-reel-slug-vNN`
 8. Generate the posting copy for approved feed or reel assets through `mitozz-posting-copy-optimizer`.
+   - bind the caption and hashtag set to the exact approved creative package filename plus the exact approved output basename or delivered asset path
+   - if the approved visual lineage changes, re-check the caption and hashtags before calling the asset production-ready
 9. If the asset is a reel, assemble the freelancer handoff packet.
 10. Review against the batch consistency rules and the lessons log.
 11. Regenerate only the failing outputs or revise only the unclear handoff sections.
@@ -113,7 +115,12 @@ Variant rule:
 - for every approved feed or reel, prepare posting copy before lock:
   - either a locked `caption_ja` block in the creative package
   - or a maintained posting-copy file that includes that asset's final caption, hashtag set, and posting notes
+- the posting-copy record should name the exact creative package file and the approved output basename when available so copy stays synchronized to the rendered asset
 - hashtag sets should default to `3-5` highly relevant tags, not a long stack of generic discovery tags
+- for Japan-facing Mitozz posts, default hashtag behavior should follow disciplined corporate-brand usage:
+  - short set
+  - brand + topic + selection or trust lens
+  - no spammy discovery stack
 - do not mark a feed or reel as fully production-ready, delivered, or calendar-locked if the visual asset exists but the posting caption and hashtag set have not been prepared
 
 ## Reel-Specific Production Layer

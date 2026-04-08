@@ -478,6 +478,7 @@ Provide:
 - a locked `caption_ja` draft or a posting-copy-pack entry is required before a feed or reel can be treated as production-ready
 - prepare a matching `hashtag_set` for every feed or reel caption
 - default hashtag behavior: `3-5` highly relevant tags only, weighted toward brand + topic + intent rather than giant generic tags
+- if the asset reaches an approved rendered-output stage, name the exact creative package filename and approved output basename so `mitozz-posting-copy-optimizer` can stay synchronized to the correct asset lineage
 - story sets may use lighter posting notes, but the related feed or reel should not ship without prepared posting copy
 - CTA
 

@@ -153,12 +153,12 @@ $bodyFamilies = @($fontProfileConfig.body_families)
 $accentFamilies = @($fontProfileConfig.accent_families)
 
 $metaFont = New-Font -Families $bodyFamilies -Size 34 -Style ([System.Drawing.FontStyle]::Regular)
-$headlineFont = New-Font -Families $headlineFamilies -Size 74 -Style ([System.Drawing.FontStyle]::Bold)
-$bodyFont = New-Font -Families $bodyFamilies -Size 38 -Style ([System.Drawing.FontStyle]::Regular)
-$cardHeadlineFont = New-Font -Families $headlineFamilies -Size 60 -Style ([System.Drawing.FontStyle]::Bold)
-$cardBodyFont = New-Font -Families $bodyFamilies -Size 36 -Style ([System.Drawing.FontStyle]::Regular)
-$ctaTitleFont = New-Font -Families $headlineFamilies -Size 38 -Style ([System.Drawing.FontStyle]::Bold)
-$ctaBodyFont = New-Font -Families $bodyFamilies -Size 31 -Style ([System.Drawing.FontStyle]::Regular)
+$headlineFont = New-Font -Families $headlineFamilies -Size 78 -Style ([System.Drawing.FontStyle]::Bold)
+$bodyFont = New-Font -Families $bodyFamilies -Size 40 -Style ([System.Drawing.FontStyle]::Regular)
+$cardHeadlineFont = New-Font -Families $headlineFamilies -Size 64 -Style ([System.Drawing.FontStyle]::Bold)
+$cardBodyFont = New-Font -Families $bodyFamilies -Size 38 -Style ([System.Drawing.FontStyle]::Regular)
+$ctaTitleFont = New-Font -Families $headlineFamilies -Size 40 -Style ([System.Drawing.FontStyle]::Bold)
+$ctaBodyFont = New-Font -Families $bodyFamilies -Size 33 -Style ([System.Drawing.FontStyle]::Regular)
 
 $textBrush = New-Object System.Drawing.SolidBrush($tokens.Colors.text_primary)
 $softTextBrush = New-Object System.Drawing.SolidBrush($tokens.Colors.text_secondary)
@@ -187,7 +187,7 @@ for ($index = 0; $index -lt 2; $index++) {
 
     if ($index -eq 0) {
         Draw-ImageCover -Graphics $graphics -ImagePath $frame1Image -X $margin -Y $margin -Width ($width - ($margin * 2)) -Height ($height - ($margin * 2)) -Radius $radius
-        Draw-RoundedGradientBox -Graphics $graphics -X 34 -Y 34 -Width 700 -Height 824 -Radius 40 -TopColor ([System.Drawing.Color]::FromArgb(230, 255, 255, 255)) -BottomColor ([System.Drawing.Color]::FromArgb(212, 247, 250, 252)) -StrokeColor ([System.Drawing.Color]::FromArgb(0, 0, 0, 0)) -StrokeWidth 0
+        Draw-RoundedGradientBox -Graphics $graphics -X 34 -Y 34 -Width 724 -Height 860 -Radius 40 -TopColor ([System.Drawing.Color]::FromArgb(230, 255, 255, 255)) -BottomColor ([System.Drawing.Color]::FromArgb(212, 247, 250, 252)) -StrokeColor ([System.Drawing.Color]::FromArgb(0, 0, 0, 0)) -StrokeWidth 0
 
         $frame = $frames[0]
         $metaLeftText = Decode-UnicodeEscapes $frame.meta_left
@@ -197,16 +197,16 @@ for ($index = 0; $index -lt 2; $index++) {
 
         $graphics.DrawString($metaLeftText, $metaFont, $softTextBrush, $metaLeft, $metaTop, $script:MitozzTypographicFormat)
         Draw-RightAlignedText -Graphics $graphics -Text $metaRightText -Font $metaFont -Brush $softTextBrush -RightX $metaRight -Y $metaTop
-        [void](Draw-TrackedLines -Graphics $graphics -Lines $headlineLines -Font $headlineFont -Brush $textBrush -X 72 -Y 164 -LineHeight 88 -Tracking 0)
-        [void](Draw-TrackedLines -Graphics $graphics -Lines $bodyLines -Font $bodyFont -Brush $softTextBrush -X 76 -Y 520 -LineHeight 52 -Tracking 0)
+        [void](Draw-TrackedLines -Graphics $graphics -Lines $headlineLines -Font $headlineFont -Brush $textBrush -X 72 -Y 160 -LineHeight 92 -Tracking 0)
+        [void](Draw-TrackedLines -Graphics $graphics -Lines $bodyLines -Font $bodyFont -Brush $softTextBrush -X 76 -Y 548 -LineHeight 56 -Tracking 0)
     }
     else {
         Draw-ImageCover -Graphics $graphics -ImagePath $frame2Image -X $margin -Y $margin -Width ($width - ($margin * 2)) -Height ($height - ($margin * 2)) -Radius $radius
-        Draw-RoundedGradientBox -Graphics $graphics -X 52 -Y 224 -Width 976 -Height 786 -Radius 44 -TopColor ([System.Drawing.Color]::FromArgb(236, 255, 255, 255)) -BottomColor ([System.Drawing.Color]::FromArgb(216, 245, 249, 251)) -StrokeColor ([System.Drawing.Color]::FromArgb(0, 0, 0, 0)) -StrokeWidth 0
-        $ctaBoxX = 120
-        $ctaBoxY = 808
-        $ctaBoxWidth = 840
-        $ctaBoxHeight = 154
+        Draw-RoundedGradientBox -Graphics $graphics -X 44 -Y 208 -Width 992 -Height 822 -Radius 44 -TopColor ([System.Drawing.Color]::FromArgb(236, 255, 255, 255)) -BottomColor ([System.Drawing.Color]::FromArgb(216, 245, 249, 251)) -StrokeColor ([System.Drawing.Color]::FromArgb(0, 0, 0, 0)) -StrokeWidth 0
+        $ctaBoxX = 112
+        $ctaBoxY = 824
+        $ctaBoxWidth = 856
+        $ctaBoxHeight = 164
         Draw-RoundedGradientBox -Graphics $graphics -X $ctaBoxX -Y $ctaBoxY -Width $ctaBoxWidth -Height $ctaBoxHeight -Radius 34 -TopColor ([System.Drawing.Color]::FromArgb(230, 247, 236, 228)) -BottomColor ([System.Drawing.Color]::FromArgb(222, 241, 232, 223)) -StrokeColor ([System.Drawing.Color]::FromArgb(0, 0, 0, 0)) -StrokeWidth 0
 
         $frame = $frames[1]
@@ -219,12 +219,12 @@ for ($index = 0; $index -lt 2; $index++) {
 
         $graphics.DrawString($metaLeftText, $metaFont, $softTextBrush, $metaLeft, $metaTop, $script:MitozzTypographicFormat)
         Draw-RightAlignedText -Graphics $graphics -Text $metaRightText -Font $metaFont -Brush $softTextBrush -RightX $metaRight -Y $metaTop
-        [void](Draw-TrackedLines -Graphics $graphics -Lines $headlineLines -Font $cardHeadlineFont -Brush $textBrush -X ($width / 2) -Y 330 -LineHeight 74 -Tracking 0 -Alignment center)
-        $graphics.FillRectangle($warmRuleBrush, 408, 584, 264, 4)
-        [void](Draw-TrackedLines -Graphics $graphics -Lines $bodyLines -Font $cardBodyFont -Brush $softTextBrush -X ($width / 2) -Y 650 -LineHeight 48 -Tracking 0 -Alignment center)
-        $ctaTitleLineHeight = 42
-        $ctaBodyLineHeight = 38
-        $ctaGap = 10
+        [void](Draw-TrackedLines -Graphics $graphics -Lines $headlineLines -Font $cardHeadlineFont -Brush $textBrush -X ($width / 2) -Y 320 -LineHeight 80 -Tracking 0 -Alignment center)
+        $graphics.FillRectangle($warmRuleBrush, 396, 606, 288, 4)
+        [void](Draw-TrackedLines -Graphics $graphics -Lines $bodyLines -Font $cardBodyFont -Brush $softTextBrush -X ($width / 2) -Y 684 -LineHeight 52 -Tracking 0 -Alignment center)
+        $ctaTitleLineHeight = 44
+        $ctaBodyLineHeight = 40
+        $ctaGap = 12
         $ctaContentHeight = $ctaTitleLineHeight + ($ctaBodyLineHeight * $ctaBodyLines.Count) + $ctaGap
         $ctaTop = [Math]::Round($ctaBoxY + (($ctaBoxHeight - $ctaContentHeight) / 2))
         [void](Draw-TrackedLines -Graphics $graphics -Lines @($ctaTitle) -Font $ctaTitleFont -Brush $textBrush -X ($width / 2) -Y $ctaTop -LineHeight $ctaTitleLineHeight -Tracking 0 -Alignment center)

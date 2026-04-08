@@ -487,7 +487,18 @@ function Get-TargetSpreadsheetName {
         throw "Month is required unless SpreadsheetName or InvoiceData.sheet_name is provided."
     }
 
-    "Jay Monthly Invoice - $TargetMonth"
+    $parsedMonth = $null
+    if ([datetime]::TryParseExact(
+        "$TargetMonth-01",
+        "yyyy-MM-dd",
+        [System.Globalization.CultureInfo]::InvariantCulture,
+        [System.Globalization.DateTimeStyles]::None,
+        [ref]$parsedMonth
+    )) {
+        return "Jay Revels - $($parsedMonth.ToString('MMMM yyyy', [System.Globalization.CultureInfo]::InvariantCulture)) Monthly Retainer Invoice"
+    }
+
+    "Jay Revels - $TargetMonth Monthly Retainer Invoice"
 }
 
 function Convert-InvoiceDataToSheetRows {
